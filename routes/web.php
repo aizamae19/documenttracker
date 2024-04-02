@@ -30,6 +30,9 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             #CATEGORY
             Route::get('/admin/category', [App\Http\Controllers\Admin\CategoryController::class, 'category'])->name('categorydashboard');
 
+            #FILES
+            Route::get('/admin/files', [App\Http\Controllers\Admin\FileController::class, 'file'])->name('filedashboard');
+
             #USERS
             Route::get('/admin/users', [App\Http\Controllers\Admin\UsersController::class, 'users'])->name('usersdashboard');
 

@@ -73,7 +73,7 @@
                      </a>
                   </li>
                   <li class="nav-item">
-                     <a href="files.html" class="nav-link">
+                     <a href="{{ route('filedashboard') }}" class="nav-link">
                         <img src="{{asset('assets/img/file.png')}}" width="30">
                         <p>
                            Files

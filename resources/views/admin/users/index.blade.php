@@ -50,7 +50,7 @@
                               <td class="text-center">
                                  <a class="btn btn-sm btn-success" href="#" data-toggle="modal" data-target="#edit"><i
                                        class="fa fa-user-edit"></i> Update</a>
-                                 <a class="btn btn-sm btn-danger" href="#" data-toggle="modal" data-target="#delete"><i
+                                 <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i
                                        class="fa fa-trash-alt"></i> Delete</a>
                               </td>
                            </tr>

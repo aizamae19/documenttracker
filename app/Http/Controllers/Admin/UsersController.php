@@ -15,4 +15,16 @@ class UsersController extends Controller
             'users'=>$users
         ]);
     }
+
+    // public function deleteusers(Request $request){
+    //     $Deletesave=Users::where('id' ,$request->id)->first();
+    //     $Deletesave-> name =$request->name;
+    //     $Deletesave-> type =$request->type;
+    //     $Deletesave-> username =$request->username;
+    //     $Deletesave-> email =$request->email;
+    //     $Deletesave-> password =$request->password;
+    //     if($Deletesave->delete()) {
+    //         return redirect()->back()->withErrors('Deleted!');
+    //     }
+    // }
 }

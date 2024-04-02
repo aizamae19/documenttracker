@@ -28,7 +28,7 @@
                               <h5>Number of Categories</h5>
                            </span>
                            <span class="info-box-number">
-                              <h2>45</h2>
+                              <h2></h2>
                            </span>
                         </div>
                      </div>
@@ -42,7 +42,7 @@
                               <h5>Number of Files</h5>
                            </span>
                            <span class="info-box-number">
-                              <h2>8</h2>
+                              <h2></h2>
                            </span>
                         </div>
                      </div>

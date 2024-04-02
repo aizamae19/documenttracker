@@ -53,36 +53,6 @@
                                        class="fa fa-trash-alt"></i> delete</a>
                               </td>
                            </tr>
-                           <tr>
-                              <td><img src="{{asset('assets/img/xlsx.png')}}" width="35"></td>
-                              <td>File-2</td>
-                              <td>CATEGORY-2</td>
-                              <td>Description</td>
-                              <td class="text-info">file-sample.xlsx</td>
-                              <td>jane doe</td>
-                              <td>08-02-21</td>
-                              <td class="text-center">
-                                 <a class="btn btn-sm btn-success" href="#" data-toggle="modal" data-target="#edit"><i
-                                       class="fa fa-edit"></i> update</a>
-                                 <a class="btn btn-sm btn-danger" href="#" data-toggle="modal" data-target="#delete"><i
-                                       class="fa fa-trash-alt"></i> delete</a>
-                              </td>
-                           </tr>
-                           <tr>
-                              <td><img src="{{asset('assets/img/pptx.png')}}" width="35"></td>
-                              <td>File-3</td>
-                              <td>CATEGORY-3</td>
-                              <td>Description</td>
-                              <td class="text-info">file-sample.pptx</td>
-                              <td>james bond</td>
-                              <td>08-02-21</td>
-                              <td class="text-center">
-                                 <a class="btn btn-sm btn-success" href="#" data-toggle="modal" data-target="#edit"><i
-                                       class="fa fa-edit"></i> update</a>
-                                 <a class="btn btn-sm btn-danger" href="#" data-toggle="modal" data-target="#delete"><i
-                                       class="fa fa-trash-alt"></i> delete</a>
-                              </td>
-                           </tr>
                         </tbody>
                      </table>
                   </div>

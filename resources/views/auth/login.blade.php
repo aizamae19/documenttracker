@@ -7,7 +7,7 @@
          <div class="wrap-login100">
             <form class="login100-form validate-form" method="post" action="{{ route('login.custom') }}">
                <span class="login100-form-title p-b-34 p-t-27">
-                  Log in
+                  Document Tracking System
                </span>
                @csrf
                <div class="wrap-input100 validate-input" data-validate = "Enter username">

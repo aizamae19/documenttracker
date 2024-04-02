@@ -73,6 +73,14 @@
                      </a>
                   </li>
                   <li class="nav-item">
+                     <a href="files.html" class="nav-link">
+                        <img src="{{asset('assets/img/file.png')}}" width="30">
+                        <p>
+                           Files
+                        </p>
+                     </a>
+                  </li>
+                  <li class="nav-item">
                      <a href="{{ route('documenttrackerdashboard') }}" class="nav-link">
                         <img src="{{asset('assets/img/tracker.png')}}" width="30">
                         <p>
@@ -80,14 +88,6 @@
                         </p>
                      </a>
                   </li>
-                  <!-- <li class="nav-item">
-                     <a href="files.html" class="nav-link">
-                        <img src="{{asset('assets/img/file.png')}}" width="30">
-                        <p>
-                           Files
-                        </p>
-                     </a>
-                  </li> -->
                   <!-- <li class="nav-item">
                      <a href="#" class="nav-link">
                         <img src="{{asset('assets/img/commit.png')}}" width="30">

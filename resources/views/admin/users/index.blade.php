@@ -46,7 +46,7 @@
                                  <p class="info">Email: {{$user->email}}<b></b></p>
                                  <p class="info">Password: <b></b></p>
                               </td>
-                              <td><span class="badge bg-success">Activated</span></td>
+                              <td><span class="badge bg-success">Active</span></td>
                               <td class="text-center">
                                  <a class="btn btn-sm btn-success" href="#" data-toggle="modal" data-target="#edit"><i
                                        class="fa fa-user-edit"></i> Update</a>
@@ -82,7 +82,8 @@
       <div class="modal-dialog modal-dialog-centered modal-lg">
          <div class="modal-content">
             <div class="modal-body text-center">
-               <form>
+               <form method="POST" action="{{ route('register.custom') }}">
+                  @csrf
                   <div class="card-body">
                      <div class="row">
                         <div class="col-md-12">

@@ -56,7 +56,7 @@
                               <h5>Number of Users</h5>
                            </span>
                            <span class="info-box-number">
-                              <h2>8</h2>
+                              <h2>{{$users}}</h2>
                            </span>
                         </div>
                      </div>

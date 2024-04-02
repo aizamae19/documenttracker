@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class AdminController extends Controller
 {
@@ -18,7 +19,8 @@ class AdminController extends Controller
         if (Auth::check()) {
             $user = Auth::user();
 
-            return view('admin.dashboard.index');
+            $users = User::count();
+            return view('admin.dashboard.index', compact('users'));
         }
     }
 }

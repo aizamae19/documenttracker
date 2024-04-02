@@ -29,29 +29,33 @@
                            <tr>
                               <th>Full Name</th>
                               <th>Category</th>
-                              <th>Codename</th>
+                              <th>Username</th>
                               <th>Account</th>
                               <th>Status</th>
                               <th class="text-center">Action</th>
                            </tr>
                         </thead>
                         <tbody>
+                           @if(isset($users))
+                           @foreach($users as $user)
                            <tr>
-                              <td>John Doe</td>
-                              <td>Admin</td>
-                              <td>john38</td>
+                              <td>{{$user->name}}</td>
+                              <td>{{$user->type}}</td>
+                              <td>{{$user->username}}</td>
                               <td>
-                                 <p class="info">Username: <b>john</b></p>
-                                 <p class="info">Password: <b>***********</b></p>
+                                 <p class="info">Email: {{$user->email}}<b></b></p>
+                                 <p class="info">Password: <b></b></p>
                               </td>
-                              <td><span class="badge bg-success">activated</span></td>
+                              <td><span class="badge bg-success">Activated</span></td>
                               <td class="text-center">
                                  <a class="btn btn-sm btn-success" href="#" data-toggle="modal" data-target="#edit"><i
-                                       class="fa fa-user-edit"></i> update</a>
+                                       class="fa fa-user-edit"></i> Update</a>
                                  <a class="btn btn-sm btn-danger" href="#" data-toggle="modal" data-target="#delete"><i
-                                       class="fa fa-trash-alt"></i> delete</a>
+                                       class="fa fa-trash-alt"></i> Delete</a>
                               </td>
                            </tr>
+                           @endforeach
+                           @endif
                         </tbody>
                      </table>
                   </div>
@@ -83,7 +87,7 @@
                      <div class="row">
                         <div class="col-md-12">
                            <div class="card-header">
-                              <h5><img src="../asset/img/users.png" width="40"> User Information</h5>
+                              <h5><img src="{{asset('assets/img/users.png')}}" width="40"> User Information</h5>
                            </div>
                            <div class="row">
                               <div class="col-md-4">
@@ -152,13 +156,19 @@
                               <h5><img src="{{asset('assets/img/users.png')}}" width="40"> User Information</h5>
                            </div>
                            <div class="row">
-                              <div class="col-md-6">
+                              <div class="col-md-4">
                                  <div class="form-group">
                                     <label class="float-left">Full Name</label>
                                     <input type="text" class="form-control" name="name" placeholder="Full Name">
                                  </div>
                               </div>
-                              <div class="col-md-6">
+                              <div class="col-md-4">
+                                 <div class="form-group">
+                                    <label class="float-left">Email</label>
+                                    <input type="email" class="form-control" name="email" placeholder="mail@gmail.com">
+                                 </div>
+                              </div>
+                              <div class="col-md-4">
                                  <div class="form-group">
                                     <label class="float-left">Category</label>
                                     <select name="type" class="form-control">
@@ -167,13 +177,13 @@
                                     </select>
                                  </div>
                               </div>
-                              <div class="col-md-6">
+                              <div class="col-md-4">
                                  <div class="form-group">
                                     <label class="float-left">Username</label>
                                     <input type="text" name="username" class="form-control" placeholder="Username">
                                  </div>
                               </div>
-                              <div class="col-md-6">
+                              <div class="col-md-4">
                                  <div class="form-group">
                                     <label class="float-left">Password</label>
                                     <input type="password" name="password" class="form-control" placeholder="**********">
@@ -184,7 +194,7 @@
                      </div>
                   </div>
                   <div class="card-footer">
-                     <a href="#" class="btn btn-danger" data-dismiss="modal">Cancel</a>
+                     <a href="{{ route('usersdashboard') }}" class="btn btn-danger" data-dismiss="modal">Cancel</a>
                      <button type="submit" class="btn btn-info">Save</button>
                   </div>
                </form>

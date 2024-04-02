@@ -75,7 +75,7 @@ class CustomAuthController extends Controller
             'role_name' =>$user->name,
         ]);
 
-        return redirect("/login")->with('success', 'You have signed in');
+        return redirect("/admin/users")->with('success', 'You have signed in');
     }
 
     public function create(array $data)

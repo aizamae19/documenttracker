@@ -39,7 +39,7 @@
                         </thead>
                         <tbody>
                            <tr>
-                              <td><img src="../asset/img/docx.png" width="35"></td>
+                              <td><img src="{{asset('assets/img/docx.png')}}" width="35"></td>
                               <td>File-1</td>
                               <td>CATEGORY-1</td>
                               <td>Description</td>
@@ -54,7 +54,7 @@
                               </td>
                            </tr>
                            <tr>
-                              <td><img src="../asset/img/xlsx.png" width="35"></td>
+                              <td><img src="{{asset('assets/img/xlsx.png')}}" width="35"></td>
                               <td>File-2</td>
                               <td>CATEGORY-2</td>
                               <td>Description</td>
@@ -69,7 +69,7 @@
                               </td>
                            </tr>
                            <tr>
-                              <td><img src="../asset/img/pptx.png" width="35"></td>
+                              <td><img src="{{asset('assets/img/pptx.png')}}" width="35"></td>
                               <td>File-3</td>
                               <td>CATEGORY-3</td>
                               <td>Description</td>
@@ -100,7 +100,7 @@
                      <div class="row">
                         <div class="col-md-12">
                            <div class="card-header">
-                              <h5><img src="../asset/img/file.png" width="40"> File Information</h5>
+                              <h5><img src="{{asset('assets/img/file.png')}}" width="40"> File Information</h5>
                            </div>
                            <div class="row">
                               <div class="col-md-6">
@@ -161,7 +161,7 @@
       <div class="modal-dialog modal-dialog-centered">
          <div class="modal-content">
             <div class="modal-body text-center">
-               <img src="../asset/img/sent.png" alt="" width="50" height="46">
+               <img src="{{asset('assets/img/sent.png')}}" alt="" width="50" height="46">
                <h3>Are you sure want to delete this File?</h3>
                <div class="m-t-20"> <a href="#" class="btn btn-white" data-dismiss="modal">Close</a>
                   <button type="submit" class="btn btn-danger">Delete</button>
@@ -179,7 +179,7 @@
                      <div class="row">
                         <div class="col-md-12">
                            <div class="card-header">
-                              <h5><img src="../asset/img/file.png" width="40"> File Information</h5>
+                              <h5><img src="{{asset('assets/img/file.png')}}" width="40"> File Information</h5>
                            </div>
                            <div class="row">
                               <div class="col-md-6">

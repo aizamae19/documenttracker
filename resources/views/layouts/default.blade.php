@@ -64,14 +64,14 @@
                         </p>
                      </a>
                   </li>
-                  <li class="nav-item">
+                  <!-- <li class="nav-item">
                      <a href="{{ route('categorydashboard') }}" class="nav-link">
                         <img src="{{asset('assets/img/category.png')}}" width="30">
                         <p>
                            Category
                         </p>
                      </a>
-                  </li>
+                  </li> -->
                   <li class="nav-item">
                      <a href="{{ route('filedashboard') }}" class="nav-link">
                         <img src="{{asset('assets/img/file.png')}}" width="30">

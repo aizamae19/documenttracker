@@ -1,6 +1,8 @@
 @extends('layouts.default')
 
 @section('content')
+
+   <link rel="stylesheet" href="{{asset('assets/css/list.css')}}">
          <div class="content-header">
             <div class="container-fluid">
                <div class="row mb-2">
@@ -40,17 +42,17 @@
                         <tbody>
                            <tr>
                               <td><img src="{{asset('assets/img/docx.png')}}" width="35"></td>
-                              <td>File-1</td>
-                              <td>CATEGORY-1</td>
-                              <td>Description</td>
-                              <td class="text-info">file.txt</td>
-                              <td>john doe</td>
-                              <td>08-02-21</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td class="text-info"></td>
+                              <td></td>
+                              <td></td>
                               <td class="text-center">
                                  <a class="btn btn-sm btn-success" href="#" data-toggle="modal" data-target="#edit"><i
-                                       class="fa fa-edit"></i> update</a>
+                                       class="fa fa-edit"></i> Update</a>
                                  <a class="btn btn-sm btn-danger" href="#" data-toggle="modal" data-target="#delete"><i
-                                       class="fa fa-trash-alt"></i> delete</a>
+                                       class="fa fa-trash-alt"></i> Delete</a>
                               </td>
                            </tr>
                         </tbody>
@@ -151,54 +153,29 @@
                            <div class="card-header">
                               <h5><img src="{{asset('assets/img/file.png')}}" width="40"> File Information</h5>
                            </div>
-                           <div class="row">
+                           <div class="body">
                               <div class="col-md-6">
-                                 <div class="form-group">
-                                    <label class="float-left">File Name</label>
-                                    <input type="text" class="form-control" placeholder="File Name">
-                                 </div>
-                              </div>
-                              <div class="col-md-6">
-                                 <div class="form-group">
-                                    <label class="float-left">Category Name</label>
-                                    <select class="form-control">
-                                       <option>Category-1</option>
-                                       <option>Category-2</option>
-                                       <option>Category-3</option>
-                                    </select>
-                                 </div>
-                              </div>
-                              <div class="col-md-12">
-                                 <div class="form-group">
-                                    <label class="float-left">Description</label>
-                                    <textarea class="form-control" placeholder="Description"></textarea>
-                                 </div>
-                              </div>
-                              <div class="col-md-6">
-                                 <div class="form-group">
-                                    <label class="float-left">Tags</label>
-                                    <input type="text" class="form-control" placeholder="Tags">
-                                 </div>
-                              </div>
-                              <div class="col-md-6">
-                                 <div class="form-group">
-                                    <label  class="float-left">Files</label>
-                                    <div class="input-group">
-                                       <div class="custom-file">
-                                          <input type="file" class="custom-file-input" id="exampleInputFile">
-                                          <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                                       </div>
+                              <ol class="olcards">
+                                 <li style="--cardColor:#fc374e">
+                                    <div class="content">
+                                       <div class="title"> <a href="">APPLICATION FOR LEAVE</a></div>
                                     </div>
-                                 </div>
+                                 </li>
+                                 <li style="--cardColor:#fc374e">
+                                    <div class="content">
+                                       <div class="title"><a href="">CERTIFICATE OF APPEARANCE</a></div>
+                                    </div>
+                                 </li>
+                                 <li style="--cardColor:#fc374e">
+                                    <div class="content">
+                                       <div class="title"><a href="">TRIP TICKET</a></div>
+                                    </div>
+                                 </li>
+                              </ol>
                               </div>
                            </div>
                         </div>
                      </div>
-                  </div>
-                  <!-- /.card-body -->
-                  <div class="card-footer">
-                     <a href="#" class="btn btn-danger" data-dismiss="modal">Cancel</a>
-                     <button type="submit" class="btn btn-info">Save</button>
                   </div>
                </form>
             </div>

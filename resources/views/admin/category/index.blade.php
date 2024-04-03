@@ -61,32 +61,12 @@
                            <td>Description</td>
                            <td class="text-center">
                                  <a class="btn btn-sm btn-success" href="#" data-toggle="modal" data-target="#edit"><i
-                                       class="fa fa-edit"></i> update</a>
+                                       class="fa fa-edit"></i> Update</a>
                                  <a class="btn btn-sm btn-danger" href="#" data-toggle="modal" data-target="#delete"><i
-                                       class="fa fa-trash-alt"></i> delete</a>
+                                       class="fa fa-trash-alt"></i> Delete</a>
                               </td>
                         </tr>
-                        <tr>
-                           <td>CATEGORY-2</td>
-                           <td>Description</td>
-                           <td class="text-center">
-                                 <a class="btn btn-sm btn-success" href="#" data-toggle="modal" data-target="#edit"><i
-                                       class="fa fa-edit"></i> update</a>
-                                 <a class="btn btn-sm btn-danger" href="#" data-toggle="modal" data-target="#delete"><i
-                                       class="fa fa-trash-alt"></i> delete</a>
-                              </td>
-                        </tr>
-                        <tr>
-                           <td>CATEGORY-3</td>
-                           <td>Description</td>
-                           <td class="text-center">
-                                 <a class="btn btn-sm btn-success" href="#" data-toggle="modal" data-target="#edit"><i
-                                       class="fa fa-edit"></i> update</a>
-                                 <a class="btn btn-sm btn-danger" href="#" data-toggle="modal" data-target="#delete"><i
-                                       class="fa fa-trash-alt"></i> delete</a>
-                              </td>
-                        </tr>
-                        </tbody>
+                     </tbody>
                   </table>
                </div>
             </div>

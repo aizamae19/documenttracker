@@ -19,7 +19,7 @@
          <section class="content">
             <div class="container-fluid">
                <div class="row">
-                  <div class="col-12 col-sm-8 col-md-8 offset-sm-2 offset-md-2 offset-lg-2">
+                  <!-- <div class="col-12 col-sm-8 col-md-8 offset-sm-2 offset-md-2 offset-lg-2">
                      <div class="info-box">
                         <span class="info-box-icon text-success"><img src="{{asset('assets/img/category.png')}}" width="50"></span>
 
@@ -32,7 +32,7 @@
                            </span>
                         </div>
                      </div>
-                  </div>
+                  </div> -->
                   <div class="col-12 col-sm-8 col-md-8 offset-sm-2 offset-md-2 offset-lg-2">
                      <div class="info-box">
                         <span class="info-box-icon text-info"><img src="{{asset('assets/img/file.png')}}" width="50"></span>

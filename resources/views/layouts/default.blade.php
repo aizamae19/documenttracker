@@ -56,7 +56,7 @@
       <aside class="main-sidebar sidebar-light-primary">
             <!-- Brand Logo -->
             <a href="" class="brand-link">
-         <img src="{{asset('assets/img/logo.png')}}" alt="DSMS Logo" width="200">
+         <img src="{{asset('assets/img/MaasinCity.png')}}" alt="DSMS Logo" width="60">
          </a>
          <div class="sidebar">
             <nav class="mt-2">

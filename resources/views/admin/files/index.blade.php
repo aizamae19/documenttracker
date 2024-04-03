@@ -84,8 +84,6 @@
                                     <label class="float-left">Category Name</label>
                                     <select class="form-control">
                                        <option>Category-1</option>
-                                       <option>Category-2</option>
-                                       <option>Category-3</option>
                                     </select>
                                  </div>
                               </div>
@@ -149,7 +147,7 @@
                      <div class="row">
                         <div class="col-md-12">
                            <div class="card-header">
-                              <h5><img src="{{asset('assets/img/file.png')}}" width="40"> File Information</h5>
+                              <h5><img src="{{asset('assets/img/file.png')}}" width="40"> Document Lists</h5>
                            </div>
                            <div class="row">
                               <div class="col-md-6">

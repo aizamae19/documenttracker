@@ -62,11 +62,11 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="card-header">
-                                                <p style="text-align: center;">6. DETAILS OF APPLICATION</p>
+                                                <label>6. DETAILS OF APPLICATION</label>
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="col-md-12">
                                         <a href="{{route('filedashboard')}}" class="btn btn-danger" data-dismiss="modal">Cancel</a>
                                         <button type="submit" class="btn btn-primary">Save</button>

@@ -1,8 +1,6 @@
 @extends('layouts.default')
 
 @section('content')
-
-   <link rel="stylesheet" href="{{asset('assets/css/list.css')}}">
          <div class="content-header">
             <div class="container-fluid">
                <div class="row mb-2">
@@ -41,7 +39,7 @@
                         </thead>
                         <tbody>
                            <tr>
-                              <td><img src="{{asset('assets/img/docx.png')}}" width="35"></td>
+                              <td></td>
                               <td></td>
                               <td></td>
                               <td></td>
@@ -153,25 +151,48 @@
                            <div class="card-header">
                               <h5><img src="{{asset('assets/img/file.png')}}" width="40"> File Information</h5>
                            </div>
-                           <div class="body">
+                           <div class="row">
                               <div class="col-md-6">
-                              <ol class="olcards">
-                                 <li style="--cardColor:#fc374e">
-                                    <div class="content">
-                                       <div class="title"> <a href="{{ route('applicationforleave')}}">APPLICATION FOR LEAVE</a></div>
+                                 <div class="form-group">
+                                    <div class="card-footer">
+                                       <button class="form-control"><a href="{{route('leaveform')}}">APPLICATION FOR LEAVE</a></button>
                                     </div>
-                                 </li>
-                                 <li style="--cardColor:#fc374e">
-                                    <div class="content">
-                                       <div class="title"><a href="">CERTIFICATE OF APPEARANCE</a></div>
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="form-group">
+                                    <div class="card-footer">
+                                       <button class="form-control"><a href="{{route('leaveform')}}">CERTIFICATE OF APPEARANCE</a></button>
                                     </div>
-                                 </li>
-                                 <li style="--cardColor:#fc374e">
-                                    <div class="content">
-                                       <div class="title"><a href="">TRIP TICKET</a></div>
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="form-group">
+                                    <div class="card-footer">
+                                       <button class="form-control"><a href="{{route('leaveform')}}">TRIP TICKET</a></button>
                                     </div>
-                                 </li>
-                              </ol>
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="form-group">
+                                    <div class="card-footer">
+                                       <button class="form-control"><a href="{{route('leaveform')}}">DISPATCH</a></button>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="form-group">
+                                    <div class="card-footer">
+                                       <button class="form-control"><a href="{{route('leaveform')}}">LOCATOR</a></button>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="form-group">
+                                    <div class="card-footer">
+                                       <button class="form-control"><a href="{{route('leaveform')}}">TRAVEL ORDER</a></button>
+                                    </div>
+                                 </div>
                               </div>
                            </div>
                         </div>

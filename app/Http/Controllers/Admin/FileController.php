@@ -12,8 +12,8 @@ class FileController extends Controller
         return view('admin.files.index');
     }
 
-    public function applicationforleave()
+    public function leaveform()
     {
-        return view('admin.files.applicationforleave');
+        return view('admin.files.leaveform');
     }
 }

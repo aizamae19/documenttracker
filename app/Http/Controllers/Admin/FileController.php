@@ -11,4 +11,9 @@ class FileController extends Controller
     {
         return view('admin.files.index');
     }
+
+    public function applicationforleave()
+    {
+        return view('admin.files.applicationforleave');
+    }
 }

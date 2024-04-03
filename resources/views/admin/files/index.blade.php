@@ -158,7 +158,7 @@
                               <ol class="olcards">
                                  <li style="--cardColor:#fc374e">
                                     <div class="content">
-                                       <div class="title"> <a href="">APPLICATION FOR LEAVE</a></div>
+                                       <div class="title"> <a href="{{ route('applicationforleave')}}">APPLICATION FOR LEAVE</a></div>
                                     </div>
                                  </li>
                                  <li style="--cardColor:#fc374e">

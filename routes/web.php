@@ -33,6 +33,9 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             #FILES
             Route::get('/admin/files', [App\Http\Controllers\Admin\FileController::class, 'file'])->name('filedashboard');
 
+            #LEAVEAPPLICATION
+            Route::get('/admin/files/applicationforleave', [App\Http\Controllers\Admin\FileController::class, 'applicationforleave'])->name('applicationforleave');
+
             #USERS
             Route::get('/admin/users', [App\Http\Controllers\Admin\UsersController::class, 'users'])->name('usersdashboard');
 

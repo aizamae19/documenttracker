@@ -110,7 +110,7 @@ activeSheetIndex = iSh;
 <td colspan='2' height='18' class='x32' style='mso-ignore:colspan;height:13.5pt;'></td>
 <td colspan='4' class='x41' style='mso-ignore:colspan;border-right:1px solid windowtext;'><font class="font0" style="text-decoration: none;">Mandatory/Forced Leave</font><font class="font16" style="text-decoration: none;">(Sec. 25, Rule XVI, Omnibus Rules Implementing E.O. No. 292)</font></td>
 <td colspan='2' class='x35' style='mso-ignore:colspan;'></td>
-<td colspan='2' class='x42' style='mso-ignore:colspan;'>Within the Philippines __________________________</td>
+<td colspan='2' class='x42' style='mso-ignore:colspan;'>Within the Philippines _________________________</td>
 <td colspan='6' style='mso-ignore:colspan;'></td>
  </tr>
  <tr height='7' style='mso-height-source:userset;height:5.25pt'>

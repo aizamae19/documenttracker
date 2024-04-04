@@ -153,42 +153,42 @@
                               <div class="col-md-6">
                                  <div class="form-group">
                                     <div class="card-footer">
-                                       <button class="form-control"><a href="{{route('leaveform')}}">APPLICATION FOR LEAVE</a></button>
+                                       <a href="{{ route('leaveform') }}" class="form-control">APPLICATION FOR LEAVE</a>
                                     </div>
                                  </div>
                               </div>
                               <div class="col-md-6">
                                  <div class="form-group">
                                     <div class="card-footer">
-                                       <button class="form-control"><a href="{{route('leaveform')}}">CERTIFICATE OF APPEARANCE</a></button>
+                                       <a href="{{route('leaveform')}}" class="form-control">CERTIFICATE OF APPEARANCE</a>
                                     </div>
                                  </div>
                               </div>
                               <div class="col-md-6">
                                  <div class="form-group">
                                     <div class="card-footer">
-                                       <button class="form-control"><a href="{{route('leaveform')}}">TRIP TICKET</a></button>
+                                       <a href="{{route('leaveform')}}" class="form-control">TRIP TICKET</a>
                                     </div>
                                  </div>
                               </div>
                               <div class="col-md-6">
                                  <div class="form-group">
                                     <div class="card-footer">
-                                       <button class="form-control"><a href="{{route('leaveform')}}">DISPATCH</a></button>
+                                       <a href="{{route('leaveform')}}" class="form-control">DISPATCH</a>
                                     </div>
                                  </div>
                               </div>
                               <div class="col-md-6">
                                  <div class="form-group">
                                     <div class="card-footer">
-                                       <button class="form-control"><a href="{{route('leaveform')}}">LOCATOR</a></button>
+                                       <a href="{{route('leaveform')}}" class="form-control">LOCATOR</a>
                                     </div>
                                  </div>
                               </div>
                               <div class="col-md-6">
                                  <div class="form-group">
                                     <div class="card-footer">
-                                       <button class="form-control"><a href="{{route('leaveform')}}">TRAVEL ORDER</a></button>
+                                       <a href="{{route('leaveform')}}" class="form-control">TRAVEL ORDER</a>
                                     </div>
                                  </div>
                               </div>

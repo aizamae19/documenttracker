@@ -57,6 +57,7 @@
             <!-- Brand Logo -->
             <a href="" class="brand-link">
          <img src="{{asset('assets/img/MaasinCity.png')}}" alt="DSMS Logo" width="60">
+         <img src="{{asset('assets/img/logo.png')}}" alt="DSMS Logo" width="190">
          </a>
          <div class="sidebar">
             <nav class="mt-2">

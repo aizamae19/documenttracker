@@ -29,10 +29,8 @@
                            <tr>
                               <th>File Type</th>
                               <th>File Name</th>
-                              <th>Category</th>
                               <th>Description</th>
-                              <th>File</th>
-                              <th>Uploaded by</th>
+                              <th>Added by</th>
                               <th>Date</th>
                               <th class="text-center">Action</th>
                            </tr>
@@ -41,11 +39,9 @@
                            <tr>
                               <td></td>
                               <td></td>
-                              <td></td>
-                              <td></td>
                               <td class="text-info"></td>
                               <td></td>
-                              <td></td>
+                              <td></td>                              
                               <td class="text-center">
                                  <a class="btn btn-sm btn-success" href="#" data-toggle="modal" data-target="#edit"><i
                                        class="fa fa-edit"></i> Update</a>
@@ -147,7 +143,7 @@
                      <div class="row">
                         <div class="col-md-12">
                            <div class="card-header">
-                              <h5><img src="{{asset('assets/img/file.png')}}" width="40"> Document Lists</h5>
+                              <h5><img src="{{asset('assets/img/file.png')}}" width="30"> Document Information</h5>
                            </div>
                            <div class="row">
                               <div class="col-md-6">
@@ -193,6 +189,10 @@
                                  </div>
                               </div>
                            </div>
+                           <div class="col-md-12">
+                              <a href="#" class="steps previous round">&#8249;</a>
+                              <a href="#" class="steps next round">&#8250;</a>
+                           </div>
                         </div>
                      </div>
                   </div>
@@ -200,4 +200,30 @@
             </div>
          </div>
       </div>
+      <style type="text/css">
+            .steps {
+               text-decoration: none;
+               display: inline-block;
+               padding: 8px 16px;
+            }
+
+            .steps:hover {
+               background-color: #ddd;
+               color: black;
+            }
+
+            .previous {
+               background-color: #f1f1f1;
+               color: black;
+            }
+
+            .next {
+               background-color: #17a2b8;
+               color: white;
+            }
+
+            .round {
+               border-radius: 50%;
+            }
+      </style>
 @endsection

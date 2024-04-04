@@ -35,6 +35,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
 
             #LEAVEAPPLICATION
             Route::get('/admin/files/leaveform', [App\Http\Controllers\Admin\FileController::class, 'leaveform'])->name('leaveform');
+            Route::post('/admin/files/leaveform/store', [App\Http\Controllers\Admin\FileController::class, 'storeleaveform'])->name('leaveform.store');
 
             #USERS
             Route::get('/admin/users', [App\Http\Controllers\Admin\UsersController::class, 'users'])->name('usersdashboard');

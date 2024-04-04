@@ -42,11 +42,6 @@
          </ul>
          <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-               <a class="nav-link" href="#" role="button">
-                  <img src="{{asset('assets/img/avatar.png')}}" class="img-circle" alt="User Image" width="40" style="margin-top: -8px;">
-               </a>
-            </li>
-            <li class="nav-item">
                <a class="nav-link" href="{{ route('signout') }}">
                   <i class="fas fa-sign-out-alt"></i>
                </a>
@@ -59,6 +54,15 @@
          <img src="{{asset('assets/img/MaasinCity.png')}}" alt="DSMS Logo" width="60">
          <img src="{{asset('assets/img/logo.png')}}" alt="DSMS Logo" width="190">
          </a>
+         <div class="brand-link">
+         <a href="">
+            <img src="{{asset('assets/img/avatar.png')}}" class="img-circle" alt="User Image"style="display: block;margin-left: auto; margin-right: auto; width: 30%;">
+         </a>
+            @if(Auth::check())
+               <p style="text-align: center;">{{ Auth::user()->name }}</p>
+            @endif
+         </div>
+                     
          <div class="sidebar">
             <nav class="mt-2">
                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"

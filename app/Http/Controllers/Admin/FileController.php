@@ -5,8 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Applicationforleave;
+use App\Models\Travelorder;
 use Illuminate\Support\Facades\Auth;
-use App\Models\User;
 
 class FileController extends Controller
 {
@@ -27,7 +27,7 @@ class FileController extends Controller
     }
 
     public function storeleaveform(Request $request){
-        $applicationforleavesave =new Applicationforleave();
+        $applicationforleavesave = new Applicationforleave();
         $applicationforleavesave->Office = $request->Office;
         $applicationforleavesave->Name = $request->Name;
         $applicationforleavesave->DateOfFiling = $request->DateOfFiling;
@@ -54,5 +54,10 @@ class FileController extends Controller
         if($applicationforleavesave->save()) {
             return redirect()->back();
         }
+    }
+
+    public function travelorder()
+    {
+        return view('admin.files.travelorder');
     }
 }

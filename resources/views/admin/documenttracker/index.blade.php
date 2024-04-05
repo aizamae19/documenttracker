@@ -1,8 +1,23 @@
 @extends('layouts.default')
 
 @section('content')
+<div class="content-header">
+            <div class="container-fluid">
+               <div class="row mb-2">
+                  <div class="col-sm-6">
+                        <h1 class="m-0"><img src="{{asset('assets/img/tracker.png')}}" width="40"> Document Tracker</h1>
+                  </div>
+                  <div class="col-sm-6">
+                     <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">Document Tracker</li>
+                     </ol>
+                  </div>
+               </div>
+            </div>
+         </div>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<div class="container py-5">
+<div class="container py-0">
   <div class="row">
     <div class="col-md-12 col-lg-12">
       <div id="tracking-pre"></div>

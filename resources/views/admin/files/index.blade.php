@@ -186,7 +186,7 @@
                                     <div class="col-md-6">
                                        <div class="form-group">
                                           <div class="card-footer">
-                                             <a href="{{route('leaveform')}}" class="form-control">TRAVEL ORDER</a>
+                                             <a href="{{route('travelorder')}}" class="form-control">TRAVEL ORDER</a>
                                           </div>
                                        </div>
                                     </div>
@@ -206,7 +206,10 @@
                                     <div class="col-md-12">
                                        <div class="form-group">
                                           <label class="float-left">Recipient</label>
-                                          
+                                          <select class="form-control" id="Recipient" name="Recipient">
+                                             <option value="volvo">SDSGDHDD</option>
+                                             <option value="saab">SDFDGF</option>
+                                          </select>
                                        </div>
                                     </div>
                                  </div>

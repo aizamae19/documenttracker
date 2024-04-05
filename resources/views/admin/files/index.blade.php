@@ -28,9 +28,9 @@
                         <thead>
                            <tr>
                               <th>File Type</th>
-                              <th>File Name</th>
                               <th>Description</th>
-                              <th>Added by</th>
+                              <th>Sender</th>
+                              <th>Recipient</th>
                               <th>Date</th>
                               <th class="text-center">Action</th>
                            </tr>
@@ -38,8 +38,8 @@
                         <tbody>
                            <tr>
                               <td></td>
-                              <td></td>
                               <td class="text-info"></td>
+                              <td></td>
                               <td></td>
                               <td></td>                              
                               <td class="text-center">
@@ -138,57 +138,87 @@
       <div class="modal-dialog modal-dialog-centered modal-lg">
          <div class="modal-content">
             <div class="modal-body text-center">
-               <form>
                   <div class="card-body">
                      <div class="row">
                         <div class="col-md-12">
                            <div class="card-header">
                               <h5><img src="{{asset('assets/img/file.png')}}" width="30"> Document Information</h5>
                            </div>
-                           <div class="row">
-                              <div class="col-md-6">
-                                 <div class="form-group">
-                                    <div class="card-footer">
-                                       <a href="{{ route('leaveform') }}" class="form-control">APPLICATION FOR LEAVE</a>
+                           <br>
+                           <div class="slide-v">
+                              <div class="slide">
+                                 <div class="row">
+                                    <div class="col-md-6">
+                                       <div class="form-group">
+                                          <div class="card-footer">
+                                             <a href="{{ route('leaveform') }}" class="form-control">APPLICATION FOR LEAVE</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div class="form-group">
+                                          <div class="card-footer">
+                                             <a href="{{route('leaveform')}}" class="form-control">CERTIFICATE OF APPEARANCE</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div class="form-group">
+                                          <div class="card-footer">
+                                             <a href="{{route('leaveform')}}" class="form-control">TRIP TICKET</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div class="form-group">
+                                          <div class="card-footer">
+                                             <a href="{{route('leaveform')}}" class="form-control">DISPATCH</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div class="form-group">
+                                          <div class="card-footer">
+                                             <a href="{{route('leaveform')}}" class="form-control">LOCATOR</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div class="form-group">
+                                          <div class="card-footer">
+                                             <a href="{{route('leaveform')}}" class="form-control">TRAVEL ORDER</a>
+                                          </div>
+                                       </div>
                                     </div>
                                  </div>
+                                 <div class="card-header">
                               </div>
-                              <div class="col-md-6">
-                                 <div class="form-group">
-                                    <div class="card-footer">
-                                       <a href="{{route('leaveform')}}" class="form-control">CERTIFICATE OF APPEARANCE</a>
+                              </div>
+                              <div class="slide">
+                                 <form method="POST" action="">
+                                 <div class="row">
+                                    <div class="col-md-12">
+                                       <div class="form-group">
+                                          <label class="float-left">Description</label>
+                                          <textarea class="form-control" placeholder="Description"></textarea>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                       <div class="form-group">
+                                          <label class="float-left">Recipient</label>
+                                          
+                                       </div>
                                     </div>
                                  </div>
-                              </div>
-                              <div class="col-md-6">
-                                 <div class="form-group">
-                                    <div class="card-footer">
-                                       <a href="{{route('leaveform')}}" class="form-control">TRIP TICKET</a>
-                                    </div>
+                                 <div class="card-footer">
+                                    <a href="#" class="btn btn-danger" data-dismiss="modal">Cancel</a>
+                                    <button type="submit" class="btn btn-info">Save</button>
+                                 </div> 
+                                 <div class="card-header">
                                  </div>
+                                 </form>
                               </div>
-                              <div class="col-md-6">
-                                 <div class="form-group">
-                                    <div class="card-footer">
-                                       <a href="{{route('leaveform')}}" class="form-control">DISPATCH</a>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-md-6">
-                                 <div class="form-group">
-                                    <div class="card-footer">
-                                       <a href="{{route('leaveform')}}" class="form-control">LOCATOR</a>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-md-6">
-                                 <div class="form-group">
-                                    <div class="card-footer">
-                                       <a href="{{route('leaveform')}}" class="form-control">TRAVEL ORDER</a>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
+                           <br>
                            <div class="col-md-12">
                               <a href="#" class="steps previous round">&#8249;</a>
                               <a href="#" class="steps next round">&#8250;</a>
@@ -196,7 +226,6 @@
                         </div>
                      </div>
                   </div>
-               </form>
             </div>
          </div>
       </div>
@@ -224,6 +253,13 @@
 
             .round {
                border-radius: 50%;
+            }
+            .slide-v {
+               margin: 0 auto;
+               -moz-user-select: none;
+               -webkit-user-select: none;
+               -ms-user-select: none;
+               user-select: none;
             }
       </style>
 @endsection

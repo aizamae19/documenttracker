@@ -6,27 +6,44 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Applicationforleave;
 use App\Models\Travelorder;
+use App\Models\File;
 use Illuminate\Support\Facades\Auth;
 
 class FileController extends Controller
 {
     public function file()
     {
-        return view('admin.files.index');
+        $files = File::get();
+        return view('admin.files.index', [
+            'files'=>$files
+        ]);
+
         if (Auth::check()) {
             $user = Auth::user();
         }
     }
 
-    public function leaveform()
+    public function storefile(Request $request)
+    {
+        $filesave = new File();
+        $filesave->FileType = $request->FileType;
+        $filesave->Description = $request->Description;
+        $filesave->Recipient = $request->Recipient;
+
+        if($filesave->save()) {
+            return redirect()->back();
+        }
+    }
+
+    public function applicationforleave()
     {
         $applicationforleaves = Applicationforleave::get();
-        return view('admin.files.leaveform', [
+        return view('admin.files.applicationforleave', [
             'applicationforleaves'=>$applicationforleaves
         ]);
     }
 
-    public function storeleaveform(Request $request){
+    public function storeapplicationforleave(Request $request){
         $applicationforleavesave = new Applicationforleave();
         $applicationforleavesave->Office = $request->Office;
         $applicationforleavesave->Name = $request->Name;
@@ -60,4 +77,6 @@ class FileController extends Controller
     {
         return view('admin.files.travelorder');
     }
+
+    
 }

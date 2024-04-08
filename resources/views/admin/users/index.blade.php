@@ -71,7 +71,7 @@
                <img src="{{ asset('assets/img/sent.png')}}" alt="" width="50" height="46">
                <h3>Are you sure want to delete this User?</h3>
                <div class="m-t-20">
-                  <a href="#" class="btn btn-white" data-dismiss="modal">Close</a>
+                  <a href="{{ route('usersdashboard') }}" class="btn btn-white" data-dismiss="modal">Close</a>
                   <button type="submit" class="btn btn-danger">Delete</button>
                </div>
             </div>
@@ -99,17 +99,17 @@
                               </div>
                               <div class="col-md-4">
                                  <div class="form-group">
+                                    <label class="float-left">Email</label>
+                                    <input type="text" class="form-control" placeholder="mail@gmail.com">
+                                 </div>
+                              </div>
+                              <div class="col-md-4">
+                                 <div class="form-group">
                                     <label class="float-left">Category</label>
                                     <select class="form-control">
                                        <option>Admin</option>
                                        <option>Staff</option>
                                     </select>
-                                 </div>
-                              </div>
-                              <div class="col-md-4">
-                                 <div class="form-group">
-                                    <label class="float-left">Code Name</label>
-                                    <input type="text" class="form-control" placeholder="Code Name">
                                  </div>
                               </div>
                               <div class="col-md-4">
@@ -124,19 +124,13 @@
                                     <input type="password" class="form-control" placeholder="**********">
                                  </div>
                               </div>
-                              <div class="col-md-4">
-                                 <div class="form-group">
-                                    <label class="float-left">Confirm Password</label>
-                                    <input type="password" class="form-control" placeholder="**********">
-                                 </div>
-                              </div>
                            </div>
                         </div>
                      </div>
                   </div>
                   <!-- /.card-body -->
                   <div class="card-footer">
-                     <a href="#" class="btn btn-danger" data-dismiss="modal">Cancel</a>
+                     <a href="{{ route('usersdashboard') }}" class="btn btn-danger" data-dismiss="modal">Cancel</a>
                      <button type="submit" class="btn btn-info">Save</button>
                   </div>
                </form>

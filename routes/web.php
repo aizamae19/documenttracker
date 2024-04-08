@@ -33,11 +33,12 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             #FILES
             Route::get('/admin/files', [App\Http\Controllers\Admin\FileController::class, 'file'])->name('filedashboard');
 
-            #LEAVEAPPLICATION
-            Route::get('/admin/files/leaveform', [App\Http\Controllers\Admin\FileController::class, 'leaveform'])->name('leaveform');
-            Route::post('/admin/files/leaveform/store', [App\Http\Controllers\Admin\FileController::class, 'storeleaveform'])->name('leaveform.store');
+            #APPLICATION FOR LEAVE
+            Route::get('/admin/files/applicationforleave', [App\Http\Controllers\Admin\FileController::class, 'applicationforleave'])->name('applicationforleave');
+            Route::post('/admin/files/applicationforleave/store', [App\Http\Controllers\Admin\FileController::class, 'applicationforleave'])->name('applicationforleave.store');
 
-            #LEAVEAPPLICATION
+
+            #TRAVEL ORDER
             Route::get('/admin/files/travelorder', [App\Http\Controllers\Admin\FileController::class, 'travelorder'])->name('travelorder');
             Route::post('/admin/files/travelorder/store', [App\Http\Controllers\Admin\FileController::class, 'storetravelorder'])->name('travelorder.store');
 

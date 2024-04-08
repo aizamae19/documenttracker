@@ -112,7 +112,7 @@
                   </div>
                   <!-- /.card-body -->
                   <div class="card-footer">
-                     <a href="#" class="btn btn-danger" data-dismiss="modal">Cancel</a>
+                     <a href="{{ route('filedashboard')}}" class="btn btn-danger" data-dismiss="modal">Cancel</a>
                      <button type="submit" class="btn btn-info">Save</button>
                   </div>
                </form>
@@ -145,41 +145,42 @@
                               <h5><img src="{{asset('assets/img/file.png')}}" width="30"> Document Information</h5>
                            </div>
                            <br>
+                           <form method="POST" action="">
                            <div class="slide-v">
                               <div class="slide">
                                  <div class="row">
                                     <div class="col-md-6">
                                        <div class="form-group">
                                           <div class="card-footer">
-                                             <a href="{{ route('leaveform') }}" class="form-control">APPLICATION FOR LEAVE</a>
+                                             <a href="{{ route('applicationforleave') }}" class="form-control">APPLICATION FOR LEAVE</a>
                                           </div>
                                        </div>
                                     </div>
                                     <div class="col-md-6">
                                        <div class="form-group">
                                           <div class="card-footer">
-                                             <a href="{{route('leaveform')}}" class="form-control">CERTIFICATE OF APPEARANCE</a>
+                                             <a href="" class="form-control">CERTIFICATE OF APPEARANCE</a>
                                           </div>
                                        </div>
                                     </div>
                                     <div class="col-md-6">
                                        <div class="form-group">
                                           <div class="card-footer">
-                                             <a href="{{route('leaveform')}}" class="form-control">TRIP TICKET</a>
+                                             <a href="" class="form-control">TRIP TICKET</a>
                                           </div>
                                        </div>
                                     </div>
                                     <div class="col-md-6">
                                        <div class="form-group">
                                           <div class="card-footer">
-                                             <a href="{{route('leaveform')}}" class="form-control">DISPATCH</a>
+                                             <a href="" class="form-control">DISPATCH</a>
                                           </div>
                                        </div>
                                     </div>
                                     <div class="col-md-6">
                                        <div class="form-group">
                                           <div class="card-footer">
-                                             <a href="{{route('leaveform')}}" class="form-control">LOCATOR</a>
+                                             <a href="" class="form-control">LOCATOR</a>
                                           </div>
                                        </div>
                                     </div>
@@ -195,19 +196,18 @@
                               </div>
                               </div>
                               <div class="slide">
-                                 <form method="POST" action="">
                                  <div class="row">
                                     <div class="col-md-12">
                                        <div class="form-group">
                                           <label class="float-left">Description</label>
-                                          <textarea class="form-control" placeholder="Description"></textarea>
+                                          <textarea name="Description" class="form-control" placeholder="Description"></textarea>
                                        </div>
                                     </div>
                                     <div class="col-md-12">
                                        <div class="form-group">
                                           <label class="float-left">Recipient</label>
-                                          <select class="form-control" id="Recipient" name="Recipient">
-                                             <option value="volvo">SDSGDHDD</option>
+                                          <select name="Recipient" class="form-control" id="Recipient" name="Recipient">
+                                             <option value="CITY MAYOR'S OFFICE">SDSGDHDD</option>
                                              <option value="saab">SDFDGF</option>
                                           </select>
                                        </div>

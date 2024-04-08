@@ -36,7 +36,7 @@
                                         <div class="col-md-8">
                                             <div class="form-group">
                                                 <p>2. NAME (Last) (First) (Middle)</p>
-                                                <input type="text" class="form-control" name="Name">                 
+                                                <input type="text" class="form-control" name="Name">
                                             </div>
                                         </div>
                                     </div>
@@ -50,13 +50,13 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <p>4. POSITION</p>
-                                                <input type="text" class="form-control" name="Position">                 
+                                                <input type="text" class="form-control" name="Position">           
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <p>5. SALARY</p>
-                                                <input type="text" class="form-control" name="Salary">                 
+                                                <input type="text" class="form-control" name="Salary">       
                                             </div>
                                         </div>
                                     </div>

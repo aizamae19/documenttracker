@@ -42,7 +42,7 @@
                               <td></td>                              
                               <td class="text-center">
                                  <a class="btn btn-sm btn-success" href="#" data-toggle="modal" data-target="#edit"><i
-                                       class="fa fa-edit"></i> Update</a>
+                                       class="fa fa-eye"></i> View</a>
                                  <a class="btn btn-sm btn-danger" href="#" data-toggle="modal" data-target="#delete"><i
                                        class="fa fa-trash-alt"></i> Delete</a>
                               </td>
@@ -53,69 +53,6 @@
                </div>
             </div>
          </section>
-      </div>
-   </div>
-   <div id="edit" class="modal animated rubberBand delete-modal" role="dialog">
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-         <div class="modal-content">
-            <div class="modal-body text-center">
-               <form>
-                  <div class="card-body">
-                     <div class="row">
-                        <div class="col-md-12">
-                           <div class="card-header">
-                              <h5><img src="{{asset('assets/img/file.png')}}" width="40"> File Information</h5>
-                           </div>
-                           <div class="row">
-                              <div class="col-md-6">
-                                 <div class="form-group">
-                                    <label class="float-left">File Name</label>
-                                    <input type="text" class="form-control" placeholder="File Name">
-                                 </div>
-                              </div>
-                              <div class="col-md-6">
-                                 <div class="form-group">
-                                    <label class="float-left">Category Name</label>
-                                    <select class="form-control">
-                                       <option>Category-1</option>
-                                    </select>
-                                 </div>
-                              </div>
-                              <div class="col-md-12">
-                                 <div class="form-group">
-                                    <label class="float-left">Description</label>
-                                    <textarea class="form-control" placeholder="Description"></textarea>
-                                 </div>
-                              </div>
-                              <div class="col-md-6">
-                                 <div class="form-group">
-                                    <label class="float-left">Tags</label>
-                                    <input type="text" class="form-control" placeholder="Tags">
-                                 </div>
-                              </div>
-                              <div class="col-md-6">
-                                 <div class="form-group">
-                                    <label  class="float-left">Files</label>
-                                    <div class="input-group">
-                                       <div class="custom-file">
-                                          <input type="file" class="custom-file-input" id="exampleInputFile">
-                                          <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- /.card-body -->
-                  <div class="card-footer">
-                     <a href="{{ route('filedashboard')}}" class="btn btn-danger" data-dismiss="modal">Cancel</a>
-                     <button type="submit" class="btn btn-info">Save</button>
-                  </div>
-               </form>
-            </div>
-         </div>
       </div>
    </div>
    
@@ -201,8 +138,6 @@
                                  <div class="card-footer">
                                     <a href="#" class="btn btn-danger" data-dismiss="modal">Cancel</a>
                                     <button type="submit" class="btn btn-info">Save</button>
-                                 </div> 
-                                 <div class="card-header">
                                  </div>
                                  </form>
                               </div>

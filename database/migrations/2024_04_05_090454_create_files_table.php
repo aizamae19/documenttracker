@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('FileType');
             $table->string('Description');
-            $table->string('Recipient');
             $table->timestamps();
         });
     }

@@ -18,9 +18,6 @@ class FileController extends Controller
             'files'=>$files
         ]);
 
-        if (Auth::check()) {
-            $user = Auth::user();
-        }
     }
 
     public function storefile(Request $request)
@@ -28,7 +25,6 @@ class FileController extends Controller
         $filesave = new File();
         $filesave->FileType = $request->FileType;
         $filesave->Description = $request->Description;
-        $filesave->Recipient = $request->Recipient;
 
         if($filesave->save()) {
             return redirect()->back();

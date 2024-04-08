@@ -74,5 +74,8 @@ class FileController extends Controller
         return view('admin.files.travelorder');
     }
 
-    
+    public function certificateofappearance()
+    {
+        return view('admin.files.certificateofappearance');
+    }
 }

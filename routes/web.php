@@ -35,12 +35,16 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
 
             #APPLICATION FOR LEAVE
             Route::get('/admin/files/applicationforleave', [App\Http\Controllers\Admin\FileController::class, 'applicationforleave'])->name('applicationforleave');
-            Route::post('/admin/files/applicationforleave/store', [App\Http\Controllers\Admin\FileController::class, 'applicationforleave'])->name('applicationforleave.store');
+            Route::post('/admin/files/applicationforleave/store', [App\Http\Controllers\Admin\FileController::class, 'storeapplicationforleave'])->name('applicationforleave.store');
 
 
             #TRAVEL ORDER
             Route::get('/admin/files/travelorder', [App\Http\Controllers\Admin\FileController::class, 'travelorder'])->name('travelorder');
             Route::post('/admin/files/travelorder/store', [App\Http\Controllers\Admin\FileController::class, 'storetravelorder'])->name('travelorder.store');
+
+            #CERTIFICATE OF APPEARANCE
+            Route::get('/admin/files/certificateofappearance', [App\Http\Controllers\Admin\FileController::class, 'certificateofappearance'])->name('certificateofappearance');
+            Route::post('/admin/files/certificateofappearance/store', [App\Http\Controllers\Admin\FileController::class, 'storecertificateofappearance'])->name('certificateofappearance.store');
 
             #USERS
             Route::get('/admin/users', [App\Http\Controllers\Admin\UsersController::class, 'users'])->name('usersdashboard');

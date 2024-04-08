@@ -94,7 +94,7 @@
                                     <div class="col-md-6">
                                        <div class="form-group">
                                           <div class="card-footer">
-                                             <a href="" class="form-control">CERTIFICATE OF APPEARANCE</a>
+                                             <a href="{{ route('certificateofappearance', ['FileType' => 'CERTIFICATE OF APPEARANCE'] )}}" class="form-control">CERTIFICATE OF APPEARANCE</a>
                                           </div>
                                        </div>
                                     </div>
@@ -147,37 +147,4 @@
             </div>
          </div>
       </div>
-      <style type="text/css">
-            .steps {
-               text-decoration: none;
-               display: inline-block;
-               padding: 8px 16px;
-            }
-
-            .steps:hover {
-               background-color: #ddd;
-               color: black;
-            }
-
-            .previous {
-               background-color: #f1f1f1;
-               color: black;
-            }
-
-            .next {
-               background-color: #17a2b8;
-               color: white;
-            }
-
-            .round {
-               border-radius: 50%;
-            }
-            .slide-v {
-               margin: 0 auto;
-               -moz-user-select: none;
-               -webkit-user-select: none;
-               -ms-user-select: none;
-               user-select: none;
-            }
-      </style>
 @endsection

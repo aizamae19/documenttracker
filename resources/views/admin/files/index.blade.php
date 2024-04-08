@@ -27,10 +27,9 @@
                      <table id="example1" class="table table-hover">
                         <thead>
                            <tr>
+                              <th>Series Number</th>
                               <th>File Type</th>
                               <th>Description</th>
-                              <th>Sender</th>
-                              <th>Recipient</th>
                               <th>Date</th>
                               <th class="text-center">Action</th>
                            </tr>
@@ -38,9 +37,8 @@
                         <tbody>
                            <tr>
                               <td></td>
+                              <td></td>
                               <td class="text-info"></td>
-                              <td></td>
-                              <td></td>
                               <td></td>                              
                               <td class="text-center">
                                  <a class="btn btn-sm btn-success" href="#" data-toggle="modal" data-target="#edit"><i
@@ -152,7 +150,7 @@
                                     <div class="col-md-6">
                                        <div class="form-group">
                                           <div class="card-footer">
-                                             <a href="{{ route('applicationforleave') }}" class="form-control">APPLICATION FOR LEAVE</a>
+                                             <a href="{{ route('applicationforleave', ['FileType' => 'APPLICATION FOR LEAVE']) }}" class="form-control">APPLICATION FOR LEAVE</a>
                                           </div>
                                        </div>
                                     </div>
@@ -187,29 +185,16 @@
                                     <div class="col-md-6">
                                        <div class="form-group">
                                           <div class="card-footer">
-                                             <a href="{{route('travelorder')}}" class="form-control">TRAVEL ORDER</a>
+                                             <a href="{{ route('travelorder', ['FileType' => 'TRAVEL ORDER'] )}}" class="form-control">TRAVEL ORDER</a>
                                           </div>
                                        </div>
                                     </div>
                                  </div>
-                                 <div class="card-header">
-                              </div>
-                              </div>
-                              <div class="slide">
                                  <div class="row">
                                     <div class="col-md-12">
                                        <div class="form-group">
                                           <label class="float-left">Description</label>
                                           <textarea name="Description" class="form-control" placeholder="Description"></textarea>
-                                       </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                       <div class="form-group">
-                                          <label class="float-left">Recipient</label>
-                                          <select name="Recipient" class="form-control" id="Recipient" name="Recipient">
-                                             <option value="CITY MAYOR'S OFFICE">SDSGDHDD</option>
-                                             <option value="saab">SDFDGF</option>
-                                          </select>
                                        </div>
                                     </div>
                                  </div>
@@ -221,11 +206,6 @@
                                  </div>
                                  </form>
                               </div>
-                           <br>
-                           <div class="col-md-12">
-                              <a href="#" class="steps previous round">&#8249;</a>
-                              <a href="#" class="steps next round">&#8250;</a>
-                           </div>
                         </div>
                      </div>
                   </div>

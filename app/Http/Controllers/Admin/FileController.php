@@ -38,7 +38,7 @@ class FileController extends Controller
     public function applicationforleave()
     {
         $applicationforleaves = Applicationforleave::get();
-        return view('admin.files.applicationforleave', [
+        return view('admin.files.leaveform', [
             'applicationforleaves'=>$applicationforleaves
         ]);
     }

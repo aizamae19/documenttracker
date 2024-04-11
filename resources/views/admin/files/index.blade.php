@@ -89,21 +89,21 @@
                                     <div class="col-md-6">
                                        <div class="form-group">
                                           <div class="card-footer">
-                                             <a href="{{ route('applicationforleave', ['FileType' => 'APPLICATION FOR LEAVE']) }}" class="form-control">APPLICATION FOR LEAVE</a>
+                                             <a href="{{ route('applicationforleave') }}" class="form-control">APPLICATION FOR LEAVE</a>
                                           </div>
                                        </div>
                                     </div>
                                     <div class="col-md-6">
                                        <div class="form-group">
                                           <div class="card-footer">
-                                             <a href="{{ route('certificateofappearance', ['FileType' => 'CERTIFICATE OF APPEARANCE'] )}}" class="form-control">CERTIFICATE OF APPEARANCE</a>
+                                             <a href="{{ route('certificateofappearance')}}" class="form-control">CERTIFICATE OF APPEARANCE</a>
                                           </div>
                                        </div>
                                     </div>
                                     <div class="col-md-6">
                                        <div class="form-group">
                                           <div class="card-footer">
-                                             <a href="{{ route('tripticket', ['FileType' => 'TRIP TICKET'] )}}" class="form-control">TRIP TICKET</a>
+                                             <a href="{{ route('tripticket')}}" class="form-control">TRIP TICKET</a>
                                           </div>
                                        </div>
                                     </div>
@@ -117,14 +117,14 @@
                                     <div class="col-md-6">
                                        <div class="form-group">
                                           <div class="card-footer">
-                                             <a href="{{ route('locator', ['FileType' => 'LOCATOR'] )}}" class="form-control">LOCATOR</a>
+                                             <a href="{{ route('locator')}}" class="form-control">LOCATOR</a>
                                           </div>
                                        </div>
                                     </div>
                                     <div class="col-md-6">
                                        <div class="form-group">
                                           <div class="card-footer">
-                                             <a href="{{ route('travelorder', ['FileType' => 'TRAVEL ORDER'] )}}" class="form-control">TRAVEL ORDER</a>
+                                             <a href="{{ route('travelorder')}}" class="form-control">TRAVEL ORDER</a>
                                           </div>
                                        </div>
                                     </div>

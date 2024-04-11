@@ -38,6 +38,14 @@ class FileController extends Controller
         ]);
     }
 
+    // public function viewapplicationforleave(Request $request){
+    //     $applicationforleaves=Applicationforleave::where('id',$request->id)->first();
+
+    //     return view('admin.files.applicationforleave',[
+    //             'applicationforleaves'=>$applicationforleaves
+    //     ]);
+    // }
+
     public function storeapplicationforleave(Request $request){
         $applicationforleavesave = new Applicationforleave();
         $applicationforleavesave->Office = $request->Office;

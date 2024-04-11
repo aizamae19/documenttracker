@@ -48,9 +48,10 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             #USERS
             Route::get('/admin/users', [App\Http\Controllers\Admin\UsersController::class, 'users'])->name('usersdashboard');
 
-            // //Delete
-            // Route::get('/admin/users/delete/{id}', [App\Http\Controllers\Admin\UsersController::class, 'deleteusers'])->name('users.delete');
-            // Route::post('/admin/users/delete', [App\Http\Controllers\Admin\UsersController::class, 'deleteusers'])->name('users.delete');
+            // //View
+            // Route::get('/admin/files/index/applicationforleave/{id}', [App\Http\Controllers\Admin\FileController::class, 'viewapplicationforleave'])->name('applicationforleave.view');
+            // Route::post('/admin/files/index/applicationforleave/view', [App\Http\Controllers\Admin\FileController::class, 'viewapplicationforleave'])->name('applicationforleave.edit.view');
+
 
             #ADD USER
             Route::get('/admin/users/add', [CustomAuthController::class, 'register'])->name('register');

@@ -39,10 +39,10 @@
 
                         <div class="info-box-content">
                            <span class="info-box-text">
-                              <h5>Number of Files</h5>
+                              <h5>Total Number of Files</h5>
                            </span>
                            <span class="info-box-number">
-                              <h2></h2>
+                              <h2>{{$files}}</h2>
                            </span>
                         </div>
                      </div>

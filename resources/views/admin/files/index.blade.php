@@ -34,17 +34,21 @@
                            </tr>
                         </thead>
                         <tbody>
+                           @if(isset($files))
+                           @foreach($files as $file)
                            <tr>
-                              <td></td>
-                              <td></td>
-                              <td></td>                              
+                              <td>{{$file->SeriesNumber}}</td>
+                              <td>{{$file->FileType}}</td>
+                              <td>{{$file->created_at}}</td>                           
                               <td class="text-center">
-                                 <a class="btn btn-sm btn-success" href="#" data-toggle="modal" data-target="#edit"><i
+                                 <a class="btn btn-sm btn-success" href="#" data-toggle="modal" data-target="#view"><i
                                        class="fa fa-eye"></i> View</a>
                                  <a class="btn btn-sm btn-danger" href="#" data-toggle="modal" data-target="#delete"><i
                                        class="fa fa-trash-alt"></i> Delete</a>
                               </td>
                            </tr>
+                           @endforeach
+                        @endif  
                         </tbody>
                      </table>
                   </div>
@@ -67,6 +71,7 @@
          </div>
       </div>
    </div>
+   
    <div id="add" class="modal animated rubberBand delete-modal" role="dialog">
       <div class="modal-dialog modal-dialog-centered modal-lg">
          <div class="modal-content">
@@ -78,9 +83,7 @@
                               <h5><img src="{{asset('assets/img/file.png')}}" width="30"> Document Information</h5>
                            </div>
                            <br>
-                           <form method="POST" action="">
                            <div class="slide-v">
-                              @csrf
                               <div class="slide">
                                  <div class="row">
                                     <div class="col-md-6">
@@ -126,7 +129,6 @@
                                        </div>
                                     </div>
                                  </div>
-                                 </form>
                               </div>
                         </div>
                      </div>

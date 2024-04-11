@@ -97,4 +97,14 @@ class FileController extends Controller
     {
         return view('admin.files.certificateofappearance');
     }
+
+    public function tripticket()
+    {
+        return view('admin.files.tripticket');
+    }
+
+    public function locator()
+    {
+        return view('admin.files.locator');
+    }
 }

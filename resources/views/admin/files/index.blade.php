@@ -103,7 +103,7 @@
                                     <div class="col-md-6">
                                        <div class="form-group">
                                           <div class="card-footer">
-                                             <a href="" class="form-control">TRIP TICKET</a>
+                                             <a href="{{ route('tripticket', ['FileType' => 'TRIP TICKET'] )}}" class="form-control">TRIP TICKET</a>
                                           </div>
                                        </div>
                                     </div>
@@ -117,7 +117,7 @@
                                     <div class="col-md-6">
                                        <div class="form-group">
                                           <div class="card-footer">
-                                             <a href="" class="form-control">LOCATOR</a>
+                                             <a href="{{ route('locator', ['FileType' => 'LOCATOR'] )}}" class="form-control">LOCATOR</a>
                                           </div>
                                        </div>
                                     </div>

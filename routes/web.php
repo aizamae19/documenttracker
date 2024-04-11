@@ -32,6 +32,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
 
             #FILES
             Route::get('/admin/files', [App\Http\Controllers\Admin\FileController::class, 'file'])->name('filedashboard');
+            Route::post('/admin/files/store', [App\Http\Controllers\Admin\FileController::class, 'storefile'])->name('storefile');
 
             #APPLICATION FOR LEAVE
             Route::get('/admin/files/applicationforleave', [App\Http\Controllers\Admin\FileController::class, 'applicationforleave'])->name('applicationforleave');
@@ -44,6 +45,14 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             #CERTIFICATE OF APPEARANCE
             Route::get('/admin/files/certificateofappearance', [App\Http\Controllers\Admin\FileController::class, 'certificateofappearance'])->name('certificateofappearance');
             Route::post('/admin/files/certificateofappearance/store', [App\Http\Controllers\Admin\FileController::class, 'storecertificateofappearance'])->name('certificateofappearance.store');
+
+            #TRIP TICKET
+            Route::get('/admin/files/tripticket', [App\Http\Controllers\Admin\FileController::class, 'tripticket'])->name('tripticket');
+            Route::post('/admin/files/tripticket/store', [App\Http\Controllers\Admin\FileController::class, 'storetripticket'])->name('tripticket.store');
+
+            #LOCATOR
+            Route::get('/admin/files/locator', [App\Http\Controllers\Admin\FileController::class, 'locator'])->name('locator');
+            Route::post('/admin/files/locator/store', [App\Http\Controllers\Admin\FileController::class, 'storelocator'])->name('locator.store');
 
             #USERS
             Route::get('/admin/users', [App\Http\Controllers\Admin\UsersController::class, 'users'])->name('usersdashboard');

@@ -6,8 +6,8 @@
       <div class="container-login100" style="background-image: url('assets/img/bg-01.jpg');">
          <div class="wrap-login100">
             <form class="login100-form validate-form" method="post" action="{{ route('login.custom') }}">
-               <span class="login100-form-title p-b-34 p-t-27">
-                  Document Tracking System
+               <span class="login100-form-title p-b-10 p-t-10">
+                  <img src="{{asset('assets/img/dts.png')}}" width="400" height="115">
                </span>
                @csrf
                <div class="wrap-input100 validate-input" data-validate = "Enter username">

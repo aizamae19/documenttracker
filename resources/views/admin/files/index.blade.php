@@ -29,7 +29,6 @@
                            <tr>
                               <th>Series Number</th>
                               <th>File Type</th>
-                              <th>Description</th>
                               <th>Date</th>
                               <th class="text-center">Action</th>
                            </tr>
@@ -38,7 +37,6 @@
                            <tr>
                               <td></td>
                               <td></td>
-                              <td class="text-info"></td>
                               <td></td>                              
                               <td class="text-center">
                                  <a class="btn btn-sm btn-success" href="#" data-toggle="modal" data-target="#edit"><i
@@ -61,7 +59,7 @@
          <div class="modal-content">
             <div class="modal-body text-center">
                <img src="{{asset('assets/img/sent.png')}}" alt="" width="50" height="46">
-               <h3>Are you sure want to delete this File?</h3>
+               <h3>Are you sure want to delete this file?</h3>
                <div class="m-t-20"> <a href="#" class="btn btn-white" data-dismiss="modal">Close</a>
                   <button type="submit" class="btn btn-danger">Delete</button>
                </div>
@@ -82,6 +80,7 @@
                            <br>
                            <form method="POST" action="">
                            <div class="slide-v">
+                              @csrf
                               <div class="slide">
                                  <div class="row">
                                     <div class="col-md-6">
@@ -126,18 +125,6 @@
                                           </div>
                                        </div>
                                     </div>
-                                 </div>
-                                 <div class="row">
-                                    <div class="col-md-12">
-                                       <div class="form-group">
-                                          <label class="float-left">Description</label>
-                                          <textarea name="Description" class="form-control" placeholder="Description"></textarea>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="card-footer">
-                                    <a href="#" class="btn btn-danger" data-dismiss="modal">Cancel</a>
-                                    <button type="submit" class="btn btn-info">Save</button>
                                  </div>
                                  </form>
                               </div>

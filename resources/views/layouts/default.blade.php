@@ -91,14 +91,14 @@
                         </p>
                      </a>
                   </li>
-                  <li class="nav-item">
+                  <!-- <li class="nav-item">
                      <a href="{{ route('documenttrackerdashboard') }}" class="nav-link">
                         <img src="{{asset('assets/img/tracker.png')}}" width="30">
                         <p>
                            Document Tracker
                         </p>
                      </a>
-                  </li>
+                  </li> -->
                   <!-- <li class="nav-item">
                      <a href="#" class="nav-link">
                         <img src="{{asset('assets/img/commit.png')}}" width="30">

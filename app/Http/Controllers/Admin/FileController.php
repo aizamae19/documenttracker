@@ -17,14 +17,13 @@ class FileController extends Controller
         return view('admin.files.index', [
             'files'=>$files
         ]);
-
     }
 
     public function storefile(Request $request)
     {
         $filesave = new File();
+        $filesave->SeriesNumber = $request->SeriesNumber;
         $filesave->FileType = $request->FileType;
-        $filesave->Description = $request->Description;
 
         if($filesave->save()) {
             return redirect()->back();
@@ -64,8 +63,20 @@ class FileController extends Controller
         $applicationforleavesave->OthersSpecify = $request->OthersSpecify;
         $applicationforleavesave->DisapprovedDueTo = $request->DisapprovedDueTo;
         
-        if($applicationforleavesave->save()) {
-            return redirect()->back();
+        $fields = ['TypeOfLeave', 'DetailsOfLeave', 'Commutation', 'Recommendation'];
+
+        foreach ($fields as $field) {
+            if ($request->has($field)) {
+        
+                $values = implode(',', $request->input($field));
+                $applicationforleavesave->$field = $values;
+            }
+        }
+
+        if ($applicationforleavesave->save()) {
+            return redirect()->back()->with('Success', 'Application for leave saved successfully.');
+        } else {
+            return redirect()->back()->with('Error', 'Failed to save application for leave.');
         }
     }
 

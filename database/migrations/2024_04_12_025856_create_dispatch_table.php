@@ -12,13 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('dispatch', function (Blueprint $table) {
-                $table->id();
+             $table->id();
                 $table->string('DispatchNumber');
                 $table->integer('TripTicketNumber');
                 $table->string('Date');
                 $table->string('Name');
                 $table->string('Address');
-                $table->integer('ContactNumber');
+                $table->string('ContactNumber');
                 $table->string('OfficeName');
                 $table->string('DescriptionofDispatch')->nullable();
                 $table->string('PlateNumber')->nullable();

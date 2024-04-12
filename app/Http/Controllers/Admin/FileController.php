@@ -39,6 +39,10 @@ class FileController extends Controller
             return redirect()->back()->withErrors('Successfully Saved!');
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/master
     }
 
     public function applicationforleave(Request $request){
@@ -47,7 +51,11 @@ class FileController extends Controller
         return view('admin.files.leaveform', [
             'applicationforleaves'=>$applicationforleaves
         ]);
+<<<<<<< HEAD
 =======
+>>>>>>> origin/master
+=======
+>>>>>>> origin/main
 >>>>>>> origin/master
     }
     //     $applicationforleaves = Applicationforleave::get();

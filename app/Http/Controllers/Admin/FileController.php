@@ -14,9 +14,6 @@ class FileController extends Controller
     public function file()
     {
         return view('admin.files.index');
-        if (Auth::check()) {
-            $user = Auth::user();
-        }
     }
 
     public function saveDispatch (Request $request)
@@ -38,31 +35,11 @@ class FileController extends Controller
         if ($Dispatchsave->save()) {
             return redirect()->back()->withErrors('Successfully Saved!');
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/master
     }
 
-    public function applicationforleave(Request $request){
-        
-        $applicationforleaves = Applicationforleave::get();
-        return view('admin.files.leaveform', [
-            'applicationforleaves'=>$applicationforleaves
-        ]);
-<<<<<<< HEAD
-=======
->>>>>>> origin/master
-=======
->>>>>>> origin/main
->>>>>>> origin/master
+    public function applicationforleave(){
+        return view('admin.files.leaveform');
     }
-    //     $applicationforleaves = Applicationforleave::get();
-    //     return view('admin.files.leaveform', [
-    //         'applicationforleaves'=>$applicationforleaves
-    //     ]);
-    // }
 
     public function storeapplicationforleave(Request $request){
         $applicationforleavesave = new Applicationforleave();
@@ -110,10 +87,6 @@ class FileController extends Controller
     {
         return view('admin.files.travelorder');
     }
-          public function leaveform()
-        {
-            return view('admin.files.leaveform');
-        }
 
     public function certificateofappearance()
     {
@@ -129,10 +102,10 @@ class FileController extends Controller
     {
         return view('admin.files.locator');
     }
-         public function dispatchfile()
-        {
-            return view('admin.files.dispatch');
-        }
+    public function dispatchfile()
+    {
+        return view('admin.files.dispatch');
+    }
 }
 
 

@@ -1,23 +1,7 @@
 @extends('layouts.default')
 
 @section('content')
-         <div class="content-header">
-            <div class="container-fluid">
-               <div class="row mb-2">
-                  <div class="col-sm-6">
-                  </div>
-                  <div class="col-sm-6">
-                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">File</li>
-                     </ol>
-                  </div>
-               </div>
-            </div>
-         </div>
-
-        <div class="card card-info">
-    <style type="text/css">
+<style type="text/css">
       html { font-family:Calibri, Arial, Helvetica, sans-serif; font-size:11pt;  }
       a.comment-indicator:hover + div.comment { background:#ffd; position:absolute; display:block; border:1px solid black; padding:0.5em }
       a.comment-indicator { background:red; display:inline-block; border:1px solid black; width:0.5em; height:0.5em }
@@ -160,86 +144,104 @@
       table.sheet0 tr.row44 { height:323pt }
       table.sheet0 tr.row45 { height:327pt }
     </style>
-  </head>
-
-
-</style>
- <style type="text/css">
+<style type="text/css">
           .sample-box {
        width: 303px;
        background-color: white;
        border: 1px solid #333;
-       padding: 39.5px;
+       padding: 37px;
        text-align: center;
        font-family: Arial, sans-serif;
        margin-top: 740px;
-       margin-left: 117px;
+       margin-left: 178px;
        margin-bottom: 10px;
        position: absolute;
-       top: 122%;
+       top: 11%;
        background-color: transparent;            
  }
-            .sample-box1 {
+         .sample-box1 {
         width: 303px;
         background-color: white;
         border: 1px solid #333;
-        padding: 39.5px;
+        padding: 37px;
         text-align: center;
         font-family: Arial, sans-serif;
         margin-top: 822px;
-        margin-left: 117px;
+        margin-left: 178px;
         margin-bottom: 10px;
         position: absolute;
-        top: 61%;
+        top: -3%;
 
 }
             .sample-box2 {
-        width: 334px;
+        width: 358px;
        background-color: white;
        border: 1px solid #333;
        padding: 47.2px;
        text-align: center;
        font-family: Arial, sans-serif;
        margin-top: 735px;
-       margin-left: 438px;
+       margin-left: 498px;
        margin-bottom: 10px;
        position: absolute;
-       top: 161%;
+       top: 4.2%;
        background-color: transparent;
 }
             .sample-box3 {
         width: 166px;
        background-color: white;
        border: 1px solid #333;
-       padding: 33.5px;
+       padding: 30px;
        text-align: center;
        font-family: Arial, sans-serif;
        margin-top: 834px;
-       margin-left: 437px;
+       margin-left: 498px;
        margin-bottom: 10px;
        position: absolute;
-       top: 61%;
+       top: 4.2%;
  }
              .sample-box4{
-       width: 166px;
+       width: 190px;
        background-color: white;
        border: 1px solid #333;
-       padding: 33.5px;
+       padding: 30px;
        text-align: center;
        font-family: Arial, sans-serif;
        margin-top: 834px;
-       margin-left: 606px;
+       margin-left: 666px;
        margin-bottom: 10px;
        position: absolute;
-       top: 61%;
+       top: 4.2%;
 }
           </style>
-                @include('layouts.partials.messages')
-         <form action="{{ route('DispatchSave') }}"  method="post">
-            @csrf
 
-                  <table border="0" cellpadding="0" cellspacing="0" id="sheet0" class="sheet0 gridlines" style="    position: absolute;
-                    left: 90px;      width: 70%; border:3px solid; top: 81px; ">
+         <div class="content-header">
+            <div class="container-fluid">
+               <div class="row mb-2">
+                  <div class="col-sm-6">
+                  </div>
+                  <div class="col-sm-6">
+                     <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">File</li>
+                     </ol>
+                  </div>
+               </div>
+            </div>
+         </div>
+        <section class="content">
+            <div class="container-fluid">
+                <div class="card card-info">
+                    <form method="POST" action="{{route('applicationforleave.store')}}">
+                        @csrf
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="card-header">
+                                        <span class="fa fa-file"> Dispatch</span>
+                                    </div>
+                                        <table border="0" cellpadding="0" cellspacing="0" id="sheet0" class="sheet0 gridlines" style="position: relative;
+                    left: 150px;      width: 70%; border:3px solid; top: 81px;">
                       <col class="col0">
                       <col class="col1">
                       <col class="col2">
@@ -255,11 +257,11 @@
                <tr class="row0" >
                   <td class="column0 style27 s style28" colspan="11"><span style="font-weight:bold; font-style:italic; color:#000000; font-family:'Calibri'; font-size:8pt"><b>Republic of the Philippines</b> <br>Province of Southern Leyte <br>City of Maasin</span></td>
                 </tr>
-                  <img src="{{asset('assets/img/MaasinCity.png')}}" style="position: absolute; top: 292px; width: 50%; left: 170px;  opacity: 0.3;">
+                  <img src="{{asset('assets/img/MaasinCity.png')}}" style="position: absolute; top: 350px; width: 50%; left: 250px;  opacity: 0.3;">
                 <tr class="row1">
                   <td class="column0 style5 s style7" colspan="5"><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:12pt">Dispatch #<br/>
-                  <i style='font-size:24px;position: absolute;left: 195px;top: 96px;' class='fas'>&#x279E;</i>
-                     </span><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:6pt; position: absolute; left: 34px;">Office-Year-Month-0000</span></td>
+                  <i style='font-size:24px;position: absolute;left: 215px;top: 96px;' class='fas'>&#x279E;</i>
+                     </span><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:6pt; position: absolute; left: 50px;">Office-Year-Month-0000</span></td>
                   <td class="column5 style5 null style7" colspan="4"><input type="text" id="" name="DispatchNumber" style="width: 140px; background-color: transparent;"></td>                
                   <td class="column9 style8 s style9" colspan="2">
                    <span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:10pt">Trip Ticket No:</span>
@@ -267,7 +269,7 @@
                </td>
                 </tr>
                 <tr class="row2">
-                  <td class="column0 style10 s style12" colspan="5"><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:12pt;">Date:</span>                  <i style='font-size:24px;position: absolute;left: 195px;top: 138px;' class='fas'>&#x279E;</i>
+                  <td class="column0 style10 s style12" colspan="5"><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:12pt;">Date:</span>                  <i style='font-size:24px;position: absolute;left: 215px;top: 138px;' class='fas'>&#x279E;</i>
 
                      </td>
                   <td class="column5 style5 null style7" colspan="6"><input type="" id="" name="Date" style="text-indent: 6px;background-color: transparent;">
@@ -287,7 +289,7 @@
                   <td class="column5 style13 null style15" colspan="6"><input type="text" id="" name="Address" style="position: absolute; margin-top: -15px; background-color: transparent; width: 450px; height: 29px; margin-left: -3px;"></td>
                 </tr>
                 <tr class="row6">
-                  <td class="column0 style10 s style12" colspan="5"><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:12pt">Contact #:</span><input type="text" id="" name="ContactNumber" style="position: absolute; margin-top: -3px; width: 176px; height: 29px; margin-left: 142px; background-color: transparent; color: black;"></td>
+                  <td class="column0 style10 s style12" colspan="5"><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:12pt">Contact #:</span><input type="text" id="" name="ContactNumber" style="position: absolute; margin-top: -3px; width: 176px; height: 29px; margin-left: 150px; background-color: transparent; color: black;"></td>
                   <td class="column5 style29 s style31" colspan="6"><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:11pt">Office Name:</span><input type="text" id="" name="OfficeName" style="position: absolute; margin-top: -3px; width: 175px; height: 29px; margin-left: 1px; background-color: transparent; color: black;"></td>
                 </tr>
                 <tr class="row7">
@@ -337,7 +339,7 @@
                <td class="column0 style1 null"></td>
                <td class="column1 style2 null"></td>
             <td class="column2 style26 s style26" colspan="6"><span style="font-weight:bold; color:#000000; font-family:'Calibri';font-size:7pt; position: absolute; top: 694px; left: 76px;">NAME AND SIGNATURE OF DISPATCHER<br/>
-            </span><span style="font-weight:bold; color:#000000; font-family:'Calibri'; font-size:7pt;  position: absolute; top: 725px; left: 30px;">DATE:<br />
+            </span><span style="font-weight:bold; color:#000000; font-family:'Calibri'; font-size:7pt;  position: absolute; top: 715px; left: 30px;">DATE:<br />
             </span><span style="font-weight:bold; color:#000000; font-family:'Calibri'; font-size:6pt; position: absolute; top: 746px; left: 30px;">RECOMMENDED FOR ISSUANCE OF TRAVEL ORDER:<br />
             </span><span style="font-weight:bold; color:#000000; font-family:'Calibri'; font-size:6pt; position: absolute; top: 800px; left: 90px;">NAME AND SIGNATURE HEAD OF OFFICE</span></td>
             <td class="column8 style6 s style6" colspan="2"><span style="font-weight:bold; color:#000000; font-family:'Calibri'; font-size:7pt;position: absolute;top: 71%">NOTED:<br />
@@ -362,16 +364,27 @@
                </tr>
           </tbody>
          </table>
-      </div>
-    </div>
-    <div class="col-md-5" style="position: absolute; top: 1357px; width: 100px; left: 500px">
-       <button type="submit" class="btn btn-primary" style="     margin-top: 6px;
-    position: absolute;
-    top: -1243px; left: 500px">Save</button>
-     </div>
-
-    </form>      
-  </div>
-</div>
-
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="card-header">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="col-md-12">
+                                        <a href="{{route('filedashboard')}}" class="btn btn-danger" data-dismiss="modal">Cancel</a>
+                                        <button type="submit" class="btn btn-primary">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
 @endsection

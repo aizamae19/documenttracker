@@ -42,6 +42,10 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::get('/admin/files/travelorder', [App\Http\Controllers\Admin\FileController::class, 'travelorder'])->name('travelorder');
             Route::post('/admin/files/travelorder/store', [App\Http\Controllers\Admin\FileController::class, 'storetravelorder'])->name('travelorder.store');
 
+            #ADD DISPATCH
+            Route::get('/admin/files/add',  [App\Http\Controllers\Admin\FileController::class, 'dispatchfile'])->name('getDispatch');
+            Route::post('/admin/files/save',  [App\Http\Controllers\Admin\FileController::class, 'saveDispatch'])->name('DispatchSave'); 
+            
             #USERS
             Route::get('/admin/users', [App\Http\Controllers\Admin\UsersController::class, 'users'])->name('usersdashboard');
 

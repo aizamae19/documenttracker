@@ -233,7 +233,42 @@
        position: absolute;
        top: 61%;
 }
+  .btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+    .card {
+      margin-bottom: 100px;
+      margin-bottom: 60px;
+    }
+    #print-button {
+      display: block;
+  width: 100px;
+  margin-left: 103%;
+  background-color: 99FF;
+  text-align: center;
+  position: relative;
+  margin-top: -136px;
+    }
+    @media print {
+      #print-button {
+        display: none;
+      }
+    } 
+    
           </style>
+
+    
+</style>
+
+<script>
+function printDocument() {
+  window.print();
+}
+</script>
+<button id="print-button" onclick="printDocument()" class="btn btn-sm btn-primary waves-effect waves-light printdtr"><i style="font-size:24px;"></i>Print</button></head>
+<body>
                 @include('layouts.partials.messages')
          <form action="{{ route('DispatchSave') }}"  method="post">
             @csrf
@@ -287,7 +322,7 @@
                   <td class="column5 style13 null style15" colspan="6"><input type="text" id="" name="Address" style="position: absolute; margin-top: -15px; background-color: transparent; width: 450px; height: 29px; margin-left: -3px;"></td>
                 </tr>
                 <tr class="row6">
-                  <td class="column0 style10 s style12" colspan="5"><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:12pt">Contact #:</span><input type="text" id="" name="ContactNumber" style="position: absolute; margin-top: -3px; width: 176px; height: 29px; margin-left: 142px; background-color: transparent; color: black;"></td>
+                  <td class="column0 style10 s style12" colspan="5"><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:12pt">Contact #:</span><input type="text" id="" name="ContactNumber" style="position: absolute; margin-top: -3px; width: 176px; height: 29px; margin-left: 144px; background-color: transparent; color: black;"></td>
                   <td class="column5 style29 s style31" colspan="6"><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:11pt">Office Name:</span><input type="text" id="" name="OfficeName" style="position: absolute; margin-top: -3px; width: 175px; height: 29px; margin-left: 1px; background-color: transparent; color: black;"></td>
                 </tr>
                 <tr class="row7">
@@ -311,7 +346,7 @@
                 <tr class="row10">
                   <td class="column2 style5 s style7" colspan="6"><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:10pt">Dispatch Vehicle:<br />
                       </span><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:6pt">Indicate Plate Number/ Conduction Sticker</span></td>
-                  <td class="column8 style13 null style15" colspan="2"><input type="text" id="" name="PlateNumber" style="position: absolute; margin-top: -3px; width: 335px; height: 29px; left: 344px; background-color: transparent; color: black;"></td>
+                  <td class="column8 style13 null style15" colspan="2"><input type="text" id="" name="PlateNumber" style="position: absolute; margin-top: -3px; width: 335px; height: 29px; left: 350px; background-color: transparent; color: black;"></td>
                   
                 </tr>
                 <tr class="row11">
@@ -326,11 +361,11 @@
                   <td class="column4 style13 null style15" colspan="6"><input type="text" id="" name="Passenger" style="position: absolute; margin-top: -15px; width: 390px; height: 29px; margin-left: -2px;background-color: transparent; color: black;"></td>
                 </tr>
                 <tr class="row14">
-               <td class="column2 style13 null style15" colspan="2"><input type="text" id="" name="Passenger" style="position: absolute; margin-top: -10px; width: 468px; height: 20px; margin-left: 181px; background-color: transparent; color: black;"></td>
+               <td class="column2 style13 null style15" colspan="2"><input type="text" id="" name="Passenger" style="position: absolute; margin-top: -10px; width: 468px; height: 20px; margin-left: 184px; background-color: transparent; color: black;"></td>
                   <td class="column4 style13 null style15" colspan="6"></td>
                 </tr>
                 <tr class="row15">
-               <td class="column2 style13 null style15" colspan="2"><input type="text" id="" name="Passenger" style="position: absolute; margin-top: -10px;width: 468px; height: 20px; margin-left: 181px; background-color: transparent; color: black;"></td>
+               <td class="column2 style13 null style15" colspan="2"><input type="text" id="" name="Passenger1" style="position: absolute; margin-top: -10px;width: 468px; height: 20px; margin-left: 184px; background-color: transparent; color: black;"></td>
                   <td class="column4 style13 null style15" colspan="6"></td>
                 </tr>
                <tr class="row16">
@@ -364,6 +399,7 @@
          </table>
       </div>
     </div>
+
     <div class="col-md-5" style="position: absolute; top: 1357px; width: 100px; left: 500px">
        <button type="submit" class="btn btn-primary" style="     margin-top: 6px;
     position: absolute;

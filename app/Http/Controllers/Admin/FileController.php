@@ -19,7 +19,7 @@ class FileController extends Controller
         }
     }
 
-    public function saveDispatch(Request $request)
+    public function saveDispatch (Request $request)
     {
             $Dispatchsave = new Dispatch();
             $Dispatchsave->DispatchNumber = $request->DispatchNumber;
@@ -38,11 +38,12 @@ class FileController extends Controller
         if ($Dispatchsave->save()) {
             return redirect()->back()->withErrors('Successfully Saved!');
         }
-        $applicationforleaves = Applicationforleave::get();
-        return view('admin.files.leaveform', [
-            'applicationforleaves'=>$applicationforleaves
-        ]);
     }
+    //     $applicationforleaves = Applicationforleave::get();
+    //     return view('admin.files.leaveform', [
+    //         'applicationforleaves'=>$applicationforleaves
+    //     ]);
+    // }
 
     public function storeleaveform(Request $request){
         $applicationforleavesave = new Applicationforleave();

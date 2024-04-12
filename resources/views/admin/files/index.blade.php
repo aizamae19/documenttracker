@@ -39,7 +39,7 @@
                            <tr>
                               <td>{{$file->SeriesNumber}}</td>
                               <td>{{$file->FileType}}</td>
-                              <td>{{$file->created_at}}</td>                           
+                              <td></td>                           
                               <td class="text-center">
                                  <a class="btn btn-sm btn-success" href="#" data-toggle="modal" data-target="#view"><i
                                        class="fa fa-eye"></i> View</a>
@@ -130,9 +130,11 @@
                                     </div>
                                  </div>
                               </div>
+                           </div>
                         </div>
                      </div>
                   </div>
+               </div>
             </div>
          </div>
       </div>

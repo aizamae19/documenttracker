@@ -32,26 +32,38 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
 
             #FILES
             Route::get('/admin/files', [App\Http\Controllers\Admin\FileController::class, 'file'])->name('filedashboard');
+            Route::post('/admin/files/store', [App\Http\Controllers\Admin\FileController::class, 'storefile'])->name('storefile');
 
             #APPLICATION FOR LEAVE
             Route::get('/admin/files/applicationforleave', [App\Http\Controllers\Admin\FileController::class, 'applicationforleave'])->name('applicationforleave');
-            Route::post('/admin/files/applicationforleave/store', [App\Http\Controllers\Admin\FileController::class, 'applicationforleave'])->name('applicationforleave.store');
-
+            Route::post('/admin/files/applicationforleave/store', [App\Http\Controllers\Admin\FileController::class, 'storeapplicationforleave'])->name('applicationforleave.store');
 
             #TRAVEL ORDER
             Route::get('/admin/files/travelorder', [App\Http\Controllers\Admin\FileController::class, 'travelorder'])->name('travelorder');
             Route::post('/admin/files/travelorder/store', [App\Http\Controllers\Admin\FileController::class, 'storetravelorder'])->name('travelorder.store');
 
-            #ADD DISPATCH
+            #CERTIFICATE OF APPEARANCE
+            Route::get('/admin/files/certificateofappearance', [App\Http\Controllers\Admin\FileController::class, 'certificateofappearance'])->name('certificateofappearance');
+            Route::post('/admin/files/certificateofappearance/store', [App\Http\Controllers\Admin\FileController::class, 'storecertificateofappearance'])->name('certificateofappearance.store');
+
+            #TRIP TICKET
+            Route::get('/admin/files/tripticket', [App\Http\Controllers\Admin\FileController::class, 'tripticket'])->name('tripticket');
+            Route::post('/admin/files/tripticket/store', [App\Http\Controllers\Admin\FileController::class, 'storetripticket'])->name('tripticket.store');
+
+            #LOCATOR
+            Route::get('/admin/files/locator', [App\Http\Controllers\Admin\FileController::class, 'locator'])->name('locator');
+            Route::post('/admin/files/locator/store', [App\Http\Controllers\Admin\FileController::class, 'storelocator'])->name('locator.store');
+
             Route::get('/admin/files/add',  [App\Http\Controllers\Admin\FileController::class, 'dispatchfile'])->name('getDispatch');
             Route::post('/admin/files/save',  [App\Http\Controllers\Admin\FileController::class, 'saveDispatch'])->name('DispatchSave'); 
-            
+
             #USERS
             Route::get('/admin/users', [App\Http\Controllers\Admin\UsersController::class, 'users'])->name('usersdashboard');
 
-            // //Delete
-            // Route::get('/admin/users/delete/{id}', [App\Http\Controllers\Admin\UsersController::class, 'deleteusers'])->name('users.delete');
-            // Route::post('/admin/users/delete', [App\Http\Controllers\Admin\UsersController::class, 'deleteusers'])->name('users.delete');
+            // //View
+            // Route::get('/admin/files/index/applicationforleave/{id}', [App\Http\Controllers\Admin\FileController::class, 'viewapplicationforleave'])->name('applicationforleave.view');
+            // Route::post('/admin/files/index/applicationforleave/view', [App\Http\Controllers\Admin\FileController::class, 'viewapplicationforleave'])->name('applicationforleave.edit.view');
+
 
             #ADD USER
             Route::get('/admin/users/add', [CustomAuthController::class, 'register'])->name('register');

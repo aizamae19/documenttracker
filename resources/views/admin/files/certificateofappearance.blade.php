@@ -18,22 +18,14 @@
         <section class="content">
             <div class="container-fluid">
                 <div class="card card-info">
-                    <form method="POST" action="{{route('applicationforleave.store')}}">
+                    <form method="POST" action="">
                         @csrf
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="card-header">
+                                        <span class="fa fa-file"> Certificate of Appearance</span>
                                     </div>
-<<<<<<< HEAD
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                        <img src="{{asset('assets/img/TravelOrder.png')}}" style=" width: 310%;">
- <div class="row">
-                              
-                                         
-                                    
-=======
                                     <br>
                                     <div class="card-header">
                                     </div>
@@ -45,7 +37,6 @@
                                 </div>
                             </div>
                         </div>
->>>>>>> origin/main
                     </form>
                 </div>
             </div>

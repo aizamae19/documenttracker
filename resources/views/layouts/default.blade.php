@@ -52,7 +52,7 @@
             <!-- Brand Logo -->
             <a href="" class="brand-link">
          <img src="{{asset('assets/img/MaasinCity.png')}}" alt="DSMS Logo" width="60">
-         <img src="{{asset('assets/img/logo.png')}}" alt="DSMS Logo" width="190">
+         <img src="{{asset('assets/img/logo.png')}}" alt="DSMS Logo" width="175">
          </a>
          <div class="brand-link">
          <a href="">
@@ -91,14 +91,14 @@
                         </p>
                      </a>
                   </li>
-                  <li class="nav-item">
+                  <!-- <li class="nav-item">
                      <a href="{{ route('documenttrackerdashboard') }}" class="nav-link">
                         <img src="{{asset('assets/img/tracker.png')}}" width="30">
                         <p>
                            Document Tracker
                         </p>
                      </a>
-                  </li>
+                  </li> -->
                   <!-- <li class="nav-item">
                      <a href="#" class="nav-link">
                         <img src="{{asset('assets/img/commit.png')}}" width="30">

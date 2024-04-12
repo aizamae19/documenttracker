@@ -13,9 +13,8 @@ return new class extends Migration
     {
         Schema::create('files', function (Blueprint $table) {
             $table->id();
+            $table->string('SeriesNumber');
             $table->string('FileType');
-            $table->string('Description');
-            $table->string('Recipient');
             $table->timestamps();
         });
     }

@@ -38,6 +38,17 @@ class FileController extends Controller
         if ($Dispatchsave->save()) {
             return redirect()->back()->withErrors('Successfully Saved!');
         }
+<<<<<<< HEAD
+=======
+    }
+
+    public function applicationforleave(Request $request){
+        
+        $applicationforleaves = Applicationforleave::get();
+        return view('admin.files.leaveform', [
+            'applicationforleaves'=>$applicationforleaves
+        ]);
+>>>>>>> origin/main
     }
     //     $applicationforleaves = Applicationforleave::get();
     //     return view('admin.files.leaveform', [
@@ -45,7 +56,7 @@ class FileController extends Controller
     //     ]);
     // }
 
-    public function storeleaveform(Request $request){
+    public function storeapplicationforleave(Request $request){
         $applicationforleavesave = new Applicationforleave();
         $applicationforleavesave->Office = $request->Office;
         $applicationforleavesave->Name = $request->Name;
@@ -70,8 +81,20 @@ class FileController extends Controller
         $applicationforleavesave->OthersSpecify = $request->OthersSpecify;
         $applicationforleavesave->DisapprovedDueTo = $request->DisapprovedDueTo;
         
-        if($applicationforleavesave->save()) {
-            return redirect()->back();
+        $fields = ['TypeOfLeave', 'DetailsOfLeave', 'Commutation', 'Recommendation'];
+
+        foreach ($fields as $field) {
+            if ($request->has($field)) {
+        
+                $values = implode(',', $request->input($field));
+                $applicationforleavesave->$field = $values;
+            }
+        }
+
+        if ($applicationforleavesave->save()) {
+            return redirect()->back()->with('Success', 'Application for leave saved successfully.');
+        } else {
+            return redirect()->back()->with('Error', 'Failed to save application for leave.');
         }
     }
 
@@ -84,6 +107,20 @@ class FileController extends Controller
             return view('admin.files.leaveform');
         }
 
+    public function certificateofappearance()
+    {
+        return view('admin.files.certificateofappearance');
+    }
+
+    public function tripticket()
+    {
+        return view('admin.files.tripticket');
+    }
+
+    public function locator()
+    {
+        return view('admin.files.locator');
+    }
          public function dispatchfile()
         {
             return view('admin.files.dispatch');

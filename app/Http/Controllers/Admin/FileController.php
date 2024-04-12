@@ -38,10 +38,6 @@ class FileController extends Controller
         if ($Dispatchsave->save()) {
             return redirect()->back()->withErrors('Successfully Saved!');
         }
-        $applicationforleaves = Applicationforleave::get();
-        return view('admin.files.leaveform', [
-            'applicationforleaves'=>$applicationforleaves
-        ]);
     }
 
     public function applicationforleave(Request $request){

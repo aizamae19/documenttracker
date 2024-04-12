@@ -161,7 +161,7 @@
  }
          .sample-box1 {
         width: 303px;
-        background-color: white;
+        background-color: transparent;
         border: 1px solid #333;
         padding: 37px;
         text-align: center;
@@ -175,7 +175,6 @@
 }
             .sample-box2 {
         width: 358px;
-       background-color: white;
        border: 1px solid #333;
        padding: 47.2px;
        text-align: center;
@@ -189,7 +188,7 @@
 }
             .sample-box3 {
         width: 166px;
-       background-color: white;
+       background-color: transparent;
        border: 1px solid #333;
        padding: 30px;
        text-align: center;
@@ -202,7 +201,7 @@
  }
              .sample-box4{
        width: 190px;
-       background-color: white;
+       background-color: transparent;
        border: 1px solid #333;
        padding: 30px;
        text-align: center;
@@ -232,7 +231,7 @@
         <section class="content">
             <div class="container-fluid">
                 <div class="card card-info">
-                    <form method="POST" action="{{route('applicationforleave.store')}}">
+                    <form method="POST" action="{{route('DispatchSave')}}">
                         @csrf
                         <div class="card-body">
                             <div class="row">
@@ -313,7 +312,7 @@
                 <tr class="row10">
                   <td class="column2 style5 s style7" colspan="6"><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:10pt">Dispatch Vehicle:<br />
                       </span><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:6pt">Indicate Plate Number/ Conduction Sticker</span></td>
-                  <td class="column8 style13 null style15" colspan="2"><input type="text" id="" name="PlateNumber" style="position: absolute; margin-top: -3px; width: 335px; height: 29px; left: 344px; background-color: transparent; color: black;"></td>
+                  <td class="column8 style13 null style15" colspan="2"><input type="text" id="" name="PlateNumber" style="position: absolute; margin-top: -3px; width: 335px; height: 29px; left: 360px; background-color: transparent; color: black;"></td>
                   
                 </tr>
                 <tr class="row11">
@@ -328,11 +327,11 @@
                   <td class="column4 style13 null style15" colspan="6"><input type="text" id="" name="Passenger" style="position: absolute; margin-top: -15px; width: 390px; height: 29px; margin-left: -2px;background-color: transparent; color: black;"></td>
                 </tr>
                 <tr class="row14">
-               <td class="column2 style13 null style15" colspan="2"><input type="text" id="" name="Passenger" style="position: absolute; margin-top: -10px; width: 468px; height: 20px; margin-left: 181px; background-color: transparent; color: black;"></td>
+               <td class="column2 style13 null style15" colspan="2"><input type="text" id="" name="Passenger" style="position: absolute; margin-top: -10px; width: 468px; height: 20px; margin-left: 190px; background-color: transparent; color: black;"></td>
                   <td class="column4 style13 null style15" colspan="6"></td>
                 </tr>
                 <tr class="row15">
-               <td class="column2 style13 null style15" colspan="2"><input type="text" id="" name="Passenger" style="position: absolute; margin-top: -10px;width: 468px; height: 20px; margin-left: 181px; background-color: transparent; color: black;"></td>
+               <td class="column2 style13 null style15" colspan="2"><input type="text" id="" name="Passenger" style="position: absolute; margin-top: -10px;width: 468px; height: 20px; margin-left: 190px; background-color: transparent; color: black;"></td>
                   <td class="column4 style13 null style15" colspan="6"></td>
                 </tr>
                <tr class="row16">

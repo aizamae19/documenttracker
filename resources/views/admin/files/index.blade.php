@@ -89,7 +89,8 @@
                                     <div class="col-md-6">
                                        <div class="form-group">
                                           <div class="card-footer">
-                                             <a href="{{ route('applicationforleave') }}" class="form-control">APPLICATION FOR LEAVE</a>
+                                             <a href="{{ route('applicationforleave') }}" class="form-control link" data-route="APPLICATIONFORLEAVE">APPLICATION FOR LEAVE</a>
+
                                           </div>
                                        </div>
                                     </div>

@@ -27,6 +27,9 @@
                                         <span class="fa fa-file"> Certificate of Appearance</span>
                                     </div>
                                     <br>
+                                    <div class="card-header">
+                                    </div>
+                                    <br>
                                     <div class="col-md-12">
                                         <a href="{{route('filedashboard')}}" class="btn btn-danger" data-dismiss="modal">Cancel</a>
                                         <button type="submit" class="btn btn-primary">Save</button>

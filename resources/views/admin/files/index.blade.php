@@ -173,7 +173,7 @@
                                     <div class="col-md-6">
                                        <div class="form-group">
                                           <div class="card-footer">
-                                             <a href="" class="form-control">DISPATCH</a>
+                                             <a href="{{ route('getDispatch') }}" class="form-control">DISPATCH</a>
                                           </div>
                                        </div>
                                     </div>

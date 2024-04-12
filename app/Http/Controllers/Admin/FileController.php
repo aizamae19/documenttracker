@@ -4,46 +4,47 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Dispatch; 
 use App\Models\Applicationforleave;
 use App\Models\Travelorder;
-use App\Models\File;
 use Illuminate\Support\Facades\Auth;
 
 class FileController extends Controller
 {
     public function file()
     {
-        $files = File::get();
-        return view('admin.files.index', [
-            'files'=>$files
-        ]);
-
+        return view('admin.files.index');
         if (Auth::check()) {
             $user = Auth::user();
         }
     }
 
-    public function storefile(Request $request)
+    public function saveDispatch(Request $request)
     {
-        $filesave = new File();
-        $filesave->FileType = $request->FileType;
-        $filesave->Description = $request->Description;
-        $filesave->Recipient = $request->Recipient;
+            $Dispatchsave = new Dispatch();
+            $Dispatchsave->DispatchNumber = $request->DispatchNumber;
+            $Dispatchsave->TripTicketNumber = $request->TripTicketNumber;
+            $Dispatchsave->Date = $request->Date;
+            $Dispatchsave->Name = $request->Name;
+            $Dispatchsave->Address = $request->Address;
+            $Dispatchsave->ContactNumber = $request->ContactNumber;
+            $Dispatchsave->OfficeName = $request->OfficeName;
+            $Dispatchsave->DescriptionofDispatch = $request->DescriptionofDispatch;
+            $Dispatchsave->PlateNumber = $request->PlateNumber;
+            // $Dispatchsave->CondutionSticker = $request->CondutionSticker;
+            $Dispatchsave->Driver = $request->Driver;
+            $Dispatchsave->Passenger = $request->Passenger;
 
-        if($filesave->save()) {
-            return redirect()->back();
+        if ($Dispatchsave->save()) {
+            return redirect()->back()->withErrors('Successfully Saved!');
         }
-    }
-
-    public function applicationforleave()
-    {
         $applicationforleaves = Applicationforleave::get();
-        return view('admin.files.applicationforleave', [
+        return view('admin.files.leaveform', [
             'applicationforleaves'=>$applicationforleaves
         ]);
     }
 
-    public function storeapplicationforleave(Request $request){
+    public function storeleaveform(Request $request){
         $applicationforleavesave = new Applicationforleave();
         $applicationforleavesave->Office = $request->Office;
         $applicationforleavesave->Name = $request->Name;
@@ -77,6 +78,15 @@ class FileController extends Controller
     {
         return view('admin.files.travelorder');
     }
+          public function leaveform()
+        {
+            return view('admin.files.leaveform');
+        }
 
-    
+         public function dispatchfile()
+        {
+            return view('admin.files.dispatch');
+        }
 }
+
+

@@ -212,48 +212,7 @@
        position: absolute;
        top: 4.2%;
 }
-  .btn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-    }
-    .card {
-      margin-bottom: 100px;
-      margin-bottom: 60px;
-    }
-    #print-button {
-      display: block;
-  width: 100px;
-  margin-left: 103%;
-  background-color: 99FF;
-  text-align: center;
-  position: relative;
-  margin-top: -136px;
-    }
-    @media print {
-      #print-button {
-        display: none;
-      }
-    } 
-    
           </style>
-<<<<<<< HEAD
-
-    
-</style>
-
-<script>
-function printDocument() {
-  window.print();
-}
-</script>
-<button id="print-button" onclick="printDocument()" class="btn btn-sm btn-primary waves-effect waves-light printdtr"><i style="font-size:24px;"></i>Print</button></head>
-<body>
-                @include('layouts.partials.messages')
-         <form action="{{ route('DispatchSave') }}"  method="post">
-            @csrf
-=======
->>>>>>> origin/main
 
          <div class="content-header">
             <div class="container-fluid">
@@ -329,11 +288,7 @@ function printDocument() {
                   <td class="column5 style13 null style15" colspan="6"><input type="text" id="" name="Address" style="position: absolute; margin-top: -15px; background-color: transparent; width: 450px; height: 29px; margin-left: -3px;"></td>
                 </tr>
                 <tr class="row6">
-<<<<<<< HEAD
-                  <td class="column0 style10 s style12" colspan="5"><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:12pt">Contact #:</span><input type="text" id="" name="ContactNumber" style="position: absolute; margin-top: -3px; width: 176px; height: 29px; margin-left: 144px; background-color: transparent; color: black;"></td>
-=======
                   <td class="column0 style10 s style12" colspan="5"><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:12pt">Contact #:</span><input type="text" id="" name="ContactNumber" style="position: absolute; margin-top: -3px; width: 176px; height: 29px; margin-left: 150px; background-color: transparent; color: black;"></td>
->>>>>>> origin/main
                   <td class="column5 style29 s style31" colspan="6"><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:11pt">Office Name:</span><input type="text" id="" name="OfficeName" style="position: absolute; margin-top: -3px; width: 175px; height: 29px; margin-left: 1px; background-color: transparent; color: black;"></td>
                 </tr>
                 <tr class="row7">
@@ -343,9 +298,9 @@ function printDocument() {
                 </tr>
                 <tr class="row8">
                   <td class="column2 style5 null style7" colspan="8"><div class="input-field mt-0 mb-0">
-                        <textarea style="height:90px; background-color: transparent;" 
+                        <textarea style="height:90px; background-color: transparent;"
                           id="textarea1"
-                          placeholder="" name="DescriptionofDispatch" 
+                          placeholder="" name="DescriptionofDispatch"
                           class="form-control border-0"
                         ></textarea>
                       </div></td>
@@ -357,12 +312,8 @@ function printDocument() {
                 <tr class="row10">
                   <td class="column2 style5 s style7" colspan="6"><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:10pt">Dispatch Vehicle:<br />
                       </span><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:6pt">Indicate Plate Number/ Conduction Sticker</span></td>
-<<<<<<< HEAD
-                  <td class="column8 style13 null style15" colspan="2"><input type="text" id="" name="PlateNumber" style="position: absolute; margin-top: -3px; width: 335px; height: 29px; left: 350px; background-color: transparent; color: black;"></td>
-=======
                   <td class="column8 style13 null style15" colspan="2"><input type="text" id="" name="PlateNumber" style="position: absolute; margin-top: -3px; width: 335px; height: 29px; left: 360px; background-color: transparent; color: black;"></td>
->>>>>>> origin/main
-                  
+                 
                 </tr>
                 <tr class="row11">
                   <td class="column2 style8 s style9" colspan="8"><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:10pt">Responding Personnel (Indicate Complete Name)</span></td>
@@ -376,19 +327,11 @@ function printDocument() {
                   <td class="column4 style13 null style15" colspan="6"><input type="text" id="" name="Passenger" style="position: absolute; margin-top: -15px; width: 390px; height: 29px; margin-left: -2px;background-color: transparent; color: black;"></td>
                 </tr>
                 <tr class="row14">
-<<<<<<< HEAD
-               <td class="column2 style13 null style15" colspan="2"><input type="text" id="" name="Passenger" style="position: absolute; margin-top: -10px; width: 468px; height: 20px; margin-left: 184px; background-color: transparent; color: black;"></td>
-                  <td class="column4 style13 null style15" colspan="6"></td>
-                </tr>
-                <tr class="row15">
-               <td class="column2 style13 null style15" colspan="2"><input type="text" id="" name="Passenger1" style="position: absolute; margin-top: -10px;width: 468px; height: 20px; margin-left: 184px; background-color: transparent; color: black;"></td>
-=======
                <td class="column2 style13 null style15" colspan="2"><input type="text" id="" name="Passenger" style="position: absolute; margin-top: -10px; width: 468px; height: 20px; margin-left: 190px; background-color: transparent; color: black;"></td>
                   <td class="column4 style13 null style15" colspan="6"></td>
                 </tr>
                 <tr class="row15">
                <td class="column2 style13 null style15" colspan="2"><input type="text" id="" name="Passenger" style="position: absolute; margin-top: -10px;width: 468px; height: 20px; margin-left: 190px; background-color: transparent; color: black;"></td>
->>>>>>> origin/main
                   <td class="column4 style13 null style15" colspan="6"></td>
                 </tr>
                <tr class="row16">
@@ -410,7 +353,7 @@ function printDocument() {
                <div class="sample-box1"></div>
                <div class="sample-box2"></div>
                <div class="sample-box3"></div>
-               <div class="sample-box4"></div> 
+               <div class="sample-box4"></div>
                <tr class="row17">
 
                <td class="column0 style4 null"></td>
@@ -418,28 +361,13 @@ function printDocument() {
                </span><span style="font-weight:bold; color:#FF0000; font-family:'Calibri'; font-size:5pt; ">1.             This dispatch ticket must be endorsed to the City Mayors Office for Issuance of Travel Order the following day after the emergency travel outside Maasin City (for emergency travel falling on a 4-12, 12-8 shift on a weekdays is conducted, otherwise travel order otherwise responders and dispatch will be ask a written explanation.<br />
                </span><span style="font-weight:bold; color:#FF0000; font-family:'Calibri'; font-size:5pt">2.             If conduction falls on a Friday (especially 4-12, 12-8  shift), Saturday, Sunday. This dispatch ticket should be forwarded the first working day after the weekend.</span></td>
                </tr>
-          </tbody>
-         </table>
-<<<<<<< HEAD
-      </div>
-    </div>
-
-    <div class="col-md-5" style="position: absolute; top: 1357px; width: 100px; left: 500px">
-       <button type="submit" class="btn btn-primary" style="     margin-top: 6px;
-    position: absolute;
-    top: -1243px; left: 500px">Save</button>
-     </div>
-
-    </form>      
-  </div>
-</div>
-
-=======
-         <br>
-         <br>
-         <br>
-         <br>
-         <br>
+                      </tbody>
+                     </table>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="card-header">
@@ -458,5 +386,4 @@ function printDocument() {
                 </div>
             </div>
         </section>
->>>>>>> origin/main
 @endsection

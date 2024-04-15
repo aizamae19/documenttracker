@@ -30,7 +30,6 @@ class FileController extends Controller
             $Dispatchsave->OfficeName = $request->OfficeName;
             $Dispatchsave->DescriptionofDispatch = $request->DescriptionofDispatch;
             $Dispatchsave->PlateNumber = $request->PlateNumber;
-            // $Dispatchsave->CondutionSticker = $request->CondutionSticker;
             $Dispatchsave->Driver = $request->Driver;
             $Dispatchsave->Passenger = $request->Passenger;
 

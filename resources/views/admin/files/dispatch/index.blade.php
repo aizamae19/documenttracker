@@ -76,12 +76,34 @@
                                             </div>
                                         </div>
                                     </div>
-                                        <div class="col-md-4">
+                                    <div class="row">
+                                        <div class="col-md-12">
                                             <div class="form-group">
                                                 <p>DESCRIPTION OF DISPATCH</p>
-                                                <input type="text" class="form-control" name="DescriptionofDispatch">
+                                                <textarea class="form-control" name="DescriptionofDispatch"></textarea>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <p>PLATE NUMBER</p>
+                                                <input type="text" class="form-control" name="PlateNumber">           
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <p>DRIVER</p>
+                                                <input type="text" class="form-control" name="Driver">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <p>PASSENGER</p>
+                                                <input type="text" class="form-control" name="Passenger">                 
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="card-header">

@@ -90,7 +90,7 @@ class FileController extends Controller
 
     public function certificateofappearance()
     {
-        return view('admin.files.certificateofappearance');
+        return view('admin.files.certificateofappearance.index');
     }
 
     public function tripticket()

@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Models\Dispatch; 
 use App\Models\Applicationforleave;
 use App\Models\Travelorder;
+use App\Models\Certificateofappearance;
+use App\Models\Locator;
 use Illuminate\Support\Facades\Auth;
 
 class FileController extends Controller
@@ -93,6 +95,23 @@ class FileController extends Controller
         return view('admin.files.certificateofappearance.index');
     }
 
+    public function storecertificateofappearance(Request $request)
+    {
+            $certificateofappearancesave = new Certificateofappearance();
+            $certificateofappearancesave->Name = $request->Name;
+            $certificateofappearancesave->Designation = $request->Designation;
+            $certificateofappearancesave->Service = $request->Service;
+            $certificateofappearancesave->InclusiveDate = $request->InclusiveDate;
+            $certificateofappearancesave->Location = $request->Location;
+            $certificateofappearancesave->Day = $request->Day;
+            $certificateofappearancesave->Date = $request->Date;
+            $certificateofappearancesave->Place = $request->Place;
+
+        if ($certificateofappearancesave->save()) {
+            return redirect()->back()->withErrors('Successfully Saved!');
+        }
+    }
+
     public function tripticket()
     {
         return view('admin.files.tripticket');
@@ -100,11 +119,36 @@ class FileController extends Controller
 
     public function locator()
     {
-        return view('admin.files.locator');
+        return view('admin.files.locator.index');
     }
+
+    public function storelocator(Request $request)
+    {
+            $locatorsave = new Locator();
+            $locatorsave->Year = $request->Year;
+            $locatorsave->MonthOf = $request->MonthOf;
+            $locatorsave->NameOfEmployee = $request->NameOfEmployee;
+            $locatorsave->Designation = $request->Designation;
+            $locatorsave->Office = $request->Office;
+            $locatorsave->Date = $request->Date;
+            $locatorsave->ExpectedTimeOfDeparture = $request->ExpectedTimeOfDeparture;
+            $locatorsave->ExpectedTimeOfReturn = $request->ExpectedTimeOfReturn;
+            $locatorsave->TimeDeviation = $request->TimeDeviation;
+            $locatorsave->OfficialOrPersonal = $request->OfficialOrPersonal;
+            $locatorsave->Purpose = $request->Purpose;
+            $locatorsave->Approval = $request->Approval;
+            $locatorsave->RequestForTranspo = $request->RequestForTranspo;
+            $locatorsave->OfficeEstablishmentVisited = $request->OfficeEstablishmentVisited;
+            $locatorsave->ConfirmationOfAppearance = $request->ConfirmationOfAppearance;
+
+        if ($locatorsave->save()) {
+            return redirect()->back()->withErrors('Successfully Saved!');
+        }
+    }
+
     public function dispatchfile()
     {
-        return view('admin.files.dispatch');
+        return view('admin.files.dispatch.index');
     }
 }
 

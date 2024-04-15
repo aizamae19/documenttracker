@@ -22,7 +22,7 @@
          padding: 0.5rem !important;
       }
       table tr td {
-         padding: 0.3rem !important;
+         padding: 0.1rem !important;
       }
    </style>
 </head>
@@ -91,14 +91,14 @@
                         </p>
                      </a>
                   </li>
-                  <!-- <li class="nav-item">
+                  <li class="nav-item">
                      <a href="{{ route('documenttrackerdashboard') }}" class="nav-link">
                         <img src="{{asset('assets/img/tracker.png')}}" width="30">
                         <p>
                            Document Tracker
                         </p>
                      </a>
-                  </li> -->
+                  </li>
                   <!-- <li class="nav-item">
                      <a href="#" class="nav-link">
                         <img src="{{asset('assets/img/commit.png')}}" width="30">
@@ -186,6 +186,10 @@
    <script src="{{asset('assets/tables/datatables-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
    <script src="{{asset('assets/tables/datatables-responsive/js/responsive.bootstrap4.min.js')}}"></script>
    <script src="{{asset('assets/tables/datatables-buttons/js/buttons.bootstrap4.min.js')}}"></script>
+   <script src="{{asset('assets/js/jquery-3.3.1.min.js')}}"></script>
+   <script src="{{asset('assets/js/popper.min.js')}}"></script>
+   <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
+   <script src="{{asset('assets/js/main.js')}}"></script>
    <script>
       $(function () {
          $("#example1").DataTable();

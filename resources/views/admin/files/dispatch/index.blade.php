@@ -20,81 +20,68 @@
          <section class="content">
             <div class="container-fluid">
                 <div class="card card-info">
-                    <form method="POST" action="{{ route('certificateofappearance.store') }}">
+                    <form method="POST" action="{{ route('DispatchSave') }}">
                         @csrf
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="card-header">
-                                        <span class="fa fa-file"> Certificate Of Appearance</span>
+                                        <span class="fa fa-file"> Dispatch</span>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-4">
+                                            <div class="form-group">
+                                                <p>DISPATCH NUMBER</p>
+                                                <input type="text" class="form-control" name="DispatchNumber">           
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <p>TRIP TICKET NUMBER</p>
+                                                <input type="text" class="form-control" name="TripTicketNumber">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <p>DATE</p>
+                                                <input type="text" class="form-control" name="Date">                 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
                                             <div class="form-group">
                                                 <p>NAME</p>
                                                 <input type="text" class="form-control" name="Name">           
                                             </div>
                                         </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <p>DESIGNATION</p>
-                                                <input type="text" class="form-control" name="Designation">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <p>SPECIFIED SERVICE RENDERED</p>
-                                                <input type="text" class="form-control" name="Service">                 
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <p>INCLUSIVE DATE</p>
-                                                <input type="text" class="form-control" name="InclusiveDate">           
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <p>LOCATION</p>
-                                                <input type="text" class="form-control" name="Location">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="card-header">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="card-header">
-                                                <label style="text-align: center;">DATE ISSUED</label>
+                                                <p>ADDRESS</p>
+                                                <input type="text" class="form-control" name="Address">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">    
-                                    	<div class="col-md-4">
+                                    	<div class="col-md-6">
                                             <div class="form-group">
-                                                <p>DAY</p>
-                                                <input type="text" class="form-control" name="Day">       
+                                                <p>CONTACT NUMBER</p>
+                                                <input type="text" class="form-control" name="ContactNumber">       
                                             </div>
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="col-md-6">
                                             <div class="form-group">
-                                                <p>DATE (MONTH, YEAR)</p>
-                                                <input type="text" class="form-control" name="Date">           
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <p>PLACE</p>
-                                                <input type="text" class="form-control" name="Place">
+                                                <p>OFFICE NAME</p>
+                                                <input type="text" class="form-control" name="OfficeName">           
                                             </div>
                                         </div>
                                     </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <p>DESCRIPTION OF DISPATCH</p>
+                                                <input type="text" class="form-control" name="DescriptionofDispatch">
+                                            </div>
+                                        </div>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="card-header">

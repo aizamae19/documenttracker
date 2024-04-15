@@ -18,7 +18,7 @@ class FileController extends Controller
         return view('admin.files.index');
     }
 
-    public function saveDispatch (Request $request)
+    public function saveDispatch  (Request $request)
     {
             $Dispatchsave = new Dispatch();
             $Dispatchsave->DispatchNumber = $request->DispatchNumber;
@@ -38,8 +38,17 @@ class FileController extends Controller
         }
     }
 
+<<<<<<< HEAD
     public function applicationforleave(){
         return view('admin.files.leaveform');
+=======
+    public function applicationforleave(Request $request){
+        
+        $applicationforleaves = Applicationforleave::get();
+        return view('admin.files.leaveform', [
+            'applicationforleaves'=>$applicationforleaves
+        ]);
+>>>>>>> origin/master
     }
 
     public function storeapplicationforleave(Request $request){
@@ -81,6 +90,26 @@ class FileController extends Controller
             return redirect()->back()->with('Success', 'Application for leave saved successfully.');
         } else {
             return redirect()->back()->with('Error', 'Failed to save application for leave.');
+        }
+    }
+public function  storetravelorder (Request $request)
+    {
+            $Travelorder = new Travelorder();
+            $Travelorder->Date = $request->Date;
+            $Travelorder->Location = $request->Location;
+            $Travelorder->Date = $request->Date;
+            $Travelorder->Name = $request->Name;
+            $Travelorder->InclusiveDates = $request->InclusiveDates;
+            $Travelorder->Designation = $request->Designation;
+            $Travelorder->Office = $request->Office;
+            $Travelorder->Endorser = $request->Endorser;
+            $Travelorder->Dated = $request->Dated;
+            $Travelorder->Purpose = $request->Purpose;
+                        $Travelorder->Subject = $request->Subject;
+
+
+        if ($Travelorder->save()) {
+            return redirect()->back()->withErrors('Successfully Saved!');
         }
     }
 

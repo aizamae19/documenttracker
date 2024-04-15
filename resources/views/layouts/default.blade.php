@@ -28,7 +28,7 @@
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
-   <div class="wrapper">
+   <div class="wrapper" style="background-color: white;">
       <nav class="main-header navbar navbar-expand navbar-light" style="background-color: #ee7699">
          <ul class="navbar-nav">
             <li class="nav-item">
@@ -173,7 +173,7 @@
             </nav>
          </div>
       </aside>
-      <div class="content-wrapper">
+      <div class="content-wrapper" style="background-color: white; ">
          @yield('content')
       </div>
    </div>

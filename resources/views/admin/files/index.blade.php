@@ -31,21 +31,20 @@
                               <th>Series Number</th>
                               <th>Office</th>
                               <th>File Type</th>
-                              <th>Date</th>
+                              <th>Date & Time</th>
                               <th class="text-center">Action</th>
                            </tr>
-                        </thead>
-                        <tbody>
-                         @foreach($files as $file)
+                           </thead>
+                           <tbody>
+                           @foreach($files as $file)
                            <tr>
-                              <td>{{$file->Date}}</td>
-                              <td>{{$file->Recipient}}</td>
+                              <td>{{$file->sef}}</td>
+                              <td>{{$file->Office}}</td>
                               <td>{{$file->Description}}</td>
-
-                              <td></td>                          
+                              <td>{{$file->created_at}}</td>
                               <td class="text-center">
                                  <a class="btn btn-sm btn-success" href="#" data-toggle="modal" data-target="#view"><i class="fa fa-eye"></i> View</a>
-                                 <a class="btn btn-sm btn-danger" href="#" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
+                                 <a class="btn btn-sm btn-danger" href="#" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a> 
                               </td>
                            </tr>
                            @endforeach
@@ -87,42 +86,42 @@
                                     <div class="col-md-6">
                                        <div class="form-group">
                                           <div class="card-footer">
-                                             <a href="{{ route('applicationforleave') }}" class="form-control link" data-route="APPLICATIONFORLEAVE">APPLICATION FOR LEAVE</a>
+                                             <a href="{{ route('applicationforleave', ['FileType' => 'APPLICATION FOR LEAVE']) }}" class="form-control link">APPLICATION FOR LEAVE</a>
                                           </div>
                                        </div>
                                     </div>
                                     <div class="col-md-6">
                                        <div class="form-group">
                                           <div class="card-footer">
-                                             <a href="{{ route('certificateofappearance')}}" class="form-control">CERTIFICATE OF APPEARANCE</a>
+                                             <a href="{{ route('certificateofappearance', ['FileType' => 'CERTIFICATION OF APPEARANCE'])}}" class="form-control">CERTIFICATE OF APPEARANCE</a>
                                           </div>
                                        </div>
                                     </div>
                                     <div class="col-md-6">
                                        <div class="form-group">
                                           <div class="card-footer">
-                                             <a href="{{ route('tripticket')}}" class="form-control">TRIP TICKET</a>
+                                             <a href="{{ route('tripticket', ['FileType' => 'TRIP TICKET'])}}" class="form-control">TRIP TICKET</a>
                                           </div>
                                        </div>
                                     </div>
                                     <div class="col-md-6">
                                        <div class="form-group">
                                           <div class="card-footer">
-                                             <a href="{{ route('getDispatch') }}" class="form-control">DISPATCH</a>
+                                             <a href="{{ route('getDispatch', ['FileType' => 'DISPATCH']) }}" class="form-control">DISPATCH</a>
                                           </div>
                                        </div>
                                     </div>
                                     <div class="col-md-6">
                                        <div class="form-group">
                                           <div class="card-footer">
-                                             <a href="{{ route('locator')}}" class="form-control">LOCATOR</a>
+                                             <a href="{{ route('locator', ['FileType' => 'LOCATOR'])}}" class="form-control">LOCATOR</a>
                                           </div>
                                        </div>
                                     </div>
                                     <div class="col-md-6">
                                        <div class="form-group">
                                           <div class="card-footer">
-                                             <a href="{{ route('travelorder')}}" class="form-control">TRAVEL ORDER</a>
+                                             <a href="{{ route('travelorder', ['FileType' => 'TRAVEL ORDER'])}}" class="form-control">TRAVEL ORDER</a>
                                           </div>
                                        </div>
                                     </div>

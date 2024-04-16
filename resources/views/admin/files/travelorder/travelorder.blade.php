@@ -66,13 +66,11 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <p>NAME</p>
-                                                <input type="text" class="form-control" name="Name">            
                                                 <input type="text" class="form-control" name="Name">                                                         </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <p>DESIGNATION</p>
-                                                <input type="text" class="form-control" name="Designation">    
                                                 <input type="text" class="form-control" name="Designation">     
                                             </div>
                                         </div>
@@ -80,13 +78,11 @@
                                             <div class="form-group">
                                                 <p>SUBJECT</p>
                                                 <input type="text" class="form-control" name="Subject">         
-                                                <input type="text" class="form-control" name="Subject">          
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <p>OFFICE</p>
-                                                <input type="text" class="form-control" name="Office">  
                                                 <input type="text" class="form-control" name="Office">   
                                             </div>
                                         </div>

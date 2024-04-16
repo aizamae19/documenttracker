@@ -9,13 +9,20 @@ use App\Models\Applicationforleave;
 use App\Models\Travelorder;
 use App\Models\Certificateofappearance;
 use App\Models\Locator;
+use App\Models\File;
 use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
 
 class FileController extends Controller
 {
     public function file()
     {
-        return view('admin.files.index');
+        $files = File::get();
+        return view('admin.files.index', [
+            'files'=>$files 
+        ]);
+
+        $current_date_time = Carbon::now()->toDateTimeString()->format('m/d/Y');
     }
 
     public function saveDispatch  (Request $request)
@@ -38,17 +45,11 @@ class FileController extends Controller
         }
     }
 
-<<<<<<< HEAD
-    public function applicationforleave(){
-        return view('admin.files.leaveform');
-=======
     public function applicationforleave(Request $request){
-        
         $applicationforleaves = Applicationforleave::get();
         return view('admin.files.leaveform', [
-            'applicationforleaves'=>$applicationforleaves
+            'applicationforleaves'=>$applicationforleaves 
         ]);
->>>>>>> origin/master
     }
 
     public function storeapplicationforleave(Request $request){

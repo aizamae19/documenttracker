@@ -31,7 +31,7 @@
               </svg>
             </div>
             <div class="tracking-date"><img src="https://raw.githubusercontent.com/shajo/portfolio/a02c5579c3ebe185bb1fc085909c582bf5fad802/delivery.svg" class="img-responsive" alt="order-placed" /></div>
-            <div class="tracking-content">Order Placed<span>09 Aug 2025, 10:00am</span></div>
+            <div class="tracking-content">Placed<span>09 Aug 2025, 10:00am</span></div>
           </div>
           <div class="tracking-item">
             <div class="tracking-icon status-intransit">
@@ -40,7 +40,7 @@
               </svg>
             </div>
             <div class="tracking-date"><img src="https://raw.githubusercontent.com/shajo/portfolio/a02c5579c3ebe185bb1fc085909c582bf5fad802/delivery.svg" class="img-responsive" alt="order-placed" /></div>
-            <div class="tracking-content">Order Confirmed<span>09 Aug 2025, 10:30am</span></div>
+            <div class="tracking-content">Confirmed<span>09 Aug 2025, 10:30am</span></div>
           </div>
           <div class="tracking-item">
             <div class="tracking-icon status-intransit">

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller; // Add this import
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -22,7 +22,7 @@ class CustomAuthController extends Controller
                 return '/user';
             }
 
-        return '/login'; // Handle if role is not found
+        return '/login';
     }
 
     public function index()

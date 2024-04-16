@@ -34,7 +34,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::get('/admin/files', [App\Http\Controllers\Admin\FileController::class, 'file'])->name('filedashboard');
             Route::post('/admin/files/store', [App\Http\Controllers\Admin\FileController::class, 'storefile'])->name('storefile');
 
-            #APPLICATION FOR LEAVE
+            #APPLICATION{{$locators->office}} FOR LEAVE
             Route::get('/admin/files/applicationforleave', [App\Http\Controllers\Admin\FileController::class, 'applicationforleave'])->name('applicationforleave');
             Route::post('/admin/files/applicationforleave/store', [App\Http\Controllers\Admin\FileController::class, 'storeapplicationforleave'])->name('applicationforleave.store');
 

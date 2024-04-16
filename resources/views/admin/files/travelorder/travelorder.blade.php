@@ -19,7 +19,6 @@
             <div class="container-fluid">
                 <div class="card card-info">
                     <form method="POST" action="{{route('travelorder.store')}}">
-
                         @csrf
                         <div class="card-body">
                             <div class="row">
@@ -37,7 +36,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <p>LOCATION</p>
-                                                <input type="text" class="form-control" name="Location">                 
+                                                <input type="text" class="form-control" name="Location">     
                                             </div>
                                         </div>
                                         <div class="col-md-4">
@@ -46,57 +45,50 @@
                                                 <input type="text" class="form-control" name="InclusiveDates">
                                             </div>
                                         </div>
-
-                                        <div class="col-md-4">
-                                      <div class="form-group">
-                                        <p>fgjthubty</p>
-                                        <input type="number" class= "form-control" name="" id="nooffamilymember" >
-                                      </div>
-                                    </div>
-                                        <div class="col-md-4">
+                                        <div class="col-md-12">
                                             <div class="form-group">
                                                 <p>PURPOSE</p>
-                                                <input type="text" class="form-control" name="Purpose">                 
+                                                <textarea class="form-control" name="Purpose"></textarea>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <p>ENDORSER</p>
-                                                <input type="text" class="form-control" name="Endorser">                 
+                                                <input type="text" class="form-control" name="Endorser">      
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <p>DATED</p>
-                                                <input type="text" class="form-control" name="Dated">                 
+                                                <input type="text" class="form-control" name="Dated">            
                                             </div>
                                         </div>
-                               <div class="col-md-4">
+                                        <div class="col-md-4">
                                             <div class="form-group">
                                                 <p>NAME</p>
-                                                <input type="text" class="form-control" name="Name">                 
+                                                <input type="text" class="form-control" name="Name">            
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <p>DESIGNATION</p>
-                                                <input type="text" class="form-control" name="Designation">                 
+                                                <input type="text" class="form-control" name="Designation">    
                                             </div>
                                         </div>
                                           <div class="col-md-4">
                                             <div class="form-group">
-                                                <p>subject</p>
-                                                <input type="text" class="form-control" name="Subject">                 
+                                                <p>SUBJECT</p>
+                                                <input type="text" class="form-control" name="Subject">         
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <p>OFFICE</p>
-                                                <input type="text" class="form-control" name="Office">                 
+                                                <input type="text" class="form-control" name="Office">  
                                             </div>
                                         </div>
-                                <div class="col-md-12">
-                                    <a href="{{route('filedashboard')}}" class="btn btn-danger" data-dismiss="modal">Cancel</a>
+                                    <div class="col-md-12">
+                                        <a href="{{route('filedashboard')}}" class="btn btn-danger" data-dismiss="modal">Cancel</a>
                                     <button type="submit" class="btn btn-primary">Save</button>
                                 </div>
                               </div>
@@ -104,6 +96,5 @@
                             </div>
                         </div>
                     </div>
-                </div>
-          </section>
+            </section>
     @endsection

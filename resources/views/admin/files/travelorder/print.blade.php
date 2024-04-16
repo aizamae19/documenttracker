@@ -1,31 +1,12 @@
 @extends('layouts.default')
 
 @section('content')
-<!DOCTYPE html>
-<html>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>2024_(MARCH)Travel Endorsement to Mayors Office.dotm</title>
     <link rel="stylesheet" type="text/css" href="https://test.myfiles.space/user_files/temporary/6618ecb97980b7.70717253/1712909496_2024-travel/styles.css" media="">
 </head>
 
 <body>
-    <div class="content-header">
-        <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-4"><br></div>
-                <div class="col-sm-4">
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">File</li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <section class="content">
         <div class="container-fluid">
             <div class="card card-info">
@@ -108,7 +89,7 @@
                     <div class="wcdiv"><img class="wcimg" style="left: 26.75pt; top: 178.14pt; width: 163.25pt; height: 25.1pt;" src="https://test.myfiles.space/user_files/temporary/6618ecb97980b7.70717253/1712909496_2024-travel/1712909496_2024-travel-6.png"></div>
                     <div class="wcdiv" style="margin-left:40pt; top:65.6pt;">
                         <div class="wcdiv" style="left:-0.75pt; top:68.9pt;"><a name="_GoBack" style="left:0pt; top:0pt;">&nbsp;</a></div>
-                        <div class="wcdiv" style="left:-0.75pt; top:117pt;"><span class="wcspan wctext002" style="left:0pt; top:0.39pt; line-height:13.41pt;">Date:</span> <span class="wcspan wctext002" style="left:36.75pt; top:0.39pt; line-height:13.41pt;">March 1, 2024</span></div>
+                        <div class="wcdiv" style="left:-0.75pt; top:117pt;"><span class="wcspan wctext002" style="left:0pt; top:0.39pt; line-height:13.41pt;">Date:</span> <span class="wcspan wctext002" style="left:36.75pt; top:0.39pt; line-height:13.41pt;"></span></div>
                         <div class="wcdiv" style="left:-0.75pt; top:147.09pt;"><span class="wcspan wctext003" style="left:-8pt; top:0.39pt; line-height:13.41pt;"> NACIONAL V MERCADO</span></div>
                         <div class="wcdiv" style="left:-0.75pt; top:162.14pt;"><span class="wcspan wctext002" style="left:-8pt; top:0.39pt; line-height:13.41pt;"> City Mayor</span></div>
                         <div class="wcdiv" style="left:-0.75pt; top:177.37pt;"><span class="wcspan wctext002" style="left:-8pt; top:0.39pt; line-height:13.41pt;"> City of Maasin</span></div>
@@ -181,12 +162,8 @@
             </div>
             <p><br></p>
         </div>
-    </section>
-</body>
-
+     </section>
+   </body>
 </html>
 @endsection
-
-
-
 

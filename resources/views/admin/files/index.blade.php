@@ -29,6 +29,7 @@
                         <thead>
                            <tr>
                               <th>Series Number</th>
+                              <th>Office</th>
                               <th>File Type</th>
                               <th>Date</th>
                               <th class="text-center">Action</th>
@@ -38,9 +39,10 @@
                            @if(isset($files))
                            @foreach($files as $file)
                            <tr>
-                              <td>{{$file->SeriesNumber}}</td>
-                              <td>{{$file->FileType}}</td>
-                              <td></td>                           
+                              <td></td>
+                              <td></td>
+                              <td></td> 
+                              <td></td>                          
                               <td class="text-center">
                                  <a class="btn btn-sm btn-success" href="#" data-toggle="modal" data-target="#view"><i
                                        class="fa fa-eye"></i> View</a>

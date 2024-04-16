@@ -27,7 +27,13 @@ class FileController extends Controller
 
     public function storefile(Request $request)
     {
-        
+        $filesave = new File();
+        $filesave->SeriesNumber = $request->SeriesNumber;
+        $filesave->FileType = $request->FileType;
+
+        if ($filesave->save()){
+            return redirect()->back()->withErrors('Successfully Saved!');
+        }
     }
 
     public function dispatchfile()

@@ -36,20 +36,19 @@
                            </tr>
                         </thead>
                         <tbody>
-                           @if(isset($files))
-                           @foreach($files as $file)
+                         @foreach($files as $file)
                            <tr>
-                              <td>{{$file->SeriesNumber}}</td>
-                              <td></td>
-                              <td>{{$file->FileType}}</td> 
-                              <td>{{$file->created_at}}</td>                          
+                              <td>{{$file->Date}}</td>
+                              <td>{{$file->Recipient}}</td>
+                              <td>{{$file->Description}}</td>
+
+                              <td></td>                          
                               <td class="text-center">
                                  <a class="btn btn-sm btn-success" href="#" data-toggle="modal" data-target="#view"><i class="fa fa-eye"></i> View</a>
                                  <a class="btn btn-sm btn-danger" href="#" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
                               </td>
                            </tr>
                            @endforeach
-                        @endif  
                         </tbody>
                      </table>
                   </div>
@@ -58,7 +57,6 @@
          </section>
       </div>
    </div>
-   
    <div id="delete" class="modal animated rubberBand delete-modal" role="dialog">
       <div class="modal-dialog modal-dialog-centered">
          <div class="modal-content">
@@ -72,7 +70,6 @@
          </div>
       </div>
    </div>
-   
    <div id="add" class="modal animated rubberBand delete-modal" role="dialog">
       <div class="modal-dialog modal-dialog-centered modal-lg">
          <div class="modal-content">

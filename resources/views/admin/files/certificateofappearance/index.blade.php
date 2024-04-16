@@ -1,69 +1,116 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.default')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto-increment Table</title>
-    <style>
-        table {
-            border: none;
-            border-collapse: collapse;
-            width: 88%;
-            margin-right: calc(12%);
-            margin-left: 23px;
-        }
+@section('content')
 
-        td {
-            color: black;
-            font-size: 15px;
-            font-weight: 400;
-            font-style: normal;
-            text-decoration: none;
-            font-family: Calibri, sans-serif;
-            vertical-align: bottom;
-            border: 1pt dotted windowtext;
-            width: 31.2232%;
-            height: 14.5pt;
-        }
+<div class="content-header">
+            <div class="container-fluid">
+               <div class="row mb-2">
+                  <div class="col-sm-6">
+                  </div>
+                  <div class="col-sm-6">
+                     <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">File</li>
+                     </ol>
+                  </div>
+               </div>
+            </div>
+         </div>
 
-        td[colspan="3"] {
-            text-align: center;
-            border-right: 1pt dotted windowtext;
-            border-bottom: 1pt dotted windowtext;
-            width: 36.6869%;
-        }
-    </style>
-</head>
-
-<body>
-    <table id="autoIncrementTable">
-        <tbody>
-            <tr>
-                <td>Name</td>
-                <td>Designation</td>
-                <td>Office</td>
-            </tr>
-        </tbody>
-    </table>
-    <script>
-        // Function to add a new row with auto-incremented index
-        function addRow() {
-            var table = document.getElementById("autoIncrementTable");
-            var rowCount = table.rows.length;
-            var row = table.insertRow(rowCount);
-        
-            var cell1 = row.insertCell(0);
-            var cell2 = row.insertCell(1);
-            var cell3 = row.insertCell(2);
-        
-            // Set the content of the cells
-            cell1.innerHTML = rowCount; // Auto-incremented index
-            cell2.innerHTML = "<input type='text'>";
-            cell3.innerHTML = "<input type='text'>";
-        }
-    </script><!-- Button to add new row -->
-    <p><button>Add Row</button></p>
-</body>
-
-</html>
+         <section class="content">
+            <div class="container-fluid">
+                <div class="card card-info">
+                    <form method="POST" action="{{ route('certificateofappearance.store') }}">
+                        @csrf
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="card-header">
+                                        <span class="fa fa-file"> Certificate Of Appearance</span>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <p>NAME</p>
+                                                <input type="text" class="form-control" name="Name">           
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <p>DESIGNATION</p>
+                                                <input type="text" class="form-control" name="Designation">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <p>SPECIFIED SERVICE RENDERED</p>
+                                                <input type="text" class="form-control" name="Service">                 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <p>INCLUSIVE DATE</p>
+                                                <input type="text" class="form-control" name="InclusiveDate">           
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <p>LOCATION</p>
+                                                <input type="text" class="form-control" name="Location">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="card-header">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="card-header">
+                                                <label style="text-align: center;">DATE ISSUED</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">    
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <p>DAY</p>
+                                                <input type="text" class="form-control" name="Day">       
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <p>DATE (MONTH, YEAR)</p>
+                                                <input type="text" class="form-control" name="Date">           
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <p>PLACE</p>
+                                                <input type="text" class="form-control" name="Place">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="card-header">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="col-md-12">
+                                        <a href="{{route('filedashboard')}}" class="btn btn-danger" data-dismiss="modal">Cancel</a>
+                                        <button type="submit" class="btn btn-primary">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+@endsection

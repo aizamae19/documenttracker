@@ -313,11 +313,7 @@
                   <td class="column2 style5 s style7" colspan="6"><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:10pt">Dispatch Vehicle:<br />
                       </span><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:6pt">Indicate Plate Number/ Conduction Sticker</span></td>
                   <td class="column8 style13 null style15" colspan="2"><input type="text" id="" name="PlateNumber" style="position: absolute; margin-top: -3px; width: 335px; height: 29px; left: 360px; background-color: transparent; color: black;"></td>
-<<<<<<< HEAD:resources/views/admin/files/dispatch.blade.php
-                 
-=======
-                  
->>>>>>> origin/main:resources/views/admin/files/dispatch/dispatch.blade.php
+
                 </tr>
                 <tr class="row11">
                   <td class="column2 style8 s style9" colspan="8"><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:10pt">Responding Personnel (Indicate Complete Name)</span></td>
@@ -365,7 +361,6 @@
                </span><span style="font-weight:bold; color:#FF0000; font-family:'Calibri'; font-size:5pt; ">1.             This dispatch ticket must be endorsed to the City Mayors Office for Issuance of Travel Order the following day after the emergency travel outside Maasin City (for emergency travel falling on a 4-12, 12-8 shift on a weekdays is conducted, otherwise travel order otherwise responders and dispatch will be ask a written explanation.<br />
                </span><span style="font-weight:bold; color:#FF0000; font-family:'Calibri'; font-size:5pt">2.             If conduction falls on a Friday (especially 4-12, 12-8  shift), Saturday, Sunday. This dispatch ticket should be forwarded the first working day after the weekend.</span></td>
                </tr>
-<<<<<<< HEAD:resources/views/admin/files/dispatch.blade.php
                       </tbody>
                      </table>
                      <br>
@@ -373,15 +368,8 @@
                      <br>
                      <br>
                      <br>
-=======
-          </tbody>
-         </table>
-         <br>
-         <br>
-         <br>
-         <br>
-         <br>
->>>>>>> origin/main:resources/views/admin/files/dispatch/dispatch.blade.php
+
+       
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="card-header">

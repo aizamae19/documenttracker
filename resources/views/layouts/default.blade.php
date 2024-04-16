@@ -19,16 +19,16 @@
          font-size: 0.7rem;
       }
       th{
-         padding: 0.5rem !important;
+         padding: 0.3rem !important;
       }
       table tr td {
-         padding: 0.1rem !important;
+         padding: 0.3rem !important;
       }
    </style>
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
-   <div class="wrapper" style="background-color: white;">
+   <div class="wrapper">
       <nav class="main-header navbar navbar-expand navbar-light" style="background-color: #ee7699">
          <ul class="navbar-nav">
             <li class="nav-item">
@@ -173,7 +173,7 @@
             </nav>
          </div>
       </aside>
-      <div class="content-wrapper" style="background-color: white; ">
+      <div class="content-wrapper">
          @yield('content')
       </div>
    </div>

@@ -184,4 +184,13 @@ public function  storetravelorder (Request $request)
     {
         return view('admin.files.dispatch.index');
     }
+
+    public function deletefile(Request $request){
+        $Deletesave=File::where('id' ,$request->id)->first();
+        $Deletesave-> SeriesNumber =$request->SeriesNumber;
+        $Deletesave-> FileType =$request->FileType;
+        if($Deletesave->delete()) {
+            return redirect()->back()->withErrors('Deleted!');
+        }
+    }
 }

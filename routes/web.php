@@ -60,9 +60,9 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             #USERS
             Route::get('/admin/users', [App\Http\Controllers\Admin\UsersController::class, 'users'])->name('usersdashboard');
 
-            // //View
-            // Route::get('/admin/files/index/applicationforleave/{id}', [App\Http\Controllers\Admin\FileController::class, 'viewapplicationforleave'])->name('applicationforleave.view');
-            // Route::post('/admin/files/index/applicationforleave/view', [App\Http\Controllers\Admin\FileController::class, 'viewapplicationforleave'])->name('applicationforleave.edit.view');
+            //Delete
+            Route::get('/admin/files/index/delete/{id}', [App\Http\Controllers\Admin\FileController::class, 'deletefile'])->name('file.delete');
+            Route::post('/admin/files/index/delete', [App\Http\Controllers\Admin\FileController::class, 'deletefile'])->name('file.delete');
 
 
             #ADD USER

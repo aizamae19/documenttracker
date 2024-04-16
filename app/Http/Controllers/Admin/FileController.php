@@ -27,13 +27,7 @@ class FileController extends Controller
 
     public function storefile(Request $request)
     {
-        $filesave = new File();
-        $filesave->SeriesNumber = $request->SeriesNumber;
-        $filesave->FileType = $request->FileType;
-
-        if ($filesave->save()){
-            return redirect()->back()->withErrors('Successfully Saved!');
-        }
+        
     }
 
     public function dispatchfile()
@@ -129,7 +123,6 @@ class FileController extends Controller
             $Travelorder->Dated = $request->Dated;
             $Travelorder->Purpose = $request->Purpose;
             $Travelorder->Subject = $request->Subject;
-
 
         if ($Travelorder->save()) {
             return redirect()->back()->withErrors('Successfully Saved!');

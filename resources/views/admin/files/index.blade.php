@@ -6,12 +6,12 @@
             <div class="container-fluid">
                <div class="row mb-2">
                   <div class="col-sm-6">
-                     <h1 class="m-0"><img src="{{asset('assets/img/file.png')}}" width="40"> List of Files</h1>
+                     <h1 class="m-0"><img src="{{asset('assets/img/file.png')}}" width="40"> List of Documents</h1>
                   </div>
                   <div class="col-sm-6">
                      <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Files</li>
+                        <li class="breadcrumb-item active">Document</li>
                      </ol>
                   </div><br>
                   <a class="btn btn-sm btn-info elevation-4" href="#" data-toggle="modal" data-target="#add" style="margin-left: 7px;"><i
@@ -30,7 +30,7 @@
                            <tr>
                               <th>Series Number</th>
                               <th>Office</th>
-                              <th>File Type</th>
+                              <th>Document Type</th>
                               <th>Date & Time</th>
                               <th class="text-center">Action</th>
                            </tr>

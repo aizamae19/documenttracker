@@ -30,6 +30,11 @@ class FileController extends Controller
         
     }
 
+    public function dispatchfile()
+    {
+        return view('admin.files.dispatch.index');
+    }
+
     public function saveDispatch(Request $request)
     {
         $Dispatchsave = new Dispatch();
@@ -52,7 +57,7 @@ class FileController extends Controller
 
     public function applicationforleave(){
         $applicationforleaves = Applicationforleave::get();
-        return view('admin.files.leaveform', [
+        return view('admin.files.applicationforleave.leaveform', [
             'applicationforleaves'=>$applicationforleaves 
         ]);
     }
@@ -98,7 +103,13 @@ class FileController extends Controller
             return redirect()->back()->with('Error', 'Failed to save application for leave.');
         }
     }
-public function  storetravelorder (Request $request)
+
+    public function travelorder()
+    {
+        return view('admin.files.travelorder.travelorder');
+    }
+    
+    public function  storetravelorder (Request $request)
     {
             $Travelorder = new Travelorder();
             $Travelorder->Date = $request->Date;
@@ -117,11 +128,6 @@ public function  storetravelorder (Request $request)
         if ($Travelorder->save()) {
             return redirect()->back()->withErrors('Successfully Saved!');
         }
-    }
-
-    public function travelorder()
-    {
-        return view('admin.files.travelorder');
     }
 
     public function certificateofappearance()
@@ -177,20 +183,6 @@ public function  storetravelorder (Request $request)
 
         if ($locatorsave->save()) {
             return redirect()->back()->withErrors('Successfully Saved!');
-        }
-    }
-
-    public function dispatchfile()
-    {
-        return view('admin.files.dispatch.index');
-    }
-
-    public function deletefile(Request $request){
-        $Deletesave=File::where('id' ,$request->id)->first();
-        $Deletesave-> SeriesNumber =$request->SeriesNumber;
-        $Deletesave-> FileType =$request->FileType;
-        if($Deletesave->delete()) {
-            return redirect()->back()->withErrors('Deleted!');
         }
     }
 }

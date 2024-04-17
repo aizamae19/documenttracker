@@ -11,33 +11,42 @@ use App\Models\Travelorder;
 use App\Models\Certificateofappearance;
 use App\Models\Locator;
 use App\Models\File;
+use App\Models\Office;
 use Carbon\Carbon;
 
 class FileController extends Controller
 {
-
-
-
     public function file()
-{
-      $dispatches = Dispatch::all(); 
+    {
+    $dispatches = Dispatch::all(); 
+    $office = Office::all();
     $locators = Locator::all(); 
     $certificateofappearances = Certificateofappearance::all(); 
-    $applicationforleave = Applicationforleave::all(); 
+    $applicationforleaves = Applicationforleave::all(); 
     $travelorders = Travelorder::all();
-    return view('admin.files.index', compact('travelorders','dispatches','locators', 'certificateofappearances', 'applicationforleave' ));
-}
+    return view('admin.files.index', compact('travelorders','dispatches','locators', 'certificateofappearances', 'applicationforleaves', 'office' ));
+    }
 
     public function storefile(Request $request)
     {
-        
-    }
-public function viewfile($id) {
-    $travelorder = Travelorder::find($id); // Assuming your model is named Resident
+        $filesave = new File();
+        $filesave->SeriesNumber = $request->SeriesNumber;
 
-    // Check if the resident is found
+        if ($filesave->save()) {
+            return redirect()->back()->withErrors('Successfully Saved!');
+        }
+    }
+
+    public function viewfile($id) {
+        $travelorder = Travelorder::find($id);
+    }
+
+    public function dispatchfile()
+    {
+        return view('admin.files.dispatch.index');
+
     if (!$travelorder) {
-        abort(404); // Or handle the case where the resident is not found
+        abort(404);
     }
 
     return view('admin.files.travelorder.print', compact('travelorder'));
@@ -62,17 +71,13 @@ public function viewfile($id) {
         $Dispatchsave->Passenger = $request->Passenger;
 
         if ($Dispatchsave->save()) {
-            return redirect()->back()->withErrors('Successfully Saved!');
+            return redirect("/admin/files")->withErrors('Successfully Saved!');
         }
     }
 
     public function applicationforleave(){
         $applicationforleaves = Applicationforleave::get();
-        return view('admin.files.applicationforleave ', [
-            'applicationforleaves'=>$applicationforleaves
-        ]);
-    
-        return view('admin.files.leaveform', [
+        return view('admin.files.applicationforleave.leaveform', [
             'applicationforleaves'=>$applicationforleaves 
         ]);
     }
@@ -113,11 +118,17 @@ public function viewfile($id) {
         }
 
         if ($applicationforleavesave->save()) {
-            return redirect()->back()->with('Success', 'Application for leave saved successfully.');
+            return redirect("/admin/files")->with('Success', 'Application for leave saved successfully.');
         } else {
             return redirect()->back()->with('Error', 'Failed to save application for leave.');
         }
-        }
+    }
+
+    public function travelorder()
+    {
+        return view('admin.files.travelorder.travelorder');
+    }
+    
         public function  storetravelorder (Request $request)
             {
             $Travelorder = new Travelorder();
@@ -132,14 +143,10 @@ public function viewfile($id) {
             $Travelorder->Dated = $request->Dated;
             $Travelorder->Purpose = $request->Purpose;
             $Travelorder->Subject = $request->Subject;
+
         if ($Travelorder->save()) {
-            return redirect()->back()->withErrors('Successfully Saved!');
+            return redirect("/admin/files")->withErrors('Successfully Saved!');
         }
-    }
-    
-    public function travelorder()
-    {
-        return view('admin.files.travelorder.travelorder');
     }
 
     public function certificateofappearance()
@@ -158,9 +165,10 @@ public function viewfile($id) {
         $certificateofappearancesave->Day = $request->Day;
         $certificateofappearancesave->Date = $request->Date;
         $certificateofappearancesave->Place = $request->Place;
+        $certificateofappearancesave->Office = $request->Office;
 
         if ($certificateofappearancesave->save()) {
-            return redirect()->back()->withErrors('Successfully Saved!');
+            return redirect("/admin/files")->withErrors('Successfully Saved!');
         }
     }
 
@@ -194,12 +202,7 @@ public function viewfile($id) {
         $locatorsave->ConfirmationOfAppearance = $request->ConfirmationOfAppearance;
 
         if ($locatorsave->save()) {
-            return redirect()->back()->withErrors('Successfully Saved!');
+            return redirect("/admin/files")->withErrors('Successfully Saved!');
         }
-    }
-
-    public function dispatchfile()
-    {
-        return view('admin.files.dispatch.index');
     }
 }

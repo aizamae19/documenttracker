@@ -15,15 +15,18 @@ use Carbon\Carbon;
 
 class FileController extends Controller
 {
-    public function file()
-    {
-        $files = File::get();
-        return view('admin.files.index', [
-            'files'=>$files 
-        ]);
 
-        $current_date_time = Carbon::now()->toDateTimeString();
-    }
+
+
+    public function file()
+{
+      $dispatch = Dispatch::all(); 
+    $locators = Locator::all(); 
+    $certificateofappearances = Certificateofappearance::all(); 
+    $applicationforleave = Applicationforleave::all(); 
+    $travelorders = Travelorder::all();
+    return view('admin.files.index', compact('travelorders','dispatch','locators', 'certificateofappearances', 'applicationforleave' ));
+}
 
     public function storefile(Request $request)
     {
@@ -120,10 +123,10 @@ class FileController extends Controller
             return redirect()->back()->withErrors('Successfully Saved!');
         }
     }
-
+    
     public function travelorder()
     {
-        return view('admin.files.travelorder.print');
+        return view('admin.files.travelorder.travelorder');
     }
 
     public function certificateofappearance()

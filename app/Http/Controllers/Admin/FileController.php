@@ -56,7 +56,7 @@ class FileController extends Controller
         $Dispatchsave->Passenger = $request->Passenger;
 
         if ($Dispatchsave->save()) {
-            return redirect()->back()->withErrors('Successfully Saved!');
+            return redirect("/admin/files")->withErrors('Successfully Saved!');
         }
     }
 
@@ -103,7 +103,7 @@ class FileController extends Controller
         }
 
         if ($applicationforleavesave->save()) {
-            return redirect()->back()->with('Success', 'Application for leave saved successfully.');
+            return redirect("/admin/files")->with('Success', 'Application for leave saved successfully.');
         } else {
             return redirect()->back()->with('Error', 'Failed to save application for leave.');
         }
@@ -130,7 +130,7 @@ class FileController extends Controller
             $Travelorder->Subject = $request->Subject;
 
         if ($Travelorder->save()) {
-            return redirect()->back()->withErrors('Successfully Saved!');
+            return redirect("/admin/files")->withErrors('Successfully Saved!');
         }
     }
 
@@ -152,7 +152,7 @@ class FileController extends Controller
         $certificateofappearancesave->Place = $request->Place;
 
         if ($certificateofappearancesave->save()) {
-            return redirect()->back()->withErrors('Successfully Saved!');
+            return redirect("/admin/files")->withErrors('Successfully Saved!');
         }
     }
 
@@ -186,7 +186,7 @@ class FileController extends Controller
         $locatorsave->ConfirmationOfAppearance = $request->ConfirmationOfAppearance;
 
         if ($locatorsave->save()) {
-            return redirect()->back()->withErrors('Successfully Saved!');
+            return redirect("/admin/files")->withErrors('Successfully Saved!');
         }
     }
 }

@@ -54,7 +54,7 @@
                     <tbody>
                     @foreach($travelorders as $key => $file)
                           <tr>
-                              <?php $SeriesNumber = sprintf('%05d', $key + 1); ?>
+                              <?php $SeriesNumber = sprintf('%05d' ,$key + 1); ?>
                               <td>{{ substr($file->created_at, 0, 6) . $SeriesNumber }}</td>
                               <td>{{ $file->Office }}</td>
                               <td>{{ $file->FileType }}</td>

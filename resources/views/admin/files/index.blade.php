@@ -45,8 +45,9 @@
                               <td></td>
                               <td>{{ substr($file->created_at, 0, 10)}}</td>
                               <td class="text-center">
-                                  <a class="btn btn-sm btn-success" href="#" data-toggle="modal" data-target="#view"><i class="fa fa-eye"></i> View</a>
-                                  <a class="btn btn-sm btn-danger" href="#" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
+                                 
+                                 <a class="btn btn-sm btn-success" href="#" data-toggle="modal" data-target="#view"><i class="fa fa-eye"></i> View</a>
+                                 <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
                               </td>
                           </tr>
                     @endforeach

@@ -17,6 +17,7 @@
                   class="fa fa-plus-square"></i>
                Add New</a>
          </div>
+<<<<<<< HEAD
       </div>
    </div>
    <section class="content">
@@ -88,6 +89,78 @@
                                     <div class="form-group">
                                        <div class="card-footer">
                                           <a href="{{ route('applicationforleave', ['FileType' => 'APPLICATION FOR LEAVE']) }}" class="form-control link" id="applicationForLeaveLink">APPLICATION FOR LEAVE</a>
+=======
+      <section class="content">
+    <div class="container-fluid">
+        <div class="card card-info">
+            <br>
+            <div class="col-md-12">
+                <table id="example1" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Series Number</th>
+                            <th>Office</th>
+                            <th>File Type</th>
+                            <th>Date & Time</th>
+                            <th class="text-center">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($travelorders->merge($dispatch)->merge($locators)  as $key => $file)
+
+                          <tr>
+                              <?php $seriesNumber = sprintf('%04d', $key + 1); ?>
+                              <td>{{ substr($file->created_at, 0, 8) . $seriesNumber }}</td>
+                              <td>{{ $file->Office }}</td>
+                              <td></td>
+                              <td>{{ substr($file->created_at, 0, 10)}}</td>
+                              <td class="text-center">
+                                  <a class="btn btn-sm btn-success" href="#" data-toggle="modal" data-target="#view"><i class="fa fa-eye"></i> View</a>
+                                  <a class="btn btn-sm btn-danger" href="#" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
+                              </td>
+                          </tr>
+                    @endforeach
+                    </tbody>
+                </table>
+            </div>
+              </div>
+          </div>
+      </section>
+      </div>
+      </div>
+      <div id="delete" class="modal animated rubberBand delete-modal" role="dialog">
+            <div class="modal-dialog modal-dialog-centered">
+               <div class="modal-content">
+                  <div class="modal-body text-center">
+                     <img src="{{asset('assets/img/sent.png')}}" alt="" width="50" height="46">
+                     <h3>Are you sure want to delete this file?</h3>
+                     <div class="m-t-20"> <a href="#" class="btn btn-white" data-dismiss="modal">Close</a>
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="add" class="modal animated rubberBand delete-modal" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+               <div class="modal-content">
+                  <div class="modal-body text-center">
+                        <div class="card-body">
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <div class="card-header">
+                                    <h5><img src="{{asset('assets/img/file.png')}}" width="30"> Document Information</h5>
+                                 </div>
+                                 <br>
+                           <div class="slide-v">
+                              <div class="slide">
+                                 <div class="row">
+                                    <div class="col-md-6">
+                                       <div class="form-group">
+                                          <div class="card-footer">
+                                             <a href="{{ route('applicationforleave', ['FileType' => 'APPLICATION FOR LEAVE']) }}" class="form-control link">APPLICATION FOR LEAVE</a>
+                                          </div>
+>>>>>>> origin/master
                                        </div>
                                     </div>
                                  </div>

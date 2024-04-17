@@ -1,41 +1,21 @@
-@extends('layouts.default')
-
-@section('content')
 <!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>2024_(MARCH)Travel Endorsement to Mayors Office.dotm</title>
-    <link rel="stylesheet" type="text/css" href="https://test.myfiles.space/user_files/temporary/6618ecb97980b7.70717253/1712909496_2024-travel/styles.css" media="">
+    <title></title>
 </head>
 
 <body>
-    <div class="content-header">
-        <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-4"><br></div>
-                <div class="col-sm-4">
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">File</li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-    </div>
     <section class="content">
         <div class="container-fluid">
             <div class="card card-info">
                 <div class="wcdiv wcpage" style="width:612pt; height:936pt;">
                     <div class="wcdiv" style="left:1.25pt; top:2.5pt;">
                         <div class="wcdiv" style="top:-0.02pt;">
-                            <div class="wcdiv">&nbsp;<img class="wcimg" style="left: 0pt; top: 0.02pt; width: 612pt; height: 80.6pt;" src="https://test.myfiles.space/user_files/temporary/6618ecb97980b7.70717253/1712909496_2024-travel/1712909496_2024-travel-1.png"></div>
+                            <div class="wcdiv">&nbsp;<img class="wcimg" style="margin: 0 auto 0 0; display: block; left: 0pt; top: 0.02pt; width: 612pt; height: 80.6pt;" src="https://test.myfiles.space/user_files/temporary/6618ecb97980b7.70717253/1712909496_2024-travel/1712909496_2024-travel-1.png"></div>
                         </div>
                         <div class="wcdiv" style="left:35.25pt; top:31.52pt;">
-                            <div class="wcdiv"><img class="wcimg" style="left: 0pt; top: 0.02pt; width: 93pt; height: 85.46pt;" src="https://test.myfiles.space/user_files/temporary/6618ecb97980b7.70717253/1712909496_2024-travel/1712909496_2024-travel-2.jpeg"></div>
+                            <div class="wcdiv"><img class="wcimg" style="margin: 0 auto 0 0; display: block; left: 0pt; top: 0.02pt; width: 93pt; height: 85.46pt;" src="https://test.myfiles.space/user_files/temporary/6618ecb97980b7.70717253/1712909496_2024-travel/1712909496_2024-travel-2.jpeg"></div>
                         </div>
                         <div class="wcdiv" style="left:232.03pt; top:36.66pt;">
                             <div class="wcdiv" style="top:0pt; clip:rect(0pt,65.38pt,16.35pt,0pt);"><span class="wcspan wctext001" style="left:0pt; top:0pt; line-height:14.65pt;">Republic</span></div>
@@ -101,17 +81,17 @@
                             <div class="wcdiv" style="top:0.01pt; clip:rect(0pt,54.18pt,23.01pt,0pt);"><span class="wcspan wctext001" style="font-size:16pt; left:0pt; top:0pt; line-height:19.53pt;">&nbsp;</span> <span class="wcspan wctext001" style="font-size:16pt; left:3.62pt; top:0pt; line-height:19.53pt;">Officer</span></div>
                         </div>
                         <div class="wcdiv" style="top:127.14pt;">
-                            <div class="wcdiv"><img class="wcimg" style="left: 0pt; top: 0pt; width: 612pt; height: 4.56pt;" src="https://test.myfiles.space/user_files/temporary/6618ecb97980b7.70717253/1712909496_2024-travel/1712909496_2024-travel-3.png"></div>
+                            <div class="wcdiv"><img class="wcimg" style="margin: 0 auto 0 0; display: block; left: 0pt; top: 0pt; width: 612pt; height: 4.56pt;" src="https://test.myfiles.space/user_files/temporary/6618ecb97980b7.70717253/1712909496_2024-travel/1712909496_2024-travel-3.png"></div>
                         </div>
                     </div>
-                    <div class="wcdiv"><img class="wcimg" style="left: 36pt; top: 268.42pt; width: 460.45pt; height: 22.6pt;" src="https://test.myfiles.space/user_files/temporary/6618ecb97980b7.70717253/1712909496_2024-travel/1712909496_2024-travel-4.png"></div>
-                    <div class="wcdiv"><img class="wcimg" style="left: 26.75pt; top: 178.14pt; width: 163.25pt; height: 25.1pt;" src="https://test.myfiles.space/user_files/temporary/6618ecb97980b7.70717253/1712909496_2024-travel/1712909496_2024-travel-6.png"></div>
+                    <div class="wcdiv"><img class="wcimg" style="margin: 0 auto 0 0; display: block; left: 36pt; top: 268.42pt; width: 460.45pt; height: 22.6pt;" src="https://test.myfiles.space/user_files/temporary/6618ecb97980b7.70717253/1712909496_2024-travel/1712909496_2024-travel-4.png"></div>
+                    <div class="wcdiv"><img class="wcimg" style="margin: 0 auto 0 0; display: block; left: 26.75pt; top: 178.14pt; width: 163.25pt; height: 25.1pt;" src="https://test.myfiles.space/user_files/temporary/6618ecb97980b7.70717253/1712909496_2024-travel/1712909496_2024-travel-6.png"></div>
                     <div class="wcdiv" style="margin-left:40pt; top:65.6pt;">
                         <div class="wcdiv" style="left:-0.75pt; top:68.9pt;"><a name="_GoBack" style="left:0pt; top:0pt;">&nbsp;</a></div>
-                        <div class="wcdiv" style="left:-0.75pt; top:117pt;"><span class="wcspan wctext002" style="left:0pt; top:0.39pt; line-height:13.41pt;">Date:</span> <span class="wcspan wctext002" style="left:36.75pt; top:0.39pt; line-height:13.41pt;">March 1, 2024</span></div>
-                        <div class="wcdiv" style="left:-0.75pt; top:147.09pt;"><span class="wcspan wctext003" style="left:-8pt; top:0.39pt; line-height:13.41pt;"> NACIONAL V MERCADO</span></div>
-                        <div class="wcdiv" style="left:-0.75pt; top:162.14pt;"><span class="wcspan wctext002" style="left:-8pt; top:0.39pt; line-height:13.41pt;"> City Mayor</span></div>
-                        <div class="wcdiv" style="left:-0.75pt; top:177.37pt;"><span class="wcspan wctext002" style="left:-8pt; top:0.39pt; line-height:13.41pt;"> City of Maasin</span></div>
+                        <div class="wcdiv" style="left:-0.75pt; top:117pt;"><span class="wcspan wctext002" style="left:0pt; top:0.39pt; line-height:13.41pt;">Date:</span></div>
+                        <div class="wcdiv" style="left:-0.75pt; top:147.09pt;"><span class="wcspan wctext003" style="left:-8pt; top:0.39pt; line-height:13.41pt;">&nbsp;NACIONAL V MERCADO</span></div>
+                        <div class="wcdiv" style="left:-0.75pt; top:162.14pt;"><span class="wcspan wctext002" style="left:-8pt; top:0.39pt; line-height:13.41pt;">&nbsp;City Mayor</span></div>
+                        <div class="wcdiv" style="left:-0.75pt; top:177.37pt;"><span class="wcspan wctext002" style="left:-8pt; top:0.39pt; line-height:13.41pt;">&nbsp;City of Maasin</span></div>
                         <div class="wcdiv" style="top:206.21pt;"><span class="wcspan wctext003" style="left:0pt; top:0.39pt; line-height:13.41pt;">Subject:</span> <span class="wcspan wctext004" style="left:63.67pt; top:0.39pt; line-height:13.41pt;">Recommendation for Issuance of Travel Order</span></div>
                         <div class="wcdiv" style="left:-0.75pt; top:235.83pt;"><span class="wcspan wctext002" style="left:0pt; top:0.39pt; line-height:13.41pt;">Sir;</span></div>
                         <div style="left:-0.75pt; top:284.66pt;">
@@ -141,7 +121,7 @@
                         <div style="left:-0.75pt; top:264.66pt;">
                             <p style="margin-top: 1%; margin-left: -10px;">We hereby endorse this travel order request with a memorandum order from the dated<br><span style="color: red;top:0.39pt;">Provincial Governor of Southern Leyte</span> from <span style="color: red;top:0.39pt;">February 26, 2024.&nbsp;</span></p>
                         </div>
-                        <table style="border: none;border-collapse: collapse;width:490pt; ">
+                        <table style="border: none;border-collapse: collapse;width:490pt;">
                             <tbody>
                                 <tr>
                                     <td colspan="2" rowspan="3" style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; text-align: center; vertical-align: top; border: 0.5pt solid windowtext; height: 43.5pt; width: 34.6939%;">
@@ -155,7 +135,7 @@
                             <p>All necessary travel arrangements should be in accordance with the government regulations on transportations, accommodations and per diem allowances.</p>
                         </div>
                         <div style="margin-left: -9px;  top:264.66pt; margin-top: -9px;">
-                            <p>We confirm that the above-name employee(s) will represent the Local Government Unit of<br> Maasin in a professional and responsible manner and will conduct the official business in <br>accordance with the rules and regulations of the government and of our organization.</p>
+                            <p>We confirm that the above-name employee(s) will represent the Local Government Unit of<br>Maasin in a professional and responsible manner and will conduct the official business in<br>accordance with the rules and regulations of the government and of our organization.</p>
                         </div>
                         <div style="margin-left: -9px; top:264.66pt; margin-top: -9px;">
                             <p>We trust that this endorsement will facilitate the travel process and enable the employee to undertake the official trip as authorized.For your issuance of travel order.</p>
@@ -166,13 +146,12 @@
                         <div style="margin-left: -9px;  margin-top: 22px;">
                             <p>Sincerely,</p>
                         </div>
-                        <div style="margin-left: -9px;  margin-top: 31px; ">
-                            <p><strong> RAUL A. INOCANDO, JR. </strong></b></p>
+                        <div style="margin-left: -9px;  margin-top: 31px;">
+                            <p><strong>RAUL A. INOCANDO, JR.&nbsp;</strong></p>
                         </div>
-                        <div style="margin-left: -9px;  margin-top: -22px;">
+                        <div style="margin-left: -9px;  margin-top: -17px;">
                             <p>CHRMO</p>
                         </div>
-                
                     </div>
                     <div class="wcdiv" style="left:68.65pt; top:360.74pt;"><br></div>
                     <link rel="stylesheet" type="text/css" href="https://test.myfiles.space/user_files/temporary/6618ecb97980b7.70717253/1712909496_2024-travel/styles.css" media="all">
@@ -183,96 +162,4 @@
         </div>
     </section>
 </body>
-
-</html>
-@endsection
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto-increment Table</title>
-    <style>
-        table {
-            border: none;
-            border-collapse: collapse;
-            width: 88%;
-            margin-right: calc(12%);
-            margin-left: 23px;
-        }
-
-        td {
-            color: black;
-            font-size: 15px;
-            font-weight: 400;
-            font-style: normal;
-            text-decoration: none;
-            font-family: Calibri, sans-serif;
-            vertical-align: bottom;
-            border: 1pt dotted windowtext;
-            width: 31.2232%;
-            height: 14.5pt;
-        }
-
-        td[colspan="3"] {
-            text-align: center;
-            border-right: 1pt dotted windowtext;
-            border-bottom: 1pt dotted windowtext;
-            width: 36.6869%;
-        }
-    </style>
-</head>
-
-<body>
-    <table id="autoIncrementTable">
-        <tbody>
-            <tr>
-                <td colspan="2">
-                    <div style="text-align: center;"><strong>Name</strong></div>
-                </td>
-                <td>
-                    <div style="text-align: center;"><strong>Designation</strong></div>
-                </td>
-                <td>
-                    <div style="text-align: center;"><strong>Office</strong></div>
-                </td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td style="width: 8.2278%;"></td>
-                <td style="width: 26.3714%;"></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </tfoot>
-    </table>
-    <script>
-        // Function to add a new row with auto-incremented index
-        function addRow() {
-            var table = document.getElementById("autoIncrementTable");
-            var rowCount = table.rows.length;
-            var row = table.insertRow(rowCount);
-        
-            var cell1 = row.insertCell(0);
-            var cell2 = row.insertCell(1);
-            var cell3 = row.insertCell(2);
-        
-            // Set the content of the cells
-            cell1.innerHTML = rowCount; // Auto-incremented index
-            cell2.innerHTML = "<input type='text'>";
-            cell3.innerHTML = "<input type='text'>";
-        }
-    </script><!-- Button to add new row -->
-    <p><button data-mousedown="true">Add Row</button></p>
-</body>
-
 </html>

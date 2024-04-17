@@ -36,7 +36,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <p>LOCATION</p>
-                                                <input type="text" class="form-control" name="Location">                 
+                                                <input type="text" class="form-control" name="Location">     
                                             </div>
                                         </div>
                                         <div class="col-md-4">
@@ -63,11 +63,10 @@
                                                 <input type="text" class="form-control" name="Dated">            
                                             </div>
                                         </div>
-                               <div class="col-md-4">
+                                        <div class="col-md-4">
                                             <div class="form-group">
                                                 <p>NAME</p>
-                                                <input type="text" class="form-control" name="Name">             
-                                            </div>
+                                                <input type="text" class="form-control" name="Name">                                                         </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
@@ -78,7 +77,7 @@
                                           <div class="col-md-4">
                                             <div class="form-group">
                                                 <p>SUBJECT</p>
-                                                <input type="text" class="form-control" name="Subject">          
+                                                <input type="text" class="form-control" name="Subject">         
                                             </div>
                                         </div>
                                         <div class="col-md-4">
@@ -87,14 +86,16 @@
                                                 <input type="text" class="form-control" name="Office">   
                                             </div>
                                         </div>
-                                <div class="col-md-12">
-                                    <a href="{{route('filedashboard')}}" class="btn btn-danger" data-dismiss="modal">Cancel</a>
+                                    <div class="col-md-12">
+                                        <a href="{{route('filedashboard')}}" class="btn btn-danger" data-dismiss="modal">Cancel</a>
                                     <button type="submit" class="btn btn-primary">Save</button>
                                 </div>
                               </div>
                              </form>
                             </div>
                         </div>
+                    </div>
+            </section>
                 </div>
           </section>
     @endsection

@@ -15,15 +15,18 @@ use Carbon\Carbon;
 
 class FileController extends Controller
 {
-    public function file()
-    {
-        $files = File::get();
-        return view('admin.files.index', [
-            'files'=>$files 
-        ]);
 
-        $current_date_time = Carbon::now()->toDateTimeString();
-    }
+
+
+    public function file()
+{
+      $dispatch = Dispatch::all(); 
+    $locators = Locator::all(); 
+    $certificateofappearances = Certificateofappearance::all(); 
+    $applicationforleave = Applicationforleave::all(); 
+    $travelorders = Travelorder::all();
+    return view('admin.files.index', compact('travelorders','dispatch','locators', 'certificateofappearances', 'applicationforleave' ));
+}
 
     public function storefile(Request $request)
     {
@@ -63,7 +66,15 @@ class FileController extends Controller
 
     public function applicationforleave(){
         $applicationforleaves = Applicationforleave::get();
+<<<<<<< HEAD
         return view('admin.files.applicationforleave.leaveform', [
+=======
+        return view('admin.files.applicationforleave ', [
+            'applicationforleaves'=>$applicationforleaves
+        ]);
+    
+        return view('admin.files.leaveform', [
+>>>>>>> origin/master
             'applicationforleaves'=>$applicationforleaves 
         ]);
     }
@@ -108,6 +119,7 @@ class FileController extends Controller
         } else {
             return redirect()->back()->with('Error', 'Failed to save application for leave.');
         }
+<<<<<<< HEAD
     }
 
     public function travelorder()
@@ -117,6 +129,11 @@ class FileController extends Controller
     
     public function  storetravelorder (Request $request)
     {
+=======
+        }
+        public function  storetravelorder (Request $request)
+            {
+>>>>>>> origin/master
             $Travelorder = new Travelorder();
             $Travelorder->Date = $request->Date;
             $Travelorder->Location = $request->Location;
@@ -129,11 +146,22 @@ class FileController extends Controller
             $Travelorder->Dated = $request->Dated;
             $Travelorder->Purpose = $request->Purpose;
             $Travelorder->Subject = $request->Subject;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
         if ($Travelorder->save()) {
             return redirect("/admin/files")->withErrors('Successfully Saved!');
         }
     }
+<<<<<<< HEAD
+=======
+    
+    public function travelorder()
+    {
+        return view('admin.files.travelorder.travelorder');
+    }
+>>>>>>> origin/master
 
     public function certificateofappearance()
     {

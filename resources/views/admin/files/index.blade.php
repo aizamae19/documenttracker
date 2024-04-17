@@ -87,7 +87,7 @@
                                  <div class="col-md-6">
                                     <div class="form-group">
                                        <div class="card-footer">
-                                          <a href="{{ route('applicationforleave', ['FileType' => 'APPLICATION FOR LEAVE']) }}" class="form-control link">APPLICATION FOR LEAVE</a>
+                                          <a href="{{ route('applicationforleave', ['FileType' => 'APPLICATION FOR LEAVE']) }}" class="form-control link" id="applicationForLeaveLink">APPLICATION FOR LEAVE</a>
                                        </div>
                                     </div>
                                  </div>
@@ -136,23 +136,27 @@
          </div>
       </div>
    </div>
-@endsection
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 $(document).ready(function() {
-   $.ajax({
-      type: "POST",
-      url: "{{ route('storefile') }}", 
-      data: {
-         '_token': '{{ csrf_token() }}', 
-      },
-      success: function(response) {
-         console.log('Data stored successfully:', response);
-      },
-      error: function(xhr, status, error) {
-         console.error('Error storing data:', error);
-      }
-   });
+    $('#applicationForLeaveLink').click(function() {
+        $.ajax({
+            type: "POST",
+            url: "{{ route('storefile') }}", 
+            data: {
+                '_token': '{{ csrf_token() }}',
+                'FileType': 'APPLICATION FOR LEAVE'
+            },
+            success: function(response) {
+                console.log('File Type stored successfully:', response);
+            },
+            error: function(xhr, status, error) {
+                console.error('Error storing File Type:', error);
+            }
+        });
+    });
 });
 </script>
+
+@endsection

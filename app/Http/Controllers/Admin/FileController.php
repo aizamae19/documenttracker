@@ -27,7 +27,12 @@ class FileController extends Controller
 
     public function storefile(Request $request)
     {
-        
+        $filesave = new File();
+        $filesave->FileType = route('applicationforleave', ['FileType' => 'APPLICATION FOR LEAVE']);
+
+        if ($filesave->save()) {
+           return redirect()->back()->withErrors('Successfully Saved!');
+        }
     }
 
     public function dispatchfile()

@@ -139,4 +139,24 @@
             </div>
          </div>
       </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script>
+      $(document).ready(function() {
+         $.ajax({
+            type: "POST",
+            url: "{{ url('/admin/files/applicationforleave/store') }}",
+            data: {
+                '_token': '{{ csrf_token() }}',
+            },
+            success: function(response) {
+                console.log('Data stored successfully:', response);
+            },
+            error: function(xhr, status, error) {
+                console.error('Error storing data:', error);
+            }
+        });
+      });
+
+      </script>
+
 @endsection

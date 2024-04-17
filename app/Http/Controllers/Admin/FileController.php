@@ -16,6 +16,7 @@ use Carbon\Carbon;
 class FileController extends Controller
 {
     public function file()
+<<<<<<< HEAD
     {
         $dispatch = Dispatch::all(); 
         $locators = Locator::all(); 
@@ -24,6 +25,16 @@ class FileController extends Controller
         $travelorders = Travelorder::all();
         return view('admin.files.index', compact('travelorders','dispatch','locators', 'certificateofappearances', 'applicationforleaves' ));
     }
+=======
+{
+      $dispatches = Dispatch::all(); 
+    $locators = Locator::all(); 
+    $certificateofappearances = Certificateofappearance::all(); 
+    $applicationforleave = Applicationforleave::all(); 
+    $travelorders = Travelorder::all();
+    return view('admin.files.index', compact('travelorders','dispatches','locators', 'certificateofappearances', 'applicationforleave' ));
+}
+>>>>>>> origin/master
 
     public function storefile(Request $request)
     {
@@ -35,12 +46,26 @@ class FileController extends Controller
             return redirect()->back()->withErrors('Successfully Saved!');
         }
     }
+public function viewfile($id) {
+    $travelorder = Travelorder::find($id); // Assuming your model is named Resident
 
+<<<<<<< HEAD
 
     public function dispatchfile()
     {
         return view('admin.files.dispatch.index');
+=======
+    // Check if the resident is found
+    if (!$travelorder) {
+        abort(404); // Or handle the case where the resident is not found
+>>>>>>> origin/master
     }
+
+    return view('admin.files.travelorder.print', compact('travelorder'));
+}
+
+
+
 
     public function saveDispatch(Request $request)
     {
@@ -64,7 +89,15 @@ class FileController extends Controller
 
     public function applicationforleave(){
         $applicationforleaves = Applicationforleave::get();
+<<<<<<< HEAD
         return view('admin.files.applicationforleave.leaveform', [
+=======
+        return view('admin.files.applicationforleave ', [
+            'applicationforleaves'=>$applicationforleaves
+        ]);
+    
+        return view('admin.files.leaveform', [
+>>>>>>> origin/master
             'applicationforleaves'=>$applicationforleaves 
         ]);
     }
@@ -109,6 +142,7 @@ class FileController extends Controller
         } else {
             return redirect()->back()->with('Error', 'Failed to save application for leave.');
         }
+<<<<<<< HEAD
     }
 
     public function travelorder()
@@ -116,6 +150,9 @@ class FileController extends Controller
         return view('admin.files.travelorder.travelorder');
     }
     
+=======
+        }
+>>>>>>> origin/master
         public function  storetravelorder (Request $request)
             {
             $Travelorder = new Travelorder();
@@ -135,6 +172,14 @@ class FileController extends Controller
             return redirect("/admin/files")->withErrors('Successfully Saved!');
         }
     }
+<<<<<<< HEAD
+=======
+    
+    public function travelorder()
+    {
+        return view('admin.files.travelorder.travelorder');
+    }
+>>>>>>> origin/master
 
     public function certificateofappearance()
     {
@@ -191,5 +236,10 @@ class FileController extends Controller
         if ($locatorsave->save()) {
             return redirect("/admin/files")->withErrors('Successfully Saved!');
         }
+    }
+
+    public function dispatchfile()
+    {
+        return view('admin.files.dispatch.index');
     }
 }

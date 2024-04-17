@@ -49,13 +49,19 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col-md-4">
                                             <div class="form-group">
-                                                <p>INCLUSIVE DATE</p>
-                                                <input type="text" class="form-control" name="InclusiveDate">           
+                                                <p>OFFICE</p>
+                                                <input type="text" class="form-control" name="Office">           
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <p>INCLUSIVE DATE</p>
+                                                <input type="text" class="form-control" name="InclusiveDate">          
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
                                             <div class="form-group">
                                                 <p>LOCATION</p>
                                                 <input type="text" class="form-control" name="Location">

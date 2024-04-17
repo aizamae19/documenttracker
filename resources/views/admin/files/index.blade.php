@@ -1,4 +1,3 @@
-
 @extends('layouts.default')
 
 @section('content')
@@ -20,6 +19,23 @@
                </div>
             </div>
          </div>
+         <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#itemReportsTab">fgerg</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#customerReportsTab">df</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#saleReportsTab">dfdf</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#purchaseReportsTab">dfee</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#vendorReportsTab">fdfe</a>
+            </li>
+          </ul>
       <section class="content">
     <div class="container-fluid">
         <div class="card card-info">
@@ -31,23 +47,26 @@
                             <th>Series Number</th>
                             <th>Office</th>
                             <th>File Type</th>
-                            <th>Date & Time</th>
+                            <th>Date</th>
                             <th class="text-center">Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                    @foreach($travelorders->merge($dispatch)->merge($locators)  as $key => $file)
-
+                    @foreach($travelorders as $key => $file)
                           <tr>
-                              <?php $seriesNumber = sprintf('%04d', $key + 1); ?>
-                              <td>{{ substr($file->created_at, 0, 8) . $seriesNumber }}</td>
+                              <?php $SeriesNumber = sprintf('%05d', $key + 1); ?>
+                              <td>{{ substr($file->created_at, 0, 6) . $SeriesNumber }}</td>
                               <td>{{ $file->Office }}</td>
-                              <td></td>
+                              <td>{{ $file->FileType }}</td>
                               <td>{{ substr($file->created_at, 0, 10)}}</td>
                               <td class="text-center">
-                                 
-                                 <a class="btn btn-sm btn-success" href="#" data-toggle="modal" data-target="#view"><i class="fa fa-eye"></i> View</a>
+                                 <a class="btn btn-sm btn-success" href="{{ url('admin/files/index/view/').'/'.$file->id}}" data-toggle="" data-target=""><i class="fa fa-eye"></i> View</a>
+
+
+
                                  <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
+                                  {{method_field('DELETE') }}
+                                  @csrf
                               </td>
                           </tr>
                     @endforeach
@@ -89,42 +108,42 @@
                                     <div class="col-md-6">
                                        <div class="form-group">
                                           <div class="card-footer">
-                                             <a href="{{ route('applicationforleave', ['FileType' => 'APPLICATION FOR LEAVE']) }}" class="form-control link">APPLICATION FOR LEAVE</a>
+                                             <a href="{{ route('applicationforleave', ['FileType' => 'APPLICATION FOR LEAVE']) }}" class="form-control link" id="applicationforleaveLink">APPLICATION FOR LEAVE</a>
                                           </div>
                                        </div>
                                     </div>
                                     <div class="col-md-6">
                                        <div class="form-group">
                                           <div class="card-footer">
-                                             <a href="{{ route('certificateofappearance', ['FileType' => 'CERTIFICATION OF APPEARANCE'])}}" class="form-control">CERTIFICATE OF APPEARANCE</a>
+                                             <a href="{{ route('certificateofappearance', ['FileType' => 'CERTIFICATION OF APPEARANCE'])}}" class="form-control" id="certificateofappearanceLink">CERTIFICATE OF APPEARANCE</a>
                                           </div>
                                        </div>
                                     </div>
                                     <div class="col-md-6">
                                        <div class="form-group">
                                           <div class="card-footer">
-                                             <a href="{{ route('tripticket', ['FileType' => 'TRIP TICKET'])}}" class="form-control">TRIP TICKET</a>
+                                             <a href="{{ route('tripticket', ['FileType' => 'TRIP TICKET'])}}" class="form-control" id="tripticketLink">TRIP TICKET</a>
                                           </div>
                                        </div>
                                     </div>
                                     <div class="col-md-6">
                                        <div class="form-group">
                                           <div class="card-footer">
-                                             <a href="{{ route('getDispatch', ['FileType' => 'DISPATCH']) }}" class="form-control">DISPATCH</a>
+                                             <a href="{{ route('getDispatch', ['FileType' => 'DISPATCH']) }}" class="form-control" id="dispatchLink">DISPATCH</a>
                                           </div>
                                        </div>
                                     </div>
                                     <div class="col-md-6">
                                        <div class="form-group">
                                           <div class="card-footer">
-                                             <a href="{{ route('locator', ['FileType' => 'LOCATOR'])}}" class="form-control">LOCATOR</a>
+                                             <a href="{{ route('locator', ['FileType' => 'LOCATOR'])}}" class="form-control" id="locatorLink">LOCATOR</a>
                                           </div>
                                        </div>
                                     </div>
                                     <div class="col-md-6">
                                        <div class="form-group">
                                           <div class="card-footer">
-                                             <a href="{{ route('travelorder', ['FileType' => 'TRAVEL ORDER'])}}" class="form-control">TRAVEL ORDER</a>
+                                             <a href="{{ route('travelorder', ['FileType' => 'TRAVEL ORDER'])}}" class="form-control" id="travelorderLink">TRAVEL ORDER</a>
                                           </div>
                                        </div>
                                     </div>
@@ -138,4 +157,27 @@
             </div>
          </div>
       </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#applicationforleaveLink').click(function() {
+        $.ajax({
+            type: "POST",
+            url: "{{ route('storefile') }}", 
+            data: {
+                '_token': '{{ csrf_token() }}',
+                'FileType': 'APPLICATION FOR LEAVE'
+            },
+            success: function(response) {
+                console.log('File Type stored successfully:', response);
+            },
+            error: function(xhr, status, error) {
+                console.error('Error storing File Type:', error);
+            }
+        });
+    });
+});
+</script>
+
 @endsection

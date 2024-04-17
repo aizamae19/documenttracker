@@ -71,8 +71,8 @@
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <p>OFFICE NAME</p>
-                                                <input type="text" class="form-control" name="OfficeName">           
+                                                <p>OFFICE</p>
+                                                <input type="text" class="form-control" name="Office">           
                                             </div>
                                         </div>
                                     </div>

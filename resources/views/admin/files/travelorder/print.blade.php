@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html>
+@extends('layouts.default')
 
-<head>
-    <title></title>
-</head>
-
-<body>
-    <section class="content">
+@section('content')
+  <section class="content">
         <div class="container-fluid">
             <div class="card card-info">
                 <div class="wcdiv wcpage" style="width:612pt; height:936pt;">
@@ -88,7 +83,7 @@
                     <div class="wcdiv"><img class="wcimg" style="margin: 0 auto 0 0; display: block; left: 26.75pt; top: 178.14pt; width: 163.25pt; height: 25.1pt;" src="https://test.myfiles.space/user_files/temporary/6618ecb97980b7.70717253/1712909496_2024-travel/1712909496_2024-travel-6.png"></div>
                     <div class="wcdiv" style="margin-left:40pt; top:65.6pt;">
                         <div class="wcdiv" style="left:-0.75pt; top:68.9pt;"><a name="_GoBack" style="left:0pt; top:0pt;">&nbsp;</a></div>
-                        <div class="wcdiv" style="left:-0.75pt; top:117pt;"><span class="wcspan wctext002" style="left:0pt; top:0.39pt; line-height:13.41pt;">Date:</span></div>
+                        <div class="wcdiv" style="left:-0.75pt; top:117pt;"><span class="wcspan wctext002" style="left:0pt; top:0.39pt; line-height:13.41pt;">Date:&nbsp;{{$travelorder->Date}}</span></div>
                         <div class="wcdiv" style="left:-0.75pt; top:147.09pt;"><span class="wcspan wctext003" style="left:-8pt; top:0.39pt; line-height:13.41pt;">&nbsp;NACIONAL V MERCADO</span></div>
                         <div class="wcdiv" style="left:-0.75pt; top:162.14pt;"><span class="wcspan wctext002" style="left:-8pt; top:0.39pt; line-height:13.41pt;">&nbsp;City Mayor</span></div>
                         <div class="wcdiv" style="left:-0.75pt; top:177.37pt;"><span class="wcspan wctext002" style="left:-8pt; top:0.39pt; line-height:13.41pt;">&nbsp;City of Maasin</span></div>
@@ -127,7 +122,7 @@
                                     <td colspan="2" rowspan="3" style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; text-align: center; vertical-align: top; border: 0.5pt solid windowtext; height: 43.5pt; width: 34.6939%;">
                                         <div style="text-align: left;">The purpose of this travel:</div>
                                     </td>
-                                    <td colspan="7" rowspan="3" style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; text-align: center; vertical-align: top; border: 0.5pt solid windowtext; width: 65.1206%; text-align: left;">gjhttttttttttttttttttttttttttttttttttttttttt southern tyuuuthtu jfhgutyur hcgyygyg southerhgg jhg southern tyuuuthtu jfhgutyur hcgyygyg southerhgg jhg</td>
+                                    <td colspan="7" rowspan="3" style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; text-align: center; vertical-align: top; border: 0.5pt solid windowtext; width: 65.1206%; text-align: left;">{{$travelorder->Purpose}}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -161,5 +156,7 @@
             <p><br></p>
         </div>
     </section>
-</body>
-</html>
+
+@endsection
+
+  

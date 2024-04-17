@@ -20,18 +20,31 @@ class FileController extends Controller
 
     public function file()
 {
-      $dispatch = Dispatch::all(); 
+      $dispatches = Dispatch::all(); 
     $locators = Locator::all(); 
     $certificateofappearances = Certificateofappearance::all(); 
     $applicationforleave = Applicationforleave::all(); 
     $travelorders = Travelorder::all();
-    return view('admin.files.index', compact('travelorders','dispatch','locators', 'certificateofappearances', 'applicationforleave' ));
+    return view('admin.files.index', compact('travelorders','dispatches','locators', 'certificateofappearances', 'applicationforleave' ));
 }
 
     public function storefile(Request $request)
     {
         
     }
+public function viewfile($id) {
+    $travelorder = Travelorder::find($id); // Assuming your model is named Resident
+
+    // Check if the resident is found
+    if (!$travelorder) {
+        abort(404); // Or handle the case where the resident is not found
+    }
+
+    return view('admin.files.travelorder.print', compact('travelorder'));
+}
+
+
+
 
     public function saveDispatch(Request $request)
     {
@@ -42,7 +55,7 @@ class FileController extends Controller
         $Dispatchsave->Name = $request->Name;
         $Dispatchsave->Address = $request->Address;
         $Dispatchsave->ContactNumber = $request->ContactNumber;
-        $Dispatchsave->OfficeName = $request->OfficeName;
+        $Dispatchsave->Office = $request->Office;
         $Dispatchsave->DescriptionofDispatch = $request->DescriptionofDispatch;
         $Dispatchsave->PlateNumber = $request->PlateNumber;
         $Dispatchsave->Driver = $request->Driver;

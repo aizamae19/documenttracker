@@ -64,6 +64,10 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::get('/admin/files/index/delete/{id}', [App\Http\Controllers\Admin\FileController::class, 'deletefile'])->name('file.delete');
             Route::post('/admin/files/index/delete', [App\Http\Controllers\Admin\FileController::class, 'deletefile'])->name('file.delete');
 
+            //View
+            Route::get('/admin/files/index/view/{id}', [App\Http\Controllers\Admin\FileController::class, 'viewfile'])->name('file.view');
+            Route::post('/admin/files/index/view', [App\Http\Controllers\Admin\FileController::class, 'viewfile'])->name('fileview');
+
 
             #ADD USER
             Route::get('/admin/users/add', [CustomAuthController::class, 'register'])->name('register');

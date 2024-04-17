@@ -20,9 +20,9 @@ class FileController extends Controller
         $dispatch = Dispatch::all(); 
         $locators = Locator::all(); 
         $certificateofappearances = Certificateofappearance::all(); 
-        $applicationforleave = Applicationforleave::all(); 
+        $applicationforleaves = Applicationforleave::all(); 
         $travelorders = Travelorder::all();
-        return view('admin.files.index', compact('travelorders','dispatch','locators', 'certificateofappearances', 'applicationforleave' ));
+        return view('admin.files.index', compact('travelorders','dispatch','locators', 'certificateofappearances', 'applicationforleaves' ));
     }
 
     public function storefile(Request $request)

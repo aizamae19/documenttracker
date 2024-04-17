@@ -87,7 +87,7 @@
                      <a href="{{ route('filedashboard') }}" class="nav-link">
                         <img src="{{asset('assets/img/file.png')}}" width="30">
                         <p>
-                           Documents
+                           Document
                         </p>
                      </a>
                   </li>
@@ -190,6 +190,7 @@
    <script src="{{asset('assets/js/popper.min.js')}}"></script>
    <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
    <script src="{{asset('assets/js/main.js')}}"></script>
+   <script src="{{asset('assets/js/jquery-3.5.1.min.js')}}"></script>
    <script>
       $(function () {
          $("#example1").DataTable();

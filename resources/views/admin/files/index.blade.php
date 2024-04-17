@@ -38,8 +38,8 @@
                     <tbody>
                     @foreach($travelorders->merge($dispatch)->merge($locators)->merge($applicationforleave)->merge($certificateofappearances) as $key => $file)
                           <tr>
-                              <?php $seriesNumber = sprintf('%05d', $key + 1); ?>
-                              <td>{{ substr($file->created_at, 0, 6) . $seriesNumber }}</td>
+                              <?php $SeriesNumber = sprintf('%05d', $key + 1); ?>
+                              <td>{{ substr($file->created_at, 0, 6) . $SeriesNumber }}</td>
                               <td>{{ $file->Office }}</td>
                               <td>{{ $file->FileType }}</td>
                               <td>{{ substr($file->created_at, 0, 10)}}</td>

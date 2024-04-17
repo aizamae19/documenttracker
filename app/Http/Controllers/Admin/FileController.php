@@ -28,6 +28,7 @@ class FileController extends Controller
     public function storefile(Request $request)
     {
         $filesave = new File();
+        $filesave->SeriesNumber = $request->SeriesNumber;
         $filesave->FileType = $request->FileType;
 
         if ($filesave->save()) {
@@ -50,7 +51,7 @@ class FileController extends Controller
         $Dispatchsave->Name = $request->Name;
         $Dispatchsave->Address = $request->Address;
         $Dispatchsave->ContactNumber = $request->ContactNumber;
-        $Dispatchsave->OfficeName = $request->OfficeName;
+        $Dispatchsave->Office = $request->Office;
         $Dispatchsave->DescriptionofDispatch = $request->DescriptionofDispatch;
         $Dispatchsave->PlateNumber = $request->PlateNumber;
         $Dispatchsave->Driver = $request->Driver;

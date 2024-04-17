@@ -19,7 +19,7 @@ return new class extends Migration
                 $table->string('Name');
                 $table->string('Address');
                 $table->string('ContactNumber');
-                $table->string('OfficeName');
+                $table->string('Office');
                 $table->string('DescriptionofDispatch')->nullable();
                 $table->string('PlateNumber')->nullable();
                 $table->string('CondutionSticker')->nullable();

@@ -29,7 +29,7 @@ activeSheetIndex = iSh;
 <body link='blue' vlink='purple' >
 
 <table border='0' cellpadding='0' cellspacing='0' width='1317' style='border-collapse: 
- collapse;table-layout:fixed;width:987pt'>
+ collapse;table-layout:fixed;width:987pt;'>
  <col width='63' span='2' style='width:47.25pt'/>
  <col width='13' style='mso-width-source:userset;width:9.75pt'/>
  <col width='18' style='mso-width-source:userset;width:13.5pt'/>
@@ -527,7 +527,7 @@ activeSheetIndex = iSh;
 <td colspan='2' class='x32' style='mso-ignore:colspan;'></td>
 <td colspan='2' class='x35' style='mso-ignore:colspan;'>_______ others (Specify)</td>
 <td colspan='4' class='x35' style='mso-ignore:colspan;'></td>
-<td height='20' width='322' style='text-align: left;height:15pt;width:241.5pt;vertical-align:top; border-right: 1px solid #000;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:10;margin-left:0px;margin-top:0px;width:318px;height:16px'><img width='320' height='16' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT8AAAAQCAYAAABgK3j8AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAFxJREFUeJzt1EERgEAQwDBg0Ih0fKBgzwX3aKKgr54zMwdAy3PtLgDYwfyAJPMDkswPSDI/IMn8gCTzA5LMD0gyPyDJ/IAk8wOSzA9IMj8gyfyApHtm3t0RAD/7FpFzCTg3S7dAAAAAAElFTkSuQmCC" name='TextBox64' alt='1'/></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='20' class='x71' width='322' style='height:15pt;width:241.5pt;'>___________________________________________</td></tr></table></span></td>
+<td height='20' width='322' style='text-align: left;height:15pt;width:241.5pt;vertical-align:top; border-right: 1px solid #000;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:10;margin-left:0px;margin-top:0px;width:318px;height:16px'><img width='322' height='16' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT8AAAAQCAYAAABgK3j8AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAFxJREFUeJzt1EERgEAQwDBg0Ih0fKBgzwX3aKKgr54zMwdAy3PtLgDYwfyAJPMDkswPSDI/IMn8gCTzA5LMD0gyPyDJ/IAk8wOSzA9IMj8gyfyApHtm3t0RAD/7FpFzCTg3S7dAAAAAAElFTkSuQmCC" name='TextBox64' alt='1'/></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='17' class='x71'>___________________________________________</td></tr></table></span></td>
 <td colspan='6' class='x60' style='mso-ignore:colspan;'></td>
 <td class='x21'>&nbsp;</td>
  </tr>

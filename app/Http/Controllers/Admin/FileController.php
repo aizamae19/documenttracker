@@ -42,16 +42,15 @@ class FileController extends Controller
     public function dispatchfile()
     {
         return view('admin.files.dispatch.index');
-
-    if (!$travelorder) {
-        abort(404);
     }
 
-    return view('admin.files.travelorder.print', compact('travelorder'));
-}
+    public function viewdispatch(Request $request){
+        $dispatches=Dispatch::where('id',$request->id)->first();
 
-
-
+        return view('admin.files.dispatch.view',[
+                'dispatches'=>$dispatches
+        ]);
+    }
 
     public function saveDispatch(Request $request)
     {
@@ -77,6 +76,14 @@ class FileController extends Controller
         $applicationforleaves = Applicationforleave::get();
         return view('admin.files.applicationforleave.leaveform', [
             'applicationforleaves'=>$applicationforleaves 
+        ]);
+    }
+
+    public function viewapplicationforleave(Request $request){
+        $applicationforleaves=Applicationforleave::where('id',$request->id)->first();
+
+        return view('admin.files.applicationforleave.view',[
+                'applicationforleaves'=>$applicationforleaves
         ]);
     }
 
@@ -126,8 +133,16 @@ class FileController extends Controller
     {
         return view('admin.files.travelorder.travelorder');
     }
+
+    public function viewtravelorder(Request $request){
+        $travelorders=Travelorder::where('id',$request->id)->first();
+
+        return view('admin.files.travelorder.print',[
+                'travelorders'=>$travelorders
+        ]);
+    }
     
-        public function  storetravelorder (Request $request)
+        public function storetravelorder (Request $request)
             {
             $Travelorder = new Travelorder();
             $Travelorder->Date = $request->Date;
@@ -152,6 +167,14 @@ class FileController extends Controller
         return view('admin.files.certificateofappearance.index');
     }
 
+    public function viewcertificateofappearance(Request $request){
+        $certificateofappearances=Certificateofappearance::where('id',$request->id)->first();
+
+        return view('admin.files.certificateofappearance.view',[
+                'certificateofappearances'=>$certificateofappearances
+        ]);
+    }
+
     public function storecertificateofappearance(Request $request)
     {
         $certificateofappearancesave = new Certificateofappearance();
@@ -167,6 +190,22 @@ class FileController extends Controller
 
         if ($certificateofappearancesave->save()) {
             return redirect("/admin/files")->withErrors('Successfully Saved!');
+        }
+    }
+
+    public function deletecertificateofappearance(Request $request){
+        $Deletesave=Certificateofappearance::where('id' ,$request->id)->first();
+        $Deletesave->Name = $request->Name;
+        $Deletesave->Designation = $request->Designation;
+        $Deletesave->Service = $request->Service;
+        $Deletesave->InclusiveDate = $request->InclusiveDate;
+        $Deletesave->Location = $request->Location;
+        $Deletesave->Day = $request->Day;
+        $Deletesave->Date = $request->Date;
+        $Deletesave->Place = $request->Place;
+        $Deletesave->Office = $request->Office;
+        if($Deletesave->delete()) {
+            return redirect()->back()->withErrors('Deleted!');
         }
     }
 

@@ -29,9 +29,9 @@
                   <li class="nav-item">
                      <a class="nav-link" data-toggle="tab" href="#certificateofappearanceTab">Certificate of Appearance</a>
                   </li>
-                  <li class="nav-item">
+                  <!-- <li class="nav-item">
                      <a class="nav-link" data-toggle="tab" href="#tripticketTab">Trip Ticket</a>
-                  </li>
+                  </li> -->
                   <li class="nav-item">
                      <a class="nav-link" data-toggle="tab" href="#dispatchTab">Dispatch</a>
                   </li>
@@ -66,7 +66,7 @@
                                     <td>{{ $applicationforleave->Name }}</td>
                                     <td>{{ substr($applicationforleave->created_at, 0, 10)}}</td>
                                     <td class="text-center">
-                                       <a class="btn btn-sm btn-success" href=""data-toggle="modal" data-target="#view"><i class="fa fa-eye"></i> View</a>
+                                       <a class="btn btn-sm btn-success" href="{{ url('/admin/files/applicationforleave/view').'/'.$applicationforleave->id}}" data-target="#view"><i class="fa fa-eye"></i> View</a>
                                        <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
                                     </td>
                                  </tr>
@@ -86,7 +86,7 @@
                                  <th>Office</th>
                                  <th>Name</th>
                                  <th>Date</th>
-                                 <th class="text-center">Action</th>
+                                 <th class="text-center"></th>
                               </tr>
                            </thead>
                            <tbody>
@@ -99,7 +99,7 @@
                                     <td>{{ $dispatches->Name }}</td>
                                     <td>{{ substr($dispatches->created_at, 0, 10)}}</td>
                                     <td class="text-center">
-                                       <a class="btn btn-sm btn-success" href=""data-toggle="modal" data-target="#view"><i class="fa fa-eye"></i> View</a>
+                                       <a class="btn btn-sm btn-success" href="{{ url('/admin/files/dispatch/view').'/'.$dispatches->id}}" data-target="#view"><i class="fa fa-eye"></i> View</a>
                                        <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
                                     </td>
                                  </tr>
@@ -119,7 +119,7 @@
                                  <th>Office</th>
                                  <th>Name</th>
                                  <th>Date</th>
-                                 <th class="text-center">Action</th>
+                                 <th class="text-center"></th>
                               </tr>
                            </thead>
                            <tbody>
@@ -132,8 +132,8 @@
                                     <td>{{ $certificateofappearance->Name }}</td>
                                     <td>{{ substr($certificateofappearance->created_at, 0, 10)}}</td>
                                     <td class="text-center">
-                                       <a class="btn btn-sm btn-success" href=""data-toggle="modal" data-target="#view"><i class="fa fa-eye"></i> View</a>
-                                       <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
+                                       <a class="btn btn-sm btn-success" href="{{ url('/admin/files/certificateofappearance/view').'/'.$certificateofappearance->id}}" data-target="#view"><i class="fa fa-eye"></i> View</a>
+                                       <a class="btn btn-sm btn-danger" href="{{ url('/admin/files/certificateofappearance/delete').'/'.$certificateofappearance->id}}" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
                                     </td>
                                  </tr>
                               @endforeach
@@ -152,7 +152,7 @@
                                  <th>Office</th>
                                  <th>Name</th>
                                  <th>Date</th>
-                                 <th class="text-center">Action</th>
+                                 <th class="text-center"></th>
                               </tr>
                            </thead>
                            <tbody>
@@ -185,7 +185,7 @@
                                  <th>Office</th>
                                  <th>Name</th>
                                  <th>Date</th>
-                                 <th class="text-center">Action</th>
+                                 <th class="text-center"></th>
                               </tr>
                            </thead>
                            <tbody>
@@ -198,7 +198,7 @@
                                  <td>{{ $travelorder->NameOfEmployee }}</td>
                                  <td>{{ substr($travelorder->created_at, 0, 10)}}</td>
                                  <td class="text-center">
-                                    <a class="btn btn-sm btn-success" href=""data-toggle="modal" data-target="#view"><i class="fa fa-eye"></i> View</a>
+                                    <a class="btn btn-sm btn-success" href="{{ url('/admin/files/travelorder/view').'/'.$travelorder->id}}" data-target="#view"><i class="fa fa-eye"></i> View</a>
                                     <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
                                  </td>
                               </tr>
@@ -221,7 +221,7 @@
                   <div class="modal-body text-center">
                      <img src="{{asset('assets/img/sent.png')}}" alt="" width="50" height="46">
                      <h3>Are you sure want to delete this file?</h3>
-                     <div class="m-t-20"> <a href="#" class="btn btn-white" data-dismiss="modal">Close</a>
+                     <div class="m-t-20"> <a href="{{ route('filedashboard') }}" class="btn btn-white" data-dismiss="modal">Close</a>
                         <button type="submit" class="btn btn-danger">Delete</button>
                      </div>
                   </div>

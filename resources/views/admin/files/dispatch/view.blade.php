@@ -231,8 +231,6 @@
         <section class="content">
             <div class="container-fluid">
                 <div class="card card-info">
-                    <form method="POST" action="{{route('DispatchSave')}}">
-                        @csrf
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-12">
@@ -261,17 +259,17 @@
                   <td class="column0 style5 s style7" colspan="5"><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:12pt">Dispatch #<br/>
                   <i style='font-size:24px;position: absolute;left: 215px;top: 96px;' class='fas'>&#x279E;</i>
                      </span><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:6pt; position: absolute; left: 50px;">Office-Year-Month-0000</span></td>
-                  <td class="column5 style5 null style7" colspan="4"><input type="text" id="" name="DispatchNumber" style="width: 140px; background-color: transparent;"></td>                
+                  <td class="column5 style5 null style7" colspan="4">{{ $dispatches->DispatchNumber}}</td>                
                   <td class="column9 style8 s style9" colspan="2">
                    <span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:10pt">Trip Ticket No:</span>
-                   <input type="text" id="" name="TripTicketNumber" style="width: 130px; background-color: transparent;">
+                   {{ $dispatches->TripTicketNumber}}
                </td>
                 </tr>
                 <tr class="row2">
                   <td class="column0 style10 s style12" colspan="5"><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:12pt;">Date:</span>                  <i style='font-size:24px;position: absolute;left: 215px;top: 138px;' class='fas'>&#x279E;</i>
 
                      </td>
-                  <td class="column5 style5 null style7" colspan="6"><input type="" id="" name="Date" style="text-indent: 6px;background-color: transparent;">
+                  <td class="column5 style5 null style7" colspan="6">{{ $dispatches->Date}}
                   </td>
                 </tr>
                 <tr class="row3">
@@ -280,16 +278,16 @@
                 <tr class="row4">
                   <td class="column0 style10 s style12" colspan="5"><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:12pt">Name:</span>
                      </td>
-                  <td class="column5 style13 null style15" colspan="6"><input type="text" id="" name="Name" style="position: absolute; margin-top: -15px; background-color: transparent; width: 450px; height: 29px; margin-left: -3px;"></td>
+                  <td class="column5 style13 null style15" colspan="6">{{ $dispatches->Name}}</td>
                 </tr>
                 <tr class="row5">
                   <td class="column0 style10 s style12" colspan="5"><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:12pt">Address:</span></td>
 
-                  <td class="column5 style13 null style15" colspan="6"><input type="text" id="" name="Address" style="position: absolute; margin-top: -15px; background-color: transparent; width: 450px; height: 29px; margin-left: -3px;"></td>
+                  <td class="column5 style13 null style15" colspan="6">{{ $dispatches->Address}}</td>
                 </tr>
                 <tr class="row6">
-                  <td class="column0 style10 s style12" colspan="5"><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:12pt">Contact #:</span><input type="text" id="" name="ContactNumber" style="position: absolute; margin-top: -3px; width: 176px; height: 29px; margin-left: 150px; background-color: transparent; color: black;"></td>
-                  <td class="column5 style29 s style31" colspan="6"><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:11pt">Office Name:</span><input type="text" id="" name="Office" style="position: absolute; margin-top: -3px; width: 175px; height: 29px; margin-left: 1px; background-color: transparent; color: black;"></td>
+                  <td class="column0 style10 s style12" colspan="5"><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:12pt">Contact #:</span>{{ $dispatches->ContactNumber}}</td>
+                  <td class="column5 style29 s style31" colspan="6"><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:11pt">Office Name:</span>{{ $dispatches->Office}}</td>
                 </tr>
                 <tr class="row7">
                   <td class="column0 style16 null style19" colspan="2" rowspan="9"></td>
@@ -297,13 +295,10 @@
                   <td class="column10 style20 null style21" rowspan="9"></td>
                 </tr>
                 <tr class="row8">
-                  <td class="column2 style5 null style7" colspan="8"><div class="input-field mt-0 mb-0">
-                        <textarea style="height:90px; background-color: transparent;"
-                          id="textarea1"
-                          placeholder="" name="DescriptionofDispatch"
-                          class="form-control border-0"
-                        ></textarea>
-                      </div></td>
+                  <td class="column2 style5 null style7" colspan="8">
+                        <div class="input-field mt-0 mb-0">
+                              {{ $dispatches->DescriptionofDispatch}}
+                        </div></td>
                 </tr>
                 <tr class="row9">
                   <td class="column2 style22 null style24" colspan="6"></td>
@@ -312,7 +307,7 @@
                 <tr class="row10">
                   <td class="column2 style5 s style7" colspan="6"><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:10pt">Dispatch Vehicle:<br />
                       </span><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:6pt">Indicate Plate Number/ Conduction Sticker</span></td>
-                  <td class="column8 style13 null style15" colspan="2"><input type="text" id="" name="PlateNumber" style="position: absolute; margin-top: -3px; width: 335px; height: 29px; left: 360px; background-color: transparent; color: black;"></td>
+                  <td class="column8 style13 null style15" colspan="2">{{ $dispatches->PlateNumber}}</td>
 
                 </tr>
                 <tr class="row11">
@@ -320,18 +315,18 @@
                 </tr>
                 <tr class="row12">
                   <td class="column2 style8 s style9" colspan="2"><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:10pt">Driver:</span></td>
-                  <td class="column4 style13 null style15" colspan="6"><input type="text" id="" name="Driver" style="position: absolute; margin-top: -15px; width: 390px; height: 29px; margin-left: -2px;background-color: transparent; color: black;"></td>
+                  <td class="column4 style13 null style15" colspan="6">{{ $dispatches->Driver}}</td>
                 </tr>
                 <tr class="row13">
                   <td class="column2 style8 s style9" colspan="2"><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:10pt">Passenger/Crew:</span></td>
-                  <td class="column4 style13 null style15" colspan="6"><input type="text" id="" name="Passenger" style="position: absolute; margin-top: -15px; width: 390px; height: 29px; margin-left: -2px;background-color: transparent; color: black;"></td>
+                  <td class="column4 style13 null style15" colspan="6">{{ $dispatches->Passenger}}</td>
                 </tr>
                 <tr class="row14">
-               <td class="column2 style13 null style15" colspan="2"><input type="text" id="" name="Passenger" style="position: absolute; margin-top: -10px; width: 468px; height: 20px; margin-left: 190px; background-color: transparent; color: black;"></td>
+               <td class="column2 style13 null style15" colspan="2"></td>
                   <td class="column4 style13 null style15" colspan="6"></td>
                 </tr>
                 <tr class="row15">
-               <td class="column2 style13 null style15" colspan="2"><input type="text" id="" name="Passenger" style="position: absolute; margin-top: -10px;width: 468px; height: 20px; margin-left: 190px; background-color: transparent; color: black;"></td>
+               <td class="column2 style13 null style15" colspan="2"></td>
                   <td class="column4 style13 null style15" colspan="6"></td>
                 </tr>
                <tr class="row16">
@@ -368,19 +363,6 @@
                      <br>
                      <br>
                      <br>
-
-       
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="card-header">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="col-md-12">
-                                        <a href="{{route('filedashboard')}}" class="btn btn-danger" data-dismiss="modal">Cancel</a>
-                                        <button type="submit" class="btn btn-primary">Save</button>
-                                    </div>
                                 </div>
                             </div>
                         </div>

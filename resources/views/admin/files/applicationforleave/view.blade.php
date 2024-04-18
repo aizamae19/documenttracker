@@ -63,14 +63,14 @@ activeSheetIndex = iSh;
  <tr height='30' style='mso-height-source:userset;height:22.5pt'>
 <td colspan='2' height='30' style='mso-ignore:colspan;height:22.5pt;'></td>
 <td class='x29' style='overflow:hidden;'><span style='mso-spacerun:yes;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
-<td colspan='3' class='x93' style='border-bottom:1px solid windowtext;'></td>
-<td colspan='5' class='x94' style='border-right:1px solid windowtext;border-bottom:1px solid windowtext;'></td>
+<td colspan='3' class='x93' style='border-bottom:1px solid windowtext;'>{{ $applicationforleaves->Office }}</td>
+<td colspan='5' class='x94' style='border-right:1px solid windowtext;border-bottom:1px solid windowtext;'>{{ $applicationforleaves->Name }}</td>
 <td colspan='7' class='x60' style='mso-ignore:colspan;'></td>
  </tr>
  <tr height='34' style='mso-height-source:userset;height:25.5pt'>
 <td colspan='2' height='34' style='mso-ignore:colspan;height:25.5pt;'></td>
-<td colspan='4' class='x73' style='mso-ignore:colspan;overflow:hidden;'>3.<span style='mso-spacerun:yes;'>&nbsp;&nbsp; </span>DATE OF FILING<span style='mso-spacerun:yes;'>&nbsp; </span>______________<span style='mso-spacerun:yes;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
-<td colspan='4' class='x30' style='mso-ignore:colspan;'>4.<span style='mso-spacerun:yes;'>&nbsp;&nbsp; </span>POSITION<span style='mso-spacerun:yes;'>&nbsp; </span>_____________________________<span style='mso-spacerun:yes;'>&nbsp;&nbsp;&nbsp;&nbsp; </span>5.<span style='mso-spacerun:yes;'>&nbsp; </span>SALARY<span style='mso-spacerun:yes;'>&nbsp; </span>______________</td>
+<td colspan='4' class='x73' style='mso-ignore:colspan;overflow:hidden;'>3.<span style='mso-spacerun:yes;'>&nbsp;&nbsp; </span>DATE OF FILING<span style='mso-spacerun:yes;'>&nbsp; </span>{{ $applicationforleaves->DateOfFiling }}<span style='mso-spacerun:yes;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+<td colspan='4' class='x30' style='mso-ignore:colspan;'>4.<span style='mso-spacerun:yes;'>&nbsp;&nbsp; </span>POSITION<span style='mso-spacerun:yes;'>&nbsp; </span>{{ $applicationforleaves->Position }}<span style='mso-spacerun:yes;'>&nbsp;&nbsp;&nbsp;&nbsp; </span>5.<span style='mso-spacerun:yes;'>&nbsp; </span>SALARY<span style='mso-spacerun:yes;'>&nbsp; </span>{{ $applicationforleaves->Salary }}</td>
 <td colspan='1' style='mso-ignore:colspan;'></td>
  </tr>
  <tr height='8' style='mso-height-source:userset;height:6pt'>

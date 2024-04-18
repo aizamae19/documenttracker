@@ -30,7 +30,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <p> DATE OF FILING</p>
-                                                <input type="Date" class="form-control" name="Date">
+                                                <input type="text" class="form-control" name="Date">
                                             </div>
                                         </div>
                                         <div class="col-md-4">

@@ -175,7 +175,46 @@
                         </table>
                      </div>
                   </div>
+<div id="travelorderTab" class="container-fluid tab-pane">
+    <div class="col-md-12">
+        <table id="itemSearchTab" class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Series Number</th>
+                    <th>Office</th>
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th class="text-center">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if(isset($travelorders))
+                    @foreach($travelorders as $key => $travelorder)
+                        <tr>
+                            <?php 
+                            $SeriesNumber = sprintf('%06d', $key + 1); 
+                            
+                            // Fetch the office code for the current office
+                            $office = App\Models\Office::where('OfficeName', $travelorder->Office)->first();
+                            $officeCode = $office ? $office->Code : '';
+                            ?>
+<td>{{ date('Y') . '-' . $officeCode . '-' . $SeriesNumber }}</td>
+                            <td>{{ $travelorder->Office }}</td>
+                            <td>{{ $travelorder->NameOfEmployee }}</td>
+                            <td>{{ substr($travelorder->created_at, 0, 10) }}</td>
+                            <td class="text-center">
+                                <a class="btn btn-sm btn-success" href="" data-toggle="modal" data-target="#view"><i class="fa fa-eye"></i> View</a>
+                                <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
+                            </td>
+                        </tr>
+                    @endforeach
+                @endif
+            </tbody>
+        </table>
+    </div>
+</div>
 
+<<<<<<< HEAD
                   <div id="travelorderTab" class="container-fluid tab-pane">
                      <div class="col-md-12">
                         <table id="itemSearchTab" class="table table-hover">
@@ -228,6 +267,21 @@
                </div>
             </div>
          </div>
+=======
+      <div id="delete" class="modal animated rubberBand delete-modal" role="dialog">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                   <div class="modal-body text-center">
+                       <img src="{{asset('assets/img/sent.png')}}" alt="" width="50" height="46">
+                       <h3>Are you sure want to delete this file?</h3>
+                       <div class="m-t-20"> <a href="#" class="btn btn-white" data-dismiss="modal">Close</a>
+                          <button type="submit" class="btn btn-danger">Delete</button>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+>>>>>>> origin/master
          <div id="add" class="modal animated rubberBand delete-modal" role="dialog">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                <div class="modal-content">
@@ -294,4 +348,4 @@
             </div>
          </div>
       </div>
-@endsection
+@endsection 

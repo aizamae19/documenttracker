@@ -96,7 +96,8 @@ activeSheetIndex = iSh;
  </tr>
  <tr height='11' style='mso-height-source:userset;height:8.25pt'>
 <td colspan='2' height='11' style='mso-ignore:colspan;height:8.25pt;'></td>
-<td height='11' width='13' style='text-align: left;height:8.25pt;width:9.75pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:14;margin-left:12px;margin-top:8px;width:81px;height:22px'><img width='81' height='22' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFEAAAAWCAYAAAC40nDiAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAFBJREFUWIXt10EKwCAQBMEx5P9fNi+QXAYiseq4wrL0zQQA2MtYzGdhxzHu1cOc7x3HOL5fkuT6+oA/ELFAxAIRC0QsELFAxAIRC/xYAGA3D+6HBRcRRujeAAAAAElFTkSuQmCC" name='CheckBox5' shapeType='checkbox' alt='1'/></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='11' class='x32' width='13' style='height:8.25pt;width:9.75pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
+<td height='11' width='13' style='text-align: left;height:8.25pt;width:9.75pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:14;margin-left:12px;margin-top:8px;width:81px;height:22px'><img width='81' height='22' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFEAAAAWCAYAAAC40nDiAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAFBJREFUWIXt10EKwCAQBMEx5P9fNi+QXAYiseq4wrL0zQQA2MtYzGdhxzHu1cOc7x3HOL5fkuT6+oA/ELFAxAIRC0QsELFAxAIRC/xYAGA3D+6HBRcRRujeAAAAAElFTkSuQmCC" name='CheckBox5' shapeType='checkbox' alt='1'@if($applicationforleaves->TypeOfLeave == 'Vacation Leave')
+@endif /></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='11' class='x32' width='13' style='height:8.25pt;width:9.75pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
 <td colspan='5' class='x35' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
 <td colspan='3' class='x35' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
 <td colspan='7' class='x60' style='mso-ignore:colspan;'><div style='display:block;overflow:hidden'></div></td>
@@ -476,7 +477,7 @@ activeSheetIndex = iSh;
 <td colspan='2' height='18' style='mso-ignore:colspan;height:13.5pt;'></td>
 <td colspan='6' class='x32' style='mso-ignore:colspan;border-right:1px solid windowtext;'></td>
 <td colspan='2' class='x35' style='mso-ignore:colspan;'></td>
-<td height='18' width='322' style='text-align: left;height:13.5pt;width:241.5pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:8;margin-left:4px;margin-top:3px;width:314px;height:11px'><img width='314' height='11' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATsAAAALCAYAAAAA0SreAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAE9JREFUaIHt1EENgDAABEEgyKl/KWjhd1VBm3AzCva1Z5IcAD+WZFy7IwBWMDuggtkBFcwOqGB2QAWzAyqYHVDB7IAKZgdUuJM8uyMAPvZOBRUMCFVl26MAAAAASUVORK5CYII=" name='TextBox55' alt='1'/></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='18' class='x40' width='322' style='height:13.5pt;width:241.5pt;border-right: 1px solid #000;
+<td height='18' width='325' style='text-align: left;height:13.5pt;width:241.5pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:8;margin-left:4px;margin-top:3px;width:314px;height:11px'><img width='314' height='11' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATsAAAALCAYAAAAA0SreAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAE9JREFUaIHt1EENgDAABEEgyKl/KWjhd1VBm3AzCva1Z5IcAD+WZFy7IwBWMDuggtkBFcwOqGB2QAWzAyqYHVDB7IAKZgdUuJM8uyMAPvZOBRUMCFVl26MAAAAASUVORK5CYII=" name='TextBox55' alt='1'/></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='18' class='x40' width='322' style='height:13.5pt;width:241.5pt;border-right: 1px solid #000;
   height: 20px;'></td></tr></table></span></td>
 <td colspan='7' class='x60' style='mso-ignore:colspan;'></td>
  </tr>
@@ -526,7 +527,7 @@ activeSheetIndex = iSh;
 <td colspan='2' class='x32' style='mso-ignore:colspan;'></td>
 <td colspan='2' class='x35' style='mso-ignore:colspan;'>_______ others (Specify)</td>
 <td colspan='4' class='x35' style='mso-ignore:colspan;'></td>
-<td height='20' width='322' style='text-align: left;height:15pt;width:241.5pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:10;margin-left:0px;margin-top:0px;width:318px;height:16px'><img width='318' height='16' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT8AAAAQCAYAAABgK3j8AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAFxJREFUeJzt1EERgEAQwDBg0Ih0fKBgzwX3aKKgr54zMwdAy3PtLgDYwfyAJPMDkswPSDI/IMn8gCTzA5LMD0gyPyDJ/IAk8wOSzA9IMj8gyfyApHtm3t0RAD/7FpFzCTg3S7dAAAAAAElFTkSuQmCC" name='TextBox64' alt='1'/></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='20' class='x71' width='322' style='height:15pt;width:241.5pt;'>___________________________________________</td></tr></table></span></td>
+<td height='20' width='322' style='text-align: left;height:15pt;width:241.5pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:10;margin-left:0px;margin-top:0px;width:318px;height:16px'><img width='320' height='16' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT8AAAAQCAYAAABgK3j8AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAFxJREFUeJzt1EERgEAQwDBg0Ih0fKBgzwX3aKKgr54zMwdAy3PtLgDYwfyAJPMDkswPSDI/IMn8gCTzA5LMD0gyPyDJ/IAk8wOSzA9IMj8gyfyApHtm3t0RAD/7FpFzCTg3S7dAAAAAAElFTkSuQmCC" name='TextBox64' alt='1'/></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='20' class='x71' width='322' style='height:15pt;width:241.5pt;'>___________________________________________</td></tr></table></span></td>
 <td colspan='6' class='x60' style='mso-ignore:colspan;'></td>
 <td class='x21'>&nbsp;</td>
  </tr>
@@ -588,7 +589,7 @@ activeSheetIndex = iSh;
 <body link='blue' vlink='purple' >
 
 <table border='0' cellpadding='0' cellspacing='0' width='837' style='border-collapse: 
- collapse;table-layout:fixed;width:627pt'>
+ collapse;table-layout:fixed;width:627pt;'>
  <col width='63' span='12' style='width:47.25pt'/>
  <col width='81' style='mso-width-source:userset;width:60.75pt'/>
  <tr height='17' style='mso-height-source:userset;height:12.75pt'>

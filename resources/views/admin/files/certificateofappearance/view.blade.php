@@ -249,36 +249,29 @@ td
 <td colspan='5' width='280' style='mso-ignore:colspan;'></td>
  </tr>
  <tr height='17' style='mso-height-source:userset;height:13pt'>
-<td height='17' class='x22' style='height:13pt;'><font class="font2" style="text-decoration: none;">CERTIFICATE OF APPEARANCE</font></td>
+<td height='17' class='x22' style='height:13pt;'><font class="font2" style="text-decoration: none; margin-left: 250px;">CERTIFICATE OF APPEARANCE</font></td>
 <td colspan='5' style='mso-ignore:colspan;'></td>
  </tr>
  <tr height='17' style='mso-height-source:userset;height:13pt'>
 <td colspan='6' height='17' style='mso-ignore:colspan;height:13pt;'></td>
  </tr>
  <tr height='17' style='mso-height-source:userset;height:13pt'>
-<td height='17' class='x23' style='height:13pt;'><font class="font3" style="text-decoration: none;">    This is to certify that Mr. / Ms.<span style='mso-spacerun:yes;'>&nbsp; </span>         <span style='mso-spacerun:yes;'>&nbsp; </span>  <span style='mso-spacerun:yes;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>,</font></td>
+<td height='17' class='x23' style='height:13pt; text-indent: 0.5;'><font class="font3" style="text-decoration: none;">    This is to certify that Mr. / Ms.<span style='mso-spacerun:yes;'>&nbsp; </span>         <span style='mso-spacerun:yes;'>&nbsp; </span><u>{{ $certificateofappearances->Name }} , {{$certificateofappearances->Designation }}</u><span style='mso-spacerun:yes;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></td>
 <td colspan='5' style='mso-ignore:colspan;'></td>
- </tr>
- <tr height='2' style='mso-height-source:userset;height:2pt'>
-<td height='2' width='566' style='text-align: left;height:2pt;width:424.5pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:2;margin-left:1px;margin-top:1px;width:202px;height:1px'><img width='202' height='1' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAAACCAYAAAAUwDM2AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBD6fLggAAACNJREFUOI1jZGBg+M8wCkbBKMAL/v+HZBMWGGMUjIJRQBgAAJRsBv9OYlgrAAAAAElFTkSuQmCC" name='s1027' alt='1'/></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='2' width='566' style='height:2pt;width:424.5pt;'></td></tr></table></span></td>
-<td colspan='5' style='mso-ignore:colspan;'></td>
- </tr>
- <tr height='2' style='mso-height-source:userset;height:1.85pt'>
-<td colspan='6' height='2' style='mso-ignore:colspan;height:1.85pt;'></td>
  </tr>
  <tr height='17' style='mso-height-source:userset;height:13pt'>
 <td height='17' class='x23' style='height:13pt;'><font class="font3" style="text-decoration: none;">                <span style='mso-spacerun:yes;'>&nbsp; </span>  </font><font class="font6" style="text-decoration: none;">(Name )       <span style='mso-spacerun:yes;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>        <span style='mso-spacerun:yes;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>(Designation)</font></td>
 <td colspan='5' style='mso-ignore:colspan;'></td>
  </tr>
  <tr height='17' style='mso-height-source:userset;height:13pt'>
-<td height='17' class='x23' style='height:13pt;'><font class="font3" style="text-decoration: none;">&nbsp;of LGU - Maasin City attended the&nbsp;</font><font class="font7" style="text-decoration: none;">BASIC INCIDENT COMMAND SYSTEM (BICS) TRAINING</font><font class="font4" style="text-decoration: none;">&nbsp;on&nbsp;</font><font class="font7" style="text-decoration: none;">February 19 - 23, 2024</font><font class="font4" style="text-decoration: none;">&nbsp;at&nbsp;</font><font class="font7" style="text-decoration: none;">Sabin Resort Hotel, Bantigue, Ormoc City</font><font class="font4" style="text-decoration: none;">.</font></td>
+<td height='17' class='x23' style='height:13pt;'><font class="font3" style="text-decoration: none;">&nbsp;of LGU - Maasin City attended the&nbsp;</font><font class="font7" style="text-decoration: none;">{{$certificateofappearances->Service }}</font><font class="font4" style="text-decoration: none;">&nbsp;on&nbsp;</font><font class="font7" style="text-decoration: none;">{{$certificateofappearances->InclusiveDate }}</font><font class="font4" style="text-decoration: none;">&nbsp;at&nbsp;</font><font class="font7" style="text-decoration: none;">{{$certificateofappearances->Location }}</font><font class="font4" style="text-decoration: none;">.</font></td>
 <td colspan='5' style='mso-ignore:colspan;'></td>
  </tr>
  <tr height='17' style='mso-height-source:userset;height:13pt'>
 <td colspan='6' height='17' style='mso-ignore:colspan;height:13pt;'></td>
  </tr>
  <tr height='17' style='mso-height-source:userset;height:13pt'>
-<td height='17' class='x24' style='height:13pt;'><font class="font4" style="text-decoration: none;">    </font><font class="font3" style="text-decoration: none;">Issued for whatever purpose it may serve this 23</font><font class="font8" style="text-decoration: none;"><sup>rd</sup></font><font class="font3" style="text-decoration: none;">&nbsp;day of February, 2024 at Sabin Resort Hotel, Ormoc City, Leyte, Philippines.</font></td>
+<td height='17' class='x24' style='height:13pt;'><font class="font4" style="text-decoration: none;">    </font><font class="font3" style="text-decoration: none;">Issued for whatever purpose it may serve this {{$certificateofappearances->Day }}</font><font class="font8" style="text-decoration: none;"><sup></sup></font><font class="font3" style="text-decoration: none;">&nbsp;day of {{$certificateofappearances->Date }} at {{$certificateofappearances->Place }}.</font></td>
 <td colspan='5' style='mso-ignore:colspan;'></td>
  </tr>
  <tr height='137' style='mso-height-source:userset;height:103.1pt'>

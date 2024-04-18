@@ -287,7 +287,7 @@
                 </tr>
                 <tr class="row6">
                   <td class="column0 style10 s style12" colspan="5"><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:12pt">Contact #:</span>{{ $dispatches->ContactNumber}}</td>
-                  <td class="column5 style29 s style31" colspan="6"><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:11pt">Office Name:</span>{{ $dispatches->Office}}</td>
+                  <td class="column5 style29 s style31" colspan="6"><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:10pt">Office Name:</span>{{ $dispatches->Office}}</td>
                 </tr>
                 <tr class="row7">
                   <td class="column0 style16 null style19" colspan="2" rowspan="9"></td>
@@ -335,13 +335,13 @@
             <td class="column2 style26 s style26" colspan="6"><span style="font-weight:bold; color:#000000; font-family:'Calibri';font-size:7pt; position: absolute; top: 694px; left: 76px;">NAME AND SIGNATURE OF DISPATCHER<br/>
             </span><span style="font-weight:bold; color:#000000; font-family:'Calibri'; font-size:7pt;  position: absolute; top: 715px; left: 30px;">DATE:<br />
             </span><span style="font-weight:bold; color:#000000; font-family:'Calibri'; font-size:6pt; position: absolute; top: 746px; left: 30px;">RECOMMENDED FOR ISSUANCE OF TRAVEL ORDER:<br />
-            </span><span style="font-weight:bold; color:#000000; font-family:'Calibri'; font-size:6pt; position: absolute; top: 800px; left: 90px;">NAME AND SIGNATURE HEAD OF OFFICE</span></td>
+            </span><span style="font-weight:bold; color:#000000; font-family:'Calibri'; font-size:6pt; position: absolute; top: 790px; left: 90px;">NAME AND SIGNATURE HEAD OF OFFICE</span></td>
             <td class="column8 style6 s style6" colspan="2"><span style="font-weight:bold; color:#000000; font-family:'Calibri'; font-size:7pt;position: absolute;top: 71%">NOTED:<br />
             </span><span style="font-weight:bold; color:#000000; font-family:'Calibri'; font-size:7pt; position: absolute; top: 705px; left: 400px;">NAME AND SIGNATURE OF TEAM LEADER ON DUTY<br />
             </span><span style="font-weight:bold; color:#000000; font-family:'Calibri'; font-size:7pt; position: absolute; top: 728px; left: 350px;">DATE:<br />
             </span><span style="font-weight:bold; color:#000000; font-family:'Calibri'; font-size:6pt;position: absolute; top: 755px; left: 350px;">FOR ISSUANCE OF TRAVEL ORDER:        <br />
             </span><span style="font-weight:bold; color:#000000; font-family:'Calibri'; font-size:6pt;position: absolute; top: 755px; left: 520px;">  RECEIVED AT THE MAYORS OFFICE:       <br />
-           </span><span style="font-weight:bold; color:#000000; font-family:'Calibri'; font-size:6pt;position: absolute; top: 805px; left: 365px;"><sup>NAME AND SIGNATURE HRMO PERSONNEL </sup></span><span style="font-weight:bold; color:#000000; font-family:'Calibri'; font-size:6pt;position: absolute; top: 805px; left: 550px;">NAME AND SIGNATURE</span></td>
+           </span><span style="font-weight:bold; color:#000000; font-family:'Calibri'; font-size:6pt;position: absolute; top: 805px; left: 365px;"><sup>NAME AND SIGNATURE HRMO PERSONNEL </sup></span><span style="font-weight:bold; color:#000000; font-family:'Calibri'; font-size:6pt;position: absolute; top: 800px; left: 550px;">NAME AND SIGNATURE</span></td>
                 <td class="column10 style3 null"></td>
               </tr>
                <div class="sample-box"></div>

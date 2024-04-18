@@ -60,8 +60,12 @@
                               @if(isset($applicationforleaves))
                               @foreach($applicationforleaves as $key => $applicationforleave)
                                  <tr>
-                                    <?php $SeriesNumber = sprintf('%05d', $key + 1); ?>
-                                    <td>{{ substr($applicationforleave->created_at, 0, 6) . $SeriesNumber }}</td>
+                                    <?php 
+                                       $SeriesNumber = sprintf('%06d', $key + 1); 
+                                       $office = App\Models\Office::where('OfficeName', $applicationforleave->Office)->first();
+                                       $officeCode = $office ? $office->Code : '';
+                                    ?>
+                                    <td>{{ date('Y') . '-' . $officeCode . '-' . $SeriesNumber }}</td>
                                     <td>{{ $applicationforleave->Office }}</td>
                                     <td>{{ $applicationforleave->Name }}</td>
                                     <td>{{ substr($applicationforleave->created_at, 0, 10)}}</td>
@@ -93,8 +97,12 @@
                               @if(isset($dispatches))
                               @foreach($dispatches as $key => $dispatches)
                                  <tr>
-                                    <?php $SeriesNumber = sprintf('%05d', $key + 1); ?>
-                                    <td>{{ substr($dispatches->created_at, 0, 6) . $SeriesNumber }}</td>
+                                    <?php 
+                                       $SeriesNumber = sprintf('%06d', $key + 1);
+                                       $office = App\Models\Office::where('OfficeName', $dispatches->Office)->first();
+                                       $officeCode = $office ? $office->Code : '';
+                                    ?>
+                                    <td>{{ date('Y') . '-' . $officeCode . '-' . $SeriesNumber }}</td>
                                     <td>{{ $dispatches->Office }}</td>
                                     <td>{{ $dispatches->Name }}</td>
                                     <td>{{ substr($dispatches->created_at, 0, 10)}}</td>
@@ -126,8 +134,12 @@
                               @if(isset($certificateofappearances))
                               @foreach($certificateofappearances as $key => $certificateofappearance)
                                  <tr>
-                                    <?php $SeriesNumber = sprintf('%05d', $key + 1); ?>
-                                    <td>{{ substr($certificateofappearance->created_at, 0, 6) . $SeriesNumber }}</td>
+                                    <?php 
+                                       $SeriesNumber = sprintf('%06d', $key + 1);
+                                       $office = App\Models\Office::where('OfficeName', $certificateofappearance->Office)->first();
+                                       $officeCode = $office ? $office->Code : '';
+                                    ?>
+                                    <td>{{ date('Y') . '-' . $officeCode . '-' . $SeriesNumber }}</td>
                                     <td>{{ $certificateofappearance->Office }}</td>
                                     <td>{{ $certificateofappearance->Name }}</td>
                                     <td>{{ substr($certificateofappearance->created_at, 0, 10)}}</td>
@@ -159,8 +171,12 @@
                               @if(isset($locators))
                               @foreach($locators as $key => $locator)
                               <tr>
-                                 <?php $SeriesNumber = sprintf('%05d', $key + 1); ?>
-                                 <td>{{ substr($locator->created_at, 0, 6) . $SeriesNumber }}</td>
+                                 <?php 
+                                    $SeriesNumber = sprintf('%06d', $key + 1);
+                                    $office = App\Models\Office::where('OfficeName', $locator->Office)->first();
+                                    $officeCode = $office ? $office->Code : ''; 
+                                 ?>
+                                 <td>{{ date('Y') . '-' . $officeCode . '-' . $SeriesNumber }}</td>
                                  <td>{{ $locator->Office }}</td>
                                  <td>{{ $locator->NameOfEmployee }}</td>
                                  <td>{{ substr($locator->created_at, 0, 10)}}</td>
@@ -192,8 +208,12 @@
                               @if(isset($travelorders))
                               @foreach($travelorders as $key => $travelorder)
                               <tr>
-                                 <?php $SeriesNumber = sprintf('%05d', $key + 1); ?>
-                                 <td>{{ substr($travelorder->created_at, 0, 6) . $SeriesNumber }}</td>
+                                 <?php 
+                                    $SeriesNumber = sprintf('%06d', $key + 1);
+                                    $office = App\Models\Office::where('OfficeName', $travelorder->Office)->first();
+                                    $officeCode = $office ? $office->Code : '';  
+                                 ?>
+                                 <td>{{ date('Y') . '-' . $officeCode . '-' . $SeriesNumber }}</td>
                                  <td>{{ $travelorder->Office }}</td>
                                  <td>{{ $travelorder->NameOfEmployee }}</td>
                                  <td>{{ substr($travelorder->created_at, 0, 10)}}</td>

@@ -90,7 +90,7 @@
                         <div class="wcdiv" style="top:206.21pt;"><span class="wcspan wctext003" style="left:0pt; top:0.39pt; line-height:13.41pt;">Subject:</span> <span class="wcspan wctext004" style="left:63.67pt; top:0.39pt; line-height:13.41pt;">Recommendation for Issuance of Travel Order</span></div>
                         <div class="wcdiv" style="left:-0.75pt; top:235.83pt;"><span class="wcspan wctext002" style="left:0pt; top:0.39pt; line-height:13.41pt;">Sir;</span></div>
                         <div style="left:-0.75pt; top:284.66pt;">
-                            <p style="margin-top: 47.5%; margin-left: -10px;">This is to certify that name(s) appearing below is/are authorized to undertake an official trip to<br><span style="color: red;top:0.39pt;">Hinunangan, Southern Leyte Hinunangan, Southern Leyte</span> from <span style="color: red;top:0.39pt;">February 26, 2024.</span></p>
+                            <p style="margin-top: 47.5%; margin-left: -10px;">This is to certify that name(s) appearing below is/are authorized to undertake an official trip to<br><span style="color: red;top:0.39pt;">{{$travelorders->Location}}</span> from <span style="color: red;top:0.39pt;">{{$travelorders->InclusiveDates}}.</span></p>
                         </div>
                         <table style="border: none; border-collapse: collapse; width: 88%; margin-right: calc(12%); margin-left:23px;">
                             <tbody>
@@ -101,9 +101,9 @@
                                 </tr>
                                 <tr>
                                     <td style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 1pt dotted windowtext; border-bottom: 1pt dotted windowtext; border-left: 1pt dotted windowtext; border-image: initial; height: 14.5pt; border-top: none; width: 6.4935%;"><br></td>
-                                    <td colspan="2" style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; text-align: center; vertical-align: bottom; border-image: initial; border-top: 1pt dotted windowtext; border-right: 1pt dotted black; border-bottom: 1pt dotted windowtext; border-left: none; width: 24.7015%;"><br></td>
-                                    <td colspan="3" style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; text-align: center; vertical-align: bottom; border-image: initial; border-top: 1pt dotted windowtext; border-right: 1pt dotted black; border-bottom: 1pt dotted windowtext; border-left: none; width: 36.6869%;"><br></td>
-                                    <td colspan="3" style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; text-align: center; vertical-align: bottom; border-image: initial; border-top: 1pt dotted windowtext; border-right: 1pt dotted black; border-bottom: 1pt dotted windowtext; border-left: none; width: 31.8785%;"><br></td>
+                                    <td colspan="2" style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; text-align: center; vertical-align: bottom; border-image: initial; border-top: 1pt dotted windowtext; border-right: 1pt dotted black; border-bottom: 1pt dotted windowtext; border-left: none; width: 24.7015%;">{{$travelorders->Name}}</td>
+                                    <td colspan="3" style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; text-align: center; vertical-align: bottom; border-image: initial; border-top: 1pt dotted windowtext; border-right: 1pt dotted black; border-bottom: 1pt dotted windowtext; border-left: none; width: 36.6869%;">{{$travelorders->Designation}}</td>
+                                    <td colspan="3" style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; text-align: center; vertical-align: bottom; border-image: initial; border-top: 1pt dotted windowtext; border-right: 1pt dotted black; border-bottom: 1pt dotted windowtext; border-left: none; width: 31.8785%;">{{$travelorders->Office}}</td>
                                 </tr>
                                 <tr>
                                     <td style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 1pt dotted windowtext; border-bottom: 1pt dotted windowtext; border-left: 1pt dotted windowtext; border-image: initial; height: 14.5pt; border-top: none; width: 6.4935%;"><br></td>
@@ -114,7 +114,7 @@
                             </tbody>
                         </table>
                         <div style="left:-0.75pt; top:264.66pt;">
-                            <p style="margin-top: 1%; margin-left: -10px;">We hereby endorse this travel order request with a memorandum order from the dated<br><span style="color: red;top:0.39pt;">Provincial Governor of Southern Leyte</span> from <span style="color: red;top:0.39pt;">February 26, 2024.&nbsp;</span></p>
+                            <p style="margin-top: 1%; margin-left: -10px;">We hereby endorse this travel order request with a memorandum order from the dated<br><span style="color: red;top:0.39pt;">{{$travelorders->Endorser}}</span> from <span style="color: red;top:0.39pt;">{{$travelorders->Dated}}.&nbsp;</span></p>
                         </div>
                         <table style="border: none;border-collapse: collapse;width:490pt;">
                             <tbody>

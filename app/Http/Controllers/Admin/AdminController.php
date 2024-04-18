@@ -7,6 +7,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\Applicationforleave;
+use App\Models\Certificateofappearance;
+use App\Models\Dispatch;
+use App\Models\Locator;
 
 class AdminController extends Controller
 {
@@ -22,7 +25,10 @@ class AdminController extends Controller
 
             $users = User::count();
             $applicationforleaves = Applicationforleave::count();
-            return view('admin.dashboard.index', compact('users', 'applicationforleaves'));
+            $certificateofappearances = Certificateofappearance::count();
+            $dispatches = Dispatch::count();
+            $locators = Locator::count();
+            return view('admin.dashboard.index', compact('users', 'applicationforleaves', 'certificateofappearances', 'dispatches', 'locators'));
         }
     }
 }

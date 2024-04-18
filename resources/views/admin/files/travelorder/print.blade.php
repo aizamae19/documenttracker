@@ -89,7 +89,7 @@
                         <div class="wcdiv" style="left:-0.75pt; top:177.37pt;"><span class="wcspan wctext002" style="left:-8pt; top:0.39pt; line-height:13.41pt;">&nbsp;City of Maasin</span></div>
                         <div class="wcdiv" style="top:206.21pt;"><span class="wcspan wctext003" style="left:0pt; top:0.39pt; line-height:13.41pt;">Subject:</span> <span class="wcspan wctext004" style="left:63.67pt; top:0.39pt; line-height:13.41pt;">Recommendation for Issuance of Travel Order</span></div>
                         <div class="wcdiv" style="left:-0.75pt; top:235.83pt;"><span class="wcspan wctext002" style="left:0pt; top:0.39pt; line-height:13.41pt;">Sir;</span></div>
-                        <div style="left:-0.75pt; top:284.66pt;">
+                        <div style="left:-0.75pt; top:284.66pt; text-align: justify;">
                             <p style="margin-top: 47.5%; margin-left: -10px;">This is to certify that name(s) appearing below is/are authorized to undertake an official trip to<br><span style="color: red;top:0.39pt;">{{$travelorders->Location}}</span> from <span style="color: red;top:0.39pt;">{{$travelorders->InclusiveDates}}.</span></p>
                         </div>
                         <table style="border: none; border-collapse: collapse; width: 88%; margin-right: calc(12%); margin-left:23px;">
@@ -113,26 +113,26 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <div style="left:-0.75pt; top:264.66pt;">
-                            <p style="margin-top: 1%; margin-left: -10px;">We hereby endorse this travel order request with a memorandum order from the dated<br><span style="color: red;top:0.39pt;">{{$travelorders->Endorser}}</span> from <span style="color: red;top:0.39pt;">{{$travelorders->Dated}}.&nbsp;</span></p>
+                        <div style="left:-0.75pt; top:264.66pt; text-align: justify;">
+                            <p style="margin-top: 1%; margin-left: -10px;">We hereby endorse this travel order request with a memorandum order from the dated <span style="color: red;top:0.39pt;">{{$travelorders->Endorser}}</span> from <span style="color: red;top:0.39pt;">{{$travelorders->Dated}}.&nbsp;</span></p>
                         </div>
-                        <table style="border: none;border-collapse: collapse;width:490pt;">
+                        <table style="border: none;border-collapse: collapse;width:490pt; text-align: justify;">
                             <tbody>
                                 <tr>
                                     <td colspan="2" rowspan="3" style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; text-align: center; vertical-align: top; border: 0.5pt solid windowtext; height: 43.5pt; width: 34.6939%;">
                                         <div style="text-align: left;">The purpose of this travel:</div>
                                     </td>
-                                    <td colspan="7" rowspan="3" style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; text-align: center; vertical-align: top; border: 0.5pt solid windowtext; width: 65.1206%; text-align: left;">{{$travelorders->Purpose}}</td>
+                                    <td colspan="10" rowspan="3" style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; text-align: center; vertical-align: top; border: 0.5pt solid windowtext; width: 75.1206%; text-align: left;">{{$travelorders->Purpose}}</td>
                                 </tr>
                             </tbody>
                         </table>
-                        <div style="margin-left: -9px; top:264.66pt; margin-top: 10px;">
+                        <div style="margin-left: -9px; top:264.66pt; margin-top: 10px; text-align: justify;">
                             <p>All necessary travel arrangements should be in accordance with the government regulations on transportations, accommodations and per diem allowances.</p>
                         </div>
-                        <div style="margin-left: -9px;  top:264.66pt; margin-top: -9px;">
-                            <p>We confirm that the above-name employee(s) will represent the Local Government Unit of<br>Maasin in a professional and responsible manner and will conduct the official business in<br>accordance with the rules and regulations of the government and of our organization.</p>
+                        <div style="margin-left: -9px;  top:264.66pt; margin-top: -9px; text-align: justify;">
+                            <p>We confirm that the above-name employee(s) will represent the Local Government Unit of Maasin in a professional and responsible manner and will conduct the official business in accordance with the rules and regulations of the government and of our organization.</p>
                         </div>
-                        <div style="margin-left: -9px; top:264.66pt; margin-top: -9px;">
+                        <div style="margin-left: -9px; top:264.66pt; margin-top: -9px; text-align: justify;">
                             <p>We trust that this endorsement will facilitate the travel process and enable the employee to undertake the official trip as authorized.For your issuance of travel order.</p>
                         </div>
                         <div style="margin-left: -9px;  top:262.66pt; margin-top: -1px;">

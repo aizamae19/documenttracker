@@ -12,6 +12,7 @@ use App\Models\Certificateofappearance;
 use App\Models\Locator;
 use App\Models\File;
 use App\Models\Office;
+use App\Models\Typeofleave;
 use Carbon\Carbon;
 
 class FileController extends Controller

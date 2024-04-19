@@ -3,15 +3,16 @@
 @section('content')
   <section class="content">
         <div class="container-fluid">
-            <div class="card card-info">
+            <div class="card card-info" style="">
                 <div class="wcdiv wcpage"> 
                     <style type="text/css">
                         .wcdiv.wcpage {
                         width: 210mm; 
-                        height: 297mm; 
+                        height: 310mm; 
+
                     }
                     </style>
-                        <div class="wcdiv" style="left:1.25pt; top:2.5pt;"> 
+                        <div class="wcdiv" style="left:0pt; top:2.5pt; background-color: white;"> 
                             <div class="wcdiv" style="top:-0.02pt;">
                             <div class="wcdiv">&nbsp;<img class="wcimg" style="margin: 0 auto 0 0; display: block; left: 0pt; top: 0.02pt; width: 612pt; height: 80.6pt;" src="https://test.myfiles.space/user_files/temporary/6618ecb97980b7.70717253/1712909496_2024-travel/1712909496_2024-travel-1.png"></div>
                         </div>
@@ -85,6 +86,7 @@
                             <div class="wcdiv"><img class="wcimg" style="margin: 0 auto 0 0; display: block; left: 0pt; top: 0pt; width: 612pt; height: 4.56pt;" src="https://test.myfiles.space/user_files/temporary/6618ecb97980b7.70717253/1712909496_2024-travel/1712909496_2024-travel-3.png"></div>
                         </div>
                     </div>
+
                     <div class="wcdiv"><img class="wcimg" style="margin: 0 auto 0 0; display: block; left: 36pt; top: 268.42pt; width: 460.45pt; height: 22.6pt;" src="https://test.myfiles.space/user_files/temporary/6618ecb97980b7.70717253/1712909496_2024-travel/1712909496_2024-travel-4.png"></div>
                     <div class="wcdiv"><img class="wcimg" style="margin: 0 auto 0 0; display: block; left: 26.75pt; top: 178.14pt; width: 163.25pt; height: 25.1pt;" src="https://test.myfiles.space/user_files/temporary/6618ecb97980b7.70717253/1712909496_2024-travel/1712909496_2024-travel-6.png"></div>
                     <div class="wcdiv" style="margin-left:40pt; top:65.6pt;">
@@ -96,8 +98,26 @@
                         <div class="wcdiv" style="top:206.21pt;"><span class="wcspan wctext003" style="left:0pt; top:0.39pt; line-height:13.41pt;">Subject:</span> <span class="wcspan wctext004" style="left:63.67pt; top:0.39pt; line-height:13.41pt;">Recommendation for Issuance of Travel Order<!-- {{$travelorders->Date}} --></span></div>
                         <div class="wcdiv" style="left:-0.75pt; top:235.83pt;"><span class="wcspan wctext002" style="left:0pt; top:0.39pt; line-height:13.41pt;">Sir;</span></div>
                         <div style="left:-0.75pt; top:284.66pt;">
-                            <p style="margin-top: 45%; margin-left: -10px; ">This is to certify that name(s) appearing below is/are authorized to undertake an official trip to<br><span style="color: red;top:0.39pt;">{{$travelorders->Date}}</span> from <span style="color: red;top:0.39pt;">February 26, 2024.</span></p>
+                            <p style="margin-top: 45%; margin-left: -10px; ">This is to certify that name(s) appearing below is/are authorized to undertake an official trip to<br><span style="color: red;top:0.39pt;">{{$travelorders->Location}}</span> from <span style="color: red;top:0.39pt;">{{$travelorders->Dated}}.</span></p>
                         </div>
+                          <div class="sample-box" style="color: white; font-size: 7px;text-align: left;">Travel Request Issuance Number: </div>
+
+                            <style >
+                                .sample-box {
+                               width: 266px;
+                        background-color: white;
+                        border: 1px solid white;
+                        padding: 18px;
+                        text-align: center;
+                        font-family: Arial, sans-serif;
+                        margin-top: 3px;
+                        margin-left: 425px;
+                        margin-bottom: 10px;
+                        position: absolute;
+                        top: 11%;
+                        background-color: #FF65FF;          
+                                             }
+                            </style>
                          <p>&nbsp;</p>
                         <table style="border: none;border-collapse: collapse;width:510pt; margin-top: -42px;">
                             <tbody>
@@ -108,11 +128,11 @@
                             </tr>
                             <tr>
                                 <td style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri; vertical-align: middle; text-align: center; border-right: 0.5pt solid windowtext; border-bottom: 1.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 12.5pt; border-top: none; width: 3.7561%; text-align: center; border: 1pt dotted windowtext;">1<br></td>
-                                <td style=" color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri; vertical-align: middle; border-right: 0.5pt solid windowtext; border-bottom: 1.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 12.5pt; border-top: none; width: 3.7561%; text-align: center; border: 1pt dotted windowtext;">{{$travelorders->Name}}<br></td>
+                                <td style=" color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri; vertical-align: middle; border-right: 0.5pt solid windowtext; border-bottom: 1.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 12.5pt; border-top: none; width: 30.7561%; text-align: center; border: 1pt dotted windowtext;">{{$travelorders->Name}}<br></td>
                                 <td style="color:black;font-size:15px;font-weight:400;font-style:normal;text-decoration:none;font-family:Calibri;text-align:center;vertical-align:middle;border:.5pt solid windowtext;border-top:none;border-left:none; border: 1pt dotted windowtext; text-align: center;">{{$travelorders->Designation}}<br></td>
                                 <td style="color:black;font-size:15px;font-weight:400;font-style:normal;text-decoration:none;font-family:Calibri;text-align:center;vertical-align:middle;border:.5pt solid windowtext;border-top:none;border-left:none; border: 1pt dotted windowtext;">{{$travelorders->Office}}<br></td>
                             </tr>
-                            <tr>
+                            <!-- <tr>
                                 <td style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 14.5pt; border-top: none; width: 9.7561%; border: 1pt dotted windowtext;"><br></td>
                                 <td style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-top: none; border-left: none; width: 30.7692%; border: 1pt dotted windowtext;"><br></td>
                                 <td style="color:black;font-size:15px;font-weight:400;font-style:normal;text-decoration:none;font-family:Calibri, sans-serif;text-align:general;vertical-align:bottom;border:.5pt solid windowtext;border-top:none;border-left:none; border: 1pt dotted windowtext;"><br></td>
@@ -129,7 +149,7 @@
                                 <td style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-top: none; border-left: none; width: 30.7692%;"><br></td>
                                 <td style="color:black;font-size:15px;font-weight:400;font-style:normal;text-decoration:none;font-family:Calibri, sans-serif;text-align:general;vertical-align:bottom;border:.5pt solid windowtext;border-top:none;border-left:none; border: 1pt dotted windowtext;"><br></td>
                                 <td style="color:black;font-size:15px;font-weight:400;font-style:normal;text-decoration:none;font-family:Calibri, sans-serif;text-align:general;vertical-align:bottom;border:.5pt solid windowtext;border-top:none;border-left:none; border: 1pt dotted windowtext;"><br></td>
-                                    </tr>
+                                    </tr> -->
                                <!--   <tr>
                                 <td style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 14.5pt; border-top: none; width: 9.7561%; border: 1pt dotted windowtext;"><br></td>
                                 <td style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-top: none; border-left: none; width: 30.7692%; border: 1pt dotted windowtext;"><br></td>
@@ -139,7 +159,7 @@
                         </tbody>
                     </table>
                         <div style="left:-0.75pt; top:264.66pt;">
-                        <p style="margin-top: 1%; margin-left: -10px; text-align: justify; ">We hereby endorse this travel order request with a memorandum order from the dated<br><span style="color: red;top:0.39pt;">Provincial Governor of Southern Leyte</span> from <span style="color: red;top:0.39pt;">February 26, 2024.&nbsp;</span></p>
+                        <p style="margin-top: 1%; margin-left: -10px; text-align: justify; ">We hereby endorse this travel order request with a memorandum order from the dated<br><span style="color: red;top:0.39pt;">Provincial Governor of Southern Leyte</span> from <span style="color: red;top:0.39pt;">{{$travelorders->InclusiveDates}}.&nbsp;</span></p>
                         </div>
                         <table style="border: none;border-collapse: collapse;width:490pt;">
                             <tbody>
@@ -163,7 +183,7 @@
                         <div style="margin-left: -9px;  top:262.66pt; margin-top: -1px;">
                             <p>For your issuance of travel order.</p>
                         </div>
-                        <div style="margin-left: -9px;  margin-top: 22px;">
+                        <div style="margin-left: -9px;  margin-top: 14px;">
                             <p>Sincerely,</p>
                         </div>
                         <div style="margin-left: -9px;  margin-top: 31px;">
@@ -173,7 +193,7 @@
                             <p>CHRMO</p>
                         </div>
                     </div>
-                    <div class="wcdiv" style="left:68.5pt; top:770.74pt;"><br></div>
+                    <div class="wcdiv" style="left:69pt; top:770.74pt; background-color: white;"><br></div>
                     <link rel="stylesheet" type="text/css" href="https://test.myfiles.space/user_files/temporary/6618ecb97980b7.70717253/1712909496_2024-travel/styles.css" media="all">
                 </div>
                 <p><br></p>

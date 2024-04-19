@@ -29,9 +29,9 @@
                   <li class="nav-item">
                      <a class="nav-link" data-toggle="tab" href="#certificateofappearanceTab">Certificate of Appearance</a>
                   </li>
-                  <!-- <li class="nav-item">
+                  <li class="nav-item">
                      <a class="nav-link" data-toggle="tab" href="#tripticketTab">Trip Ticket</a>
-                  </li> -->
+                  </li>
                   <li class="nav-item">
                      <a class="nav-link" data-toggle="tab" href="#dispatchTab">Dispatch</a>
                   </li>
@@ -61,6 +61,7 @@
                               @foreach($applicationforleaves as $key => $applicationforleave)
                                  <tr>
                                     <?php 
+<<<<<<< HEAD
                                        $SeriesNumber = sprintf('%06d', $key + 1); 
                                        $office = App\Models\Office::where('OfficeName', $applicationforleave->Office)->first();
                                        $officeCode = $office ? $office->Code : '';
@@ -69,8 +70,19 @@
                                     <td>{{ $applicationforleave->Office }}</td>
                                     <td>{{ $applicationforleave->Name }}</td>
                                     <td>{{ substr($applicationforleave->created_at, 0, 10)}}</td>
+=======
+                                        $SeriesNumber = sprintf('%06d', $key + 1); 
+                                        
+                                        $office = App\Models\Office::where('ShortName', $applicationforleave->Office)->first();
+                                        $officeCode = $office ? $office->Code : '';
+                                        ?>
+                                        <td>{{ date('Y') . '-' . $officeCode . '-' . $SeriesNumber }}</td>
+                                        <td>{{ $applicationforleave->Office }}</td>
+                                        <td>{{ $applicationforleave->Name }}</td>
+                                        <td>{{ substr($applicationforleave->created_at, 0, 10) }}</td>
+>>>>>>> origin/master
                                     <td class="text-center">
-                                       <a class="btn btn-sm btn-success" href="{{ url('/admin/files/applicationforleave/view').'/'.$applicationforleave->id}}" data-target="#view"><i class="fa fa-eye"></i> View</a>
+                                       <a class="btn btn-sm btn-success" href=""data-toggle="modal" data-target="#view"><i class="fa fa-eye"></i> View</a>
                                        <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
                                     </td>
                                  </tr>
@@ -90,13 +102,14 @@
                                  <th>Office</th>
                                  <th>Name</th>
                                  <th>Date</th>
-                                 <th class="text-center"></th>
+                                 <th class="text-center">Action</th>
                               </tr>
                            </thead>
                            <tbody>
                               @if(isset($dispatches))
                               @foreach($dispatches as $key => $dispatches)
                                  <tr>
+<<<<<<< HEAD
                                     <?php 
                                        $SeriesNumber = sprintf('%06d', $key + 1);
                                        $office = App\Models\Office::where('OfficeName', $dispatches->Office)->first();
@@ -106,8 +119,20 @@
                                     <td>{{ $dispatches->Office }}</td>
                                     <td>{{ $dispatches->Name }}</td>
                                     <td>{{ substr($dispatches->created_at, 0, 10)}}</td>
+=======
+                                     <?php 
+                                        $SeriesNumber = sprintf('%06d', $key + 1); 
+                                        
+                                        $office = App\Models\Office::where('ShortName', $dispatches->Office)->first();
+                                        $officeCode = $office ? $office->Code : '';
+                                        ?>
+                                        <td>{{ date('Y') . '-' . $officeCode . '-' . $SeriesNumber }}</td>
+                                        <td>{{ $dispatches->Office }}</td>
+                                        <td>{{ $dispatches->Name }}</td>
+                                        <td>{{ substr($dispatches->created_at, 0, 10) }}</td>
+>>>>>>> origin/master
                                     <td class="text-center">
-                                       <a class="btn btn-sm btn-success" href="{{ url('/admin/files/dispatch/view').'/'.$dispatches->id}}" data-target="#view"><i class="fa fa-eye"></i> View</a>
+                                       <a class="btn btn-sm btn-success" href="{{ url('/admin/files/dispatch/view/').'/'.$dispatches->id}}"data-toggle="" data-target="#view"><i class="fa fa-eye"></i> View</a>
                                        <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
                                     </td>
                                  </tr>
@@ -127,13 +152,14 @@
                                  <th>Office</th>
                                  <th>Name</th>
                                  <th>Date</th>
-                                 <th class="text-center"></th>
+                                 <th class="text-center">Action</th>
                               </tr>
                            </thead>
                            <tbody>
                               @if(isset($certificateofappearances))
                               @foreach($certificateofappearances as $key => $certificateofappearance)
                                  <tr>
+<<<<<<< HEAD
                                     <?php 
                                        $SeriesNumber = sprintf('%06d', $key + 1);
                                        $office = App\Models\Office::where('OfficeName', $certificateofappearance->Office)->first();
@@ -143,9 +169,21 @@
                                     <td>{{ $certificateofappearance->Office }}</td>
                                     <td>{{ $certificateofappearance->Name }}</td>
                                     <td>{{ substr($certificateofappearance->created_at, 0, 10)}}</td>
+=======
+                                        <?php 
+                                        $SeriesNumber = sprintf('%06d', $key + 1); 
+                                        
+                                        $office = App\Models\Office::where('ShortName', $certificateofappearance->Office)->first();
+                                        $officeCode = $office ? $office->Code : '';
+                                        ?>
+                                        <td>{{ date('Y') . '-' . $officeCode . '-' . $SeriesNumber }}</td>
+                                        <td>{{ $certificateofappearance->Office }}</td>
+                                        <td>{{ $certificateofappearance->Name }}</td>
+                                        <td>{{ substr($certificateofappearance->created_at, 0, 10) }}</td>
+>>>>>>> origin/master
                                     <td class="text-center">
-                                       <a class="btn btn-sm btn-success" href="{{ url('/admin/files/certificateofappearance/view').'/'.$certificateofappearance->id}}" data-target="#view"><i class="fa fa-eye"></i> View</a>
-                                       <a class="btn btn-sm btn-danger" href="{{ url('/admin/files/certificateofappearance/delete').'/'.$certificateofappearance->id}}" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
+                                       <a class="btn btn-sm btn-success" href=""data-toggle="modal" data-target="#view"><i class="fa fa-eye"></i> View</a>
+                                       <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
                                     </td>
                                  </tr>
                               @endforeach
@@ -154,7 +192,6 @@
                         </table>
                      </div>
                   </div>
-
                   <div id="locatorTab" class="container-fluid tab-pane">
                      <div class="col-md-12">
                         <table id="itemSearchTab" class="table table-hover">
@@ -164,7 +201,7 @@
                                  <th>Office</th>
                                  <th>Name</th>
                                  <th>Date</th>
-                                 <th class="text-center"></th>
+                                 <th class="text-center">Action</th>
                               </tr>
                            </thead>
                            <tbody>
@@ -172,6 +209,7 @@
                               @foreach($locators as $key => $locator)
                               <tr>
                                  <?php 
+<<<<<<< HEAD
                                     $SeriesNumber = sprintf('%06d', $key + 1);
                                     $office = App\Models\Office::where('OfficeName', $locator->Office)->first();
                                     $officeCode = $office ? $office->Code : ''; 
@@ -180,6 +218,17 @@
                                  <td>{{ $locator->Office }}</td>
                                  <td>{{ $locator->NameOfEmployee }}</td>
                                  <td>{{ substr($locator->created_at, 0, 10)}}</td>
+=======
+                                        $SeriesNumber = sprintf('%06d', $key + 1); 
+                                        
+                                        $office = App\Models\Office::where('ShortName', $locator->Office)->first();
+                                        $officeCode = $office ? $office->Code : '';
+                                        ?>
+                                        <td>{{ date('Y') . '-' . $officeCode . '-' . $SeriesNumber }}</td>
+                                        <td>{{ $locator->Office }}</td>
+                                        <td>{{ $locator->Name }}</td>
+                                        <td>{{ substr($locator->created_at, 0, 10) }}</td>
+>>>>>>> origin/master
                                  <td class="text-center">
                                     <a class="btn btn-sm btn-success" href=""data-toggle="modal" data-target="#view"><i class="fa fa-eye"></i> View</a>
                                     <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
@@ -191,6 +240,7 @@
                         </table>
                      </div>
                   </div>
+<<<<<<< HEAD
 
                   <div id="travelorderTab" class="container-fluid tab-pane">
                      <div class="col-md-12">
@@ -224,83 +274,115 @@
                               </tr>
                               @endforeach
                               @endif
+=======
+               <div id="travelorderTab" class="container-fluid tab-pane">
+                  <div class="col-md-12">
+                     <table id="itemSearchTab" class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Series Number</th>
+                                <th>Office</th>
+                                <th>Date</th>
+                                <th class="text-center">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if(isset($travelorders))
+                                @foreach($travelorders as $key => $travelorder)
+                                    <tr>
+                                        <?php 
+                                        $SeriesNumber = sprintf('%06d', $key + 1); 
+                                        
+                                        $office = App\Models\Office::where('ShortName', $travelorder->Office)->first();
+                                        $officeCode = $office ? $office->Code : '';
+                                        ?>
+                                        <td>{{ date('Y') . '-' . $officeCode . '-' . $SeriesNumber }}</td>
+                                        <td>{{ $travelorder->Office }}</td>
+                                        <td></td>
+                                        <td>{{ substr($travelorder->created_at, 0, 10) }}</td>
+                                        <td class="text-center">
+                                            <a class="btn btn-sm btn-success" href="{{ url('/admin/files/travelorder/view/').'/'.$travelorder->id}}" data-toggle="" data-target="#"><i class="fa fa-eye"></i>View</a>
+                                            <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i>Delete</a>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            @endif
+>>>>>>> origin/master
                            </tbody>
-                        </table>
+                       </table>
+                   </div>
+                </div>
+                   <div id="delete" class="modal animated rubberBand delete-modal" role="dialog">
+                     <div class="modal-dialog modal-dialog-centered">
+                         <div class="modal-content">
+                            <div class="modal-body text-center">
+                                <img src="{{asset('assets/img/sent.png')}}" alt="" width="50" height="46">
+                                <h3>Are you sure want to delete this file?</h3>
+                                <div class="m-t-20"> <a href="#" class="btn btn-white" data-dismiss="modal">Close</a>
+                                   <button type="submit" class="btn btn-danger">Delete</button>
+                                </div>
+                             </div>
+                        </div>
                      </div>
                   </div>
-
-
-              </div>
-          </div>
-      </section>
-      </div>
-      </div>
-      <div id="delete" class="modal animated rubberBand delete-modal" role="dialog">
-            <div class="modal-dialog modal-dialog-centered">
-               <div class="modal-content">
-                  <div class="modal-body text-center">
-                     <img src="{{asset('assets/img/sent.png')}}" alt="" width="50" height="46">
-                     <h3>Are you sure want to delete this file?</h3>
-                     <div class="m-t-20"> <a href="{{ route('filedashboard') }}" class="btn btn-white" data-dismiss="modal">Close</a>
-                        <button type="submit" class="btn btn-danger">Delete</button>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div id="add" class="modal animated rubberBand delete-modal" role="dialog">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-               <div class="modal-content">
-                  <div class="modal-body text-center">
-                     <div class="card-body">
-                        <div class="row">
-                           <div class="col-md-12">
-                              <div class="card-header">
-                                 <h5><img src="{{asset('assets/img/file.png')}}" width="30"> Document Information</h5>
-                              </div>
-                              <br>
-                           <div class="slide-v">
-                              <div class="slide">
-                                 <div class="row">
-                                    <div class="col-md-6">
-                                       <div class="form-group">
-                                          <div class="card-footer">
-                                             <a href="{{ route('applicationforleave') }}" class="form-control link" id="applicationforleaveLink">APPLICATION FOR LEAVE</a>
+                     <div id="add" class="modal animated rubberBand delete-modal" role="dialog">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                           <div class="modal-content">
+                              <div class="modal-body text-center">
+                                 <div class="card-body">
+                                    <div class="row">
+                                       <div class="col-md-12">
+                                          <div class="card-header">
+                                             <h5><img src="{{asset('assets/img/file.png')}}" width="30"> Document Information</h5>
                                           </div>
-                                       </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                       <div class="form-group">
-                                          <div class="card-footer">
-                                             <a href="{{ route('certificateofappearance')}}" class="form-control" id="certificateofappearanceLink">CERTIFICATE OF APPEARANCE</a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                       <div class="form-group">
-                                          <div class="card-footer">
-                                             <a href="{{ route('tripticket')}}" class="form-control" id="tripticketLink">TRIP TICKET</a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                       <div class="form-group">
-                                          <div class="card-footer">
-                                             <a href="{{ route('getDispatch') }}" class="form-control" id="dispatchLink">DISPATCH</a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                       <div class="form-group">
-                                          <div class="card-footer">
-                                             <a href="{{ route('locator')}}" class="form-control" id="locatorLink">LOCATOR</a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                       <div class="form-group">
-                                          <div class="card-footer">
-                                             <a href="{{ route('travelorder')}}" class="form-control" id="travelorderLink">TRAVEL ORDER</a>
+                                          <br>
+                                          <div class="slide-v">
+                                             <div class="slide">
+                                                <div class="row">
+                                                   <div class="col-md-6">
+                                                      <div class="form-group">
+                                                         <div class="card-footer">
+                                                            <a href="{{ route('applicationforleave') }}" class="form-control link" id="applicationforleaveLink">APPLICATION FOR LEAVE</a>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                   <div class="col-md-6">
+                                                      <div class="form-group">
+                                                         <div class="card-footer">
+                                                            <a href="{{ route('certificateofappearance')}}" class="form-control" id="certificateofappearanceLink">CERTIFICATE OF APPEARANCE</a>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                   <div class="col-md-6">
+                                                      <div class="form-group">
+                                                         <div class="card-footer">
+                                                            <a href="{{ route('tripticket')}}" class="form-control" id="tripticketLink">TRIP TICKET</a>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                   <div class="col-md-6">
+                                                      <div class="form-group">
+                                                         <div class="card-footer">
+                                                            <a href="{{ route('getDispatch') }}" class="form-control" id="dispatchLink">DISPATCH</a>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                   <div class="col-md-6">
+                                                      <div class="form-group">
+                                                         <div class="card-footer">
+                                                            <a href="{{ route('locator')}}" class="form-control" id="locatorLink">LOCATOR</a>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                   <div class="col-md-6">
+                                                      <div class="form-group">
+                                                         <div class="card-footer">
+                                                            <a href="{{ route('travelorder')}}" class="form-control" id="travelorderLink">TRAVEL ORDER</a>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
                                           </div>
                                        </div>
                                     </div>
@@ -309,9 +391,4 @@
                            </div>
                         </div>
                      </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
 @endsection 

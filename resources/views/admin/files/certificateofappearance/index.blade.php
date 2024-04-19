@@ -52,9 +52,36 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <p>OFFICE</p>
-                                                <input type="text" class="form-control" name="Office">           
-                                            </div>
-                                        </div>
+                                                    <select name="Office" class="form-control" required=""  >
+                                                         <option enabled>Select Office</option>
+                                                          <option>OFFICE OF THE CITY MAYOR</option>
+                                                          <option>OFFICE OF THE CITY BUDGET OFFICER</option>
+                                                          <option>OFFICE OF THE CITY ACCOUNTANT</option>
+                                                          <option>OFFICE OF THE CITY GENERAL SERVICES OFFICER</option>   
+                                                          <option>OFFICE OF THE CITY AGRICULTURIST</option>
+                                                          <option>DILG CITY OFFICE</option>
+                                                          <option>OFFICE OF THE CITY ADMINISTRATOR</option>
+                                                          <option>OFFICE OF THE CITY LEGAL OFFICER</option>
+                                                          <option>OFFICE OF THE CITY TREASURER</option>
+                                                          <option>OFFICE OF THE CITY ASSESSOR</option>
+                                                          <option>OFFICE OF THE CITY ENGINEER</option>
+                                                          <option>OFFICE OF THE CITY HEALTH OFFICER</option>
+                                                          <option>OFFICE OF THE CITY VETERINARIAN</option>
+                                                          <option>OFFICE OF THE CITY CIVIL REGISTRAR</option>
+                                                          <option>LOCAL ECONOMIC ENTERPRISE - MARKET OPERATION</option>
+                                                          <option>LOCAL ECONOMIC ENTERPRISE - TERMINAL OPERATION</option>
+                                                          <option>LOCAL ECONOMIC ENTERPRISE - SLAUGHTERHOUSE OPERATION</option>
+                                                          <option>OFFICE OF THE CITY DISASTER RISK REDUCTION AND MANAGEMENT OFFICER</option>
+                                                          <option>CITY INVESTMENT PROMOTIONS AND TOURISM OFFICE</option>
+                                                          <option>OFFICE OF THE VICE MAYOR AND THE SANGGUNIANG PANLUNGSOD</option>
+                                                          <option>OFFICE OF THE SECRETARY TO THE SANGGUNIANG PANLUNGSOD</option>
+                                                          <option>OFFICE OF THE CITY HUMAN RESOURCE MANAGEMENT AND DEVELOPMENT OFFICER</option>
+                                                          <option>OFFICE OF THE CITY PLANNING AND DEVELOPMENT COORDINATOR</option>
+                                                          <option>OFFICE OF THE CITY ENVIRONMENT AND NATURAL RESOURCES MANAGEMENT OFFICER</option>
+                                                          <option>OFFICE OF THE CITY SOCIAL WELFARE AND DEVELOPMENT OFFICER</option>
+                                                    </select>                                    
+                                                </div>
+                                          </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <p>INCLUSIVE DATE</p>

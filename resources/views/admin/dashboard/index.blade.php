@@ -72,6 +72,33 @@
                         </div>
                      </div>
                   </div>
+
+                  <div class="col-3 col-sm-3 col-md-4 offset-sm-1 offset-md-1 offset-lg-2">
+                     <div class="info-box">
+                        <span class="info-box-icon text-success"><img src="{{asset('assets/img/travelorder.png')}}" width="50"></span>
+                        <div class="info-box-content">
+                           <span class="info-box-text">
+                              <h5>Travel Order</h5>
+                           </span>
+                           <span class="info-box-number">
+                              <h2>{{$travelorders}}</h2>
+                           </span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-3 col-sm-3 col-md-4 offset-sm-1 offset-md-2 offset-lg-0">
+                     <div class="info-box">
+                        <span class="info-box-icon text-info"><img src="{{asset('assets/img/tripticket.png')}}" width="50"></span>
+                        <div class="info-box-content">
+                           <span class="info-box-text">
+                              <h5>Trip Ticket</h5>
+                           </span>
+                           <span class="info-box-number">
+                              <h2></h2>
+                           </span>
+                        </div>
+                     </div>
+                  </div>
                </div>
             </div>
          </section>

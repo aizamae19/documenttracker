@@ -10,6 +10,7 @@ use App\Models\Applicationforleave;
 use App\Models\Certificateofappearance;
 use App\Models\Dispatch;
 use App\Models\Locator;
+use App\Models\Travelorder;
 
 class AdminController extends Controller
 {
@@ -28,7 +29,8 @@ class AdminController extends Controller
             $certificateofappearances = Certificateofappearance::count();
             $dispatches = Dispatch::count();
             $locators = Locator::count();
-            return view('admin.dashboard.index', compact('users', 'applicationforleaves', 'certificateofappearances', 'dispatches', 'locators'));
+            $travelorders = Travelorder::count();
+            return view('admin.dashboard.index', compact('users', 'applicationforleaves', 'certificateofappearances', 'dispatches', 'locators', 'travelorders'));
         }
     }
 }

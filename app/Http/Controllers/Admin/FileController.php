@@ -68,7 +68,9 @@ class FileController extends Controller
         $Dispatchsave->DescriptionofDispatch = $request->DescriptionofDispatch;
         $Dispatchsave->PlateNumber = $request->PlateNumber;
         $Dispatchsave->Driver = $request->Driver;
-        $Dispatchsave->Passenger = json_encode($request->Passenger);
+        $Dispatchsave->Passenger = $request->Passenger;
+        $Dispatchsave->Crew = $request->Crew;
+        $Dispatchsave->PassengerName = $request->PassengerName;
 
 
         if ($Dispatchsave->save()) {
@@ -157,9 +159,9 @@ class FileController extends Controller
             $Travelorder->Dated = $request->Dated;
             $Travelorder->Purpose = $request->Purpose;
             $Travelorder->Subject = $request->Subject;
-            $Travelorder->Name = json_encode($request->Name);
-            $Travelorder->Designation = json_encode($request->Designation);
-            $Travelorder->Office = json_encode($request->Office);
+            $Travelorder->Name = $request->Name;
+            $Travelorder->Designation = $request->Designation;
+            $Travelorder->Office = $request->Office;
 
         if ($Travelorder->save()) {
             return redirect("/admin/files")->withErrors('Successfully Saved!');

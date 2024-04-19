@@ -86,9 +86,7 @@
                                                               $('#travelorder_form').show();
                                                               $('#travelorders_form').empty();
                                                               for(let x = 0; x < Subject; x++){
-                                                                  $('#travelorders_form').append('<div class="col-md-4"><div class="form-group"><p>NAME</p><input class="form-control" name="Name[]" placeholder="Name"></div></div><div class="col-md-4"><div class="form-group"><p>DESIGNATION</p><input class="form-control" name="Designation[]" placeholder="Designation"></div></div><div class="col-md-4"> <div    <p>OFFICE</p><select name="Office" class="form-control" required=""  > <option enabled>Select Office</option> <option>OFFICE OF THE CITY MAYOR</option> <option>OFFICE OF THE CITY BUDGET OFFICER</option><option>OFFICE OF THE CITY ACCOUNTANT</option><option>OFFICE OF THE CITY GENERAL SERVICES OFFICER</option> <option>OFFICE OF THE CITY AGRICULTURIST</option><option>DILG CITY OFFICE</option> <option>OFFICE OF THE CITY ADMINISTRATOR</option>    <option>OFFICE OF THE CITY LEGAL OFFICER</option> <option>OFFICE OF THE CITY TREASURER</option>  <option>OFFICE OF THE CITY ASSESSOR</option><option>OFFICE OF THE CITY ENGINEER</option><option>OFFICE OF THE CITY HEALTH OFFICER</option><option>OFFICE OF THE CITY VETERINARIAN</option><option>OFFICE OF THE CITY CIVIL REGISTRAR</option> <option>LOCAL ECONOMIC ENTERPRISE - MARKET OPERATION</option> <option>LOCAL ECONOMIC ENTERPRISE - TERMINAL OPERATION</option> <option>LOCAL ECONOMIC ENTERPRISE - SLAUGHTERHOUSE OPERATION</option>  <option>OFFICE OF THE CITY DISASTER RISK REDUCTION AND MANAGEMENT OFFICER</option>  <option>CITY INVESTMENT PROMOTIONS AND TOURISM OFFICE</option>  <option>OFFICE OF THE VICE MAYOR AND THE SANGGUNIANG PANLUNGSOD</option>   <option>OFFICE OF THE SECRETARY TO THE SANGGUNIANG PANLUNGSOD</option>   <option>OFFICE OF THE CITY HUMAN RESOURCE MANAGEMENT AND DEVELOPMENT OFFICER</option> <option>OFFICE OF THE CITY PLANNING AND DEVELOPMENT COORDINATOR</option> <option>OFFICE OF THE CITY ENVIRONMENT AND NATURAL RESOURCES MANAGEMENT OFFICER</option> <option>OFFICE OF THE CITY SOCIAL WELFARE AND DEVELOPMENT OFFICER</option></select>     </div>   </div>');
-                                       
-                                                    
+                                                                  $('#travelorders_form').append('<div class="col-md-4"><div class="form-group"><p>NAME</p><input class="form-control" name="Name" placeholder="Name"></div></div><div class="col-md-4"><div class="form-group"><p>DESIGNATION</p><input class="form-control" name="Designation" placeholder="Designation"></div></div><div class="col-md-4"> <div    <p>OFFICE</p><select name="Office" class="form-control" required=""  > <option>MAYORS</option><option>BUDGET</option><option>ACCOUNTANTING</option>  <option>OGS</option> <option>AGRICULTURE</option><option>DILG </option><option>ADMIN</option>  <option>LEGAL</option><option>TREASURER</option> <option> ASSESSOR</option><option> ENGINEERING<option>CHU</option>  <option> VET</option> <option> REGISTRAR</option> <option>MARKET</option> <option>TERMINAL</option> <option> SLAUGHTERHOUSE </option> <option>CDRRMO</option> <option>TOURISM</option><option>VICE SP</option>    <option>SECRETARY SP</option><option>HRMO</option> <option>PLANNING</option> <option>CENRO</option>  <option>CSWD</option></select>     </div>   </div>');
                                                               }
                                                           } else {
                                                               $('#travelorder_form').hide();
@@ -107,3 +105,26 @@
                         </div>
                  </section>
         @endsection
+                                                         
+                                                          
+                                                         
+                                                         
+                                                      
+                                                         
+                                                         
+                                                         
+                                                         
+                                                         
+                                                        
+                                                         
+                                                          
+                                                          
+                                                          
+                                                             
+                                                         
+                                                          
+                                                          
+                                                        
+                                                        
+                                       
+                                                    

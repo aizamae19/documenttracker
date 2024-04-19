@@ -1,7 +1,20 @@
 @extends('layouts.default')
 
 @section('content')
-<<<<<<< HEAD
+<div class="content-header">
+            <div class="container-fluid">
+               <div class="row mb-2">
+                  <div class="col-sm-6">
+                  </div>
+                  <div class="col-sm-6">
+                     <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">File</li>
+                     </ol>
+                  </div>
+               </div>
+            </div>
+         </div>
 
         <section class="content">
             <div class="container-fluid">
@@ -9,20 +22,11 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-12">
-=======
-  <section class="content">
-        <div class="container-fluid">
-            <div class="card card-info" style="">
->>>>>>> origin/master
                 <div class="wcdiv wcpage"> 
                     <style type="text/css">
                         .wcdiv.wcpage {
                         width: 210mm; 
                         height: 310mm; 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
                     }
                     </style>
                         <div class="wcdiv" style="left:0pt; top:2.5pt; background-color: white;"> 
@@ -145,41 +149,17 @@
                                 <td style="color:black;font-size:15px;font-weight:400;font-style:normal;text-decoration:none;font-family:Calibri;text-align:center;vertical-align:middle;border:.5pt solid windowtext;border-top:none;border-left:none; border: 1pt dotted windowtext; text-align: center;">{{$travelorders->Designation}}<br></td>
                                 <td style="color:black;font-size:15px;font-weight:400;font-style:normal;text-decoration:none;font-family:Calibri;text-align:center;vertical-align:middle;border:.5pt solid windowtext;border-top:none;border-left:none; border: 1pt dotted windowtext;">{{$travelorders->Office}}<br></td>
                             </tr>
-                            <!-- <tr>
+
                                 <td style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 14.5pt; border-top: none; width: 9.7561%; border: 1pt dotted windowtext;"><br></td>
                                 <td style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-top: none; border-left: none; width: 30.7692%; border: 1pt dotted windowtext;"><br></td>
                                 <td style="color:black;font-size:15px;font-weight:400;font-style:normal;text-decoration:none;font-family:Calibri, sans-serif;text-align:general;vertical-align:bottom;border:.5pt solid windowtext;border-top:none;border-left:none; border: 1pt dotted windowtext;"><br></td>
                                 <td style="color:black;font-size:15px;font-weight:400;font-style:normal;text-decoration:none;font-family:Calibri, sans-serif;text-align:general;vertical-align:bottom;border:.5pt solid windowtext;border-top:none;border-left:none; border: 1pt dotted windowtext;"><br></td>
                             </tr>
-<<<<<<< HEAD
                         </tbody>
                     </table>
                         <div style="left:-0.75pt; top:264.66pt;">
                         <p style="margin-top: 1%; margin-left: -10px; text-align: justify; ">We hereby endorse this travel order request with a memorandum order from the <span style="color: red;top:0.39pt;">{{$travelorders->Endorser}}</span> dated <span style="color: red;top:0.39pt;">February 26, 2024.&nbsp;</span></p>
-=======
-                            <tr>
-                                <td style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 14.5pt; border-top: none; width: 9.7561%; border: 1pt dotted windowtext;"><br></td>
-                                <td style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-top: none; border-left: none; width: 30.7692%; border: 1pt dotted windowtext;"><br></td>
-                                <td style="color:black;font-size:15px;font-weight:400;font-style:normal;text-decoration:none;font-family:Calibri, sans-serif;text-align:general;vertical-align:bottom;border:.5pt solid windowtext;border-top:none;border-left:none; border: 1pt dotted windowtext;"><br></td>
-                                <td style="color:black;font-size:15px;font-weight:400;font-style:normal;text-decoration:none;font-family:Calibri, sans-serif;text-align:general;vertical-align:bottom;border:.5pt solid windowtext;border-top:none;border-left:none; border: 1pt dotted windowtext;"><br></td>
-                            </tr>
-                            <tr>
-                                <td style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 14.5pt; border-top: none; width: 9.7561%; border: 1pt dotted windowtext;"><br></td>
-                                <td style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-top: none; border-left: none; width: 30.7692%;"><br></td>
-                                <td style="color:black;font-size:15px;font-weight:400;font-style:normal;text-decoration:none;font-family:Calibri, sans-serif;text-align:general;vertical-align:bottom;border:.5pt solid windowtext;border-top:none;border-left:none; border: 1pt dotted windowtext;"><br></td>
-                                <td style="color:black;font-size:15px;font-weight:400;font-style:normal;text-decoration:none;font-family:Calibri, sans-serif;text-align:general;vertical-align:bottom;border:.5pt solid windowtext;border-top:none;border-left:none; border: 1pt dotted windowtext;"><br></td>
-                                    </tr> -->
-                               <!--   <tr>
-                                <td style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 14.5pt; border-top: none; width: 9.7561%; border: 1pt dotted windowtext;"><br></td>
-                                <td style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-top: none; border-left: none; width: 30.7692%; border: 1pt dotted windowtext;"><br></td>
-                                <td style="color:black;font-size:15px;font-weight:400;font-style:normal;text-decoration:none;font-family:Calibri, sans-serif;text-align:general;vertical-align:bottom;border:.5pt solid windowtext;border-top:none;border-left:none; border: 1pt dotted windowtext;"><br></td>
-                                <td style="color:black;font-size:15px;font-weight:400;font-style:normal;text-decoration:none;font-family:Calibri, sans-serif;text-align:general;vertical-align:bottom;border:.5pt solid windowtext;border-top:none;border-left:none; border: 1pt dotted windowtext;"><br></td>
-                            </tr> -->
-                        </tbody>
-                    </table>
-                        <div style="left:-0.75pt; top:264.66pt;">
-                        <p style="margin-top: 1%; margin-left: -10px; text-align: justify; ">We hereby endorse this travel order request with a memorandum order from the dated<br><span style="color: red;top:0.39pt;">Provincial Governor of Southern Leyte</span> from <span style="color: red;top:0.39pt;">{{$travelorders->InclusiveDates}}.&nbsp;</span></p>
->>>>>>> origin/master
+                               
                         </div>
                         <table style="border: none;border-collapse: collapse;width:490pt; text-align: justify;">
                             <tbody>

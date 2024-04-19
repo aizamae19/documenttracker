@@ -43,7 +43,7 @@
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
-                                                <p>SPECIFIED SERVICE RENDERED</p>
+                                                <p>PURPOSE</p>
                                                 <input type="text" class="form-control" name="Service">                 
                                             </div>
                                         </div>

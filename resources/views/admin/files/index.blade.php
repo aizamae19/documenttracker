@@ -22,6 +22,15 @@
       <section class="content">
     <div class="container-fluid">
         <div class="card card-info">
+
+            <div class="row">
+               <div class="col-sm-12 col-md-2">
+                  <div class="dataTables_length" id="example1_length">
+                     <label>Show entries<select name="example1_length" aria-controls="example1" class="custom-select custom-select-sm form-control form-control-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></label>
+                  </div>
+               </div>
+            </div>
+
             <ul class="nav nav-tabs" role="tablist">
                   <li class="nav-item">
                      <a class="nav-link active" data-toggle="tab" href="#applicationforleaveTab">Application for Leave</a>
@@ -40,6 +49,7 @@
                   </li>
                </ul>
                <br>
+
             <div class="tab-content">
                   <div id="applicationforleaveTab" class="container-fluid tab-pane active">
                      <div class="col-md-12">
@@ -59,7 +69,7 @@
                                  <tr>
                                     <?php 
                                         $SeriesNumber = sprintf('%06d', $key + 1); 
-                                        $office = App\Models\Office::where('OfficeName', $applicationforleave->Office)->first();
+                                        $office = App\Models\Office::where('ShortName', $applicationforleave->Office)->first();
                                         $officeCode = $office ? $office->Code : '';
                                         ?>
                                         <td>{{ date('Y') . '-' . $officeCode . '-' . $SeriesNumber }}</td>
@@ -97,7 +107,7 @@
                                      <?php 
                                         $SeriesNumber = sprintf('%06d', $key + 1); 
                                         
-                                        $office = App\Models\Office::where('OfficeName', $dispatches->Office)->first();
+                                        $office = App\Models\Office::where('ShortName', $dispatches->Office)->first();
                                         $officeCode = $office ? $office->Code : '';
                                         ?>
                                         <td>{{ date('Y') . '-' . $officeCode . '-' . $SeriesNumber }}</td>
@@ -135,7 +145,7 @@
                                         <?php 
                                         $SeriesNumber = sprintf('%06d', $key + 1); 
                                         
-                                        $office = App\Models\Office::where('OfficeName', $certificateofappearance->Office)->first();
+                                        $office = App\Models\Office::where('ShortName', $certificateofappearance->Office)->first();
                                         $officeCode = $office ? $office->Code : '';
                                         ?>
                                         <td>{{ date('Y') . '-' . $officeCode . '-' . $SeriesNumber }}</td>
@@ -172,7 +182,7 @@
                                  <?php 
                                         $SeriesNumber = sprintf('%06d', $key + 1); 
                                         
-                                        $office = App\Models\Office::where('OfficeName', $locator->Office)->first();
+                                        $office = App\Models\Office::where('ShortName', $locator->Office)->first();
                                         $officeCode = $office ? $office->Code : '';
                                         ?>
                                         <td>{{ date('Y') . '-' . $officeCode . '-' . $SeriesNumber }}</td>
@@ -210,7 +220,7 @@
                                         <?php 
                                         $SeriesNumber = sprintf('%06d', $key + 1); 
                                         
-                                        $office = App\Models\Office::where('OfficeName', $travelorder->Office)->first();
+                                        $office = App\Models\Office::where('ShortName', $travelorder->Office)->first();
                                         $officeCode = $office ? $office->Code : '';
                                         ?>
                                         <td>{{ date('Y') . '-' . $officeCode . '-' . $SeriesNumber }}</td>

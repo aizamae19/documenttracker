@@ -145,7 +145,7 @@
       table.sheet0 tr.row45 { height:327pt }
     </style>
 <style type="text/css">
-      
+
           .sample-box {
        width: 303px;
        background-color: white;
@@ -346,6 +346,8 @@
            </span><span style="font-weight:bold; color:#000000; font-family:'Calibri'; font-size:6pt;position: absolute; top: 830px; left: 350px;"><sup>NAME AND SIGNATURE HRMO PERSONNEL </sup></span><span style="font-weight:bold; color:#000000; font-family:'Calibri'; font-size:6pt;position: absolute; top: 825px; left: 525px;">NAME AND SIGNATURE</span></td>
                 <td class="column10 style3 null"></td>
               </tr>
+                             <div class="sample-box"></div>
+
                <div class="sample-box1"></div>
                <div class="sample-box2"></div>
                <div class="sample-box3"></div>

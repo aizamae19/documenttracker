@@ -60,14 +60,25 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             #USERS
             Route::get('/admin/users', [App\Http\Controllers\Admin\UsersController::class, 'users'])->name('usersdashboard');
 
+            //ViewApplicationforLeave
+            Route::get('/admin/files/applicationforleave/view/{id}', [App\Http\Controllers\Admin\FileController::class, 'viewapplicationforleave'])->name('applicationforleave.view');
+            Route::post('/admin/files/applicationforleave/view', [App\Http\Controllers\Admin\FileController::class, 'viewapplicationforleave'])->name('applicationforleaveview');
+
+            //ViewDispatch
+            Route::get('/admin/files/dispatch/view/{id}', [App\Http\Controllers\Admin\FileController::class, 'viewdispatch'])->name('dispatch.view');
+            Route::post('/admin/files/dispatch/view', [App\Http\Controllers\Admin\FileController::class, 'viewdispatch'])->name('dispatchview');
+
+            //ViewCertificateOfAppearance
+            Route::get('/admin/files/certificateofappearance/view/{id}', [App\Http\Controllers\Admin\FileController::class, 'viewcertificateofappearance'])->name('certificateofappearance.view');
+            Route::post('/admin/files/certificateofappearance/view', [App\Http\Controllers\Admin\FileController::class, 'viewcertificateofappearance'])->name('certificateofappearanceview');
+
+            //ViewTravelOrder
+            Route::get('/admin/files/travelorder/view/{id}', [App\Http\Controllers\Admin\FileController::class, 'viewtravelorder'])->name('travelorder.view');
+            Route::post('/admin/files/travelorder/view', [App\Http\Controllers\Admin\FileController::class, 'viewtravelorder'])->name('travelorderview');
+
             //Delete
-            Route::get('/admin/files/index/delete/{id}', [App\Http\Controllers\Admin\FileController::class, 'deletefile'])->name('file.delete');
-            Route::post('/admin/files/index/delete', [App\Http\Controllers\Admin\FileController::class, 'deletefile'])->name('file.delete');
-
-            //View
-            Route::get('/admin/files/index/view/{id}', [App\Http\Controllers\Admin\FileController::class, 'viewfile'])->name('file.view');
-            Route::post('/admin/files/index/view', [App\Http\Controllers\Admin\FileController::class, 'viewfile'])->name('fileview');
-
+            Route::get('/admin/files/certificateofappearance/delete/{id}', [App\Http\Controllers\Admin\FileController::class, 'deletecertificateofappearance'])->name('certificateofappearance.delete');
+            Route::post('/admin/files/certificateofappearance/delete', [App\Http\Controllers\Admin\FileController::class, 'deletecertificateofappearance'])->name('certificateofappearance.delete');
 
             #ADD USER
             Route::get('/admin/users/add', [CustomAuthController::class, 'register'])->name('register');

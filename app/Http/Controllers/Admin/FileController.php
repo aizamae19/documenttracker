@@ -44,16 +44,15 @@ class FileController extends Controller
     public function dispatchfile()
     {
         return view('admin.files.dispatch.index');
-
-    if (!$travelorder) {
-        abort(404);
     }
 
-    return view('admin.files.travelorder.print', compact('travelorder'));
-}
+    public function viewdispatch(Request $request){
+        $dispatches=Dispatch::where('id',$request->id)->first();
 
-
-
+        return view('admin.files.dispatch.view',[
+                'dispatches'=>$dispatches
+        ]);
+    }
 
     public function saveDispatch(Request $request)
     {
@@ -68,7 +67,8 @@ class FileController extends Controller
         $Dispatchsave->DescriptionofDispatch = $request->DescriptionofDispatch;
         $Dispatchsave->PlateNumber = $request->PlateNumber;
         $Dispatchsave->Driver = $request->Driver;
-        $Dispatchsave->Passenger = $request->Passenger;
+        $Dispatchsave->Passenger = json_encode($request->Passenger);
+
 
         if ($Dispatchsave->save()) {
             return redirect("/admin/files")->withErrors('Successfully Saved!');
@@ -79,6 +79,14 @@ class FileController extends Controller
         $applicationforleaves = Applicationforleave::get();
         return view('admin.files.applicationforleave.leaveform', [
             'applicationforleaves'=>$applicationforleaves 
+        ]);
+    }
+
+    public function viewapplicationforleave(Request $request){
+        $applicationforleaves=Applicationforleave::where('id',$request->id)->first();
+
+        return view('admin.files.applicationforleave.view',[
+                'applicationforleaves'=>$applicationforleaves
         ]);
     }
 
@@ -128,21 +136,29 @@ class FileController extends Controller
     {
         return view('admin.files.travelorder.travelorder');
     }
+
+    public function viewtravelorder(Request $request){
+        $travelorders=Travelorder::where('id',$request->id)->first();
+
+        return view('admin.files.travelorder.print',[
+                'travelorders'=>$travelorders
+        ]);
+    }
     
-        public function  storetravelorder (Request $request)
+        public function storetravelorder (Request $request)
             {
             $Travelorder = new Travelorder();
             $Travelorder->Date = $request->Date;
             $Travelorder->Location = $request->Location;
             $Travelorder->Date = $request->Date;
-            $Travelorder->Name = $request->Name;
             $Travelorder->InclusiveDates = $request->InclusiveDates;
-            $Travelorder->Designation = $request->Designation;
-            $Travelorder->Office = $request->Office;
             $Travelorder->Endorser = $request->Endorser;
             $Travelorder->Dated = $request->Dated;
             $Travelorder->Purpose = $request->Purpose;
             $Travelorder->Subject = $request->Subject;
+            $Travelorder->Name = json_encode($request->Name);
+            $Travelorder->Designation = json_encode($request->Designation);
+            $Travelorder->Office = json_encode($request->Office);
 
         if ($Travelorder->save()) {
             return redirect("/admin/files")->withErrors('Successfully Saved!');
@@ -152,6 +168,14 @@ class FileController extends Controller
     public function certificateofappearance()
     {
         return view('admin.files.certificateofappearance.index');
+    }
+
+    public function viewcertificateofappearance(Request $request){
+        $certificateofappearances=Certificateofappearance::where('id',$request->id)->first();
+
+        return view('admin.files.certificateofappearance.view',[
+                'certificateofappearances'=>$certificateofappearances
+        ]);
     }
 
     public function storecertificateofappearance(Request $request)
@@ -169,6 +193,22 @@ class FileController extends Controller
 
         if ($certificateofappearancesave->save()) {
             return redirect("/admin/files")->withErrors('Successfully Saved!');
+        }
+    }
+
+    public function deletecertificateofappearance(Request $request){
+        $Deletesave=Certificateofappearance::where('id' ,$request->id)->first();
+        $Deletesave->Name = $request->Name;
+        $Deletesave->Designation = $request->Designation;
+        $Deletesave->Service = $request->Service;
+        $Deletesave->InclusiveDate = $request->InclusiveDate;
+        $Deletesave->Location = $request->Location;
+        $Deletesave->Day = $request->Day;
+        $Deletesave->Date = $request->Date;
+        $Deletesave->Place = $request->Place;
+        $Deletesave->Office = $request->Office;
+        if($Deletesave->delete()) {
+            return redirect()->back()->withErrors('Deleted!');
         }
     }
 

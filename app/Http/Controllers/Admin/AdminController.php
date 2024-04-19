@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
-use App\Models\File;
+use App\Models\Applicationforleave;
 
 class AdminController extends Controller
 {
@@ -21,8 +21,8 @@ class AdminController extends Controller
             $user = Auth::user();
 
             $users = User::count();
-            $files = File::count();
-            return view('admin.dashboard.index', compact('users', 'files'));
+            $applicationforleaves = Applicationforleave::count();
+            return view('admin.dashboard.index', compact('users', 'applicationforleaves'));
         }
     }
 }

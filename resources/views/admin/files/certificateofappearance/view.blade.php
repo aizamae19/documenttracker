@@ -363,10 +363,6 @@ td
                                     <div class="card-header">
                                     </div>
                                     <br>
-                                    <div class="col-md-12">
-                                        <a href="{{route('filedashboard')}}" class="btn btn-danger" data-dismiss="modal">Cancel</a>
-                                        <button type="submit" class="btn btn-primary">Save</button>
-                                    </div>
                                 </div>
                             </div>
                         </div>

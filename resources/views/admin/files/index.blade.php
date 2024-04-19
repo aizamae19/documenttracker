@@ -60,11 +60,16 @@
                               @if(isset($applicationforleaves))
                               @foreach($applicationforleaves as $key => $applicationforleave)
                                  <tr>
-                                    <?php $SeriesNumber = sprintf('%05d', $key + 1); ?>
-                                    <td>{{ substr($applicationforleave->created_at, 0, 6) . $SeriesNumber }}</td>
-                                    <td>{{ $applicationforleave->Office }}</td>
-                                    <td>{{ $applicationforleave->Name }}</td>
-                                    <td>{{ substr($applicationforleave->created_at, 0, 10)}}</td>
+                                    <?php 
+                                        $SeriesNumber = sprintf('%06d', $key + 1); 
+                                        
+                                        $office = App\Models\Office::where('ShortName', $applicationforleave->Office)->first();
+                                        $officeCode = $office ? $office->Code : '';
+                                        ?>
+                                        <td>{{ date('Y') . '-' . $officeCode . '-' . $SeriesNumber }}</td>
+                                        <td>{{ $applicationforleave->Office }}</td>
+                                        <td>{{ $applicationforleave->Name }}</td>
+                                        <td>{{ substr($applicationforleave->created_at, 0, 10) }}</td>
                                     <td class="text-center">
                                        <a class="btn btn-sm btn-success" href=""data-toggle="modal" data-target="#view"><i class="fa fa-eye"></i> View</a>
                                        <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
@@ -93,13 +98,18 @@
                               @if(isset($dispatches))
                               @foreach($dispatches as $key => $dispatches)
                                  <tr>
-                                    <?php $SeriesNumber = sprintf('%05d', $key + 1); ?>
-                                    <td>{{ substr($dispatches->created_at, 0, 6) . $SeriesNumber }}</td>
-                                    <td>{{ $dispatches->Office }}</td>
-                                    <td>{{ $dispatches->Name }}</td>
-                                    <td>{{ substr($dispatches->created_at, 0, 10)}}</td>
+                                     <?php 
+                                        $SeriesNumber = sprintf('%06d', $key + 1); 
+                                        
+                                        $office = App\Models\Office::where('ShortName', $dispatches->Office)->first();
+                                        $officeCode = $office ? $office->Code : '';
+                                        ?>
+                                        <td>{{ date('Y') . '-' . $officeCode . '-' . $SeriesNumber }}</td>
+                                        <td>{{ $dispatches->Office }}</td>
+                                        <td>{{ $dispatches->Name }}</td>
+                                        <td>{{ substr($dispatches->created_at, 0, 10) }}</td>
                                     <td class="text-center">
-                                       <a class="btn btn-sm btn-success" href=""data-toggle="modal" data-target="#view"><i class="fa fa-eye"></i> View</a>
+                                       <a class="btn btn-sm btn-success" href="{{ url('/admin/files/dispatch/view/').'/'.$dispatches->id}}"data-toggle="" data-target="#view"><i class="fa fa-eye"></i> View</a>
                                        <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
                                     </td>
                                  </tr>
@@ -126,11 +136,16 @@
                               @if(isset($certificateofappearances))
                               @foreach($certificateofappearances as $key => $certificateofappearance)
                                  <tr>
-                                    <?php $SeriesNumber = sprintf('%05d', $key + 1); ?>
-                                    <td>{{ substr($certificateofappearance->created_at, 0, 6) . $SeriesNumber }}</td>
-                                    <td>{{ $certificateofappearance->Office }}</td>
-                                    <td>{{ $certificateofappearance->Name }}</td>
-                                    <td>{{ substr($certificateofappearance->created_at, 0, 10)}}</td>
+                                        <?php 
+                                        $SeriesNumber = sprintf('%06d', $key + 1); 
+                                        
+                                        $office = App\Models\Office::where('ShortName', $certificateofappearance->Office)->first();
+                                        $officeCode = $office ? $office->Code : '';
+                                        ?>
+                                        <td>{{ date('Y') . '-' . $officeCode . '-' . $SeriesNumber }}</td>
+                                        <td>{{ $certificateofappearance->Office }}</td>
+                                        <td>{{ $certificateofappearance->Name }}</td>
+                                        <td>{{ substr($certificateofappearance->created_at, 0, 10) }}</td>
                                     <td class="text-center">
                                        <a class="btn btn-sm btn-success" href=""data-toggle="modal" data-target="#view"><i class="fa fa-eye"></i> View</a>
                                        <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
@@ -142,7 +157,6 @@
                         </table>
                      </div>
                   </div>
-
                   <div id="locatorTab" class="container-fluid tab-pane">
                      <div class="col-md-12">
                         <table id="itemSearchTab" class="table table-hover">
@@ -159,11 +173,16 @@
                               @if(isset($locators))
                               @foreach($locators as $key => $locator)
                               <tr>
-                                 <?php $SeriesNumber = sprintf('%05d', $key + 1); ?>
-                                 <td>{{ substr($locator->created_at, 0, 6) . $SeriesNumber }}</td>
-                                 <td>{{ $locator->Office }}</td>
-                                 <td>{{ $locator->NameOfEmployee }}</td>
-                                 <td>{{ substr($locator->created_at, 0, 10)}}</td>
+                                 <?php 
+                                        $SeriesNumber = sprintf('%06d', $key + 1); 
+                                        
+                                        $office = App\Models\Office::where('ShortName', $locator->Office)->first();
+                                        $officeCode = $office ? $office->Code : '';
+                                        ?>
+                                        <td>{{ date('Y') . '-' . $officeCode . '-' . $SeriesNumber }}</td>
+                                        <td>{{ $locator->Office }}</td>
+                                        <td>{{ $locator->Name }}</td>
+                                        <td>{{ substr($locator->created_at, 0, 10) }}</td>
                                  <td class="text-center">
                                     <a class="btn btn-sm btn-success" href=""data-toggle="modal" data-target="#view"><i class="fa fa-eye"></i> View</a>
                                     <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
@@ -182,7 +201,6 @@
                             <tr>
                                 <th>Series Number</th>
                                 <th>Office</th>
-                                <th>Name</th>
                                 <th>Date</th>
                                 <th class="text-center">Action</th>
                             </tr>
@@ -194,15 +212,15 @@
                                         <?php 
                                         $SeriesNumber = sprintf('%06d', $key + 1); 
                                         
-                                        $office = App\Models\Office::where('OfficeName', $travelorder->Office)->first();
+                                        $office = App\Models\Office::where('ShortName', $travelorder->Office)->first();
                                         $officeCode = $office ? $office->Code : '';
                                         ?>
                                         <td>{{ date('Y') . '-' . $officeCode . '-' . $SeriesNumber }}</td>
                                         <td>{{ $travelorder->Office }}</td>
-                                        <td>{{ $travelorder->FileType }}</td>
+                                        <td></td>
                                         <td>{{ substr($travelorder->created_at, 0, 10) }}</td>
                                         <td class="text-center">
-                                            <a class="btn btn-sm btn-success" href="" data-toggle="modal" data-target="#view"><i class="fa fa-eye"></i>View</a>
+                                            <a class="btn btn-sm btn-success" href="{{ url('/admin/files/travelorder/view/').'/'.$travelorder->id}}" data-toggle="" data-target="#"><i class="fa fa-eye"></i>View</a>
                                             <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i>Delete</a>
                                         </td>
                                     </tr>
@@ -211,8 +229,8 @@
                            </tbody>
                        </table>
                    </div>
-               </div>
-               <div id="delete" class="modal animated rubberBand delete-modal" role="dialog">
+                </div>
+                   <div id="delete" class="modal animated rubberBand delete-modal" role="dialog">
                      <div class="modal-dialog modal-dialog-centered">
                          <div class="modal-content">
                             <div class="modal-body text-center">
@@ -220,8 +238,8 @@
                                 <h3>Are you sure want to delete this file?</h3>
                                 <div class="m-t-20"> <a href="#" class="btn btn-white" data-dismiss="modal">Close</a>
                                    <button type="submit" class="btn btn-danger">Delete</button>
-                               </div>
-                           </div>
+                                </div>
+                             </div>
                         </div>
                      </div>
                   </div>

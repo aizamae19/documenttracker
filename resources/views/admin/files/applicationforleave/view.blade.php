@@ -71,7 +71,7 @@ activeSheetIndex = iSh;
  </tr>
  <tr height='34' style='mso-height-source:userset;height:25.5pt'>
 <td colspan='2' height='34' style='mso-ignore:colspan;height:25.5pt;'></td><td colspan='4' class='x73' style='mso-ignore:colspan;overflow:hidden;'>3.<span style='mso-spacerun:yes;'>&nbsp;&nbsp; </span>DATE OF FILING<span style='mso-spacerun:yes;'>&nbsp; @if(isset($applicationforleaves->DateOfFiling) && !empty($applicationforleaves->DateOfFiling))
-        <u style="padding: 0 0 100px">{{ $applicationforleaves->DateOfFiling }}</u>
+        <u style="border-width: 10px;">{{ $applicationforleaves->DateOfFiling }}</u>
     @else
         ______________
     @endif</span>
@@ -2170,7 +2170,7 @@ input[type="checkbox"] {
   left: 8px;
   width: 2px;
   height: 8px;
-  border: solid #000;
+  border: 1px solid #000;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
     }

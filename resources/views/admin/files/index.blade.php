@@ -1,8 +1,3 @@
-(No subject)
-ellaglaiza Layan <ellaglaizalayan1233@gmail.com>
-​
-You
-​
 @extends('layouts.default')
 
 @section('content')
@@ -77,7 +72,7 @@ You
                                         ?>
                                         <td>{{ date('Y') . '-' . sprintf('%03d', $officeCode) . '-' . $seriesNumberPadded }}</td>
                                         <td>{{ $applicationforleave->Office }}</td>
-                                        <td>{{ $applicationforleave->NameOfEmployee }}</td>
+                                        <td>{{ $applicationforleave->Name }}</td>
                                         <td>{{ substr($applicationforleave->created_at, 0, 10) }}</td>
                                     <td class="text-center">
                                        <a class="btn btn-sm btn-success" href="{{ url('/admin/files/applicationforleave/view/').'/'.$applicationforleave->id}}" data-target="#view"><i class="fa fa-eye"></i> View</a>
@@ -122,7 +117,7 @@ You
                                         ?>
                                         <td>{{ date('Y') . '-' . sprintf('%03d', $officeCode) . '-' . $seriesNumberPadded }}</td>
                                         <td>{{ $dispatches->Office }}</td>
-                                        <td>{{ $dispatches->NameOfEmployee }}</td>
+                                        <td>{{ $dispatches->Name }}</td>
                                         <td>{{ substr($dispatches->created_at, 0, 10) }}</td>
                                     <td class="text-center">
                                        <a class="btn btn-sm btn-success" href="{{ url('/admin/files/dispatch/view/').'/'.$dispatches->id}}" data-target="#view"><i class="fa fa-eye"></i> View</a>
@@ -167,7 +162,7 @@ You
                                         ?>
                                         <td>{{ date('Y') . '-' . sprintf('%03d', $officeCode) . '-' . $seriesNumberPadded }}</td>
                                         <td>{{ $certificateofappearance->Office }}</td>
-                                        <td>{{ $certificateofappearance->NameOfEmployee }}</td>
+                                        <td>{{ $certificateofappearance->Name }}</td>
                                         <td>{{ substr($certificateofappearance->created_at, 0, 10) }}</td>
                                     <td class="text-center">
                                        <a class="btn btn-sm btn-success" href="{{ url('/admin/files/certificateofappearance/view/').'/'.$certificateofappearance->id}}" data-target="#view"><i class="fa fa-eye"></i> View</a>
@@ -256,7 +251,7 @@ You
                                         ?>
                                         <td>{{ date('Y') . '-' . sprintf('%03d', $officeCode) . '-' . $seriesNumberPadded }}</td>
                                         <td>{{ $travelorder->Office }}</td>
-                                        <td>{{ $travelorder->NameOfEmployee }}</td>
+                                        <td>{{ $travelorder->Name }}</td>
                                         <td>{{ substr($travelorder->created_at, 0, 10) }}</td>
 
                                         <td class="text-center">

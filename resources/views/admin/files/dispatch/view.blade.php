@@ -235,9 +235,6 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="card-header">
-                                        <span class="fa fa-file"> Dispatch</span>
-                                    </div>
                                         <table border="0" cellpadding="0" cellspacing="0" id="sheet0" class="sheet0 gridlines" style="position: relative;
                     left: 150px;      width: 70%; border:3px solid; top: 81px;">
                       <col class="col0">

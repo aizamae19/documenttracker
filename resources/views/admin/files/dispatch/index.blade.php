@@ -73,32 +73,31 @@
                                             <div class="form-group">
                                                 <p>OFFICE NAME</p>
                                                     <select name="Office" class="form-control" required=""  >
-                                                         <option enabled>Select Office</option>
-                                                          <option>OFFICE OF THE CITY MAYOR</option>
-                                                          <option>OFFICE OF THE CITY BUDGET OFFICER</option>
-                                                          <option>OFFICE OF THE CITY ACCOUNTANT</option>
-                                                          <option>OFFICE OF THE CITY GENERAL SERVICES OFFICER</option>   
-                                                          <option>OFFICE OF THE CITY AGRICULTURIST</option>
-                                                          <option>DILG CITY OFFICE</option>
-                                                          <option>OFFICE OF THE CITY ADMINISTRATOR</option>
-                                                          <option>OFFICE OF THE CITY LEGAL OFFICER</option>
-                                                          <option>OFFICE OF THE CITY TREASURER</option>
-                                                          <option>OFFICE OF THE CITY ASSESSOR</option>
-                                                          <option>OFFICE OF THE CITY ENGINEER</option>
-                                                          <option>OFFICE OF THE CITY HEALTH OFFICER</option>
-                                                          <option>OFFICE OF THE CITY VETERINARIAN</option>
-                                                          <option>OFFICE OF THE CITY CIVIL REGISTRAR</option>
-                                                          <option>LOCAL ECONOMIC ENTERPRISE - MARKET OPERATION</option>
-                                                          <option>LOCAL ECONOMIC ENTERPRISE - TERMINAL OPERATION</option>
-                                                          <option>LOCAL ECONOMIC ENTERPRISE - SLAUGHTERHOUSE OPERATION</option>
-                                                          <option>OFFICE OF THE CITY DISASTER RISK REDUCTION AND MANAGEMENT OFFICER</option>
-                                                          <option>CITY INVESTMENT PROMOTIONS AND TOURISM OFFICE</option>
-                                                          <option>OFFICE OF THE VICE MAYOR AND THE SANGGUNIANG PANLUNGSOD</option>
-                                                          <option>OFFICE OF THE SECRETARY TO THE SANGGUNIANG PANLUNGSOD</option>
-                                                          <option>OFFICE OF THE CITY HUMAN RESOURCE MANAGEMENT AND DEVELOPMENT OFFICER</option>
-                                                          <option>OFFICE OF THE CITY PLANNING AND DEVELOPMENT COORDINATOR</option>
-                                                          <option>OFFICE OF THE CITY ENVIRONMENT AND NATURAL RESOURCES MANAGEMENT OFFICER</option>
-                                                          <option>OFFICE OF THE CITY SOCIAL WELFARE AND DEVELOPMENT OFFICER</option>
+                                                          <option enabled>Select Office</option>
+                                                          <option>MAYOR'S</option>
+                                                          <option>BUDGET</option>
+                                                          <option>ACCOUNTANTING</option>
+                                                          <option>OGS</option>   
+                                                          <option>AGRICULTURE</option>
+                                                          <option>DILG </option>
+                                                          <option>ADMIN</option>
+                                                          <option>LEGAL</option>
+                                                          <option>TREASURER</option>
+                                                          <option> ASSESSOR</option>
+                                                          <option> ENGINEERING<option>CHU</option>
+                                                          <option> VET</option>
+                                                          <option> REGISTRAR</option>
+                                                          <option>MARKET</option>
+                                                          <option>TERMINAL</option>
+                                                          <option> SLAUGHTERHOUSE </option>
+                                                          <option>CDRRMO</option>
+                                                          <option>TOURISM</option>
+                                                          <option>VICE SP</option>
+                                                          <option>SECRETARY SP</option>
+                                                          <option>HRMO</option>
+                                                          <option>PLANNING</option>
+                                                          <option>CENRO</option>
+                                                          <option>CSWD</option>
                                                     </select>                                            </div>
                                                 </div>
                                             </div>
@@ -145,7 +144,7 @@
                                                               $('#passenger_form').show();
                                                               $('#passengers_form').empty();
                                                               for(let x = 0; x < Passenger; x++){
-                                                                  $('#passengers_form').append('<div class="col-md-4"><div class="form-group"><p>Name</p><input class="form-control" name="Passenger" placeholder=""></div></div><div class="col-md-4"><div class="form-group"><p>Name</p><input class="form-control" name="PassengerName" placeholder=""></div></div><div class="col-md-4"><div class="form-group"><p>Name</p><input class="form-control" name="Crew" placeholder=""></div></div>');
+                                                                  $('#passengers_form').append('<div class="col-md-4"><div class="form-group"><p>FirstName</p><input class="form-control" name="Passenger" placeholder=""></div></div><div class="col-md-4"><div class="form-group"><p>Middle Initial</p><input class="form-control" name="PassengerName" placeholder=""></div></div><div class="col-md-4"><div class="form-group"><p>LastName</p><input class="form-control" name="Crew" placeholder=""></div></div>');
                                        
                                                     
                                                               }

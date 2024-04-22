@@ -30,9 +30,6 @@
                      <a class="nav-link" data-toggle="tab" href="#certificateofappearanceTab">Certificate of Appearance</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" data-toggle="tab" href="#tripticketTab">Trip Ticket</a>
-                  </li>
-                  <li class="nav-item">
                      <a class="nav-link" data-toggle="tab" href="#dispatchTab">Dispatch</a>
                   </li>
                   <li class="nav-item">
@@ -58,20 +55,27 @@
                            </thead>
                            <tbody>
                               @if(isset($applicationforleaves))
-                              @foreach($applicationforleaves as $key => $applicationforleave)
-                                 <tr>
-                                    <?php 
-                                        $SeriesNumber = sprintf('%06d', $key + 1); 
-                                        
+                                <?php
+                                $officeSeriesNumbers = []; 
+                                ?>
+                                @foreach($applicationforleaves as $key => $applicationforleave)
+                                    <tr>
+                                        <?php 
                                         $office = App\Models\Office::where('ShortName', $applicationforleave->Office)->first();
                                         $officeCode = $office ? $office->Code : '';
+                                        
+                                        if (!isset($officeSeriesNumbers[$applicationforleave->Office])) {
+                                            $officeSeriesNumbers[$applicationforleave->Office] = 1;
+                                        }
+                                        $seriesNumber = $officeSeriesNumbers[$applicationforleave->Office]++;
+                                        $seriesNumberPadded = sprintf('%06d', $seriesNumber);
                                         ?>
-                                        <td>{{ date('Y') . '-' . $officeCode . '-' . $SeriesNumber }}</td>
+                                        <td>{{ date('Y') . '-' . sprintf('%03d', $officeCode) . '-' . $seriesNumberPadded }}</td>
                                         <td>{{ $applicationforleave->Office }}</td>
-                                        <td>{{ $applicationforleave->Name }}</td>
+                                        <td>{{ $applicationforleave->NameOfEmployee }}</td>
                                         <td>{{ substr($applicationforleave->created_at, 0, 10) }}</td>
                                     <td class="text-center">
-                                       <a class="btn btn-sm btn-success" href=""data-toggle="modal" data-target="#view"><i class="fa fa-eye"></i> View</a>
+                                       <a class="btn btn-sm btn-success" href="{{ url('/admin/files/applicationforleave/view/').'/'.$applicationforleave->id}}" data-target="#view"><i class="fa fa-eye"></i> View</a>
                                        <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
                                     </td>
                                  </tr>
@@ -91,25 +95,32 @@
                                  <th>Office</th>
                                  <th>Name</th>
                                  <th>Date</th>
-                                 <th class="text-center">Action</th>
+                                 <th class="text-center"></th>
                               </tr>
                            </thead>
                            <tbody>
                               @if(isset($dispatches))
-                              @foreach($dispatches as $key => $dispatches)
-                                 <tr>
-                                     <?php 
-                                        $SeriesNumber = sprintf('%06d', $key + 1); 
-                                        
+                                <?php
+                                $officeSeriesNumbers = []; 
+                                ?>
+                                @foreach($dispatches as $key => $dispatches)
+                                    <tr>
+                                        <?php 
                                         $office = App\Models\Office::where('ShortName', $dispatches->Office)->first();
                                         $officeCode = $office ? $office->Code : '';
+                                        
+                                        if (!isset($officeSeriesNumbers[$dispatches->Office])) {
+                                            $officeSeriesNumbers[$dispatches->Office] = 1;
+                                        }
+                                        $seriesNumber = $officeSeriesNumbers[$dispatches->Office]++;
+                                        $seriesNumberPadded = sprintf('%06d', $seriesNumber);
                                         ?>
-                                        <td>{{ date('Y') . '-' . $officeCode . '-' . $SeriesNumber }}</td>
+                                        <td>{{ date('Y') . '-' . sprintf('%03d', $officeCode) . '-' . $seriesNumberPadded }}</td>
                                         <td>{{ $dispatches->Office }}</td>
-                                        <td>{{ $dispatches->Name }}</td>
+                                        <td>{{ $dispatches->NameOfEmployee }}</td>
                                         <td>{{ substr($dispatches->created_at, 0, 10) }}</td>
                                     <td class="text-center">
-                                       <a class="btn btn-sm btn-success" href="{{ url('/admin/files/dispatch/view/').'/'.$dispatches->id}}"data-toggle="" data-target="#view"><i class="fa fa-eye"></i> View</a>
+                                       <a class="btn btn-sm btn-success" href="{{ url('/admin/files/dispatch/view/').'/'.$dispatches->id}}" data-target="#view"><i class="fa fa-eye"></i> View</a>
                                        <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
                                     </td>
                                  </tr>
@@ -129,25 +140,32 @@
                                  <th>Office</th>
                                  <th>Name</th>
                                  <th>Date</th>
-                                 <th class="text-center">Action</th>
+                                 <th class="text-center"></th>
                               </tr>
                            </thead>
                            <tbody>
-                              @if(isset($certificateofappearances))
-                              @foreach($certificateofappearances as $key => $certificateofappearance)
-                                 <tr>
+                               @if(isset($certificateofappearances))
+                                <?php
+                                $officeSeriesNumbers = []; 
+                                ?>
+                                @foreach($certificateofappearances as $key => $certificateofappearance)
+                                    <tr>
                                         <?php 
-                                        $SeriesNumber = sprintf('%06d', $key + 1); 
-                                        
                                         $office = App\Models\Office::where('ShortName', $certificateofappearance->Office)->first();
                                         $officeCode = $office ? $office->Code : '';
+                                        
+                                        if (!isset($officeSeriesNumbers[$certificateofappearance->Office])) {
+                                            $officeSeriesNumbers[$certificateofappearance->Office] = 1;
+                                        }
+                                        $seriesNumber = $officeSeriesNumbers[$certificateofappearance->Office]++;
+                                        $seriesNumberPadded = sprintf('%06d', $seriesNumber);
                                         ?>
-                                        <td>{{ date('Y') . '-' . $officeCode . '-' . $SeriesNumber }}</td>
+                                        <td>{{ date('Y') . '-' . sprintf('%03d', $officeCode) . '-' . $seriesNumberPadded }}</td>
                                         <td>{{ $certificateofappearance->Office }}</td>
-                                        <td>{{ $certificateofappearance->Name }}</td>
+                                        <td>{{ $certificateofappearance->NameOfEmployee }}</td>
                                         <td>{{ substr($certificateofappearance->created_at, 0, 10) }}</td>
                                     <td class="text-center">
-                                       <a class="btn btn-sm btn-success" href=""data-toggle="modal" data-target="#view"><i class="fa fa-eye"></i> View</a>
+                                       <a class="btn btn-sm btn-success" href="{{ url('/admin/files/certificateofappearance/view/').'/'.$certificateofappearance->id}}" data-target="#view"><i class="fa fa-eye"></i> View</a>
                                        <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
                                     </td>
                                  </tr>
@@ -166,25 +184,32 @@
                                  <th>Office</th>
                                  <th>Name</th>
                                  <th>Date</th>
-                                 <th class="text-center">Action</th>
+                                 <th class="text-center"></th>
                               </tr>
                            </thead>
                            <tbody>
                               @if(isset($locators))
-                              @foreach($locators as $key => $locator)
-                              <tr>
-                                 <?php 
-                                        $SeriesNumber = sprintf('%06d', $key + 1); 
-                                        
+                                <?php
+                                $officeSeriesNumbers = []; 
+                                ?>
+                                @foreach($locators as $key => $locator)
+                                    <tr>
+                                        <?php 
                                         $office = App\Models\Office::where('ShortName', $locator->Office)->first();
                                         $officeCode = $office ? $office->Code : '';
+                                        
+                                        if (!isset($officeSeriesNumbers[$locator->Office])) {
+                                            $officeSeriesNumbers[$locator->Office] = 1;
+                                        }
+                                        $seriesNumber = $officeSeriesNumbers[$locator->Office]++;
+                                        $seriesNumberPadded = sprintf('%06d', $seriesNumber);
                                         ?>
-                                        <td>{{ date('Y') . '-' . $officeCode . '-' . $SeriesNumber }}</td>
+                                        <td>{{ date('Y') . '-' . sprintf('%03d', $officeCode) . '-' . $seriesNumberPadded }}</td>
                                         <td>{{ $locator->Office }}</td>
-                                        <td>{{ $locator->Name }}</td>
+                                        <td>{{ $locator->NameOfEmployee }}</td>
                                         <td>{{ substr($locator->created_at, 0, 10) }}</td>
                                  <td class="text-center">
-                                    <a class="btn btn-sm btn-success" href=""data-toggle="modal" data-target="#view"><i class="fa fa-eye"></i> View</a>
+                                    <a class="btn btn-sm btn-success" href="{{ url('/admin/files/locator/view/').'/'.$locator->id}}" data-target="#view"><i class="fa fa-eye"></i> View</a>
                                     <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
                                  </td>
                               </tr>
@@ -194,6 +219,7 @@
                         </table>
                      </div>
                   </div>
+
                <div id="travelorderTab" class="container-fluid tab-pane">
                   <div class="col-md-12">
                      <table id="itemSearchTab" class="table table-hover">
@@ -201,24 +227,33 @@
                             <tr>
                                 <th>Series Number</th>
                                 <th>Office</th>
+                                <th>Name</th>
                                 <th>Date</th>
                                 <th class="text-center">Action</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            @if(isset($travelorders))
+                       <tbody>
+                    @if(isset($travelorders))
+                                <?php
+                                $officeSeriesNumbers = []; 
+                                ?>
                                 @foreach($travelorders as $key => $travelorder)
                                     <tr>
                                         <?php 
-                                        $SeriesNumber = sprintf('%06d', $key + 1); 
-                                        
                                         $office = App\Models\Office::where('ShortName', $travelorder->Office)->first();
                                         $officeCode = $office ? $office->Code : '';
+                                        
+                                        if (!isset($officeSeriesNumbers[$travelorder->Office])) {
+                                            $officeSeriesNumbers[$travelorder->Office] = 1;
+                                        }
+                                        $seriesNumber = $officeSeriesNumbers[$travelorder->Office]++;
+                                        $seriesNumberPadded = sprintf('%06d', $seriesNumber);
                                         ?>
-                                        <td>{{ date('Y') . '-' . $officeCode . '-' . $SeriesNumber }}</td>
+                                        <td>{{ date('Y') . '-' . sprintf('%03d', $officeCode) . '-' . $seriesNumberPadded }}</td>
                                         <td>{{ $travelorder->Office }}</td>
-                                        <td></td>
+                                        <td>{{ $travelorder->NameOfEmployee }}</td>
                                         <td>{{ substr($travelorder->created_at, 0, 10) }}</td>
+
                                         <td class="text-center">
                                             <a class="btn btn-sm btn-success" href="{{ url('/admin/files/travelorder/view/').'/'.$travelorder->id}}" data-toggle="" data-target="#"><i class="fa fa-eye"></i>View</a>
                                             <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i>Delete</a>
@@ -226,7 +261,7 @@
                                     </tr>
                                 @endforeach
                             @endif
-                           </tbody>
+                        </tbody>
                        </table>
                    </div>
                 </div>

@@ -12,6 +12,7 @@ use App\Models\Certificateofappearance;
 use App\Models\Locator;
 use App\Models\File;
 use App\Models\Office;
+use App\Models\Typeofleave;
 use Carbon\Carbon;
 
 class FileController extends Controller
@@ -19,12 +20,14 @@ class FileController extends Controller
     public function file()
     {
     $dispatches = Dispatch::all(); 
-    $office = Office::all();
+    $offices = Office::all();
     $locators = Locator::all(); 
     $certificateofappearances = Certificateofappearance::all(); 
     $applicationforleaves = Applicationforleave::all(); 
     $travelorders = Travelorder::all();
-    return view('admin.files.index', compact('travelorders','dispatches','locators', 'certificateofappearances', 'applicationforleaves', 'office' ));
+    $files = File::all();
+
+    return view('admin.files.index', compact('travelorders','dispatches','locators', 'certificateofappearances', 'applicationforleaves', 'offices' , 'files'));
     }
 
     public function storefile(Request $request)

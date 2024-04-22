@@ -95,27 +95,27 @@
                         <div class="wcdiv" style="left:-0.75pt; top:147.09pt;"><span class="wcspan wctext003" style="left:-8pt; top:0.39pt; line-height:13.41pt;">&nbsp;NACIONAL V MERCADO</span></div>
                         <div class="wcdiv" style="left:-0.75pt; top:162.14pt;"><span class="wcspan wctext002" style="left:-8pt; top:0.39pt; line-height:13.41pt;">&nbsp;City Mayor</span></div>
                         <div class="wcdiv" style="left:-0.75pt; top:177.37pt;"><span class="wcspan wctext002" style="left:-8pt; top:0.39pt; line-height:13.41pt;">&nbsp;City of Maasin</span></div>
-                        <div class="wcdiv" style="top:206.21pt;"><span class="wcspan wctext003" style="left:0pt; top:0.39pt; line-height:13.41pt;">Subject:</span> <span class="wcspan wctext004" style="left:63.67pt; top:0.39pt; line-height:13.41pt;">Recommendation for Issuance of Travel Order<!-- {{$travelorders->Date}} --></span></div>
+                        <div class="wcdiv" style="top:206.21pt;"><span class="wcspan wctext003" style="left:0pt; top:0.39pt; line-height:13.41pt;">Subject:</span> <span class="wcspan wctext004" style="left:63.67pt; top:0.39pt; line-height:13.41pt;">Recommendation for Issuance of Travel Order</span></div>
                         <div class="wcdiv" style="left:-0.75pt; top:235.83pt;"><span class="wcspan wctext002" style="left:0pt; top:0.39pt; line-height:13.41pt;">Sir;</span></div>
                         <div style="left:-0.75pt; top:284.66pt;">
                             <p style="margin-top: 45%; margin-left: -10px; ">This is to certify that name(s) appearing below is/are authorized to undertake an official trip to<br><span style="color: red;top:0.39pt;">{{$travelorders->Location}}</span> from <span style="color: red;top:0.39pt;">{{$travelorders->Dated}}.</span></p>
                         </div>
-                          <div class="sample-box" style="color: white; font-size: 7px;text-align: left;">Travel Request Issuance Number: </div>
+                          <div class="sample-box" style="color: white; font-size: 7px;text-align: left;">Travel Request Issuance Number:  </div>
 
                             <style >
                                 .sample-box {
                                width: 266px;
-                        background-color: white;
-                        border: 1px solid white;
-                        padding: 18px;
-                        text-align: center;
-                        font-family: Arial, sans-serif;
-                        margin-top: 3px;
-                        margin-left: 425px;
-                        margin-bottom: 10px;
-                        position: absolute;
-                        top: 11%;
-                        background-color: #FF65FF;          
+                                background-color: white;
+                                border: 1px solid white;
+                                padding: 18px;
+                                text-align: center;
+                                font-family: Arial, sans-serif;
+                                margin-top: 3px;
+                                margin-left: 425px;
+                                margin-bottom: 10px;
+                                position: absolute;
+                                top: 11%;
+                                background-color: #FF65FF;          
                                              }
                             </style>
                          <p>&nbsp;</p>

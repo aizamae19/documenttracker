@@ -70,9 +70,25 @@ activeSheetIndex = iSh;
 <td colspan='7' class='x60' style='mso-ignore:colspan;'></td>
  </tr>
  <tr height='34' style='mso-height-source:userset;height:25.5pt'>
-<td colspan='2' height='34' style='mso-ignore:colspan;height:25.5pt;'></td>
-<td colspan='4' class='x73' style='mso-ignore:colspan;overflow:hidden;'>3.<span style='mso-spacerun:yes;'>&nbsp;&nbsp; </span>DATE OF FILING<span style='mso-spacerun:yes;'>&nbsp; </span><u>{{ $applicationforleaves->DateOfFiling }}</u><span style='mso-spacerun:yes;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
-<td colspan='4' class='x30' style='mso-ignore:colspan;'>4.<span style='mso-spacerun:yes;'>&nbsp;&nbsp; </span>POSITION<span style='mso-spacerun:yes;'>&nbsp; </span><u>{{ $applicationforleaves->Position }}</u><span style='mso-spacerun:yes;'>&nbsp;&nbsp;&nbsp;&nbsp; </span>5.<span style='mso-spacerun:yes;'>&nbsp; </span>SALARY<span style='mso-spacerun:yes;'>&nbsp; </span><u>{{ $applicationforleaves->Salary }}</u></td>
+<td colspan='2' height='34' style='mso-ignore:colspan;height:25.5pt;'></td><td colspan='4' class='x73' style='mso-ignore:colspan;overflow:hidden;'>3.<span style='mso-spacerun:yes;'>&nbsp;&nbsp; </span>DATE OF FILING<span style='mso-spacerun:yes;'>&nbsp; @if(isset($applicationforleaves->DateOfFiling) && !empty($applicationforleaves->DateOfFiling))
+        <u style="padding: 0 0 100px">{{ $applicationforleaves->DateOfFiling }}</u>
+    @else
+        ______________
+    @endif</span>
+    <span style='mso-spacerun:yes;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+</td>
+
+<td colspan='4' class='x30' style='mso-ignore:colspan;'>4.<span style='mso-spacerun:yes;'>&nbsp;&nbsp; </span>POSITION<span style='mso-spacerun:yes;'>&nbsp; </span>
+        @if(isset($applicationforleaves->Position) && !empty($applicationforleaves->Position))
+            <u>{{ $applicationforleaves->Position }}</u>
+        @else
+            _____________________________
+        @endif
+    <span style='mso-spacerun:yes;'>&nbsp;&nbsp;&nbsp;&nbsp; </span>5.<span style='mso-spacerun:yes;'>&nbsp; </span>SALARY<span style='mso-spacerun:yes;'>&nbsp; </span>@if(isset($applicationforleaves->Salary) && !empty($applicationforleaves->Salary))
+            <u>{{ $applicationforleaves->Salary }}</u>
+        @else
+             _____________
+        @endif</td>
 <td colspan='1' style='mso-ignore:colspan; border-right: 1px solid #000;
   height: 5px;'></td>
  </tr>
@@ -98,7 +114,7 @@ activeSheetIndex = iSh;
 <td colspan='2' height='11' style='mso-ignore:colspan;height:8.25pt;'></td>
 <td height='11' width='13' style='text-align: left;height:8.25pt;width:9.75pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:14;margin-left:12px;margin-top:8px;width:81px;height:22px'>
 
-<input type="checkbox" name="CheckBox5" {{ (!empty($applicationforleaves->TypeOfLeave) && $applicationforleaves->TypeOfLeave == 'Vacation Leave') ? 'checked' : '' }}>
+<input type="checkbox" name="CheckBox5" {{ (!empty($applicationforleaves->TypeOfLeave) && $applicationforleaves->TypeOfLeave == 'Vacation Leave') ? 'checked' : 'disabled' }} onclick="return false;">
 </span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='11' class='x32' width='13' style='height:8.25pt;width:9.75pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
 <td colspan='5' class='x35' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
 <td colspan='3' class='x35' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
@@ -115,9 +131,9 @@ activeSheetIndex = iSh;
  </tr>
  <tr height='7' style='mso-height-source:userset;height:5.25pt'>
 <td colspan='2' height='7' style='mso-ignore:colspan;height:5.25pt;'></td>
-<td height='7' width='13' style='text-align: left;height:5.25pt;width:9.75pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:12;margin-left:11px;margin-top:5px;width:81px;height:22px'><input type="checkbox" name="CheckBox3" {{ (!empty($applicationforleaves->TypeOfLeave) && $applicationforleaves->TypeOfLeave == 'Mandatory/Forced Leave') ? 'checked' : '' }}></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x32' width='13' style='height:5.25pt;width:9.75pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
+<td height='7' width='13' style='text-align: left;height:5.25pt;width:9.75pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:12;margin-left:11px;margin-top:5px;width:81px;height:22px'><input type="checkbox" name="CheckBox3" {{ (!empty($applicationforleaves->TypeOfLeave) && $applicationforleaves->TypeOfLeave == 'Mandatory/Forced Leave') ? 'checked' : 'disabled' }} onclick="return false;"></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x32' width='13' style='height:5.25pt;width:9.75pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
 <td colspan='5' class='x35' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
-<td height='7' width='18' style='text-align: left;height:5.25pt;width:13.5pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:25;margin-left:17px;margin-top:5px;width:81px;height:22px'><input type="checkbox" name="CheckBox16" {{ (!empty($applicationforleaves->DetailsOfLeave) && $applicationforleaves->DetailsOfLeave == 'Within the Philippines') ? 'checked' : '' }}></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x35' width='18' style='height:5.25pt;width:13.5pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
+<td height='7' width='18' style='text-align: left;height:5.25pt;width:13.5pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:25;margin-left:17px;margin-top:5px;width:81px;height:22px'><input type="checkbox" name="CheckBox16" {{ (!empty($applicationforleaves->DetailsOfLeave) && $applicationforleaves->DetailsOfLeave == 'Within the Philippines') ? 'checked' : 'disabled' }} onclick="return false;"></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x35' width='18' style='height:5.25pt;width:13.5pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
 <td colspan='2' class='x35' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
 <td colspan='7' class='x60' style='mso-ignore:colspan;'><div style='display:block;overflow:hidden'></div></td>
  </tr>
@@ -126,14 +142,18 @@ activeSheetIndex = iSh;
 <td colspan='2' class='x32' style='mso-ignore:colspan;'></td>
 <td colspan='4' class='x41' style='mso-ignore:colspan;border-right:1px solid windowtext;'><font class="font0" style="text-decoration: none;">Mandatory/Forced Leave</font><font class="font16" style="text-decoration: none;">(Sec. 25, Rule XVI, Omnibus Rules Implementing E.O. No. 292)</font></td>
 <td colspan='2' class='x35' style='mso-ignore:colspan;'></td>
-<td colspan='1' class='x42' style='mso-ignore:colspan;'>Within the Philippines _________________________</td>
+<td colspan='1' class='x42' style='mso-ignore:colspan;'>Within the Philippines @if(isset($applicationforleaves->WithinThePhilippines) && !empty($applicationforleaves->WithinThePhilippines))
+            <u>{{ $applicationforleaves->WithinThePhilippines    }}</u>
+        @else
+            _________________________
+        @endif</td>
 <td colspan='6' style='mso-ignore:colspan;'></td>
  </tr>
  <tr height='7' style='mso-height-source:userset;height:5.25pt'>
 <td colspan='2' height='7' style='mso-ignore:colspan;height:5.25pt;'></td>
-<td height='7' width='13' style='text-align: left;height:5.25pt;width:9.75pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:13;margin-left:12px;margin-top:5px;width:80px;height:22px'><input type="checkbox" name="CheckBox4" {{ (!empty($applicationforleaves->TypeOfLeave) && $applicationforleaves->TypeOfLeave == 'Sick Leave') ? 'checked' : '' }}></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x32' width='13' style='height:5.25pt;width:9.75pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
+<td height='7' width='13' style='text-align: left;height:5.25pt;width:9.75pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:13;margin-left:12px;margin-top:5px;width:80px;height:22px'><input type="checkbox" name="CheckBox4" {{ (!empty($applicationforleaves->TypeOfLeave) && $applicationforleaves->TypeOfLeave == 'Sick Leave') ? 'checked' : 'disabled' }} onclick="return false;"></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x32' width='13' style='height:5.25pt;width:9.75pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
 <td colspan='5' class='x35' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
-<td height='7' width='18' style='text-align: left;height:5.25pt;width:13.5pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:26;margin-left:17px;margin-top:5px;width:81px;height:22px'><input type="checkbox" name="CheckBox17" {{ (!empty($applicationforleaves->DetailsOfLeave) && $applicationforleaves->DetailsOfLeave == 'Abroad') ? 'checked' : '' }}></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x35' width='18' style='height:5.25pt;width:13.5pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
+<td height='7' width='18' style='text-align: left;height:5.25pt;width:13.5pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:26;margin-left:17px;margin-top:5px;width:81px;height:22px'><input type="checkbox" name="CheckBox17" {{ (!empty($applicationforleaves->DetailsOfLeave) && $applicationforleaves->DetailsOfLeave == 'Abroad') ? 'checked' : 'disabled' }} onclick="return false;"></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x35' width='18' style='height:5.25pt;width:13.5pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
 <td colspan='2' class='x35' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
 <td colspan='7' class='x60' style='mso-ignore:colspan;'><div style='display:block;overflow:hidden'></div></td>
  </tr>
@@ -143,12 +163,16 @@ activeSheetIndex = iSh;
 <td colspan='3' class='x41' style='mso-ignore:colspan;'><font class="font0" style="text-decoration: none;">Sick Leave&nbsp;</font><font class="font16" style="text-decoration: none;">&nbsp;(Sec. 43, Rule XVI, Omnibus Rules Implementing E.O. No. 292)</font></td>
 <td class='x42'></td>
 <td colspan='2' class='x35' style='mso-ignore:colspan;'></td>
-<td class='x42'>Abroad (Specify) _____________________________</td>
+<td class='x42'>Abroad (Specify) @if(isset($applicationforleaves->Abroad) && !empty($applicationforleaves->Abroad))
+            <u>{{ $applicationforleaves->Abroad    }}</u>
+        @else
+            _____________________________
+        @endif</td>
 <td colspan='7' class='x60' style='mso-ignore:colspan;'></td>
  </tr>
  <tr height='7' style='mso-height-source:userset;height:5.25pt'>
 <td colspan='2' height='7' style='mso-ignore:colspan;height:5.25pt;'></td>
-<td height='7' width='13' style='text-align: left;height:5.25pt;width:9.75pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:15;margin-left:12px;margin-top:5px;width:80px;height:22px'><input type="checkbox" name="CheckBox6" {{ (!empty($applicationforleaves->TypeOfLeave) && $applicationforleaves->TypeOfLeave == 'Maternity Leave') ? 'checked' : '' }}></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x32' width='13' style='height:5.25pt;width:9.75pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
+<td height='7' width='13' style='text-align: left;height:5.25pt;width:9.75pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:15;margin-left:12px;margin-top:5px;width:80px;height:22px'><input type="checkbox" name="CheckBox6" {{ (!empty($applicationforleaves->TypeOfLeave) && $applicationforleaves->TypeOfLeave == 'Maternity Leave') ? 'checked' : 'disabled' }} onclick="return false;"></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x32' width='13' style='height:5.25pt;width:9.75pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
 <td colspan='5' class='x35' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
 <td colspan='3' class='x35' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
 <td colspan='7' class='x60' style='mso-ignore:colspan;'><div style='display:block;overflow:hidden'></div></td>
@@ -164,9 +188,9 @@ activeSheetIndex = iSh;
  </tr>
  <tr height='7' style='mso-height-source:userset;height:5.25pt'>
 <td colspan='2' height='7' style='mso-ignore:colspan;height:5.25pt;'></td>
-<td height='7' width='13' style='text-align: left;height:5.25pt;width:9.75pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:16;margin-left:12px;margin-top:4px;width:80px;height:22px'><input type="checkbox" name="CheckBox7" {{ (!empty($applicationforleaves->TypeOfLeave) && $applicationforleaves->TypeOfLeave == 'Paternity Leave') ? 'checked' : '' }}></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x32' width='13' style='height:5.25pt;width:9.75pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
+<td height='7' width='13' style='text-align: left;height:5.25pt;width:9.75pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:16;margin-left:12px;margin-top:4px;width:80px;height:22px'><input type="checkbox" name="CheckBox7" {{ (!empty($applicationforleaves->TypeOfLeave) && $applicationforleaves->TypeOfLeave == 'Paternity Leave') ? 'checked' : 'disabled' }} onclick="return false;"></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x32' width='13' style='height:5.25pt;width:9.75pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
 <td colspan='5' class='x35' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
-<td height='7' width='18' style='text-align: left;height:5.25pt;width:13.5pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:27;margin-left:17px;margin-top:4px;width:81px;height:22px'><input type="checkbox" name="CheckBox18" {{ (!empty($applicationforleaves->DetailsOfLeave) && $applicationforleaves->DetailsOfLeave == 'In Hospital') ? 'checked' : '' }}></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x35' width='18' style='height:5.25pt;width:13.5pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
+<td height='7' width='18' style='text-align: left;height:5.25pt;width:13.5pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:27;margin-left:17px;margin-top:4px;width:81px;height:22px'><input type="checkbox" name="CheckBox18" {{ (!empty($applicationforleaves->DetailsOfLeave) && $applicationforleaves->DetailsOfLeave == 'In Hospital') ? 'checked' : 'disabled' }} onclick="return false;"></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x35' width='18' style='height:5.25pt;width:13.5pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
 <td colspan='2' class='x35' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
 <td colspan='7' class='x60' style='mso-ignore:colspan;'><div style='display:block;overflow:hidden'></div></td>
  </tr>
@@ -176,16 +200,20 @@ activeSheetIndex = iSh;
 <td colspan='3' class='x41' style='mso-ignore:colspan;'><font class="font0" style="text-decoration: none;">Paternity Leave&nbsp;</font><font class="font16" style="text-decoration: none;">(R.A. No. 8187 / CSC MC No. 71, s. 1998, as amended)</font></td>
 <td class='x42'></td>
 <td colspan='2' class='x35' style='mso-ignore:colspan;'></td>
-<td class='x42'>In Hospital (Specify Illness) _____________________</td>
+<td class='x42'>In Hospital (Specify Illness)  @if(isset($applicationforleaves->InHospital) && !empty($applicationforleaves->InHospital))
+            <u>{{ $applicationforleaves->InHospital    }}</u>
+        @else
+            _____________________
+        @endif</td>
 <td class='x60'></td>
 <td height='18' width='63' style='text-align: left;height:13.5pt;width:47.25pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:2;margin-left:0px;margin-top:0px;width:8px;height:21px'><img width='8' height='21' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAVCAYAAAB7R6/OAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAA9JREFUKJFjYBgFo2CIAQACtQABC+dsXwAAAABJRU5ErkJggg==" name='TextBox11' alt='1'/></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='18' width='63' style='height:13.5pt;width:47.25pt;'></td></tr></table></span></td>
 <td colspan='5' style='mso-ignore:colspan;'></td>
  </tr>
  <tr height='7' style='mso-height-source:userset;height:5.25pt'>
 <td colspan='2' height='7' style='mso-ignore:colspan;height:5.25pt;'></td>
-<td height='7' width='13' style='text-align: left;height:5.25pt;width:9.75pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:17;margin-left:12px;margin-top:4px;width:80px;height:22px'><input type="checkbox" name="CheckBox8" {{ (!empty($applicationforleaves->TypeOfLeave) && $applicationforleaves->TypeOfLeave == 'Special Privilege Leave') ? 'checked' : '' }}></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x32' width='13' style='height:5.25pt;width:9.75pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
+<td height='7' width='13' style='text-align: left;height:5.25pt;width:9.75pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:17;margin-left:12px;margin-top:4px;width:80px;height:22px'><input type="checkbox" name="CheckBox8" {{ (!empty($applicationforleaves->TypeOfLeave) && $applicationforleaves->TypeOfLeave == 'Special Privilege Leave') ? 'checked' : 'disabled' }} onclick="return false;"></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x32' width='13' style='height:5.25pt;width:9.75pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
 <td colspan='5' class='x35' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
-<td height='7' width='18' style='text-align: left;height:5.25pt;width:13.5pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:28;margin-left:17px;margin-top:4px;width:80px;height:22px'><input type="checkbox" name="CheckBox19" {{ (!empty($applicationforleaves->DetailsOfLeave) && $applicationforleaves->DetailsOfLeave == 'Out Patient') ? 'checked' : '' }}></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x35' width='18' style='height:5.25pt;width:13.5pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
+<td height='7' width='18' style='text-align: left;height:5.25pt;width:13.5pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:28;margin-left:17px;margin-top:4px;width:80px;height:22px'><input type="checkbox" name="CheckBox19" {{ (!empty($applicationforleaves->DetailsOfLeave) && $applicationforleaves->DetailsOfLeave == 'Out Patient') ? 'checked' : 'disabled' }} onclick="return false;"></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x35' width='18' style='height:5.25pt;width:13.5pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
 <td colspan='2' class='x35' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
 <td colspan='7' class='x60' style='mso-ignore:colspan;'><div style='display:block;overflow:hidden'></div></td>
  </tr>
@@ -194,12 +222,16 @@ activeSheetIndex = iSh;
 <td colspan='2' class='x32' style='mso-ignore:colspan;'></td>
 <td colspan='4' class='x41' style='mso-ignore:colspan;border-right:1px solid windowtext;'><font class="font0" style="text-decoration: none;">Special Privilege Leave</font><font class="font17" style="text-decoration: none;">&nbsp;</font><font class="font16" style="text-decoration: none;">(Sec. 21, Rule XVI, Omnibus Rules Implementing E.O. No. 292)</font></td>
 <td colspan='2' class='x35' style='mso-ignore:colspan;'></td>
-<td class='x42'>Out Patient (Specify Illness)<span style='mso-spacerun:yes;'>&nbsp; </span>____________________</td>
+<td class='x42'>Out Patient (Specify Illness)<span style='mso-spacerun:yes;'>&nbsp; </span>@if(isset($applicationforleaves->OutPatient) && !empty($applicationforleaves->OutPatient))
+            <u>{{ $applicationforleaves->OutPatient    }}</u>
+        @else
+            ____________________
+        @endif</td>
 <td colspan='7' class='x60' style='mso-ignore:colspan;'></td>
  </tr>
  <tr height='7' style='mso-height-source:userset;height:5.25pt'>
 <td colspan='2' height='7' style='mso-ignore:colspan;height:5.25pt;'></td>
-<td height='7' width='13' style='text-align: left;height:5.25pt;width:9.75pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:18;margin-left:12px;margin-top:5px;width:81px;height:22px'><input type="checkbox" name="CheckBox9" {{ (!empty($applicationforleaves->TypeOfLeave) && $applicationforleaves->TypeOfLeave == 'Solo Parent Leave') ? 'checked' : '' }}></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x32' width='13' style='height:5.25pt;width:9.75pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
+<td height='7' width='13' style='text-align: left;height:5.25pt;width:9.75pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:18;margin-left:12px;margin-top:5px;width:81px;height:22px'><input type="checkbox" name="CheckBox9" {{ (!empty($applicationforleaves->TypeOfLeave) && $applicationforleaves->TypeOfLeave == 'Solo Parent Leave') ? 'checked' : 'disabled' }} onclick="return false;"></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x32' width='13' style='height:5.25pt;width:9.75pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
 <td colspan='5' class='x35' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
 <td class='x35'><div style='display:block;overflow:hidden'></div></td>
 <td height='7' width='18' style='text-align: left;height:5.25pt;width:13.5pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:6;margin-left:1px;margin-top:1px;width:335px;height:21px'><img width='335' height='21' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAU8AAAAWCAYAAABAOx55AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAHRJREFUeJzt1EENwgAABEFKkFPpmEPB1QLZT9NkRsG+9ti2FwB/2/Z93x0B8ETmCRCYJ0BgngCBeQIE5gkQmCdAYJ4AgXkCBOYJEJgnQGCeAIF5AgTmCRCYJ0BgngCBeQIE5gkQmCdAYJ4AwWfbeXcEwMP8Lu1+C+0O4IKTAAAAAElFTkSuQmCC" name='TextBox45' alt='1'/></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x35' width='18' style='height:5.25pt;width:13.5pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
@@ -217,7 +249,7 @@ activeSheetIndex = iSh;
  </tr>
  <tr height='7' style='mso-height-source:userset;height:5.25pt'>
 <td colspan='2' height='7' style='mso-ignore:colspan;height:5.25pt;'></td>
-<td height='7' width='13' style='text-align: left;height:5.25pt;width:9.75pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:19;margin-left:12px;margin-top:5px;width:81px;height:22px'><input type="checkbox" name="CheckBox10" {{ (!empty($applicationforleaves->TypeOfLeave) && $applicationforleaves->TypeOfLeave == 'Study Leave') ? 'checked' : '' }}></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x32' width='13' style='height:5.25pt;width:9.75pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
+<td height='7' width='13' style='text-align: left;height:5.25pt;width:9.75pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:19;margin-left:12px;margin-top:5px;width:81px;height:22px'><input type="checkbox" name="CheckBox10" {{ (!empty($applicationforleaves->TypeOfLeave) && $applicationforleaves->TypeOfLeave == 'Study Leave') ? 'checked' : 'disabled' }} onclick="return false;"></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x32' width='13' style='height:5.25pt;width:9.75pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
 <td colspan='5' class='x35' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
 <td colspan='3' class='x35' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
 <td colspan='7' class='x60' style='mso-ignore:colspan;'><div style='display:block;overflow:hidden'></div></td>
@@ -233,7 +265,7 @@ activeSheetIndex = iSh;
  </tr>
  <tr height='7' style='mso-height-source:userset;height:5.25pt'>
 <td colspan='2' height='7' style='mso-ignore:colspan;height:5.25pt;'></td>
-<td height='7' width='13' style='text-align: left;height:5.25pt;width:9.75pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:20;margin-left:12px;margin-top:5px;width:81px;height:22px'><input type="checkbox" name="CheckBox11" {{ (!empty($applicationforleaves->TypeOfLeave) && $applicationforleaves->TypeOfLeave == '10-Day VAWC Leave') ? 'checked' : '' }}></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x32' width='13' style='height:5.25pt;width:9.75pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
+<td height='7' width='13' style='text-align: left;height:5.25pt;width:9.75pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:20;margin-left:12px;margin-top:5px;width:81px;height:22px'><input type="checkbox" name="CheckBox11" {{ (!empty($applicationforleaves->TypeOfLeave) && $applicationforleaves->TypeOfLeave == '10-Day VAWC Leave') ? 'checked' : 'disabled' }} onclick="return false;"></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x32' width='13' style='height:5.25pt;width:9.75pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
 <td colspan='5' class='x35' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
 <td colspan='3' class='x35' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
 <td colspan='7' class='x60' style='mso-ignore:colspan;'><div style='display:block;overflow:hidden'></div></td>
@@ -244,12 +276,16 @@ activeSheetIndex = iSh;
 <td colspan='3' class='x41' style='mso-ignore:colspan;'><font class="font0" style="text-decoration: none;">10-Day VAWC Leave&nbsp;</font><font class="font16" style="text-decoration: none;">(RA No. 9262 / CSC MC No. 15, s. 2005)</font></td>
 <td class='x42'></td>
 <td class='x35'></td>
-<td colspan='2' class='x40' style='mso-ignore:colspan;border-right:1px solid windowtext;'>(Specify Illness) ________________________________</td>
+<td colspan='2' class='x40' style='mso-ignore:colspan;border-right:1px solid windowtext;'>(Specify Illness) @if(isset($applicationforleaves->SpecialLeaveBenefitsForWomen) && !empty($applicationforleaves->SpecialLeaveBenefitsForWomen))
+            <u>{{ $applicationforleaves->SpecialLeaveBenefitsForWomen }}</u>
+        @else
+            ________________________________
+        @endif</td>
 <td colspan='7' class='x60' style='mso-ignore:colspan;'></td>
  </tr>
  <tr height='7' style='mso-height-source:userset;height:5.25pt'>
 <td colspan='2' height='7' style='mso-ignore:colspan;height:5.25pt;'></td>
-<td height='7' width='13' style='text-align: left;height:5.25pt;width:9.75pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:21;margin-left:12px;margin-top:5px;width:81px;height:22px'><input type="checkbox" name="CheckBox12" {{ (!empty($applicationforleaves->TypeOfLeave) && $applicationforleaves->TypeOfLeave == 'Rehabilitation Privilege') ? 'checked' : '' }}></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x32' width='13' style='height:5.25pt;width:9.75pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
+<td height='7' width='13' style='text-align: left;height:5.25pt;width:9.75pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:21;margin-left:12px;margin-top:5px;width:81px;height:22px'><input type="checkbox" name="CheckBox12" {{ (!empty($applicationforleaves->TypeOfLeave) && $applicationforleaves->TypeOfLeave == 'Rehabilitation Privilege') ? 'checked' : 'disabled' }} onclick="return false;"></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x32' width='13' style='height:5.25pt;width:9.75pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
 <td colspan='5' class='x35' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
 <td colspan='3' class='x35' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
 <td colspan='7' class='x60' style='mso-ignore:colspan;'><div style='display:block;overflow:hidden'></div></td>
@@ -264,7 +300,7 @@ activeSheetIndex = iSh;
  </tr>
  <tr height='7' style='mso-height-source:userset;height:5.25pt'>
 <td colspan='2' height='7' style='mso-ignore:colspan;height:5.25pt;'></td>
-<td height='7' width='13' style='text-align: left;height:5.25pt;width:9.75pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:22;margin-left:12px;margin-top:5px;width:80px;height:22px'><input type="checkbox" name="CheckBox13" {{ (!empty($applicationforleaves->TypeOfLeave) && $applicationforleaves->TypeOfLeave == 'Special Leave Benefits for Women') ? 'checked' : '' }}></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x32' width='13' style='height:5.25pt;width:9.75pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
+<td height='7' width='13' style='text-align: left;height:5.25pt;width:9.75pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:22;margin-left:12px;margin-top:5px;width:80px;height:22px'><input type="checkbox" name="CheckBox13" {{ (!empty($applicationforleaves->TypeOfLeave) && $applicationforleaves->TypeOfLeave == 'Special Leave Benefits for Women') ? 'checked' : 'disabled' }} onclick="return false;"></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x32' width='13' style='height:5.25pt;width:9.75pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
 <td colspan='5' class='x35' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
 <td colspan='3' class='x35' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
 <td colspan='7' class='x60' style='mso-ignore:colspan;'><div style='display:block;overflow:hidden'></div></td>
@@ -279,9 +315,9 @@ activeSheetIndex = iSh;
  </tr>
  <tr height='7' style='mso-height-source:userset;height:5.25pt'>
 <td colspan='2' height='7' style='mso-ignore:colspan;height:5.25pt;'></td>
-<td height='7' width='13' style='text-align: left;height:5.25pt;width:9.75pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:23;margin-left:12px;margin-top:5px;width:81px;height:22px'><input type="checkbox" name="CheckBox14" {{ (!empty($applicationforleaves->TypeOfLeave) && $applicationforleaves->TypeOfLeave == "Special Emergency 'Calamity)' Leave") ? 'checked' : '' }}></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x32' width='13' style='height:5.25pt;width:9.75pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
+<td height='7' width='13' style='text-align: left;height:5.25pt;width:9.75pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:23;margin-left:12px;margin-top:5px;width:81px;height:22px'><input type="checkbox" name="CheckBox14" {{ (!empty($applicationforleaves->TypeOfLeave) && $applicationforleaves->TypeOfLeave == 'Special Emergency (Calamity) Leave') ? 'checked' : 'disabled' }} onclick="return false;"></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x32' width='13' style='height:5.25pt;width:9.75pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
 <td colspan='5' class='x35' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
-<td height='7' width='18' style='text-align: left;height:5.25pt;width:13.5pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:29;margin-left:17px;margin-top:5px;width:80px;height:22px'><input type="checkbox" name="CheckBox18" {{ (!empty($applicationforleaves->DetailsOfLeave) && $applicationforleaves->DetailsOfLeave == "Completion of Master's Degree") ? 'checked' : '' }}></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x35' width='18' style='height:5.25pt;width:13.5pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
+<td height='7' width='18' style='text-align: left;height:5.25pt;width:13.5pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:29;margin-left:17px;margin-top:5px;width:80px;height:22px'><input type="checkbox" name="CheckBox18" {{ (!empty($applicationforleaves->DetailsOfLeave) && $applicationforleaves->DetailsOfLeave == "Completion of Master's Degree") ? 'checked' : 'disabled' }} onclick="return false;"></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x35' width='18' style='height:5.25pt;width:13.5pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
 <td colspan='2' class='x35' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
 <td colspan='7' class='x60' style='mso-ignore:colspan;'><div style='display:block;overflow:hidden'></div></td>
  </tr>
@@ -295,9 +331,9 @@ activeSheetIndex = iSh;
  </tr>
  <tr height='7' style='mso-height-source:userset;height:5.25pt'>
 <td colspan='2' height='7' style='mso-ignore:colspan;height:5.25pt;'></td>
-<td height='7' width='13' style='text-align: left;height:5.25pt;width:9.75pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:24;margin-left:12px;margin-top:5px;width:81px;height:22px'><input type="checkbox" name="CheckBox15" {{ (!empty($applicationforleaves->TypeOfLeave) && $applicationforleaves->TypeOfLeave == 'Adoption Leave') ? 'checked' : '' }}></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x32' width='13' style='height:5.25pt;width:9.75pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
+<td height='7' width='13' style='text-align: left;height:5.25pt;width:9.75pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:24;margin-left:12px;margin-top:5px;width:81px;height:22px'><input type="checkbox" name="CheckBox15" {{ (!empty($applicationforleaves->TypeOfLeave) && $applicationforleaves->TypeOfLeave == 'Adoption Leave') ? 'checked' : 'disabled' }} onclick="return false;"></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x32' width='13' style='height:5.25pt;width:9.75pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
 <td colspan='5' class='x35' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
-<td height='7' width='18' style='text-align: left;height:5.25pt;width:13.5pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:30;margin-left:17px;margin-top:6px;width:81px;height:22px'><input type="checkbox" name="CheckBox18" {{ (!empty($applicationforleaves->DetailsOfLeave) && $applicationforleaves->DetailsOfLeave == 'BAR/Board Examination Review') ? 'checked' : '' }}></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x35' width='18' style='height:5.25pt;width:13.5pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
+<td height='7' width='18' style='text-align: left;height:5.25pt;width:13.5pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:30;margin-left:17px;margin-top:6px;width:81px;height:22px'><input type="checkbox" name="CheckBox18" {{ (!empty($applicationforleaves->DetailsOfLeave) && $applicationforleaves->DetailsOfLeave == 'BAR/Board Examination Review') ? 'checked' : 'disabled' }} onclick="return false;"></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x35' width='18' style='height:5.25pt;width:13.5pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
 <td colspan='2' class='x35' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
 <td colspan='7' class='x60' style='mso-ignore:colspan;'><div style='display:block;overflow:hidden'></div></td>
  </tr>
@@ -326,7 +362,7 @@ activeSheetIndex = iSh;
  <tr height='7' style='mso-height-source:userset;height:5.25pt'>
 <td colspan='2' height='7' style='mso-ignore:colspan;height:5.25pt;'></td>
 <td colspan='6' class='x32' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
-<td height='7' width='18' style='text-align: left;height:5.25pt;width:13.5pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:31;margin-left:17px;margin-top:5px;width:81px;height:22px'><input type="checkbox" name="CheckBox18" {{ (!empty($applicationforleaves->DetailsOfLeave) && $applicationforleaves->DetailsOfLeave == 'Monetization of Leave Credits') ? 'checked' : '' }}></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x35' width='18' style='height:5.25pt;width:13.5pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
+<td height='7' width='18' style='text-align: left;height:5.25pt;width:13.5pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:31;margin-left:17px;margin-top:5px;width:81px;height:22px'><input type="checkbox" name="CheckBox18" {{ (!empty($applicationforleaves->DetailsOfLeave) && $applicationforleaves->DetailsOfLeave == 'Monetization of Leave Credits') ? 'checked' : 'disabled' }} onclick="return false;"></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x35' width='18' style='height:5.25pt;width:13.5pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
 <td colspan='2' class='x35' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
 <td colspan='7' class='x60' style='mso-ignore:colspan;'><div style='display:block;overflow:hidden'></div></td>
  </tr>
@@ -342,14 +378,18 @@ activeSheetIndex = iSh;
  <tr height='7' style='mso-height-source:userset;height:5.25pt'>
 <td colspan='2' height='7' style='mso-ignore:colspan;height:5.25pt;'></td>
 <td colspan='6' class='x32' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
-<td height='7' width='18' style='text-align: left;height:5.25pt;width:13.5pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:32;margin-left:17px;margin-top:4px;width:81px;height:23px'><input type="checkbox" name="CheckBox18" {{ (!empty($applicationforleaves->DetailsOfLeave) && $applicationforleaves->DetailsOfLeave == 'Terminal Leave') ? 'checked' : '' }}></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x35' width='18' style='height:5.25pt;width:13.5pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
+<td height='7' width='18' style='text-align: left;height:5.25pt;width:13.5pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:32;margin-left:17px;margin-top:4px;width:81px;height:23px'><input type="checkbox" name="CheckBox18" {{ (!empty($applicationforleaves->DetailsOfLeave) && $applicationforleaves->DetailsOfLeave == 'Terminal Leave') ? 'checked' : 'disabled' }} onclick="return false;"></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x35' width='18' style='height:5.25pt;width:13.5pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
 <td colspan='2' class='x35' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
 <td colspan='7' class='x60' style='mso-ignore:colspan;'><div style='display:block;overflow:hidden'></div></td>
  </tr>
  <tr height='18' style='mso-height-source:userset;height:13.5pt'>
 <td colspan='2' height='18' style='mso-ignore:colspan;height:13.5pt;'></td>
 <td class='x32'></td>
-<td colspan='4' class='x43' style='mso-ignore:colspan;'>_____________________________________</td>
+<td colspan='4' class='x43' style='mso-ignore:colspan;'>@if(isset($applicationforleaves->Others) && !empty($applicationforleaves->Others))
+            <u>{{ $applicationforleaves->Others }}</u>
+        @else
+            _____________________________________
+        @endif </td>
 <td class='x40'></td>
 <td colspan='2' class='x35' style='mso-ignore:colspan;'></td>
 <td class='x42'>Terminal Leave&nbsp;</td>
@@ -371,14 +411,19 @@ activeSheetIndex = iSh;
  <tr height='7' style='mso-height-source:userset;height:5.25pt'>
 <td colspan='2' height='7' style='mso-ignore:colspan;height:5.25pt;'></td>
 <td colspan='6' class='x32' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
-<td height='7' width='18' style='text-align: left;height:5.25pt;width:13.5pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:33;margin-left:17px;margin-top:5px;width:81px;height:22px'><input type="checkbox" name="CheckBox18" {{ (!empty($applicationforleaves->Commutation) && $applicationforleaves->Commutation == 'Not Requested') ? 'checked' : '' }}></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x35' width='18' style='height:5.25pt;width:13.5pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
+<td height='7' width='18' style='text-align: left;height:5.25pt;width:13.5pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:33;margin-left:17px;margin-top:5px;width:81px;height:22px'><input type="checkbox" name="CheckBox18" {{ (!empty($applicationforleaves->Commutation) && $applicationforleaves->Commutation == 'Not Requested') ? 'checked' : 'disabled' }} onclick="return false;">
+</span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x35' width='18' style='height:5.25pt;width:13.5pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
 <td colspan='2' class='x31' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
 <td colspan='7' class='x60' style='mso-ignore:colspan;'><div style='display:block;overflow:hidden'></div></td>
  </tr>
  <tr height='18' style='mso-height-source:userset;height:13.5pt'>
 <td colspan='2' height='18' style='mso-ignore:colspan;height:13.5pt;'></td>
 <td class='x32'></td>
-<td colspan='4' class='x47' style='mso-ignore:colspan;'>________________________________________</td>
+<td colspan='4' class='x47' style='mso-ignore:colspan;'>@if(isset($applicationforleaves->NumberOfWorkingDaysAppliedFor) && !empty($applicationforleaves->NumberOfWorkingDaysAppliedFor))
+            <u>{{ $applicationforleaves->NumberOfWorkingDaysAppliedFor }}</u>
+        @else
+            ________________________________________
+        @endif</td>
 <td class='x40'></td>
 <td colspan='2' class='x35' style='mso-ignore:colspan;'></td>
 <td class='x42'>Not Requested</td>
@@ -389,7 +434,7 @@ activeSheetIndex = iSh;
  <tr height='7' style='mso-height-source:userset;height:5.25pt'>
 <td colspan='2' height='7' style='mso-ignore:colspan;height:5.25pt;'></td>
 <td colspan='6' class='x32' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
-<td height='7' width='18' style='text-align: left;height:5.25pt;width:13.5pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:34;margin-left:17px;margin-top:5px;width:81px;height:22px'><input type="checkbox" name="CheckBox25" {{ (!empty($applicationforleaves->Commutation) && $applicationforleaves->Commutation == 'Requested') ? 'checked' : '' }}></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x35' width='18' style='height:5.25pt;width:13.5pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
+<td height='7' width='18' style='text-align: left;height:5.25pt;width:13.5pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:34;margin-left:17px;margin-top:5px;width:81px;height:22px'><input type="checkbox" name="CheckBox25" {{ (!empty($applicationforleaves->Commutation) && $applicationforleaves->Commutation == 'Requested') ? 'checked' : 'disabled' }} onclick="return false;"></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x35' width='18' style='height:5.25pt;width:13.5pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
 <td colspan='2' class='x35' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
 <td colspan='7' class='x60' style='mso-ignore:colspan;'><div style='display:block;overflow:hidden'></div></td>
  </tr>
@@ -405,7 +450,11 @@ activeSheetIndex = iSh;
  <tr height='25' style='mso-height-source:userset;height:18.75pt'>
 <td colspan='2' height='25' style='mso-ignore:colspan;height:18.75pt;'></td>
 <td class='x32'></td>
-<td colspan='4' class='x50' style='mso-ignore:colspan;'>________________________________________</td>
+<td colspan='4' class='x50' style='mso-ignore:colspan;'>@if(isset($applicationforleaves->InclusiveDates) && !empty($applicationforleaves->InclusiveDates))
+            <u>{{ $applicationforleaves->InclusiveDates }}</u>
+        @else
+            ________________________________________
+        @endif</td>
 <td class='x40'></td>
 <td colspan='2' class='x52' style='mso-ignore:colspan;'></td>
 <td class='x67'></td>
@@ -436,7 +485,7 @@ activeSheetIndex = iSh;
 <td colspan='2' class='x32' style='mso-ignore:colspan;'><div style='display:block;overflow:hidden'></div></td>
 <td height='6' width='126' style='text-align: left;height:4.5pt;width:94.5pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:7;margin-left:107px;margin-top:1px;width:188px;height:21px'><img width='188' height='21' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALwAAAAVCAYAAAD8WoSNAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAFVJREFUaIHt0jEBACAMwDDAv+fhAo4mCnp0z8wsiDi/A+Alw5NieFIMT4rhSTE8KYYnxfCkGJ4Uw5NieFIMT4rhSTE8KYYnxfCkGJ4Uw5NieFIMT8oFcJkEJtHIoCMAAAAASUVORK5CYII=" name='TextBox51' alt='1'/></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='6' class='x35' width='126' style='height:4.5pt;width:94.5pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
 <td colspan='3' class='x35' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
-<td height='6' width='18' style='text-align: left;height:4.5pt;width:13.5pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:35;margin-left:17px;margin-top:3px;width:80px;height:22px'><input type="checkbox" name="CheckBox26" {{ (!empty($applicationforleaves->Recommendation) && $applicationforleaves->Recommendation == 'For Approval') ? 'checked' : '' }}></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='6' class='x35' width='18' style='height:4.5pt;width:13.5pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
+<td height='6' width='18' style='text-align: left;height:4.5pt;width:13.5pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:35;margin-left:17px;margin-top:3px;width:80px;height:22px'><input type="checkbox" name="CheckBox26" {{ (!empty($applicationforleaves->Recommendation) && $applicationforleaves->Recommendation == 'For Approval') ? 'checked' : 'disabled' }} onclick="return false;"></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='6' class='x35' width='18' style='height:4.5pt;width:13.5pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
 <td colspan='2' class='x35' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
 <td colspan='7' class='x60' style='mso-ignore:colspan;'><div style='display:block;overflow:hidden'></div></td>
  </tr>
@@ -450,7 +499,7 @@ activeSheetIndex = iSh;
  <tr height='7' style='mso-height-source:userset;height:5.25pt'>
 <td colspan='2' height='7' style='mso-ignore:colspan;height:5.25pt;'></td>
 <td colspan='6' class='x32' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
-<td height='7' width='18' style='text-align: left;height:5.25pt;width:13.5pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:36;margin-left:17px;margin-top:5px;width:81px;height:22px'><input type="checkbox" name="CheckBox27" {{ (!empty($applicationforleaves->Recommendation) && $applicationforleaves->Recommendation == 'For disapproval due to') ? 'checked' : '' }}></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x35' width='18' style='height:5.25pt;width:13.5pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
+<td height='7' width='18' style='text-align: left;height:5.25pt;width:13.5pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:36;margin-left:17px;margin-top:5px;width:81px;height:22px'><input type="checkbox" name="CheckBox27" {{ (!empty($applicationforleaves->Recommendation) && $applicationforleaves->Recommendation == 'For disapproval due to') ? 'checked' : 'disabled' }} onclick="return false;"></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='7' class='x35' width='18' style='height:5.25pt;width:13.5pt;'><div style='display:block;overflow:hidden'></div></td></tr></table></span></td>
 <td colspan='2' class='x35' style='mso-ignore:colspan;border-right:1px solid windowtext;'><div style='display:block;overflow:hidden'></div></td>
 <td colspan='7' class='x60' style='mso-ignore:colspan;'><div style='display:block;overflow:hidden'></div></td>
  </tr>
@@ -458,7 +507,11 @@ activeSheetIndex = iSh;
 <td colspan='2' height='18' style='mso-ignore:colspan;height:13.5pt;'></td>
 <td colspan='6' class='x32' style='mso-ignore:colspan;border-right:1px solid windowtext;'></td>
 <td colspan='2' class='x35' style='mso-ignore:colspan;'></td>
-<td class='x40'>For disapproval due to ________________________</td>
+<td class='x40'>For disapproval due to @if(isset($applicationforleaves->ForDisapprovalDueTo) && !empty($applicationforleaves->ForDisapprovalDueTo))
+            <u>{{ $applicationforleaves->ForDisapprovalDueTo }}</u>
+        @else
+            ________________________
+        @endif</td>
 <td colspan='7' class='x60' style='mso-ignore:colspan;'></td>
  </tr>
  <tr height='18' style='mso-height-source:userset;height:13.5pt'>
@@ -511,15 +564,27 @@ activeSheetIndex = iSh;
  <tr height='18' style='mso-height-source:userset;height:13.5pt'>
 <td colspan='2' height='18' style='mso-ignore:colspan;height:13.5pt;'></td>
 <td colspan='2' class='x32' style='mso-ignore:colspan;'></td>
-<td colspan='2' class='x35' style='mso-ignore:colspan;'>_______ days with pay</td>
+<td colspan='2' class='x35' style='mso-ignore:colspan;'>@if(isset($applicationforleaves->DaysWithPay) && !empty($applicationforleaves->DaysWithPay))
+            <u>{{ $applicationforleaves->DaysWithPay }}</u>
+        @else
+            _______
+        @endif days with pay</td>
 <td colspan='4' class='x35' style='mso-ignore:colspan;'></td>
-<td class='x70'>_______________________________________</td>
+<td class='x70'>@if(isset($applicationforleaves->DisapprovedDueTo) && !empty($applicationforleaves->DisapprovedDueTo))
+            <u>{{ $applicationforleaves->DisapprovedDueTo }}</u>
+        @else
+            _______________________________________
+        @endif</td>
 <td colspan='7' class='x60' style='mso-ignore:colspan;'></td>
  </tr>
  <tr height='18' style='mso-height-source:userset;height:13.5pt'>
 <td colspan='2' height='18' style='mso-ignore:colspan;height:13.5pt;'></td>
 <td colspan='2' class='x32' style='mso-ignore:colspan;'></td>
-<td colspan='2' class='x35' style='mso-ignore:colspan;'>_______ days without pay</td>
+<td colspan='2' class='x35' style='mso-ignore:colspan;'>@if(isset($applicationforleaves->DaysWithoutPay) && !empty($applicationforleaves->DaysWithoutPay))
+            <u>{{ $applicationforleaves->DaysWithoutPay }}</u>
+        @else
+            _______
+        @endif days without pay</td>
 <td colspan='4' class='x35' style='mso-ignore:colspan;'></td>
 <td class='x71'>___________________________________________</td>
 <td colspan='7' class='x60' style='mso-ignore:colspan;'></td>
@@ -527,7 +592,11 @@ activeSheetIndex = iSh;
  <tr height='20' style='mso-height-source:userset;height:15pt'>
 <td colspan='2' height='20' style='mso-ignore:colspan;height:15pt;'></td>
 <td colspan='2' class='x32' style='mso-ignore:colspan;'></td>
-<td colspan='2' class='x35' style='mso-ignore:colspan;'>_______ others (Specify)</td>
+<td colspan='2' class='x35' style='mso-ignore:colspan;'>@if(isset($applicationforleaves->OthersSpecify) && !empty($applicationforleaves->OthersSpecify))
+            <u>{{ $applicationforleaves->OthersSpecify }}</u>
+        @else
+            _______
+        @endif others (Specify)</td>
 <td colspan='4' class='x35' style='mso-ignore:colspan;'></td>
 <td height='20' width='322' style='text-align: left;height:15pt;width:241.5pt;vertical-align:top; border-right: 1px solid #000;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:10;margin-left:0px;margin-top:0px;width:318px;height:16px'></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr>___________________________________________</tr></table></span></td>
 <td colspan='6' class='x60' style='mso-ignore:colspan;'></td>

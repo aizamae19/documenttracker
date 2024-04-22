@@ -41,6 +41,7 @@
             <br>
 
             <div class="tab-content">
+<<<<<<< HEAD
                <div id="applicationforleaveTab" class="container-fluid tab-pane active">
                   <div class="col-md-12">
                      <table id="example1" class="table table-hover">
@@ -66,6 +67,175 @@
                                  <td>{{ $applicationforleave->Office }}</td>
                                  <td>{{ $applicationforleave->Name }}</td>
                                  <td>{{ substr($applicationforleave->created_at, 0, 10) }}</td>
+=======
+                  <div id="applicationforleaveTab" class="container-fluid tab-pane active">
+                     <div class="col-md-12">
+                        <table id="itemSearchTab" class="table table-hover">
+                           <thead>
+                              <tr>
+                                 <th>Series Number</th>
+                                 <th>Office</th>
+                                 <th>Name</th>
+                                 <th>Date</th>
+                                 <th class="text-center"></th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              @if(isset($applicationforleaves))
+                                <?php
+                                $officeSeriesNumbers = []; 
+                                ?>
+                                @foreach($applicationforleaves as $key => $applicationforleave)
+                                    <tr>
+                                        <?php 
+                                        $office = App\Models\Office::where('ShortName', $applicationforleave->Office)->first();
+                                        $officeCode = $office ? $office->Code : '';
+                                        
+                                        if (!isset($officeSeriesNumbers[$applicationforleave->Office])) {
+                                            $officeSeriesNumbers[$applicationforleave->Office] = 1;
+                                        }
+                                        $seriesNumber = $officeSeriesNumbers[$applicationforleave->Office]++;
+                                        $seriesNumberPadded = sprintf('%06d', $seriesNumber);
+                                        ?>
+                                        <td>{{ date('Y') . '-' . sprintf('%03d', $officeCode) . '-' . $seriesNumberPadded }}</td>
+                                        <td>{{ $applicationforleave->Office }}</td>
+                                        <td>{{ $applicationforleave->NameOfEmployee }}</td>
+                                        <td>{{ substr($applicationforleave->created_at, 0, 10) }}</td>
+                                    <td class="text-center">
+                                       <a class="btn btn-sm btn-success" href="{{ url('/admin/files/applicationforleave/view/').'/'.$applicationforleave->id}}" data-target="#view"><i class="fa fa-eye"></i> View</a>
+                                       <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
+                                    </td>
+                                 </tr>
+                              @endforeach
+                              @endif
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+
+                  <div id="dispatchTab" class="container-fluid tab-pane">
+                     <div class="col-md-12">
+                        <table id="itemSearchTab" class="table table-hover">
+                           <thead>
+                              <tr>
+                                 <th>Series Number</th>
+                                 <th>Office</th>
+                                 <th>Name</th>
+                                 <th>Date</th>
+                                 <th class="text-center"></th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              @if(isset($dispatches))
+                                <?php
+                                $officeSeriesNumbers = []; 
+                                ?>
+                                @foreach($dispatches as $key => $dispatches)
+                                    <tr>
+                                        <?php 
+                                        $office = App\Models\Office::where('ShortName', $dispatches->Office)->first();
+                                        $officeCode = $office ? $office->Code : '';
+                                        
+                                        if (!isset($officeSeriesNumbers[$dispatches->Office])) {
+                                            $officeSeriesNumbers[$dispatches->Office] = 1;
+                                        }
+                                        $seriesNumber = $officeSeriesNumbers[$dispatches->Office]++;
+                                        $seriesNumberPadded = sprintf('%06d', $seriesNumber);
+                                        ?>
+                                        <td>{{ date('Y') . '-' . sprintf('%03d', $officeCode) . '-' . $seriesNumberPadded }}</td>
+                                        <td>{{ $dispatches->Office }}</td>
+                                        <td>{{ $dispatches->NameOfEmployee }}</td>
+                                        <td>{{ substr($dispatches->created_at, 0, 10) }}</td>
+                                    <td class="text-center">
+                                       <a class="btn btn-sm btn-success" href="{{ url('/admin/files/dispatch/view/').'/'.$dispatches->id}}" data-target="#view"><i class="fa fa-eye"></i> View</a>
+                                       <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
+                                    </td>
+                                 </tr>
+                              @endforeach
+                              @endif
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+
+                  <div id="certificateofappearanceTab" class="container-fluid tab-pane">
+                     <div class="col-md-12">
+                        <table id="itemSearchTab" class="table table-hover">
+                           <thead>
+                              <tr>
+                                 <th>Series Number</th>
+                                 <th>Office</th>
+                                 <th>Name</th>
+                                 <th>Date</th>
+                                 <th class="text-center"></th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                               @if(isset($certificateofappearances))
+                                <?php
+                                $officeSeriesNumbers = []; 
+                                ?>
+                                @foreach($certificateofappearances as $key => $certificateofappearance)
+                                    <tr>
+                                        <?php 
+                                        $office = App\Models\Office::where('ShortName', $certificateofappearance->Office)->first();
+                                        $officeCode = $office ? $office->Code : '';
+                                        
+                                        if (!isset($officeSeriesNumbers[$certificateofappearance->Office])) {
+                                            $officeSeriesNumbers[$certificateofappearance->Office] = 1;
+                                        }
+                                        $seriesNumber = $officeSeriesNumbers[$certificateofappearance->Office]++;
+                                        $seriesNumberPadded = sprintf('%06d', $seriesNumber);
+                                        ?>
+                                        <td>{{ date('Y') . '-' . sprintf('%03d', $officeCode) . '-' . $seriesNumberPadded }}</td>
+                                        <td>{{ $certificateofappearance->Office }}</td>
+                                        <td>{{ $certificateofappearance->NameOfEmployee }}</td>
+                                        <td>{{ substr($certificateofappearance->created_at, 0, 10) }}</td>
+                                    <td class="text-center">
+                                       <a class="btn btn-sm btn-success" href="{{ url('/admin/files/certificateofappearance/view/').'/'.$certificateofappearance->id}}" data-target="#view"><i class="fa fa-eye"></i> View</a>
+                                       <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
+                                    </td>
+                                 </tr>
+                              @endforeach
+                              @endif
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+                  <div id="locatorTab" class="container-fluid tab-pane">
+                     <div class="col-md-12">
+                        <table id="itemSearchTab" class="table table-hover">
+                           <thead>
+                              <tr>
+                                 <th>Series Number</th>
+                                 <th>Office</th>
+                                 <th>Name</th>
+                                 <th>Date</th>
+                                 <th class="text-center"></th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              @if(isset($locators))
+                                <?php
+                                $officeSeriesNumbers = []; 
+                                ?>
+                                @foreach($locators as $key => $locator)
+                                    <tr>
+                                        <?php 
+                                        $office = App\Models\Office::where('ShortName', $locator->Office)->first();
+                                        $officeCode = $office ? $office->Code : '';
+                                        
+                                        if (!isset($officeSeriesNumbers[$locator->Office])) {
+                                            $officeSeriesNumbers[$locator->Office] = 1;
+                                        }
+                                        $seriesNumber = $officeSeriesNumbers[$locator->Office]++;
+                                        $seriesNumberPadded = sprintf('%06d', $seriesNumber);
+                                        ?>
+                                        <td>{{ date('Y') . '-' . sprintf('%03d', $officeCode) . '-' . $seriesNumberPadded }}</td>
+                                        <td>{{ $locator->Office }}</td>
+                                        <td>{{ $locator->NameOfEmployee }}</td>
+                                        <td>{{ substr($locator->created_at, 0, 10) }}</td>
+>>>>>>> origin/master
                                  <td class="text-center">
                                     <a class="btn btn-sm btn-success" href="{{ url('/admin/files/applicationforleave/view/').'/'.$applicationforleave->id}}" data-target="#view"><i class="fa fa-eye"></i> View</a>
                                     <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
@@ -81,6 +251,7 @@
                   <div class="col-md-12">
                      <table id="example2" class="table table-hover">
                         <thead>
+<<<<<<< HEAD
                            <tr>
                               <th>Series Number</th>
                               <th>Office</th>
@@ -230,6 +401,59 @@
                            <div class="m-t-20"> <a href="#" class="btn btn-white" data-dismiss="modal">Close</a>
                               <button type="submit" class="btn btn-danger">Delete</button>
                            </div>
+=======
+                            <tr>
+                                <th>Series Number</th>
+                                <th>Office</th>
+                                <th>Name</th>
+                                <th>Date</th>
+                                <th class="text-center">Action</th>
+                            </tr>
+                        </thead>
+                       <tbody>
+                    @if(isset($travelorders))
+                                <?php
+                                $officeSeriesNumbers = []; 
+                                ?>
+                                @foreach($travelorders as $key => $travelorder)
+                                    <tr>
+                                        <?php 
+                                        $office = App\Models\Office::where('ShortName', $travelorder->Office)->first();
+                                        $officeCode = $office ? $office->Code : '';
+                                        
+                                        if (!isset($officeSeriesNumbers[$travelorder->Office])) {
+                                            $officeSeriesNumbers[$travelorder->Office] = 1;
+                                        }
+                                        $seriesNumber = $officeSeriesNumbers[$travelorder->Office]++;
+                                        $seriesNumberPadded = sprintf('%06d', $seriesNumber);
+                                        ?>
+                                        <td>{{ date('Y') . '-' . sprintf('%03d', $officeCode) . '-' . $seriesNumberPadded }}</td>
+                                        <td>{{ $travelorder->Office }}</td>
+                                        <td>{{ $travelorder->NameOfEmployee }}</td>
+                                        <td>{{ substr($travelorder->created_at, 0, 10) }}</td>
+
+                                        <td class="text-center">
+                                            <a class="btn btn-sm btn-success" href="{{ url('/admin/files/travelorder/view/').'/'.$travelorder->id}}" data-toggle="" data-target="#"><i class="fa fa-eye"></i>View</a>
+                                            <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i>Delete</a>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            @endif
+                        </tbody>
+                       </table>
+                   </div>
+                </div>
+                   <div id="delete" class="modal animated rubberBand delete-modal" role="dialog">
+                     <div class="modal-dialog modal-dialog-centered">
+                         <div class="modal-content">
+                            <div class="modal-body text-center">
+                                <img src="{{asset('assets/img/sent.png')}}" alt="" width="50" height="46">
+                                <h3>Are you sure want to delete this file?</h3>
+                                <div class="m-t-20"> <a href="#" class="btn btn-white" data-dismiss="modal">Close</a>
+                                   <button type="submit" class="btn btn-danger">Delete</button>
+                                </div>
+                             </div>
+>>>>>>> origin/master
                         </div>
                      </div>
                   </div>

@@ -1,6 +1,7 @@
 @extends('layouts.default')
 
 @section('content')
+<<<<<<< HEAD
 <div class="content-header">
             <div class="container-fluid">
                <div class="row mb-2">
@@ -22,11 +23,20 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-12">
+=======
+  <section class="content">
+        <div class="container-fluid">
+            <div class="card card-info" style="">
+>>>>>>> origin/master
                 <div class="wcdiv wcpage"> 
                     <style type="text/css">
                         .wcdiv.wcpage {
                         width: 210mm; 
                         height: 310mm; 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
                     }
                     </style>
                         <div class="wcdiv" style="left:0pt; top:2.5pt; background-color: white;"> 
@@ -112,27 +122,27 @@
                         <div class="wcdiv" style="left:-0.75pt; top:147.09pt;"><span class="wcspan wctext003" style="left:-8pt; top:0.39pt; line-height:13.41pt;">&nbsp;NACIONAL V MERCADO</span></div>
                         <div class="wcdiv" style="left:-0.75pt; top:162.14pt;"><span class="wcspan wctext002" style="left:-8pt; top:0.39pt; line-height:13.41pt;">&nbsp;City Mayor</span></div>
                         <div class="wcdiv" style="left:-0.75pt; top:177.37pt;"><span class="wcspan wctext002" style="left:-8pt; top:0.39pt; line-height:13.41pt;">&nbsp;City of Maasin</span></div>
-                        <div class="wcdiv" style="top:206.21pt;"><span class="wcspan wctext003" style="left:0pt; top:0.39pt; line-height:13.41pt;">Subject:</span> <span class="wcspan wctext004" style="left:63.67pt; top:0.39pt; line-height:13.41pt;">Recommendation for Issuance of Travel Order<!-- {{$travelorders->Date}} --></span></div>
+                        <div class="wcdiv" style="top:206.21pt;"><span class="wcspan wctext003" style="left:0pt; top:0.39pt; line-height:13.41pt;">Subject:</span> <span class="wcspan wctext004" style="left:63.67pt; top:0.39pt; line-height:13.41pt;">Recommendation for Issuance of Travel Order</span></div>
                         <div class="wcdiv" style="left:-0.75pt; top:235.83pt;"><span class="wcspan wctext002" style="left:0pt; top:0.39pt; line-height:13.41pt;">Sir;</span></div>
                         <div style="left:-0.75pt; top:284.66pt;">
                             <p style="margin-top: 45%; margin-left: -10px; ">This is to certify that name(s) appearing below is/are authorized to undertake an official trip to<br><span style="color: red;top:0.39pt;">{{$travelorders->Location}}</span> from <span style="color: red;top:0.39pt;">{{$travelorders->Dated}}.</span></p>
                         </div>
-                          <div class="sample-box" style="color: white; font-size: 7px;text-align: left;">Travel Request Issuance Number: </div>
+                          <div class="sample-box" style="color: white; font-size: 7px;text-align: left;">Travel Request Issuance Number:  </div>
 
                             <style >
                                 .sample-box {
                                width: 266px;
-                        background-color: white;
-                        border: 1px solid white;
-                        padding: 18px;
-                        text-align: center;
-                        font-family: Arial, sans-serif;
-                        margin-top: 3px;
-                        margin-left: 425px;
-                        margin-bottom: 10px;
-                        position: absolute;
-                        top: 11%;
-                        background-color: #FF65FF;          
+                                background-color: white;
+                                border: 1px solid white;
+                                padding: 18px;
+                                text-align: center;
+                                font-family: Arial, sans-serif;
+                                margin-top: 3px;
+                                margin-left: 425px;
+                                margin-bottom: 10px;
+                                position: absolute;
+                                top: 11%;
+                                background-color: #FF65FF;          
                                              }
                             </style>
                          <p>&nbsp;</p>
@@ -155,13 +165,38 @@
                                 <td style="color:black;font-size:15px;font-weight:400;font-style:normal;text-decoration:none;font-family:Calibri, sans-serif;text-align:general;vertical-align:bottom;border:.5pt solid windowtext;border-top:none;border-left:none; border: 1pt dotted windowtext;"><br></td>
                                 <td style="color:black;font-size:15px;font-weight:400;font-style:normal;text-decoration:none;font-family:Calibri, sans-serif;text-align:general;vertical-align:bottom;border:.5pt solid windowtext;border-top:none;border-left:none; border: 1pt dotted windowtext;"><br></td>
                             </tr>
+<<<<<<< HEAD
                         </tbody>
                     </table>
                         <div style="left:-0.75pt; top:264.66pt;">
                         <p style="margin-top: 1%; margin-left: -10px; text-align: justify; ">We hereby endorse this travel order request with a memorandum order from the <span style="color: red;top:0.39pt;">{{$travelorders->Endorser}}</span> dated <span style="color: red;top:0.39pt;">February 26, 2024.&nbsp;</span></p>
                                
+=======
+                            <tr>
+                                <td style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 14.5pt; border-top: none; width: 9.7561%; border: 1pt dotted windowtext;"><br></td>
+                                <td style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-top: none; border-left: none; width: 30.7692%; border: 1pt dotted windowtext;"><br></td>
+                                <td style="color:black;font-size:15px;font-weight:400;font-style:normal;text-decoration:none;font-family:Calibri, sans-serif;text-align:general;vertical-align:bottom;border:.5pt solid windowtext;border-top:none;border-left:none; border: 1pt dotted windowtext;"><br></td>
+                                <td style="color:black;font-size:15px;font-weight:400;font-style:normal;text-decoration:none;font-family:Calibri, sans-serif;text-align:general;vertical-align:bottom;border:.5pt solid windowtext;border-top:none;border-left:none; border: 1pt dotted windowtext;"><br></td>
+                            </tr>
+                            <tr>
+                                <td style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 14.5pt; border-top: none; width: 9.7561%; border: 1pt dotted windowtext;"><br></td>
+                                <td style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-top: none; border-left: none; width: 30.7692%;"><br></td>
+                                <td style="color:black;font-size:15px;font-weight:400;font-style:normal;text-decoration:none;font-family:Calibri, sans-serif;text-align:general;vertical-align:bottom;border:.5pt solid windowtext;border-top:none;border-left:none; border: 1pt dotted windowtext;"><br></td>
+                                <td style="color:black;font-size:15px;font-weight:400;font-style:normal;text-decoration:none;font-family:Calibri, sans-serif;text-align:general;vertical-align:bottom;border:.5pt solid windowtext;border-top:none;border-left:none; border: 1pt dotted windowtext;"><br></td>
+                                    </tr> -->
+                               <!--   <tr>
+                                <td style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; border-image: initial; height: 14.5pt; border-top: none; width: 9.7561%; border: 1pt dotted windowtext;"><br></td>
+                                <td style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; vertical-align: bottom; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-image: initial; border-top: none; border-left: none; width: 30.7692%; border: 1pt dotted windowtext;"><br></td>
+                                <td style="color:black;font-size:15px;font-weight:400;font-style:normal;text-decoration:none;font-family:Calibri, sans-serif;text-align:general;vertical-align:bottom;border:.5pt solid windowtext;border-top:none;border-left:none; border: 1pt dotted windowtext;"><br></td>
+                                <td style="color:black;font-size:15px;font-weight:400;font-style:normal;text-decoration:none;font-family:Calibri, sans-serif;text-align:general;vertical-align:bottom;border:.5pt solid windowtext;border-top:none;border-left:none; border: 1pt dotted windowtext;"><br></td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                        <div style="left:-0.75pt; top:264.66pt;">
+                        <p style="margin-top: 1%; margin-left: -10px; text-align: justify; ">We hereby endorse this travel order request with a memorandum order from the dated<br><span style="color: red;top:0.39pt;">Provincial Governor of Southern Leyte</span> from <span style="color: red;top:0.39pt;">{{$travelorders->InclusiveDates}}.&nbsp;</span></p>
+>>>>>>> origin/master
                         </div>
-                        <table style="border: none;border-collapse: collapse;width:490pt; text-align: justify;">
+                        <table style="border: none;border-collapse: collapse;width:490pt;">
                             <tbody>
                                 <tr>
                                     <td colspan="2" rowspan="3" style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; text-align: center; vertical-align: top; border: 1pt dotted windowtext; height: 43.5pt; width: 34.6939%;">
@@ -177,8 +212,8 @@
                         <div style="margin-left: -9px;  top:264.66pt; margin-top: -9px; text-align: justify;">
                             <p>We confirm that the above-name employee(s) will represent the Local Government Unit of Maasin in a professional and responsible manner and will conduct the official business in accordance with the rules and regulations of the government and of our organization.</p>
                         </div>
-                        <div style="margin-left: -9px; top:264.66pt; margin-top: -9px; text-align: justify;">
-                            <p>We trust that this endorsement will facilitate the travel process and enable the employee to undertake the official trip as authorized. For your issuance of travel order.</p>
+                        <div style="margin-left: -9px; top:264.66pt; margin-top: -9px; text-align: justify; ">
+                            <p>We trust that this endorsement will facilitate the travel process and enable the employee to undertake the official trip as authorized.For your issuance of travel order.</p>
                         </div>
                         <div style="margin-left: -9px;  top:262.66pt; margin-top: -1px;">
                             <p>For your issuance of travel order.</p>
@@ -186,7 +221,7 @@
                         <div style="margin-left: -9px;  margin-top: 14px;">
                             <p>Sincerely,</p>
                         </div>
-                        <div style="margin-left: -9px;  margin-top: 21px;">
+                        <div style="margin-left: -9px;  margin-top: 31px;">
                             <p><strong>RAUL A. INOCANDO, JR.&nbsp;</strong></p>
                         </div>
                         <div style="margin-left: -9px;  margin-top: -17px;">

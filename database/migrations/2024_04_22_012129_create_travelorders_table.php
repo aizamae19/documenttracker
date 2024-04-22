@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('travelorders', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('office_id')->nullable();
             $table->string('Date');
             $table->string('Subject');
             $table->string('Location');
@@ -35,3 +36,5 @@ return new class extends Migration
         Schema::dropIfExists('travelorders');
     }
 };
+
+    

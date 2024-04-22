@@ -190,9 +190,8 @@
    <script src="{{asset('assets/tables/datatables-buttons/js/buttons.bootstrap4.min.js')}}"></script>
    <script type="text/javascript">
       $(function () {
-         $("#example1").DataTable();
+         $("#example1, #example2, #example3, #example4, #example5").DataTable();
       });
    </script>
 </body>
-
 </html>

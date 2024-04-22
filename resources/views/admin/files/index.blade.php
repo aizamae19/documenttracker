@@ -77,47 +77,9 @@
                      </table>
                   </div>
                </div>
-
-               <div id="dispatchTab" class="container-fluid tab-pane">
-                  <div class="col-md-12">
-                     <table id="example1" class="table table-hover">
-                        <thead>
-                           <tr>
-                              <th>Series Number</th>
-                              <th>Office</th>
-                              <th>Name</th>
-                              <th>Date</th>
-                              <th class="text-center"></th>
-                           </tr>
-                        </thead>
-                        <tbody>
-                           @if(isset($dispatches))
-                           @foreach($dispatches as $key => $dispatches)
-                              <tr>
-                                 <?php 
-                                    $SeriesNumber = sprintf('%06d', $key + 1);    
-                                    $office = App\Models\Office::where('ShortName', $dispatches->Office)->first();
-                                    $officeCode = $office ? $office->Code : '';
-                                 ?>
-                                 <td>{{ date('Y') . '-' . $officeCode . '-' . $SeriesNumber }}</td>
-                                 <td>{{ $dispatches->Office }}</td>
-                                 <td>{{ $dispatches->Name }}</td>
-                                 <td>{{ substr($dispatches->created_at, 0, 10) }}</td>
-                                 <td class="text-center">
-                                    <a class="btn btn-sm btn-success" href="{{ url('/admin/files/dispatch/view/').'/'.$dispatches->id}}" data-target="#view"><i class="fa fa-eye"></i> View</a>
-                                    <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
-                                 </td>
-                              </tr>
-                           @endforeach
-                           @endif
-                        </tbody>
-                     </table>
-                  </div>
-               </div>
-
                <div id="certificateofappearanceTab" class="container-fluid tab-pane">
                   <div class="col-md-12">
-                     <table id="example1" class="table table-hover">
+                     <table id="example2" class="table table-hover">
                         <thead>
                            <tr>
                               <th>Series Number</th>
@@ -151,9 +113,45 @@
                      </table>
                   </div>
                </div>
+               <div id="dispatchTab" class="container-fluid tab-pane">
+                  <div class="col-md-12">
+                     <table id="example3" class="table table-hover">
+                        <thead>
+                           <tr>
+                              <th>Series Number</th>
+                              <th>Office</th>
+                              <th>Name</th>
+                              <th>Date</th>
+                              <th class="text-center"></th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           @if(isset($dispatches))
+                           @foreach($dispatches as $key => $dispatches)
+                              <tr>
+                                 <?php 
+                                    $SeriesNumber = sprintf('%06d', $key + 1);    
+                                    $office = App\Models\Office::where('ShortName', $dispatches->Office)->first();
+                                    $officeCode = $office ? $office->Code : '';
+                                 ?>
+                                 <td>{{ date('Y') . '-' . $officeCode . '-' . $SeriesNumber }}</td>
+                                 <td>{{ $dispatches->Office }}</td>
+                                 <td>{{ $dispatches->Name }}</td>
+                                 <td>{{ substr($dispatches->created_at, 0, 10) }}</td>
+                                 <td class="text-center">
+                                    <a class="btn btn-sm btn-success" href="{{ url('/admin/files/dispatch/view/').'/'.$dispatches->id}}" data-target="#view"><i class="fa fa-eye"></i> View</a>
+                                    <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
+                                 </td>
+                              </tr>
+                           @endforeach
+                           @endif
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
                <div id="locatorTab" class="container-fluid tab-pane">
                   <div class="col-md-12">
-                     <table id="example1" class="table table-hover">
+                     <table id="example4" class="table table-hover">
                         <thead>
                            <tr>
                               <th>Series Number</th>
@@ -189,7 +187,7 @@
                </div>
                <div id="travelorderTab" class="container-fluid tab-pane">
                   <div class="col-md-12">
-                     <table id="example1" class="table table-hover">
+                     <table id="example5" class="table table-hover">
                         <thead>
                            <tr>
                               <th>Series Number</th>

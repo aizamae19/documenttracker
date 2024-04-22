@@ -143,7 +143,7 @@ activeSheetIndex = iSh;
 <td colspan='4' class='x41' style='mso-ignore:colspan;border-right:1px solid windowtext;'><font class="font0" style="text-decoration: none;">Mandatory/Forced Leave</font><font class="font16" style="text-decoration: none;">(Sec. 25, Rule XVI, Omnibus Rules Implementing E.O. No. 292)</font></td>
 <td colspan='2' class='x35' style='mso-ignore:colspan;'></td>
 <td colspan='1' class='x42' style='mso-ignore:colspan;'>Within the Philippines @if(isset($applicationforleaves->WithinThePhilippines) && !empty($applicationforleaves->WithinThePhilippines))
-            <u>{{ $applicationforleaves->WithinThePhilippines    }}</u>
+            <u style="padding: 0 0 40px;">{{ $applicationforleaves->WithinThePhilippines    }}</u>
         @else
             _________________________
         @endif</td>

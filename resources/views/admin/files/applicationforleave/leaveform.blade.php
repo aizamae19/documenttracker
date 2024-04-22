@@ -34,7 +34,7 @@
                                                          <option enabled>Select Office</option>
                                                           <option>MAYOR'S</option>
                                                           <option>BUDGET</option>
-                                                          <option>ACCOUNTANTING</option>
+                                                          <option>ACCOUNTING</option>
                                                           <option>OGS</option>   
                                                           <option>AGRICULTURE</option>
                                                           <option>DILG </option>
@@ -70,7 +70,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <p>3. DATE OF FILING</p>
-                                                <input type="text" class="form-control" name="DateOfFiling">
+                                                <input type="date" class="form-control" name="DateOfFiling">
                                             </div>
                                         </div>
                                         <div class="col-md-4">

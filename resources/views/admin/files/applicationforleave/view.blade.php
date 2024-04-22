@@ -71,7 +71,7 @@ activeSheetIndex = iSh;
  </tr>
  <tr height='34' style='mso-height-source:userset;height:25.5pt'>
 <td colspan='2' height='34' style='mso-ignore:colspan;height:25.5pt;'></td><td colspan='4' class='x73' style='mso-ignore:colspan;overflow:hidden;'>3.<span style='mso-spacerun:yes;'>&nbsp;&nbsp; </span>DATE OF FILING<span style='mso-spacerun:yes;'>&nbsp; @if(isset($applicationforleaves->DateOfFiling) && !empty($applicationforleaves->DateOfFiling))
-        <u style="border-width: 10px;">{{ $applicationforleaves->DateOfFiling }}</u>
+        <u>{{ $applicationforleaves->DateOfFiling }}</u>
     @else
         ______________
     @endif</span>
@@ -84,7 +84,7 @@ activeSheetIndex = iSh;
         @else
             _____________________________
         @endif
-    <span style='mso-spacerun:yes;'>&nbsp;&nbsp;&nbsp;&nbsp; </span>5.<span style='mso-spacerun:yes;'>&nbsp; </span>SALARY<span style='mso-spacerun:yes;'>&nbsp; </span>@if(isset($applicationforleaves->Salary) && !empty($applicationforleaves->Salary))
+    <span style='mso-spacerun:yes;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>5.<span style='mso-spacerun:yes;'>&nbsp; </span>SALARY<span style='mso-spacerun:yes;'>&nbsp; </span>@if(isset($applicationforleaves->Salary) && !empty($applicationforleaves->Salary))
             <u>{{ $applicationforleaves->Salary }}</u>
         @else
              _____________

@@ -71,7 +71,7 @@ activeSheetIndex = iSh;
  </tr>
  <tr height='34' style='mso-height-source:userset;height:25.5pt'>
 <td colspan='2' height='34' style='mso-ignore:colspan;height:25.5pt;'></td><td colspan='4' class='x73' style='mso-ignore:colspan;overflow:hidden;'>3.<span style='mso-spacerun:yes;'>&nbsp;&nbsp; </span>DATE OF FILING<span style='mso-spacerun:yes;'>&nbsp; @if(isset($applicationforleaves->DateOfFiling) && !empty($applicationforleaves->DateOfFiling))
-        <u>{{ $applicationforleaves->DateOfFiling }}</u>
+        <u style="">{{ $applicationforleaves->DateOfFiling }}</u>
     @else
         ______________
     @endif</span>

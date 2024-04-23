@@ -43,7 +43,7 @@
             <div class="tab-content">
                   <div id="applicationforleaveTab" class="container-fluid tab-pane active">
                      <div class="col-md-12">
-                        <table id="example1" class="table table-hover">
+                        <table id="applicationforleave" class="table table-bordered">
                            <thead>
                               <tr>
                                  <th>Series Number</th>
@@ -88,7 +88,7 @@
 
                   <div id="dispatchTab" class="container-fluid tab-pane">
                      <div class="col-md-12">
-                        <table id="example3" class="table table-hover">
+                        <table id="dispatch" class="table table-bordered">
                            <thead>
                               <tr>
                                  <th>Series Number</th>
@@ -133,7 +133,7 @@
 
                   <div id="certificateofappearanceTab" class="container-fluid tab-pane">
                      <div class="col-md-12">
-                        <table id="example2" class="table table-hover">
+                        <table id="certificateofappearance" class="table table-bordered">
                            <thead>
                               <tr>
                                  <th>Series Number</th>
@@ -177,7 +177,7 @@
                   </div>
                   <div id="locatorTab" class="container-fluid tab-pane">
                      <div class="col-md-12">
-                        <table id="example4" class="table table-hover">
+                        <table id="locator" class="table table-bordered">
                            <thead>
                               <tr>
                                  <th>Series Number</th>
@@ -222,7 +222,7 @@
 
                <div id="travelorderTab" class="container-fluid tab-pane">
                   <div class="col-md-12">
-                     <table id="example5" class="table table-hover">
+                     <table id="travelorder" class="table table-bordered">
                         <thead>
                             <tr>
                                 <th>Series Number</th>

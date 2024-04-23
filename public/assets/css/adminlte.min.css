@@ -2026,7 +2026,7 @@ pre code {
 }
 
 .table-bordered thead td,.table-bordered thead th {
-    border-bottom-width: 2px
+    border-bottom-width: 1px;
 }
 
 .table-borderless tbody+tbody,.table-borderless td,.table-borderless th,.table-borderless thead th {

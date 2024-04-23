@@ -189,9 +189,31 @@
    <script src="{{asset('assets/tables/datatables-responsive/js/responsive.bootstrap4.min.js')}}"></script>
    <script src="{{asset('assets/tables/datatables-buttons/js/buttons.bootstrap4.min.js')}}"></script>
    <script type="text/javascript">
-      $(function () {
-         $("#applicationforleave, #certificateofappearance, #dispatch, #locator, #travelorder").DataTable();
+   $(document).ready(function() {
+  
+      $("#applicationforleave tfoot tr th").each(function() {
+         var title = $(this).text();
+         $(this).html('<input type="text" placeholder="Search ' + title + '" />');
       });
+
+      var table = $("#applicationforleave").DataTable();
+  
+      table.columns().every(function(index) {
+         var that = this;
+
+         $("input", this.footer()).on("keyup change clear", function() {
+            if (that.search() !== this.value) {
+               that.search(this.value).draw();
+               table
+               .rows()
+               .$("tr", { filter: "applied" })
+               .each(function() {
+                  console.log(table.row(this).data());
+               });
+            }
+         });
+      });
+   });
    </script>
 </body>
 </html>

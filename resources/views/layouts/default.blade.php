@@ -189,29 +189,25 @@
    <script src="{{asset('assets/tables/datatables-responsive/js/responsive.bootstrap4.min.js')}}"></script>
    <script src="{{asset('assets/tables/datatables-buttons/js/buttons.bootstrap4.min.js')}}"></script>
    <script type="text/javascript">
-   $(document).ready(function() {
-  
-      $("#applicationforleave tfoot tr th").each(function() {
+      $(document).ready(function () {
+      $("#applicationforleave tfoot tr th").each(function () {
          var title = $(this).text();
          $(this).html('<input type="text" placeholder="Search ' + title + '" />');
       });
+      var table = $("#applicationforleave, #certificateofappearance, #dispatch, #locator, #travelorder").DataTable({
+         dom: '<"dt-buttons"Bf><"clear">lirtp',
+         paging: true,
+         autoWidth: true,
+         initComplete: function (settings, json) {
+            var footer = $("#applicationforleave tfoot tr");
+            $("#applicationforleave thead").append(footer);
+         }
+      });
 
-      var table = $("#applicationforleave").DataTable();
-  
-      table.columns().every(function(index) {
-         var that = this;
-
-         $("input", this.footer()).on("keyup change clear", function() {
-            if (that.search() !== this.value) {
-               that.search(this.value).draw();
-               table
-               .rows()
-               .$("tr", { filter: "applied" })
-               .each(function() {
-                  console.log(table.row(this).data());
-               });
-            }
-         });
+      $("#applicationforleave thead").on("keyup", "input", function () {
+         table.column($(this).parent().index())
+         .search(this.value)
+         .draw();
       });
    });
    </script>

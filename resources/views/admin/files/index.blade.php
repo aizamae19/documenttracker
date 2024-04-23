@@ -38,7 +38,6 @@
                   <a class="nav-link" data-toggle="tab" href="#travelorderTab">Travel Order</a>
                </li>
             </ul>
-            <br>
             <div class="tab-content">
                <div id="applicationforleaveTab" class="container-fluid tab-pane active">
                   <div class="col-md-12">
@@ -134,14 +133,6 @@
                               @endforeach
                            @endif
                         </tbody>
-                        <tfoot>
-                           <tr>
-                              <th>Series Number</th>
-                              <th>Office</th>
-                              <th>Name</th>
-                              <th>Date</th>
-                           </tr>
-                        </tfoot>
                      </table>
                   </div>
                </div>
@@ -187,18 +178,9 @@
                               @endforeach
                            @endif
                         </tbody>
-                        <tfoot>
-                           <tr>
-                              <th>Series Number</th>
-                              <th>Office</th>
-                              <th>Name</th>
-                              <th>Date</th>
-                           </tr>
-                        </tfoot>
                      </table>
                   </div>
                </div>
-
                <div id="locatorTab" class="container-fluid tab-pane">
                   <div class="col-md-12">
                      <table id="locator" class="table table-bordered">
@@ -240,14 +222,6 @@
                               @endforeach
                            @endif
                         </tbody>
-                        <tfoot>
-                           <tr>
-                              <th>Series Number</th>
-                              <th>Office</th>
-                              <th>Name</th>
-                              <th>Date</th>
-                           </tr>
-                        </tfoot>
                      </table>
                   </div>
                </div>
@@ -293,14 +267,6 @@
                               @endforeach
                            @endif
                         </tbody>
-                        <tfoot>
-                           <tr>
-                              <th>Series Number</th>
-                              <th>Office</th>
-                              <th>Name</th>
-                              <th>Date</th>
-                           </tr>
-                        </tfoot>
                      </table>
                   </div>
                </div>
@@ -383,4 +349,8 @@
                      </div>
                   </div>
                </div>
+            </div>
+         </div>
+      </div>
+   </section>
 @endsection 

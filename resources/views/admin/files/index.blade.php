@@ -73,8 +73,10 @@
                                     <td>{{ $applicationforleave->Name }}</td>
                                     <td>{{ substr($applicationforleave->created_at, 0, 10) }}</td>
                                     <td class="text-center">
-                                       <a class="btn btn-sm btn-success" href="{{ url('/admin/files/applicationforleave/view/').'/'.$applicationforleave->id}}" data-target="#view"><i class="fa fa-eye"></i> View</a>
-                                       <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
+                                       <a class="btn btn-sm btn-success" href="{{ url('/admin/files/applicationforleave/view/').'/'.$applicationforleave->id}}" data-target="#view"><i class="fa fa-eye"></i> 
+                                       View</a>
+                                       <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> 
+                                       Delete</a>
                                     </td>
                                  </tr>
                               @endforeach
@@ -86,6 +88,7 @@
                               <th>Office</th>
                               <th>Name</th>
                               <th>Date</th>
+                              <th class="text-center"></th>
                            </tr>
                         </tfoot>
                      </table>
@@ -126,8 +129,10 @@
                                     <td>{{ $dispatches->Name }}</td>
                                     <td>{{ substr($dispatches->created_at, 0, 10) }}</td>
                                     <td class="text-center">
-                                       <a class="btn btn-sm btn-success" href="{{ url('/admin/files/dispatch/view/').'/'.$dispatches->id}}" data-target="#view"><i class="fa fa-eye"></i> View</a>
-                                       <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
+                                       <a class="btn btn-sm btn-success" href="{{ url('/admin/files/dispatch/view/').'/'.$dispatches->id}}" data-target="#view"><i class="fa fa-eye"></i> 
+                                       View</a>
+                                       <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> 
+                                       Delete</a>
                                     </td>
                                  </tr>
                               @endforeach

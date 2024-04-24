@@ -23,12 +23,13 @@ class FileController extends Controller
     $offices = Office::all();
     $locators = Locator::all(); 
     $certificateofappearances = Certificateofappearance::all(); 
-    $applicationforleaves = Applicationforleave::all(); 
+    $applicationforleaves = Applicationforleave::all();
     $travelorders = Travelorder::all();
     $files = File::all();
 
     return view('admin.files.index', compact('travelorders','dispatches','locators', 'certificateofappearances', 'applicationforleaves', 'offices' , 'files'));
     }
+
 
     public function storefile(Request $request)
     {

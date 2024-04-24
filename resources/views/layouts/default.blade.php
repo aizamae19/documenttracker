@@ -14,6 +14,7 @@
    <link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
    <link rel="stylesheet" href="{{asset('assets/css/list.css')}}">
    <link rel="stylesheet" href="{{asset('assets/tables/datatables-bs4/css/dataTables.bootstrap4.min.css')}}">
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css"/>
    <style type="text/css">
       table tr td {
          padding: 0.3rem !important;
@@ -190,26 +191,28 @@
    <script src="{{asset('assets/tables/datatables-buttons/js/buttons.bootstrap4.min.js')}}"></script>
    <script type="text/javascript">
       $(document).ready(function () {
-      $("#applicationforleave tfoot tr th").each(function () {
-         var title = $(this).text();
-         $(this).html('<input type="text" placeholder="Search ' + title + '" />');
-      });
-      var table = $("#applicationforleave, #certificateofappearance, #dispatch, #locator, #travelorder").DataTable({
-         dom: '<"dt-buttons"Bf><"clear">lirtp',
-         paging: true,
-         autoWidth: true,
-         initComplete: function (settings, json) {
-            var footer = $("#applicationforleave tfoot tr");
-            $("#applicationforleave thead").append(footer);
-         }
-      });
-
-      $("#applicationforleave thead").on("keyup", "input", function () {
-         table.column($(this).parent().index())
-         .search(this.value)
-         .draw();
-      });
+   $("#applicationforleave tfoot tr th").each(function () {
+      var title = $(this).text();
+      $(this).html('<input type="text" placeholder="Search ' + title + ' " />');
    });
+   
+   var table = $("#applicationforleave, #certificateofappearance, #dispatch, #locator, #travelorder").DataTable({
+      dom: '<"dt-buttons"Bf><"clear">lirtp',
+      paging: true,
+      autoWidth: true,
+      initComplete: function (settings, json) {
+         var footer = $("#applicationforleave tfoot tr");
+         $("#applicationforleave thead").append(footer);
+      },
+   });
+
+   $("#applicationforleave thead").on("keyup", "input", function () {
+      table.column($(this).parent().index())
+      .search(this.value)
+      .draw();
+   });
+});
+
    </script>
 </body>
 </html>

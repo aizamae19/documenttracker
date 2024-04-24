@@ -84,11 +84,11 @@
                         </tbody>
                         <tfoot>
                            <tr>
-                              <th>Series Number</th>
-                              <th>Office</th>
-                              <th>Name</th>
-                              <td></td>
-                              <td></td>
+                              <td>Series Number</td>
+                              <td>Office</td>
+                              <td>Name</td>
+                              <th></th>
+                              <th></th>
                            </tr>
                         </tfoot>
                      </table>

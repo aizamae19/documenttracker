@@ -78,14 +78,6 @@
                         </p>
                      </a>
                   </li>
-                  <!-- <li class="nav-item">
-                     <a href="{{ route('categorydashboard') }}" class="nav-link">
-                        <img src="{{asset('assets/img/category.png')}}" width="30">
-                        <p>
-                           Category
-                        </p>
-                     </a>
-                  </li> -->
                   <li class="nav-item">
                      <a href="{{ route('filedashboard') }}" class="nav-link">
                         <img src="{{asset('assets/img/file.png')}}" width="30">
@@ -191,28 +183,46 @@
    <script src="{{asset('assets/tables/datatables-buttons/js/buttons.bootstrap4.min.js')}}"></script>
    <script type="text/javascript">
       $(document).ready(function () {
-   $("#applicationforleave tfoot tr th").each(function () {
-      var title = $(this).text();
-      $(this).html('<input type="text" class="form-control" placeholder="' + title + ' " />');
-   });
-   
-   var table = $("#applicationforleave, #certificateofappearance, #dispatch, #locator, #travelorder").DataTable({
-      dom: '<"dt-buttons"Bf><"clear">lirtp',
-      paging: true,
-      autoWidth: true,
-      initComplete: function (settings, json) {
-         var footer = $("#applicationforleave tfoot tr");
-         $("#applicationforleave thead").append(footer);
-      },
-   });
+         $("#applicationforleave tfoot tr td").each(function () {
+            var title = $(this).text();
+            $(this).html('<input type="text" placeholder="' + title + ' " />');
+         });
 
-   $("#applicationforleave thead").on("keyup", "input", function () {
-      table.column($(this).parent().index())
-      .search(this.value)
-      .draw();
-   });
-});
+         var table = $("#applicationforleave, #certificateofappearance, #dispatch, #locator, #travelorder").DataTable({
+            dom: '<"dt-buttons"Bf><"clear">lirtp',
+            paging: true,
+            autoWidth: true,
+            initComplete: function (settings, json) {
+               var footer = $("#applicationforleave tfoot tr");
+               $("#applicationforleave thead").append(footer);
+            },
+         });
 
+         $("#applicationforleave thead").on("keyup", "input", function () {
+            table.column($(this).parent().index())
+            .search(this.value)
+            .draw();
+         });
+
+         $('#startdate, #enddate').on('change', function () {
+            var startDate = $('#startdate').val();
+            var endDate = $('#enddate').val();
+
+            table.columns().every(function () {
+               var column = this;
+               column
+               .search(startDate, true, false)
+               .draw();
+            });
+
+            table.columns().every(function () {
+               var column = this;
+               column
+               .search(endDate, false, true)
+               .draw();
+            });
+         });
+      });
    </script>
 </body>
 </html>

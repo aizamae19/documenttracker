@@ -87,8 +87,8 @@
                               <th>Series Number</th>
                               <th>Office</th>
                               <th>Name</th>
-                              <th>Date</th>
-                              <th class="text-center"></th>
+                              <td></td>
+                              <td></td>
                            </tr>
                         </tfoot>
                      </table>

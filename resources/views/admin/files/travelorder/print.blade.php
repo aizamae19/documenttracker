@@ -1,6 +1,7 @@
 @extends('layouts.default')
 
 @section('content')
+
 <div class="content-header">
             <div class="container-fluid">
                <div class="row mb-2">
@@ -16,6 +17,7 @@
             </div>
          </div>
        <section class="content">
+  <section class="content">
         <div class="container-fluid">
             <div class="card card-info" style="">
                 <div class="wcdiv wcpage"> 
@@ -44,6 +46,7 @@
                         .count:before {
                         counter-increment: section;
                         content: counter(section);
+
                     }
                     </style>
                         <div class="wcdiv" style="left:0pt; top:2.5pt; background-color: white;"> 
@@ -136,6 +139,23 @@
                           <div class="sample-box" style="color: white; font-size: 7px;text-align: left;">Travel Request Issuance Number: 
                         </div>
                          <table style="border: none;border-collapse: collapse;width:540pt; margin-top: 10px;">
+                            <style >
+                                .sample-box {
+                               width: 266px;
+                                background-color: white;
+                                border: 1px solid white;
+                                padding: 18px;
+                                text-align: center;
+                                font-family: Arial, sans-serif;
+                                margin-top: 3px;
+                                margin-left: 425px;
+                                margin-bottom: 10px;
+                                position: absolute;
+                                top: 11%;
+                                background-color: #FF65FF;          
+                                             }
+                            </style>
+                            <table style="border: none;border-collapse: collapse;width:540pt; margin-top: 10px;">
                             <tbody>
                                 <tr>
                                 <td   colspan="2" style="color:black;font-size:15px;font-weight:700;font-style:normal;text-decoration:none;font-family:Calibri, sans-serif;text-align:center;vertical-align:bottom;border:.5pt solid windowtext;height:11.5pt;width:106pt; border: 1pt dotted windowtext;">Name</td>
@@ -155,10 +175,10 @@
                                 <td style="color:black;font-size:15px;font-style:normal;text-decoration:none;font-family:Calibri;text-align:center;vertical-align:middle;border:.5pt solid windowtext;border-left:none;width:118pt; border: 1pt dotted windowtext;">{{ $Designation[$x] }}</td>
                                 <td style="color:black;font-size:15px;font-style:normal;text-decoration:none;font-family:Calibri;text-align:center;vertical-align:bottom;border:.5pt solid windowtext;border-left:none;width:116pt; border: 1pt dotted windowtext;">{{ $Office[$x] }}</td>
                                 </tr>
-                                  <?php
+                                      <?php
+                                        }
                                     }
-                                }
-                                ?>
+                                    ?>
                            </tbody>
                         </table>
                         <div style="left:-0.75pt; top:264.66pt;">

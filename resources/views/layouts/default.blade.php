@@ -190,7 +190,27 @@
    <script type="text/javascript">
       $(function () {
          $("#example1, #example2, #example3, #example4, #example5").DataTable();
+      $(document).ready(function () {
+      $("#applicationforleave tfoot tr th").each(function () {
+         var title = $(this).text();
+         $(this).html('<input type="text" placeholder="Search ' + title + '" />');
       });
+      var table = $("#applicationforleave, #certificateofappearance, #dispatch, #locator, #travelorder").DataTable({
+         dom: '<"dt-buttons"Bf><"clear">lirtp',
+         paging: true,
+         autoWidth: true,
+         initComplete: function (settings, json) {
+            var footer = $("#applicationforleave tfoot tr");
+            $("#applicationforleave thead").append(footer);
+         }
+      });
+
+      $("#applicationforleave thead").on("keyup", "input", function () {
+         table.column($(this).parent().index())
+         .search(this.value)
+         .draw();
+      });
+   });
    </script>
 </body>
 </html>

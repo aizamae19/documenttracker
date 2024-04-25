@@ -30,12 +30,6 @@
                                     <div class="row">
                                         <div class="col-md-4">
                                             <div class="form-group">
-                                                <p>DISPATCH NUMBER</p>
-                                                <input type="text" class="form-control" name="DispatchNumber">           
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
                                                 <p>TRIP TICKET NUMBER</p>
                                                 <input type="text" class="form-control" name="TripTicketNumber">
                                             </div>
@@ -46,29 +40,27 @@
                                                 <input type="text" class="form-control" name="Date">                 
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col-md-4">
                                             <div class="form-group">
                                                 <p>NAME</p>
                                                 <input type="text" class="form-control" name="Name">           
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
                                             <div class="form-group">
                                                 <p>ADDRESS</p>
                                                 <input type="text" class="form-control" name="Address">
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">    
-                                    	<div class="col-md-6">
+                                        </div>  
+                                    	<div class="col-md-4">
                                             <div class="form-group">
                                                 <p>CONTACT NUMBER</p>
                                                 <input type="text" class="form-control" name="ContactNumber">       
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-4">
                                             <div class="form-group">
                                                 <p>OFFICE NAME</p>
                                                     <select name="Office" class="form-control" required=""  >
@@ -97,10 +89,17 @@
                                                           <option>PLANNING</option>
                                                           <option>CENRO</option>
                                                           <option>CSWD</option>
+<<<<<<< HEAD
                                                     </select>                                
                                                   </div>
+=======
+                                                    </select>    
+                                                </div>
+>>>>>>> origin/main
                                                 </div>
                                             </div>
+                                        </div>
+                                    </div>
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="form-group">

@@ -76,9 +76,29 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::get('/admin/files/travelorder/view/{id}', [App\Http\Controllers\Admin\FileController::class, 'viewtravelorder'])->name('travelorder.view');
             Route::post('/admin/files/travelorder/view', [App\Http\Controllers\Admin\FileController::class, 'viewtravelorder'])->name('travelorderview');
 
-            //Delete
+            //DeleteCertificateofAppearance
             Route::get('/admin/files/certificateofappearance/delete/{id}', [App\Http\Controllers\Admin\FileController::class, 'deletecertificateofappearance'])->name('certificateofappearance.delete');
             Route::post('/admin/files/certificateofappearance/delete', [App\Http\Controllers\Admin\FileController::class, 'deletecertificateofappearance'])->name('certificateofappearance.delete');
+
+            //DeleteTravelorder
+            Route::get('/admin/files/travelorder/delete/{id}', [App\Http\Controllers\Admin\FileController::class, 'deletetravelorder'])->name('travelorder.delete');
+            Route::post('/admin/files/travelorder/delete', [App\Http\Controllers\Admin\FileController::class, 'deletetravelorder'])->name('travelorder.delete');
+
+             //DeleteDispatch
+            Route::get('/admin/files/dispatch/delete/{id}', [App\Http\Controllers\Admin\FileController::class, 'deletedispatch'])->name('dispatch.delete');
+            Route::post('/admin/files/dispatch/delete', [App\Http\Controllers\Admin\FileController::class, 'deletedispatch'])->name('dispatch.delete');
+
+            //DeleteTripTicket
+            Route::get('/admin/files/tripticket/delete/{id}', [App\Http\Controllers\Admin\FileController::class, 'deletetripticket'])->name('tripticket.delete');
+            Route::post('/admin/files/tripticket/delete', [App\Http\Controllers\Admin\FileController::class, 'deletetripticket'])->name('tripticket.delete');
+
+             //DeleteLocator
+            Route::get('/admin/files/locator/delete/{id}', [App\Http\Controllers\Admin\FileController::class, 'deletelocator'])->name('locator.delete');
+            Route::post('/admin/files/locator/delete', [App\Http\Controllers\Admin\FileController::class, 'deletelocator'])->name('locator.delete');
+
+            //DeleteApplicationforLeave
+            Route::get('/admin/files/applicationforleave/delete/{id}', [App\Http\Controllers\Admin\FileController::class, 'deleteapplicationforleave'])->name('applicationforleave.delete');
+            Route::post('/admin/files/applicationforleave/delete', [App\Http\Controllers\Admin\FileController::class, 'deleteapplicationforleave'])->name('applicationforleave.delete');
 
             #ADD USER
             Route::get('/admin/users/add', [CustomAuthController::class, 'register'])->name('register');

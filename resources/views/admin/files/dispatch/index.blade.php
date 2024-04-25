@@ -16,7 +16,6 @@
                </div>
             </div>
          </div>
-
          <section class="content">
             <div class="container-fluid">
                 <div class="card card-info">
@@ -89,7 +88,7 @@
                                                           <option> REGISTRAR</option>
                                                           <option>MARKET</option>
                                                           <option>TERMINAL</option>
-                                                          <option> SLAUGHTERHOUSE </option>
+                                                          <option> SLAUGHTER </option>
                                                           <option>CDRRMO</option>
                                                           <option>TOURISM</option>
                                                           <option>VICE SP</option>
@@ -98,7 +97,8 @@
                                                           <option>PLANNING</option>
                                                           <option>CENRO</option>
                                                           <option>CSWD</option>
-                                                    </select>                                            </div>
+                                                    </select>                                
+                                                  </div>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -134,7 +134,6 @@
                                                       <div class="row" id="passengers_form">
                                                       </div>
                                                   </div>
-
                                                   <script src="{{ asset('assets/jquery-3.7.1.min.js') }}"></script>
                                                   <script>
                                                       $('#Passenger').on('input', function(){
@@ -144,9 +143,7 @@
                                                               $('#passenger_form').show();
                                                               $('#passengers_form').empty();
                                                               for(let x = 0; x < Passenger; x++){
-                                                                  $('#passengers_form').append('<div class="col-md-4"><div class="form-group"><p>FirstName</p><input class="form-control" name="Passenger" placeholder=""></div></div><div class="col-md-4"><div class="form-group"><p>Middle Initial</p><input class="form-control" name="PassengerName" placeholder=""></div></div><div class="col-md-4"><div class="form-group"><p>LastName</p><input class="form-control" name="Crew" placeholder=""></div></div>');
-                                       
-                                                    
+                                                                  $('#passengers_form').append('<div class="col-md-4"><div class="form-group"><p>FirstName</p><input class="form-control" name="Passenger" placeholder=""></div></div><div class="col-md-4"><div class="form-group"><p>Middle Name</p><input class="form-control" name="PassengerName" placeholder=""></div></div><div class="col-md-4"><div class="form-group"><p>LastName</p><input class="form-control" name="Crew" placeholder=""></div></div>');
                                                               }
                                                           } else {
                                                               $('#passenger_form').hide();

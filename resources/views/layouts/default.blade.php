@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,14 +14,16 @@
    <link rel="stylesheet" href="{{asset('assets/css/list.css')}}">
    <link rel="stylesheet" href="{{asset('assets/tables/datatables-bs4/css/dataTables.bootstrap4.min.css')}}">
    <style type="text/css">
-      td a.btn{
-         font-size: 0.7rem;
-      }
-      th{
-         padding: 0.3rem !important;
-      }
       table tr td {
          padding: 0.3rem !important;
+      }
+      table tr td p{
+         margin-top: -0.8rem !important;
+         margin-bottom: -0.8rem !important;
+         font-size: 0.9rem;
+      }
+      td a.btn{
+         font-size: 0.7rem;
       }
    </style>
 </head>
@@ -173,7 +174,7 @@
             </nav>
          </div>
       </aside>
-      <div class="content-wrapper">
+      <div class="content-wrapper" style="background-color: white">
          @yield('content')
       </div>
    </div>
@@ -186,16 +187,10 @@
    <script src="{{asset('assets/tables/datatables-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
    <script src="{{asset('assets/tables/datatables-responsive/js/responsive.bootstrap4.min.js')}}"></script>
    <script src="{{asset('assets/tables/datatables-buttons/js/buttons.bootstrap4.min.js')}}"></script>
-   <script src="{{asset('assets/js/jquery-3.3.1.min.js')}}"></script>
-   <script src="{{asset('assets/js/popper.min.js')}}"></script>
-   <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
-   <script src="{{asset('assets/js/main.js')}}"></script>
-   <script src="{{asset('assets/js/jquery-3.5.1.min.js')}}"></script>
-   <script>
+   <script type="text/javascript">
       $(function () {
-         $("#example1").DataTable();
+         $("#example1, #example2, #example3, #example4, #example5").DataTable();
       });
    </script>
 </body>
-
 </html>

@@ -70,10 +70,10 @@ class FileController extends Controller
         $Dispatchsave->DescriptionofDispatch = $request->DescriptionofDispatch;
         $Dispatchsave->PlateNumber = $request->PlateNumber;
         $Dispatchsave->Driver = $request->Driver;
-        $Dispatchsave->Passenger = $request->Passenger;
-        $Dispatchsave->Crew = $request->Crew;
-        $Dispatchsave->PassengerName = $request->PassengerName;
-
+        $Dispatchsave->Passenger = implode(", ", $request->Passenger);
+        $Dispatchsave->Crew = implode(", ", $$request->Crew);
+        $Dispatchsave->PassengerName = implode(",", $request->PassengerName);
+       
         if ($Dispatchsave->save()) {
             return redirect("/admin/files")->withErrors('Successfully Saved!');
         }

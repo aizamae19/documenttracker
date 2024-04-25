@@ -47,7 +47,7 @@
                               <th>Series Number</th>
                               <th>Office</th>
                               <th>Name</th>
-                              <th>Date</th>
+                              <th>Date Of Filing</th>
                               <th class="text-center"></th>
                            </tr>
                         </thead>
@@ -71,7 +71,7 @@
                                     <td>{{ date('Y') . '-' . sprintf('%03d', $officeCode) . '-' . $seriesNumberPadded }}</td>
                                     <td>{{ $applicationforleave->Office }}</td>
                                     <td>{{ $applicationforleave->Name }}</td>
-                                    <td>{{ substr($applicationforleave->created_at, 0, 10) }}</td>
+                                    <td>{{ $applicationforleave->DateOfFiling }}</td>
                                     <td class="text-center">
                                        <a class="btn btn-sm btn-success" href="{{ url('/admin/files/applicationforleave/view/').'/'.$applicationforleave->id}}" data-target="#view"><i class="fa fa-eye"></i> 
                                        View</a>
@@ -84,9 +84,9 @@
                         </tbody>
                         <tfoot>
                            <tr>
-                              <td>Series Number</td>
-                              <td>Office</td>
-                              <td>Name</td>
+                              <th>Series Number</th>
+                              <th>Office</th>
+                              <th>Name</th>
                               <th></th>
                               <th></th>
                            </tr>
@@ -127,7 +127,7 @@
                                     <td>{{ date('Y') . '-' . sprintf('%03d', $officeCode) . '-' . $seriesNumberPadded }}</td>
                                     <td>{{ $dispatches->Office }}</td>
                                     <td>{{ $dispatches->Name }}</td>
-                                    <td>{{ substr($dispatches->created_at, 0, 10) }}</td>
+                                    <td>{{ $dispatches->Date }}</td>
                                     <td class="text-center">
                                        <a class="btn btn-sm btn-success" href="{{ url('/admin/files/dispatch/view/').'/'.$dispatches->id}}" data-target="#view"><i class="fa fa-eye"></i> 
                                        View</a>
@@ -138,6 +138,15 @@
                               @endforeach
                            @endif
                         </tbody>
+                        <tfoot>
+                           <tr>
+                              <td>Series Number</td>
+                              <td>Office</td>
+                              <td>Name</td>
+                              <th></th>
+                              <th></th>
+                           </tr>
+                        </tfoot>
                      </table>
                   </div>
                </div>
@@ -183,6 +192,15 @@
                               @endforeach
                            @endif
                         </tbody>
+                        <tfoot>
+                           <tr>
+                              <td>Series Number</td>
+                              <td>Office</td>
+                              <td>Name</td>
+                              <th></th>
+                              <th></th>
+                           </tr>
+                        </tfoot>
                      </table>
                   </div>
                </div>
@@ -218,7 +236,7 @@
                                     <td>{{ date('Y') . '-' . sprintf('%03d', $officeCode) . '-' . $seriesNumberPadded }}</td>
                                     <td>{{ $locator->Office }}</td>
                                     <td>{{ $locator->NameOfEmployee }}</td>
-                                    <td>{{ substr($locator->created_at, 0, 10) }}</td>
+                                    <td>{{ $locator->Date }}</td>
                                     <td class="text-center">
                                        <a class="btn btn-sm btn-success" href="{{ url('/admin/files/locator/view/').'/'.$locator->id}}" data-target="#view"><i class="fa fa-eye"></i> View</a>
                                        <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
@@ -227,6 +245,15 @@
                               @endforeach
                            @endif
                         </tbody>
+                        <tfoot>
+                           <tr>
+                              <td>Series Number</td>
+                              <td>Office</td>
+                              <td>Name</td>
+                              <th></th>
+                              <th></th>
+                           </tr>
+                        </tfoot>
                      </table>
                   </div>
                </div>
@@ -239,7 +266,7 @@
                               <th>Series Number</th>
                               <th>Office</th>
                               <th>Name</th>
-                              <th>Date</th>
+                              <th>Date Of Filing</th>
                               <th class="text-center">Action</th>
                            </tr>
                         </thead>
@@ -263,7 +290,7 @@
                                     <td>{{ date('Y') . '-' . sprintf('%03d', $officeCode) . '-' . $seriesNumberPadded }}</td>
                                     <td>{{ $travelorder->Office }}</td>
                                     <td>{{ $travelorder->Name }}</td>
-                                    <td>{{ substr($travelorder->created_at, 0, 10) }}</td>
+                                    <td>{{ $travelorder->Date }}</td>
                                     <td class="text-center">
                                        <a class="btn btn-sm btn-success" href="{{ url('/admin/files/travelorder/view/').'/'.$travelorder->id}}" data-toggle="" data-target="#"><i class="fa fa-eye"></i>View</a>
                                        <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i>Delete</a>
@@ -272,6 +299,15 @@
                               @endforeach
                            @endif
                         </tbody>
+                        <tfoot>
+                           <tr>
+                              <td>Series Number</td>
+                              <td>Office</td>
+                              <td>Name</td>
+                              <th></th>
+                              <th></th>
+                           </tr>
+                        </tfoot>
                      </table>
                   </div>
                </div>

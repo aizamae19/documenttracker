@@ -13,7 +13,6 @@ use App\Models\Locator;
 use App\Models\File;
 use App\Models\Office;
 use App\Models\Typeofleave;
-use Carbon\Carbon;
 
 class FileController extends Controller
 {
@@ -25,20 +24,8 @@ class FileController extends Controller
     $certificateofappearances = Certificateofappearance::all(); 
     $applicationforleaves = Applicationforleave::all();
     $travelorders = Travelorder::all();
-    $files = File::all();
 
-    return view('admin.files.index', compact('travelorders','dispatches','locators', 'certificateofappearances', 'applicationforleaves', 'offices' , 'files'));
-    }
-
-
-    public function storefile(Request $request)
-    {
-        $filesave = new File();
-        $filesave->SeriesNumber = $request->SeriesNumber;
-
-        if ($filesave->save()) {
-            return redirect()->back()->withErrors('Successfully Saved!');
-        }
+    return view('admin.files.index', compact('travelorders','dispatches','locators', 'certificateofappearances', 'applicationforleaves', 'offices'));
     }
 
     public function viewfile($id) {
@@ -151,8 +138,8 @@ class FileController extends Controller
         ]);
     }
     
-        public function storetravelorder (Request $request)
-            {
+    public function storetravelorder (Request $request)
+        {
             $Travelorder = new Travelorder();
             $Travelorder->Date = $request->Date;
             $Travelorder->Location = $request->Location;

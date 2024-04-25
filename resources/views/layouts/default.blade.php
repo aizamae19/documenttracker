@@ -183,12 +183,12 @@
    <script src="{{asset('assets/tables/datatables-buttons/js/buttons.bootstrap4.min.js')}}"></script>
    <script type="text/javascript">
       $(document).ready(function () {
-         $("#applicationforleave tfoot tr td").each(function () {
+         $("#applicationforleave tfoot tr th").each(function () {
             var title = $(this).text();
-            $(this).html('<input type="text" placeholder="' + title + ' " />');
+            $(this).html('<input type="text" placeholder=" Search' + title + ' " />');
          });
 
-         var table = $("#applicationforleave, #certificateofappearance, #dispatch, #locator, #travelorder").DataTable({
+         var table = $("#applicationforleave, #certificateofappearance, #dispatch, #locator, #travelorder, #users").DataTable({
             dom: '<"dt-buttons"Bf><"clear">lirtp',
             paging: true,
             autoWidth: true,

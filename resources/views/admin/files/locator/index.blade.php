@@ -59,31 +59,31 @@
                                                 <p>OFFICE</p>
                                                 <select name="Office" class="form-control" required=""  >
                                                          <option enabled>Select Office</option>
-                                                           
                                                           <option>MAYOR'S</option>
-                                                          <option>BUDGET</option>
-                                                          <option>ACCOUNTANTING</option>
-                                                          <option>OGS</option>   
-                                                          <option>AGRICULTURE</option>
-                                                          <option>DILG </option>
-                                                          <option>ADMIN</option>
-                                                          <option>LEGAL</option>
-                                                          <option>TREASURER</option>
-                                                          <option> ASSESSOR</option>
-                                                          <option> ENGINEERING<option>CHU</option>
-                                                          <option> VET</option>
-                                                          <option> REGISTRAR</option>
-                                                          <option>MARKET</option>
-                                                          <option>TERMINAL</option>
-                                                          <option> SLAUGHTERHOUSE </option>
                                                           <option>CDRRMO</option>
                                                           <option>TOURISM</option>
                                                           <option>VICE SP</option>
                                                           <option>SECRETARY SP</option>
-                                                          <option>HRMO</option>
+                                                          <option>ADMIN</option>
+                                                          <option>HR</option>
                                                           <option>PLANNING</option>
+                                                          <option>BUDGET</option>
+                                                          <option>ACCOUNTING</option>
+                                                          <option>OGS</option>   
                                                           <option>CENRO</option>
+                                                          <option>LEGAL</option>
+                                                          <option>TREASURER</option>
+                                                          <option>ASSESSOR</option>
+                                                          <option>ENGINEERING</option>
+                                                          <option>CHU</option> 
                                                           <option>CSWD</option>
+                                                          <option>VET</option>
+                                                          <option>REGISTRAR</option> 
+                                                          <option>DILG</option>
+                                                          <option>MARKET</option>
+                                                          <option>TERMINAL</option>
+                                                          <option>SLAUGHTER</option>
+                                                          <option>AGRICULTURE</option>
                                                     </select>
                                             </div>
                                         </div>

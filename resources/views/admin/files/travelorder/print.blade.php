@@ -19,13 +19,26 @@
   <section class="content">
         <div class="container-fluid">
             <div class="card card-info" style="">
+                <br>
+                <button id="print-button" onclick="window.print()" class="btn btn-sm btn-primary waves-effect waves-light printdtr"><i class="fa fa-print"></i> Print</button>
                 <div class="wcdiv wcpage"> 
                     <style type="text/css">
                         .wcdiv.wcpage {
                         width: 210mm; 
                         height: 350mm; 
                     }
+                    #print-button {
+                        display: block;
+                        width: 100px;
+                        margin-left: 50px;
+                    }
+                    @media print {
+                        #print-button {
+                            display: none;
+                        }  
+                    }
                     </style>
+
                         <div class="wcdiv" style="left:0pt; top:2.5pt; background-color: white;"> 
                             <div class="wcdiv" style="top:-0.02pt;">
                             <div class="wcdiv">&nbsp;<img class="wcimg" style="margin: 0 auto 0 0; display: block; left: 0pt; top: 0.02pt; width: 612pt; height: 80.6pt;" src="https://test.myfiles.space/user_files/temporary/6618ecb97980b7.70717253/1712909496_2024-travel/1712909496_2024-travel-1.png"></div>

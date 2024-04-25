@@ -213,6 +213,17 @@
        position: absolute;
        top: 4.2%;
 }
+
+      #print-button {
+            display: block;
+            width: 100px;
+            margin-left: 7px;
+        }
+        @media print {
+            #print-button {
+                display: none;
+            }
+        }
           </style>
 
          <div class="content-header">
@@ -235,6 +246,7 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-12">
+                                    <button id="print-button" onclick="window.print()" class="btn btn-sm btn-primary waves-effect waves-light printdtr"><i class="fa fa-print"></i> Print</button>
                                         <table border="0" cellpadding="0" cellspacing="0" id="sheet0" class="sheet0 gridlines" style="position: relative;
                     left: 150px;      width: 70%; border:3px solid; top: 81px;">
                       <col class="col0">

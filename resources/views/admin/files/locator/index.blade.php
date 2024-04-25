@@ -28,26 +28,26 @@
                                     </div>
                                     <br>
                                     <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col-md-4">
                                             <div class="form-group">
                                                 <p>YEAR</p>
                                                 <input type="text" class="form-control" name="Year">           
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-4">
                                             <div class="form-group">
                                                 <p>MONTH OF</p>
                                                 <input type="text" class="form-control" name="MonthOf">
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row">
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <p>NAME OF EMPLOYEE</p>
                                                 <input type="text" class="form-control" name="NameOfEmployee">        
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="row">
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <p>DESIGNATION</p>
@@ -85,6 +85,12 @@
                                                           <option>SLAUGHTER</option>
                                                           <option>AGRICULTURE</option>
                                                     </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <p>Number of Rows</p>
+                                                <input type="text" class="form-control" name="Designation">
                                             </div>
                                         </div>
                                     </div>

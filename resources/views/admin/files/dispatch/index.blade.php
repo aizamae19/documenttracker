@@ -66,24 +66,6 @@
                                                     <select name="Office" class="form-control" required=""  >
                                                           <option enabled>Select Office</option>
                                                           <option>MAYOR'S</option>
-<<<<<<< HEAD
-=======
-                                                          <option>BUDGET</option>
-                                                          <option>ACCOUNTANTING</option>
-                                                          <option>OGS</option>   
-                                                          <option>AGRICULTURE</option>
-                                                          <option>DILG </option>
-                                                          <option>ADMIN</option>
-                                                          <option>LEGAL</option>
-                                                          <option>TREASURER</option>
-                                                          <option> ASSESSOR</option>
-                                                          <option> ENGINEERING<option>CHU</option>
-                                                          <option> VET</option>
-                                                          <option> REGISTRAR</option>
-                                                          <option>MARKET</option>
-                                                          <option>TERMINAL</option>
-                                                          <option> SLAUGHTER </option>
->>>>>>> origin/master
                                                           <option>CDRRMO</option>
                                                           <option>TOURISM</option>
                                                           <option>VICE SP</option>
@@ -101,7 +83,6 @@
                                                           <option>ENGINEERING</option>
                                                           <option>CHU</option> 
                                                           <option>CSWD</option>
-<<<<<<< HEAD
                                                           <option>VET</option>
                                                           <option>REGISTRAR</option> 
                                                           <option>DILG</option>
@@ -111,14 +92,10 @@
                                                           <option>AGRICULTURE</option>
                                                     </select>    
                                                 </div>
-=======
-                                                    </select>                                
-                                                  </div>
->>>>>>> origin/master
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="form-group">

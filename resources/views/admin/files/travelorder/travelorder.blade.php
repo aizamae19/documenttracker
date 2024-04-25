@@ -26,56 +26,19 @@
                                             <span class="fa fa-file">Travel Order</span>
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-3">
+                                            <div class="col-md-4">
                                                 <div class="form-group">
                                                     <p> DATE OF FILING</p>
-<<<<<<< HEAD
-                                                    <input type="date" class="form-control" name="Date">
-=======
                                                     <input type="date"  class="form-control" name="Date">
->>>>>>> origin/master
                                                 </div>
                                             </div>
-                                            <div class="col-md-3">
-                                                <div class="form-group">
-                                                    <p>OFFICE</p>
-                                                    <select name="Office" class="form-control" required=""  >
-                                                         <option enabled>Select Office</option>
-                                                          <option>MAYOR'S</option>
-                                                          <option>CDRRMO</option>
-                                                          <option>TOURISM</option>
-                                                          <option>VICE SP</option>
-                                                          <option>SECRETARY SP</option>
-                                                          <option>ADMIN</option>
-                                                          <option>HR</option>
-                                                          <option>PLANNING</option>
-                                                          <option>BUDGET</option>
-                                                          <option>ACCOUNTING</option>
-                                                          <option>OGS</option>   
-                                                          <option>CENRO</option>
-                                                          <option>LEGAL</option>
-                                                          <option>TREASURER</option>
-                                                          <option>ASSESSOR</option>
-                                                          <option>ENGINEERING</option>
-                                                          <option>CHU</option> 
-                                                          <option>CSWD</option>
-                                                          <option>VET</option>
-                                                          <option>REGISTRAR</option> 
-                                                          <option>DILG</option>
-                                                          <option>MARKET</option>
-                                                          <option>TERMINAL</option>
-                                                          <option>SLAUGHTER</option>
-                                                          <option>AGRICULTURE</option>
-                                                    </select>     
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
+                                            <div class="col-md-4">
                                                 <div class="form-group">
                                                     <p>LOCATION</p>
                                                     <input type="text" class="form-control" name="Location">     
                                                 </div>
                                             </div>
-                                            <div class="col-md-3">
+                                            <div class="col-md-4">
                                                 <div class="form-group">
                                                     <p>INCLUSIVE DATE</p>
                                                     <input type="text" class="form-control" name="InclusiveDates">

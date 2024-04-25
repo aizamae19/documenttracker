@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -168,7 +167,7 @@
             </nav>
          </div>
       </aside>
-      <div class="content-wrapper">
+      <div class="content-wrapper" style="background-color: white">
          @yield('content')
       </div>
    </div>
@@ -182,6 +181,7 @@
    <script src="{{asset('assets/tables/datatables-responsive/js/responsive.bootstrap4.min.js')}}"></script>
    <script src="{{asset('assets/tables/datatables-buttons/js/buttons.bootstrap4.min.js')}}"></script>
    <script type="text/javascript">
+<<<<<<< HEAD
       $(document).ready(function () {
          $("#applicationforleave tfoot tr th").each(function () {
             var title = $(this).text();
@@ -222,6 +222,10 @@
                .draw();
             });
          });
+=======
+      $(function () {
+         $("#example1, #example2, #example3, #example4, #example5").DataTable();
+>>>>>>> origin/master
       });
 
        document.getElementById('print-button').addEventListener('click', function () {

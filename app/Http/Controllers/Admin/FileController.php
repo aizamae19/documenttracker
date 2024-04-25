@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Models\Dispatch; 
+use App\Models\Dispatch;
 use App\Models\Applicationforleave;
 use App\Models\Travelorder;
 use App\Models\Certificateofappearance;
@@ -19,11 +19,11 @@ class FileController extends Controller
 {
     public function file()
     {
-    $dispatches = Dispatch::all(); 
+    $dispatches = Dispatch::all();
     $offices = Office::all();
-    $locators = Locator::all(); 
-    $certificateofappearances = Certificateofappearance::all(); 
-    $applicationforleaves = Applicationforleave::all(); 
+    $locators = Locator::all();
+    $certificateofappearances = Certificateofappearance::all();
+    $applicationforleaves = Applicationforleave::all();
     $travelorders = Travelorder::all();
     $files = File::all();
 
@@ -102,10 +102,10 @@ class FileController extends Controller
         public function applicationforleave(){
             $applicationforleaves = Applicationforleave::get();
             return view('admin.files.applicationforleave.leaveform', [
-                'applicationforleaves'=>$applicationforleaves 
+                'applicationforleaves'=>$applicationforleaves
             ]);
         }
-        
+       
         public function viewapplicationforleave(Request $request){
             $applicationforleaves=Applicationforleave::where('id',$request->id)->first();
 
@@ -138,12 +138,12 @@ class FileController extends Controller
             $applicationforleavesave->DaysWithoutPay = $request->DaysWithoutPay;
             $applicationforleavesave->OthersSpecify = $request->OthersSpecify;
             $applicationforleavesave->DisapprovedDueTo = $request->DisapprovedDueTo;
-            
+           
             $fields = ['TypeOfLeave', 'DetailsOfLeave', 'Commutation', 'Recommendation'];
 
             foreach ($fields as $field) {
                 if ($request->has($field)) {
-            
+           
                     $values = implode(',', $request->input($field));
                     $applicationforleavesave->$field = $values;
                 }
@@ -165,7 +165,7 @@ class FileController extends Controller
                 $travelorders = Travelorder::all();
                 $files = File::all();
                 $offices = Office::all();
-            return view('admin.files.travelorder.print', compact('travelorders', 'offices','travelorder','files'));   
+            return view('admin.files.travelorder.print', compact('travelorders', 'offices','travelorder','files'));  
             }
        
              public function storetravelorder(Request $request)
@@ -292,4 +292,3 @@ class FileController extends Controller
             }
         }
     }
-    

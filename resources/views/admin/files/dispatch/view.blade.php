@@ -292,10 +292,17 @@
                   <td class="column2 style5 s style7" colspan="8"><span style="font-weight:bold; color:#000000; font-family:'Arial'; font-size:10pt">Description of Dispatch </span><span style="color:#000000; font-family:'Arial'; font-size:6pt">[Provide a brief description of the dispatch, including any relevant details or special instructions</span><span style="color:#000000; font-family:'Arial'; font-size:7pt; ">.]</span></td>
                   <td class="column10 style20 null style21" rowspan="9"></td>
                 </tr>
+                 <?php 
+                                        $PassengerName = explode(',', $dispatches->PassengerName);
+                                        $Passenger = explode(',', $dispatches->P);
+                                        $Crew = explode(',', $travelorder->Office);
+                                        if ($Name !== null && $Designation !== null && $Office !== null ) {
+                                        for($x = 0; $x < count($Name); $x++) {
+                                    ?>
                 <tr class="row8">
                   <td class="column2 style5 null style7" colspan="8">
                         <div class="input-field mt-0 mb-0">
-                              {{ $dispatches->DescriptionofDispatch}}
+                            
                         </div></td>
                 </tr>
                 <tr class="row9">

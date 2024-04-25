@@ -24,7 +24,7 @@
                <div class="card card-info">
                   <br>
                   <div class="col-md-12">
-                     <table id="example1" class="table">
+                     <table id="users" class="table table-bordered">
                         <thead class="btn-cancel">
                            <tr>
                               <th>Full Name</th>

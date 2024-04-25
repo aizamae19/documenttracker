@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('Office');
             $table->string('Name');
-            $table->string('DateOfFiling');
+            $table->date('DateOfFiling');
             $table->string('Position');
             $table->string('Salary');
             $table->string('TypeOfLeave');

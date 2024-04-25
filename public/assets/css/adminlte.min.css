@@ -42,7 +42,7 @@
 }
 
 *,::after,::before {
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 html {
@@ -10940,6 +10940,10 @@ a.text-dark:focus,a.text-dark:hover {
         display: table-header-group
     }
 
+     tfoot {
+        display: table-footer-group
+    }
+
     img,tr {
         page-break-inside: avoid
     }
@@ -10989,7 +10993,7 @@ a.text-dark:focus,a.text-dark:hover {
         color: inherit
     }
 
-    .table-dark tbody+tbody,.table-dark td,.table-dark th,.table-dark thead th {
+    .table-dark tbody+tbody,.table-dark td,.table-dark th,.table-dark thead th, .table-dark tfoot th, .table-dark tfoot td{
         border-color: #dee2e6
     }
 

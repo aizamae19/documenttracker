@@ -15,6 +15,7 @@
                </div>
             </div>
          </div>
+
         <section class="content">
             <div class="container-fluid">
                 <div class="card card-info">    
@@ -253,11 +254,24 @@
             font-family: Candara, sans-serif;
             mso-protection: locked visible;
         }
+
+        #print-button {
+            display: block;
+            width: 100px;
+            margin-left: 7px;
+        }
+        @media print {
+            #print-button {
+                display: none;
+            }
+        }
         -->
     </style>
 </head>
 
 <body>
+    <button id="print-button" onclick="window.print()" class="btn btn-sm btn-primary waves-effect waves-light printdtr"><i class="fa fa-print"></i> Print</button>
+    <br>
     <table border="0" cellpadding="0" cellspacing="0" width="846" style="
  collapse;table-layout:fixed;width:634pt;">
         <colgroup>

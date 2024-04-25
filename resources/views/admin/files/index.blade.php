@@ -41,7 +41,19 @@
             <div class="tab-content">
                <div id="applicationforleaveTab" class="container-fluid tab-pane active">
                   <div class="col-md-12">
-                     <table id="applicationforleave" class="table table-bordered">
+                     <div class="card" style=" width: 100%; margin-top: 7px;">
+                        <div class="row-flex" style="display: flex;justify-content: flex-start;align-items: center;">
+                           <div class="form-group col-md-3 m-t-20">
+                              <label>Start Date</label>
+                              <input type="date" class="form-control" id="startdate">
+                           </div>    
+                           <div class="form-group col-md-3 m-t-20">
+                              <label>End Date</label>
+                              <input type="date" class="form-control" id="enddate">
+                           </div>
+                        </div>
+                    </div>
+                      <table id="applicationforleave" class="table table-bordered">
                         <thead>
                            <tr>
                               <th>Series Number</th>
@@ -97,6 +109,18 @@
 
                <div id="dispatchTab" class="container-fluid tab-pane">
                   <div class="col-md-12">
+                     <div class="card" style=" width: 100%;margin-top: 7px;">
+                        <div class="row-flex" style="display: flex;justify-content: flex-start;align-items: center;">
+                           <div class="form-group col-md-3 m-t-20">
+                              <label>Start Date</label>
+                              <input type="date" class="form-control" id="startdate">
+                           </div>    
+                           <div class="form-group col-md-3 m-t-20">
+                              <label>End Date</label>
+                              <input type="date" class="form-control" id="enddate">
+                           </div>
+                        </div>
+                    </div>
                      <table id="dispatch" class="table table-bordered">
                         <thead>
                            <tr>
@@ -138,21 +162,24 @@
                               @endforeach
                            @endif
                         </tbody>
-                        <tfoot>
-                           <tr>
-                              <td>Series Number</td>
-                              <td>Office</td>
-                              <td>Name</td>
-                              <th></th>
-                              <th></th>
-                           </tr>
-                        </tfoot>
                      </table>
                   </div>
                </div>
 
                <div id="certificateofappearanceTab" class="container-fluid tab-pane">
                   <div class="col-md-12">
+                     <div class="card" style=" width: 100%;margin-top: 7px;">
+                        <div class="row-flex" style="display: flex;justify-content: flex-start;align-items: center;">
+                           <div class="form-group col-md-3 m-t-20">
+                              <label>Start Date</label>
+                              <input type="date" class="form-control" id="startdate">
+                           </div>    
+                           <div class="form-group col-md-3 m-t-20">
+                              <label>End Date</label>
+                              <input type="date" class="form-control" id="enddate">
+                           </div>
+                        </div>
+                    </div>
                      <table id="certificateofappearance" class="table table-bordered">
                         <thead>
                            <tr>
@@ -192,20 +219,23 @@
                               @endforeach
                            @endif
                         </tbody>
-                        <tfoot>
-                           <tr>
-                              <td>Series Number</td>
-                              <td>Office</td>
-                              <td>Name</td>
-                              <th></th>
-                              <th></th>
-                           </tr>
-                        </tfoot>
                      </table>
                   </div>
                </div>
                <div id="locatorTab" class="container-fluid tab-pane">
                   <div class="col-md-12">
+                     <div class="card" style=" width: 100%;margin-top: 7px;">
+                        <div class="row-flex" style="display: flex;justify-content: flex-start;align-items: center;">
+                           <div class="form-group col-md-3 m-t-20">
+                              <label>Start Date</label>
+                              <input type="date" class="form-control" id="startdate">
+                           </div>    
+                           <div class="form-group col-md-3 m-t-20">
+                              <label>End Date</label>
+                              <input type="date" class="form-control" id="enddate">
+                           </div>
+                        </div>
+                    </div>
                      <table id="locator" class="table table-bordered">
                         <thead>
                            <tr>
@@ -245,21 +275,24 @@
                               @endforeach
                            @endif
                         </tbody>
-                        <tfoot>
-                           <tr>
-                              <td>Series Number</td>
-                              <td>Office</td>
-                              <td>Name</td>
-                              <th></th>
-                              <th></th>
-                           </tr>
-                        </tfoot>
                      </table>
                   </div>
                </div>
 
                <div id="travelorderTab" class="container-fluid tab-pane">
                   <div class="col-md-12">
+                     <div class="card" style=" width: 100%;margin-top: 7px;">
+                        <div class="row-flex" style="display: flex;justify-content: flex-start;align-items: center;">
+                           <div class="form-group col-md-3 m-t-20">
+                              <label>Start Date</label>
+                              <input type="date" class="form-control" id="startdate">
+                           </div>    
+                           <div class="form-group col-md-3 m-t-20">
+                              <label>End Date</label>
+                              <input type="date" class="form-control" id="enddate">
+                           </div>
+                        </div>
+                    </div>
                      <table id="travelorder" class="table table-bordered">
                         <thead>
                            <tr>
@@ -299,15 +332,6 @@
                               @endforeach
                            @endif
                         </tbody>
-                        <tfoot>
-                           <tr>
-                              <td>Series Number</td>
-                              <td>Office</td>
-                              <td>Name</td>
-                              <th></th>
-                              <th></th>
-                           </tr>
-                        </tfoot>
                      </table>
                   </div>
                </div>

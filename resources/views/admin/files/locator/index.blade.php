@@ -90,11 +90,35 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <p>Number of Rows</p>
-                                                <input type="text" class="form-control" name="Designation">
+                                                <input type="number" class="form-control" id="Rows">
                                             </div>
                                         </div>
                                     </div>
-                                    <br>
+
+                                                  <div class="col-md-12" id="row_form" style="display: none;">
+                                                      <div class="form-group">
+                                                      </div>
+                                                      <div class="row" id="rows_form">
+                                                      </div>
+                                                  </div>
+                                                  <script src="{{ asset('assets/jquery-3.7.1.min.js') }}"></script>
+                                                  <script>
+                                                      $('#Rows').on('input', function(){
+                                                          var Rows = Number($('#Rows').val());
+
+                                                          if(Rows >= 1){
+                                                              $('#Row_form').show();
+                                                              $('#Rows_form').empty();
+                                                              for(let x = 0; x < Rows; x++){
+                                                                  $('#Rowss_form').append('<div class="col-md-4"><div class="form-group"><p>FirstName</p><input class="form-control" name="Passenger" placeholder=""></div></div><div class="col-md-4"><div class="form-group"><p>Middle Name</p><input class="form-control" name="PassengerName" placeholder=""></div></div><div class="col-md-4"><div class="form-group"><p>LastName</p><input class="form-control" name="Crew" placeholder=""></div></div>');
+                                                              }
+                                                          } else {
+                                                              $('#Row_form').hide();
+                                                          }
+                                                          console.log(Rows);
+                                                      });
+                                                  </script>
+
                                     <table class="html-table">
                                         <tr>
                                             <th class="tableh" style="text-align:center; font-size: 12px;">DATE</th>

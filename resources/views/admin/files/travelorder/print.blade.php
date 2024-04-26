@@ -1,25 +1,3 @@
-@extends('layouts.default')
-
-@section('content')
-
-<div class="content-header">
-            <div class="container-fluid">
-               <div class="row mb-2">
-                  <div class="col-sm-6">
-                  </div>
-                  <div class="col-sm-6">
-                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">File</li>
-                     </ol>
-                  </div>
-               </div>
-            </div>
-         </div>
-       <section class="content">
-  <section class="content">
-        <div class="container-fluid">
-            <div class="card card-info" style="">
                 <button id="print-button" onclick="window.print()" class="btn btn-sm btn-primary waves-effect waves-light printdtr"><i class="fa fa-print"></i> Print</button>
                 <div class="wcdiv wcpage">
                     <style type="text/css">
@@ -237,4 +215,3 @@
     </div>
   </div>
 </div>
-@endsection

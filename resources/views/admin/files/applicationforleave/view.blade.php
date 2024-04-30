@@ -76,22 +76,24 @@ xmlns="http://www.w3.org/TR/REC-html40">
 <td colspan='7' class='x60' style='mso-ignore:colspan;'></td>
 </tr>
 <tr height='34' style='mso-height-source:userset;height:25.5pt'>
-<td colspan='2' height='34' style='mso-ignore:colspan;height:25.5pt;'></td><td colspan='4' class='x73' style='mso-ignore:colspan;overflow:hidden;'>3.<span style='mso-spacerun:yes;'>&nbsp;&nbsp; </span>DATE OF FILING<span style='mso-spacerun:yes;'>&nbsp; @if(isset($applicationforleaves->DateOfFiling) && !empty($applicationforleaves->DateOfFiling))
-        <u style="">{{ $applicationforleaves->DateOfFiling }}</u>
+<td colspan='2' height='34' style='mso-ignore:colspan;height:25.5pt;position: relative;
+    left: 399px;'>___________________</td><td colspan='4' class='x73' style='mso-ignore:colspan;overflow:hidden;'>3.<span style='mso-spacerun:yes;'>&nbsp;&nbsp; </span>DATE OF FILING<span style='mso-spacerun:yes;'>&nbsp; @if(isset($applicationforleaves->DateOfFiling) && !empty($applicationforleaves->DateOfFiling))
+       {{ $applicationforleaves->DateOfFiling }}
     @else
         ___________________
     @endif</span>
     <span style='mso-spacerun:yes;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 </td>
 
-<td colspan='4' class='x30' style='mso-ignore:colspan;'>4.<span style='mso-spacerun:yes;'>&nbsp;&nbsp; </span>POSITION<span style='mso-spacerun:yes;'>&nbsp; </span>
+<td colspan='4' class='x30' style='mso-ignore:colspan;'>4.<span style='mso-spacerun:yes;'>&nbsp;&nbsp; </span>POSITION<span style='mso-spacerun:yes;'>&nbsp; ______________________</span>
         @if(isset($applicationforleaves->Position) && !empty($applicationforleaves->Position))
-            <u>{{ $applicationforleaves->Position }}</u>
+           <span style="position: relative;
+    left: -130px;">{{ $applicationforleaves->Position }}</span>
         @else
             _____________________________
         @endif
-    <span style='mso-spacerun:yes;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>5.<span style='mso-spacerun:yes;'>&nbsp; </span>SALARY<span style='mso-spacerun:yes;'>&nbsp; </span>@if(isset($applicationforleaves->Salary) && !empty($applicationforleaves->Salary))
-            <u>{{ $applicationforleaves->Salary }}</u>
+    <span style='mso-spacerun:yes;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>5.<span style='mso-spacerun:yes;'>&nbsp; </span>SALARY<span style='mso-spacerun:yes;'>&nbsp; _____________</span>@if(isset($applicationforleaves->Salary) && !empty($applicationforleaves->Salary))
+    <span style="position: relative; left: -93px;">{{ $applicationforleaves->Salary }}</span>
         @else
              _____________
         @endif</td>
@@ -147,9 +149,10 @@ xmlns="http://www.w3.org/TR/REC-html40">
 <td colspan='2' height='18' style='mso-ignore:colspan;height:13.5pt;'></td>
 <td colspan='2' class='x32' style='mso-ignore:colspan;'></td>
 <td colspan='4' class='x41' style='mso-ignore:colspan;border-right:1px solid windowtext;'><font class="font0" style="text-decoration: none;">Mandatory/Forced Leave</font><font class="font16" style="text-decoration: none;">(Sec. 25, Rule XVI, Omnibus Rules Implementing E.O. No. 292)</font></td>
-<td colspan='2' class='x35' style='mso-ignore:colspan;'></td>
+<td colspan='2' class='x35' style='mso-ignore:colspan; position: relative;
+    left: 166px;'>_________________________</td>
 <td colspan='1' class='x42' style='mso-ignore:colspan;'>Within the Philippines @if(isset($applicationforleaves->WithinThePhilippines) && !empty($applicationforleaves->WithinThePhilippines))
-            <u style="padding: 0 0 40px;">{{ $applicationforleaves->WithinThePhilippines    }}</u>
+            <span style="padding: 0 0 40px;">{{ $applicationforleaves->WithinThePhilippines    }}</span>
         @else
             _________________________
         @endif</td>
@@ -168,11 +171,12 @@ xmlns="http://www.w3.org/TR/REC-html40">
 <td colspan='2' class='x32' style='mso-ignore:colspan;'></td>
 <td colspan='3' class='x41' style='mso-ignore:colspan;'><font class="font0" style="text-decoration: none;">Sick Leave&nbsp;</font><font class="font16" style="text-decoration: none;">&nbsp;(Sec. 43, Rule XVI, Omnibus Rules Implementing E.O. No. 292)</font></td>
 <td class='x42'></td>
-<td colspan='2' class='x35' style='mso-ignore:colspan;'></td>
+<td colspan='2' class='x35' style='mso-ignore:colspan;position: relative;
+    left: 137px;'>_____________________________</td>
 <td class='x42'>Abroad (Specify) @if(isset($applicationforleaves->Abroad) && !empty($applicationforleaves->Abroad))
-            <u>{{ $applicationforleaves->Abroad    }}</u>
+            {{ $applicationforleaves->Abroad    }}
         @else
-            _____________________________
+           
         @endif</td>
 <td colspan='7' class='x60' style='mso-ignore:colspan;'></td>
 </tr>
@@ -205,11 +209,12 @@ xmlns="http://www.w3.org/TR/REC-html40">
 <td colspan='2' class='x32' style='mso-ignore:colspan;'></td>
 <td colspan='3' class='x41' style='mso-ignore:colspan;'><font class="font0" style="text-decoration: none;">Paternity Leave&nbsp;</font><font class="font16" style="text-decoration: none;">(R.A. No. 8187 / CSC MC No. 71, s. 1998, as amended)</font></td>
 <td class='x42'></td>
-<td colspan='2' class='x35' style='mso-ignore:colspan;'></td>
+<td colspan='2' class='x35' style='mso-ignore:colspan;position: relative;
+    left: 197px;'>_____________________</td>
 <td class='x42'>In Hospital (Specify Illness)  @if(isset($applicationforleaves->InHospital) && !empty($applicationforleaves->InHospital))
-            <u>{{ $applicationforleaves->InHospital    }}</u>
+            {{ $applicationforleaves->InHospital    }}
         @else
-            _____________________
+            
         @endif</td>
 <td class='x60'></td>
 <td height='18' width='63' style='text-align: left;height:13.5pt;width:47.25pt;vertical-align:top;' align='left'><span style='mso-ignore:vglayout;position:absolute;z-index:2;margin-left:0px;margin-top:0px;width:8px;height:21px'><img width='8' height='21' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAVCAYAAAB7R6/OAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAA9JREFUKJFjYBgFo2CIAQACtQABC+dsXwAAAABJRU5ErkJggg==" name='TextBox11' alt='1'/></span><span style='mso-ignore:vglayout2'><table cellpadding='0' cellspacing='0'><tr><td height='18' width='63' style='height:13.5pt;width:47.25pt;'></td></tr></table></span></td>
@@ -227,11 +232,12 @@ xmlns="http://www.w3.org/TR/REC-html40">
 <td colspan='2' height='18' style='mso-ignore:colspan;height:13.5pt;'></td>
 <td colspan='2' class='x32' style='mso-ignore:colspan;'></td>
 <td colspan='4' class='x41' style='mso-ignore:colspan;border-right:1px solid windowtext;'><font class="font0" style="text-decoration: none;">Special Privilege Leave</font><font class="font17" style="text-decoration: none;">&nbsp;</font><font class="font16" style="text-decoration: none;">(Sec. 21, Rule XVI, Omnibus Rules Implementing E.O. No. 292)</font></td>
-<td colspan='2' class='x35' style='mso-ignore:colspan;'></td>
+<td colspan='2' class='x35' style='mso-ignore:colspan;position: relative;
+    left: 200px;'>____________________</td>
 <td class='x42'>Out Patient (Specify Illness)<span style='mso-spacerun:yes;'>&nbsp; </span>@if(isset($applicationforleaves->OutPatient) && !empty($applicationforleaves->OutPatient))
-            <u>{{ $applicationforleaves->OutPatient    }}</u>
+            {{ $applicationforleaves->OutPatient    }}
         @else
-            ____________________
+            
         @endif</td>
 <td colspan='7' class='x60' style='mso-ignore:colspan;'></td>
 </tr>
@@ -282,8 +288,9 @@ xmlns="http://www.w3.org/TR/REC-html40">
 <td colspan='3' class='x41' style='mso-ignore:colspan;'><font class="font0" style="text-decoration: none;">10-Day VAWC Leave&nbsp;</font><font class="font16" style="text-decoration: none;">(RA No. 9262 / CSC MC No. 15, s. 2005)</font></td>
 <td class='x42'></td>
 <td class='x35'></td>
-<td colspan='2' class='x40' style='mso-ignore:colspan;border-right:1px solid windowtext;'>(Specify Illness) @if(isset($applicationforleaves->SpecialLeaveBenefitsForWomen) && !empty($applicationforleaves->SpecialLeaveBenefitsForWomen))
-            <u>{{ $applicationforleaves->SpecialLeaveBenefitsForWomen }}</u>
+<td colspan='2' class='x40' style='mso-ignore:colspan;border-right:1px solid windowtext;'>(Specify Illness) @if(isset($applicationforleaves->SpecialLeaveBenefitsForWomen) && !empty($applicationforleaves->SpecialLeaveBenefitsForWomen))________________________________
+            <span style="position: relative;
+    left: -211px;">{{ $applicationforleaves->SpecialLeaveBenefitsForWomen }}</span>
         @else
             ________________________________
         @endif</td>
@@ -391,8 +398,9 @@ xmlns="http://www.w3.org/TR/REC-html40">
 <tr height='18' style='mso-height-source:userset;height:13.5pt'>
 <td colspan='2' height='18' style='mso-ignore:colspan;height:13.5pt;'></td>
 <td class='x32'></td>
-<td colspan='4' class='x43' style='mso-ignore:colspan;'>@if(isset($applicationforleaves->Others) && !empty($applicationforleaves->Others))
-            <u>{{ $applicationforleaves->Others }}</u>
+<td colspan='4' class='x43' style='mso-ignore:colspan;'>@if(isset($applicationforleaves->Others) && !empty($applicationforleaves->Others)) _____________________________________
+    
+            <span style="    position: relative; left: -266px;" >{{ $applicationforleaves->Others }}</span>
         @else
             _____________________________________
         @endif </td>
@@ -425,8 +433,8 @@ xmlns="http://www.w3.org/TR/REC-html40">
 <tr height='18' style='mso-height-source:userset;height:13.5pt'>
 <td colspan='2' height='18' style='mso-ignore:colspan;height:13.5pt;'></td>
 <td class='x32'></td>
-<td colspan='4' class='x47' style='mso-ignore:colspan;'>@if(isset($applicationforleaves->NumberOfWorkingDaysAppliedFor) && !empty($applicationforleaves->NumberOfWorkingDaysAppliedFor))
-            <u>{{ $applicationforleaves->NumberOfWorkingDaysAppliedFor }}</u>
+<td colspan='4' class='x47' style='mso-ignore:colspan;'>@if(isset($applicationforleaves->NumberOfWorkingDaysAppliedFor) && !empty($applicationforleaves->NumberOfWorkingDaysAppliedFor)) ________________________________________
+            <span style="    position: relative; left: -283px;">{{ $applicationforleaves->NumberOfWorkingDaysAppliedFor }}</span>
         @else
             ________________________________________
         @endif</td>
@@ -456,8 +464,8 @@ xmlns="http://www.w3.org/TR/REC-html40">
 <tr height='25' style='mso-height-source:userset;height:18.75pt'>
 <td colspan='2' height='25' style='mso-ignore:colspan;height:18.75pt;'></td>
 <td class='x32'></td>
-<td colspan='4' class='x50' style='mso-ignore:colspan;'>@if(isset($applicationforleaves->InclusiveDates) && !empty($applicationforleaves->InclusiveDates))
-            <u>{{ $applicationforleaves->InclusiveDates }}</u>
+<td colspan='4' class='x50' style='mso-ignore:colspan;'>@if(isset($applicationforleaves->InclusiveDates) && !empty($applicationforleaves->InclusiveDates)) ________________________________________
+            <span style="position: relative;left: -284px">{{ $applicationforleaves->InclusiveDates }}</span>
         @else
             ________________________________________
         @endif</td>
@@ -513,8 +521,8 @@ xmlns="http://www.w3.org/TR/REC-html40">
 <td colspan='2' height='18' style='mso-ignore:colspan;height:13.5pt;'></td>
 <td colspan='6' class='x32' style='mso-ignore:colspan;border-right:1px solid windowtext;'></td>
 <td colspan='2' class='x35' style='mso-ignore:colspan;'></td>
-<td class='x40'>For disapproval due to @if(isset($applicationforleaves->ForDisapprovalDueTo) && !empty($applicationforleaves->ForDisapprovalDueTo))
-            <u>{{ $applicationforleaves->ForDisapprovalDueTo }}</u>
+<td class='x40'>For disapproval due to @if(isset($applicationforleaves->ForDisapprovalDueTo) && !empty($applicationforleaves->ForDisapprovalDueTo)) ________________________
+            <span style="position: relative;left: -178px;">{{ $applicationforleaves->ForDisapprovalDueTo }}</span>
         @else
             ________________________
         @endif</td>
@@ -570,14 +578,14 @@ xmlns="http://www.w3.org/TR/REC-html40">
  <tr height='18' style='mso-height-source:userset;height:13.5pt'>
 <td colspan='2' height='18' style='mso-ignore:colspan;height:13.5pt;'></td>
 <td colspan='2' class='x32' style='mso-ignore:colspan;'></td>
-<td colspan='2' class='x35' style='mso-ignore:colspan;'>@if(isset($applicationforleaves->DaysWithPay) && !empty($applicationforleaves->DaysWithPay))
-            <u>{{ $applicationforleaves->DaysWithPay }}</u>
+<td colspan='2' class='x35' style='mso-ignore:colspan;'>@if(isset($applicationforleaves->DaysWithPay) && !empty($applicationforleaves->DaysWithPay)) _______
+            <span style="position: relative;left: -53px">{{ $applicationforleaves->DaysWithPay }}</span>
         @else
             _______
         @endif days with pay</td>
 <td colspan='4' class='x35' style='mso-ignore:colspan;'></td>
-<td class='x70'>@if(isset($applicationforleaves->DisapprovedDueTo) && !empty($applicationforleaves->DisapprovedDueTo))
-            <u>{{ $applicationforleaves->DisapprovedDueTo }}</u>
+<td class='x70'>@if(isset($applicationforleaves->DisapprovedDueTo) && !empty($applicationforleaves->DisapprovedDueTo))  _______________________________________
+            <span style="position: relative;left: -313px">{{ $applicationforleaves->DisapprovedDueTo }}</span>
         @else
             _______________________________________
         @endif</td>
@@ -586,8 +594,8 @@ xmlns="http://www.w3.org/TR/REC-html40">
  <tr height='18' style='mso-height-source:userset;height:13.5pt'>
 <td colspan='2' height='18' style='mso-ignore:colspan;height:13.5pt;'></td>
 <td colspan='2' class='x32' style='mso-ignore:colspan;'></td>
-<td colspan='2' class='x35' style='mso-ignore:colspan;'>@if(isset($applicationforleaves->DaysWithoutPay) && !empty($applicationforleaves->DaysWithoutPay))
-            <u>{{ $applicationforleaves->DaysWithoutPay }}</u>
+<td colspan='2' class='x35' style='mso-ignore:colspan;'>@if(isset($applicationforleaves->DaysWithoutPay) && !empty($applicationforleaves->DaysWithoutPay))_______
+            <span style="position: relative;left: -53px">{{ $applicationforleaves->DaysWithoutPay }}</span>
         @else
             _______
         @endif days without pay</td>
@@ -598,8 +606,8 @@ xmlns="http://www.w3.org/TR/REC-html40">
  <tr height='20' style='mso-height-source:userset;height:15pt'>
 <td colspan='2' height='20' style='mso-ignore:colspan;height:15pt;'></td>
 <td colspan='2' class='x32' style='mso-ignore:colspan;'></td>
-<td colspan='2' class='x35' style='mso-ignore:colspan;'>@if(isset($applicationforleaves->OthersSpecify) && !empty($applicationforleaves->OthersSpecify))
-            <u>{{ $applicationforleaves->OthersSpecify }}</u>
+<td colspan='2' class='x35' style='mso-ignore:colspan;'>@if(isset($applicationforleaves->OthersSpecify) && !empty($applicationforleaves->OthersSpecify))_______
+            <span style="position: relative;left: -53px">{{ $applicationforleaves->OthersSpecify }}</span>
         @else
             _______
         @endif others (Specify)</td>

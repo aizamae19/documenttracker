@@ -60,7 +60,7 @@
                               <th>Office</th>
                               <th>Name</th>
                               <th>Date Of Filing</th>
-                              <th class="text-center"></th>
+                              <th class="text-center">Action</th>
                            </tr>
                         </thead>
                         <tbody>
@@ -94,18 +94,6 @@
                               @endforeach
                            @endif
                         </tbody>
-<<<<<<< HEAD
-=======
-                        <tfoot>
-                           <tr>
-                              <th>Series Number</th>
-                              <th>Office</th>
-                              <th>Name</th>
-                              <th>Date Of Filing</th>
-                              <th class="text-center"></th>
-                           </tr>
-                        </tfoot>
->>>>>>> origin/main
                      </table>
                   </div>
                </div>
@@ -131,7 +119,7 @@
                               <th>Office</th>
                               <th>Name</th>
                               <th>Date</th>
-                              <th class="text-center"></th>
+                              <th class="text-center">Action</th>
                            </tr>
                         </thead>
                         <tbody>
@@ -190,7 +178,7 @@
                               <th>Office</th>
                               <th>Name</th>
                               <th>Date</th>
-                              <th class="text-center"></th>
+                              <th class="text-center">Action</th>
                            </tr>
                         </thead>
                         <tbody>
@@ -246,7 +234,7 @@
                               <th>Office</th>
                               <th>Name</th>
                               <th>Date</th>
-                              <th class="text-center"></th>
+                              <th class="text-center">Action</th>
                            </tr>
                         </thead>
                         <tbody>
@@ -271,11 +259,7 @@
                                     <td>{{ $locator->NameOfEmployee }}</td>
                                     <td>{{ explode(', ', $locator->Date)[0] }}</td>
                                     <td class="text-center">
-<<<<<<< HEAD
                                        <a class="btn btn-sm btn-success" href="{{ url('/admin/files/locator/view/').'/'.$locator->id}}" data-target="#"><i class="fa fa-eye"></i> View</a>
-=======
-                                       <a class="btn btn-sm btn-success" href="{{ url('/admin/files/locator/view/').'/'.$locator->id}}" data-target="#view"><i class="fa fa-eye"></i> View</a>
->>>>>>> origin/main
                                        <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
                                     </td>
                                  </tr>

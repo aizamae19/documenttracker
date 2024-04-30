@@ -2479,20 +2479,16 @@
       }
       @media print{
             .logo {
-<<<<<<< HEAD
                   position: absolute;
                   top: 285px;
                   width: 60%;
-=======
                   position: absolute; 
                   top: 285px; 
                   width: 60%; 
->>>>>>> origin/main
                   left: 167px;  
                   opacity: 0.3;
             }
             .fas {
-<<<<<<< HEAD
                   font-size: 28px;
                   position: absolute;
                   left: 145px;
@@ -2507,7 +2503,6 @@
             .contact{
                   position: absolute;
                   left: 178px;
-=======
                   font-size: 28px; 
                   position: absolute; 
                   left: 145px; 
@@ -2522,7 +2517,6 @@
             .contact{
                   position: absolute; 
                   left: 178px; 
->>>>>>> origin/main
                   top: 205px;
             }
             .sample-box1 {
@@ -2551,7 +2545,6 @@
                   background-color: transparent;            
             }
             .date1{
-<<<<<<< HEAD
                   font-weight:bold;
                   color:#000000;
                   font-family:'Calibri';
@@ -2570,7 +2563,6 @@
             }
             .head {
                   top: 680px;
-=======
                   font-weight:bold; 
                   color:#000000; 
                   font-family:'Calibri'; 
@@ -2589,7 +2581,6 @@
             }
             .head {
                   top: 680px; 
->>>>>>> origin/main
                   left: 50px;
             }
             .sample-box2 {
@@ -2606,11 +2597,8 @@
                   background-color: transparent;
             }
             .onduty{
-<<<<<<< HEAD
                   top: 580px;
-=======
                   top: 580px; 
->>>>>>> origin/main
                   left: 270px;
             }
             .sample-box3 {
@@ -2627,7 +2615,6 @@
                   position: absolute;
             }
             .forissuance{
-<<<<<<< HEAD
                   font-weight:bold;
                   color:#000000;
                   font-family:'Calibri';
@@ -2661,7 +2648,6 @@
                   font-size:6pt;
                   position: absolute;
                   top: 680px;
-=======
                   font-weight:bold; 
                   color:#000000; 
                   font-family:'Calibri'; 
@@ -2695,7 +2681,6 @@
                   font-size:6pt;
                   position: absolute; 
                   top: 680px; 
->>>>>>> origin/main
                   left: 395px;
             }
             .sample-box4 {
@@ -2710,7 +2695,6 @@
                 top: -13.6%;
             }
             .date2{
-<<<<<<< HEAD
                   font-weight:bold;
                   color:#000000;
                   font-family:'Calibri';
@@ -2735,7 +2719,6 @@
                   font-size:12pt;
             }
             table.sheet0 tr.row3 {
-=======
                   font-weight:bold; 
                   color:#000000; 
                   font-family:'Calibri'; 
@@ -2760,7 +2743,6 @@
                   font-size:12pt;
             }
             table.sheet0 tr.row3 { 
->>>>>>> origin/main
                   height:15pt;
             }
       }

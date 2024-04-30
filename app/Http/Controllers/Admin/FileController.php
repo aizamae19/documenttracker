@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Models\Dispatch; 
+use App\Models\Dispatch;
 use App\Models\Applicationforleave;
 use App\Models\Travelorder;
 use App\Models\Certificateofappearance;
@@ -19,10 +19,10 @@ class FileController extends Controller
 {
     public function file()
     {
-    $dispatches = Dispatch::all(); 
+    $dispatches = Dispatch::all();
     $offices = Office::all();
-    $locators = Locator::all(); 
-    $certificateofappearances = Certificateofappearance::all(); 
+    $locators = Locator::all();
+    $certificateofappearances = Certificateofappearance::all();
     $applicationforleaves = Applicationforleave::all();
     $travelorders = Travelorder::all();
 
@@ -46,14 +46,6 @@ class FileController extends Controller
         ]);
     }
 
- public function viewlocator(Request $request){
-        $locator=locator::where('id',$request->id)->first();
-
-        return view('admin.files.locator.view',[
-                'locator'=>$locator
-        ]);
-    }
-
     public function saveDispatch(Request $request)
     {
         $Dispatchsave = new Dispatch();
@@ -66,38 +58,16 @@ class FileController extends Controller
         $Dispatchsave->DescriptionofDispatch = $request->DescriptionofDispatch;
         $Dispatchsave->PlateNumber = $request->PlateNumber;
         $Dispatchsave->Driver = $request->Driver;
-<<<<<<< HEAD
-        $Dispatchsave->Passenger = implode(", ", $request->Passenger);
-=======
         $Dispatchsave->Passenger = $request->Passenger;
         $Dispatchsave->Crew = $request->Crew;
         $Dispatchsave->PassengerName =implode(", ",$request->PassengerName);
 
->>>>>>> origin/main
 
-       
         if ($Dispatchsave->save()) {
             return redirect("/admin/files")->withErrors('Successfully Saved!');
         }
     }
 
-<<<<<<< HEAD
-    //  public function deletedispatch (Request $request){
-    //         $Deletesave= Dispatch::where('id',$request->id)->first();
-    //         $Deletesave->DispatchNumber = $request->DispatchNumber;
-    //         $Deletesave->TripTicketNumber = $request->TripTicketNumber;
-    //         $Deletesave->Date = $request->Date;
-    //         $Deletesave->Name = $request->Name;
-    //         $Deletesave->Address = $request->Address;
-    //         $Deletesave->ContactNumber = $request->ContactNumber;
-    //         $Deletesave->Office = $request->Office;
-    //         $Deletesave->DescriptionofDispatch = $request->DescriptionofDispatch;
-    //         $Deletesave->PlateNumber = $request->PlateNumber;
-    //         $Deletesave->Driver = $request->Driver;
-    //         $Deletesave->Passenger = $request->Passenger;
-    //         $Deletesave->Crew = $request->Crew;
-    //         $Deletesave->PassengerName = $request->PassengerName;
-=======
      public function deletedispatch (Request $request){
             $Deletesave= Dispatch::where('id',$request->id)->first();
             $Deletesave->TripTicketNumber = $request->TripTicketNumber;
@@ -112,19 +82,18 @@ class FileController extends Controller
             $Deletesave->Passenger = $request->Passenger;
             $Deletesave->Crew = $request->Crew;
             $Deletesave->PassengerName = $request->PassengerName;
->>>>>>> origin/main
 
-    //     if($Deletesave->delete()) {
-    //          return redirect()->back()->withErrors('Deleted!');
-    //     }
-    // }
+        if($Deletesave->delete()) {
+             return redirect()->back()->withErrors('Deleted!');
+        }
+    }
         public function applicationforleave(){
             $applicationforleaves = Applicationforleave::get();
             return view('admin.files.applicationforleave.leaveform', [
-                'applicationforleaves'=>$applicationforleaves 
+                'applicationforleaves'=>$applicationforleaves
             ]);
         }
-        
+       
         public function viewapplicationforleave(Request $request){
             $applicationforleaves=Applicationforleave::where('id',$request->id)->first();
 
@@ -157,12 +126,12 @@ class FileController extends Controller
             $applicationforleavesave->DaysWithoutPay = $request->DaysWithoutPay;
             $applicationforleavesave->OthersSpecify = $request->OthersSpecify;
             $applicationforleavesave->DisapprovedDueTo = $request->DisapprovedDueTo;
-            
+           
             $fields = ['TypeOfLeave', 'DetailsOfLeave', 'Commutation', 'Recommendation'];
 
             foreach ($fields as $field) {
                 if ($request->has($field)) {
-            
+           
                     $values = implode(',', $request->input($field));
                     $applicationforleavesave->$field = $values;
                 }
@@ -174,29 +143,17 @@ class FileController extends Controller
             }
             }
 
-<<<<<<< HEAD
-       public function travelorder()
-{
-    // Retrieve the travel orders from the database
-    $travelorders = \App\Models\TravelOrder::all();
-
-    // Return the blade view with the travel orders
-    return view('admin.files.travelorder.travelorder', compact('travelorders'));
-}
-
-=======
             public function travelorder()
             {
                 return view('admin.files.travelorder.travelorder');
             }
-    
->>>>>>> origin/main
+   
             public function viewtravelorder(Request $request){
                 $travelorder=Travelorder::where('id',$request->id)->first();
                 $travelorders = Travelorder::all();
                 $files = File::all();
                 $offices = Office::all();
-            return view('admin.files.travelorder.print', compact('travelorders', 'offices','travelorder','files'));   
+            return view('admin.files.travelorder.print', compact('travelorders', 'offices','travelorder','files'));  
             }
        
              public function storetravelorder(Request $request)
@@ -252,6 +209,7 @@ class FileController extends Controller
                     'certificateofappearances'=>$certificateofappearances
             ]);
         }
+
         public function storecertificateofappearance(Request $request)
         {
             $certificateofappearancesave = new Certificateofappearance();
@@ -269,6 +227,7 @@ class FileController extends Controller
                 return redirect("/admin/files")->withErrors('Successfully Saved!');
             }
         }
+
         public function deletecertificateofappearance(Request $request)
         {
             $Deletesave=Certificateofappearance::where('id' ,$request->id)->first();
@@ -330,4 +289,5 @@ class FileController extends Controller
             }
         }
     }
+
     

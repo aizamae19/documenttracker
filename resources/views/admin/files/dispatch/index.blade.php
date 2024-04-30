@@ -92,14 +92,10 @@
                                                           <option>AGRICULTURE</option>
                                                     </select>    
                                                 </div>
-<<<<<<< HEAD
                                                 </div>
-=======
->>>>>>> origin/main
                                             </div>
                                         </div>
                                     </div>
-                                </div>
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="form-group">
@@ -141,13 +137,8 @@
                                                           if(Passengers >= 1){
                                                               $('#passenger_form').show();
                                                               $('#passengers_form').empty();
-<<<<<<< HEAD
                                                               for(let x = 0; x < Passengers; x++){
                                                                   $('#passengers_form').append('<div class="col-md-12"><div class="form-group"><p>Name</p><input class="form-control" name="Passenger[]" placeholder=""></div></div>');
-=======
-                                                              for(let x = 0; x < Passenger; x++){
-                                                                  $('#passengers_form').append('<div class="col-md-12"><div class="form-group"><p>Name</p><input class="form-control" name="Passenger" placeholder=""></div></div>');
->>>>>>> origin/main
                                                               }
                                                           } else {
                                                               $('#passenger_form').hide();

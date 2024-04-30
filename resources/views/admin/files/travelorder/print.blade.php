@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @extends('layouts.default')
 
 @section('content')
@@ -27,18 +26,10 @@
                         .wcdiv.wcpage {
                         width: 210mm;
                         height: 350mm;
-=======
-<title>Document Tracking System</title>
-<link rel="icon" type="image/ico" href="{{asset('assets/img/MaasinCity.png')}}">
-  <section class="content">
-        <div class="container-fluid">
-            <div class="card card-info" style="">
-                <div class="wcdiv wcpage">
-                    <style type="text/css">
+                    }
                         .wcdiv.wcpage {
                             width: 220mm;
                             height: 300mm;
->>>>>>> origin/main
                     }
                         .sample-box {
                         width: 266px;
@@ -61,7 +52,6 @@
                         counter-increment: section;
                         content: counter(section);
 
-<<<<<<< HEAD
                     }
                     #print-button {
                         display: block;
@@ -72,8 +62,6 @@
                         #print-button {
                             display: none;
                         }
-=======
->>>>>>> origin/main
                     }
                     </style>
                         <div class="wcdiv" style="left:0pt; top:2.5pt; background-color: white;">
@@ -161,11 +149,8 @@
                         <div class="wcdiv" style="top:206.21pt;"><span class="wcspan wctext003" style="left:0pt; top:0.39pt; line-height:13.41pt;">Subject:</span> <span class="wcspan wctext004" style="left:63.67pt; top:0.39pt; line-height:13.41pt;">Recommendation for Issuance of Travel Order</span></div>
                         <div class="wcdiv" style="left:-0.75pt; top:235.83pt;"><span class="wcspan wctext002" style="left:0pt; top:0.39pt; line-height:13.41pt;">Sir;</span></div>
                         <div style="left:-0.75pt; top:284.66pt;">
-<<<<<<< HEAD
                         <p style="margin-top: 45%; margin-left: -10px; ">This is to certify that name(s) appearing below is/are authorized to undertake an official trip to<br><span style="color: red;top:0.39pt;">{{$travelorder->Location}}</span> from <span style="color: red;top:0.39pt;">{{$travelorder->Dated}}.</span></p>
-=======
                         <p style="margin-top: 47%; ">This is to certify that name(s) appearing below is/are authorized to undertake an official trip to <span style="color: red;top:0.39pt;">{{$travelorder->Location}}</span> from <span style="color: red;top:0.39pt;">{{$travelorder->InclusiveDates}}.</span></p>
->>>>>>> origin/main
                         </div>
                            <div class="sample-box" style="color: white; font-size: 7px;text-align: left;">Travel Request Issuance Number:</div>
                          <table style="border: none;border-collapse: collapse;width:540pt; margin-top: 10px;">
@@ -212,11 +197,8 @@
                                </tbody>
                             </table>
                             <div style="left:-0.75pt; top:264.66pt;">
-<<<<<<< HEAD
                             <p style="margin-top: 1%; margin-left: -10px; text-align: justify; ">We hereby endorse this travel order request with a memorandum order from the  <span style="color: red;top:0.39pt;">Provincial Governor of Southern Leyte</span> dated <span style="color: red;top:0.39pt;">{{$travelorder->InclusiveDates}}.&nbsp;</span></p>
-=======
                             <p style="margin-top: 1%; text-align: justify; ">We hereby endorse this travel order request with a memorandum order from the  <span style="color: red;top:0.39pt;">{{$travelorder->Endorser}}</span> dated <span style="color: red;top:0.39pt;">{{$travelorder->Dated}}.&nbsp;</span></p>
->>>>>>> origin/main
                             </div>
                             <table style="border: none;border-collapse: collapse;width:490pt;">
                                 <tbody>
@@ -258,10 +240,7 @@
             <p><br></p>
          </div>
       </section>
-<<<<<<< HEAD
     </div>
   </div>
 </div>
 @endsection
-=======
->>>>>>> origin/main

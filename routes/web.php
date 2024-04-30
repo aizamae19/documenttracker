@@ -101,6 +101,10 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::get('/admin/files/locator/delete/{id}', [App\Http\Controllers\Admin\FileController::class, 'deletelocator'])->name('locator.delete');
             Route::post('/admin/files/locator/delete', [App\Http\Controllers\Admin\FileController::class, 'deletelocator'])->name('locator.delete');
 
+             //View Locator
+            Route::get('/admin/files/locator/view/{id}', [App\Http\Controllers\Admin\FileController::class, 'viewlocator'])->name('locator.view');
+            Route::post('/admin/files/locator/view', [App\Http\Controllers\Admin\FileController::class, 'viewlocator'])->name('locatorview');
+
             //DeleteApplicationforLeave
             Route::get('/admin/files/applicationforleave/delete/{id}', [App\Http\Controllers\Admin\FileController::class, 'deleteapplicationforleave'])->name('applicationforleave.delete');
             Route::post('/admin/files/applicationforleave/delete', [App\Http\Controllers\Admin\FileController::class, 'deleteapplicationforleave'])->name('applicationforleave.delete');

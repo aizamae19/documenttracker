@@ -23,7 +23,7 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="card-header">
-                                            <span class="fa fa-file">Travel Order</span>
+                                            <span class="fa fa-file"> Travel Order</span>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-4">

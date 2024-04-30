@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Travelorder extends Model
 {
+    
     use HasFactory;
 }

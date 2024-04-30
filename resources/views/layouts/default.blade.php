@@ -13,7 +13,6 @@
    <link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
    <link rel="stylesheet" href="{{asset('assets/css/list.css')}}">
    <link rel="stylesheet" href="{{asset('assets/tables/datatables-bs4/css/dataTables.bootstrap4.min.css')}}">
-   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css"/>
    <style type="text/css">
       table tr td {
          padding: 0.3rem !important;
@@ -181,48 +180,66 @@
    <script src="{{asset('assets/tables/datatables-responsive/js/responsive.bootstrap4.min.js')}}"></script>
    <script src="{{asset('assets/tables/datatables-buttons/js/buttons.bootstrap4.min.js')}}"></script>
    <script type="text/javascript">
+<<<<<<< HEAD
 
       $(document).ready(function () {
          $("#applicationforleave tfoot tr th").each(function () {
             var title = $(this).text();
             $(this).html('<input type="text" placeholder=" Search' + title + ' " />');
          });
+=======
+     $(document).ready(function () {
+    $("#applicationforleave tfoot tr th").each(function () {
+        var title = $(this).text();
+        $(this).html('<input type="text" placeholder=" Search' + title + ' " />');
+    });
+>>>>>>> origin/main
 
-         var table = $("#applicationforleave, #certificateofappearance, #dispatch, #locator, #travelorder, #users").DataTable({
-            dom: '<"dt-buttons"Bf><"clear">lirtp',
-            paging: true,
-            autoWidth: true,
-            initComplete: function (settings, json) {
-               var footer = $("#applicationforleave tfoot tr");
-               $("#applicationforleave thead").append(footer);
-            },
-         });
+    var table = $("#applicationforleave, #certificateofappearance, #dispatch, #locator, #travelorder, #users").DataTable({
+        dom: '<"dt-buttons"Bf><"clear">lirtp',
+        paging: true,
+        autoWidth: true,
+        initComplete: function (settings, json) {
+            var footer = $("#applicationforleave tfoot tr");
+            $("#applicationforleave thead").append(footer);
+        },
+    });
 
-         $("#applicationforleave thead").on("keyup", "input", function () {
-            table.column($(this).parent().index())
-            .search(this.value)
-            .draw();
-         });
+    $("#applicationforleave thead").on("keyup", "input", function () {
+        table.column($(this).parent().index()).search(this.value).draw();
+    });
 
-         $('#startdate, #enddate').on('change', function () {
-            var startDate = $('#startdate').val();
-            var endDate = $('#enddate').val();
+    $('#startdate, #enddate').on('change', function () {
+        var startDate = $('#startdate').val();
+        var endDate = $('#enddate').val();
 
-            table.columns().every(function () {
-               var column = this;
-               column
-               .search(startDate, true, false)
-               .draw();
-            });
+        // Display the selected date range in the table
+        $('#dateRangeDisplay').text(startDate + ' to ' + endDate);
 
-            table.columns().every(function () {
-               var column = this;
-               column
-               .search(endDate, false, true)
-               .draw();
-            });
-         });
-      });
+        // Custom filtering function to filter by date range
+        $.fn.dataTable.ext.search.push(
+            function (settings, data, dataIndex) {
+                var min = new Date(startDate);
+                var max = new Date(endDate);
+                var date = new Date(data[3]); 
+
+                if ((startDate === "" && endDate === "") ||
+                    (startDate === "" && date <= max) ||
+                    (min <= date && endDate === "") ||
+                    (min <= date && date <= max)) {
+                    return true;
+                }
+                return false;
+            }
+        );
+
+        table.draw();
+
+        $.fn.dataTable.ext.search.pop();
+    });
+});
+
+
 
        document.getElementById('print-button').addEventListener('click', function () {
            var printContents = document.getElementById('table-container').innerHTML;

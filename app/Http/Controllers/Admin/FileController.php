@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Models\Dispatch;
+use App\Models\Dispatch; 
 use App\Models\Applicationforleave;
 use App\Models\Travelorder;
 use App\Models\Certificateofappearance;
@@ -19,25 +19,14 @@ class FileController extends Controller
 {
     public function file()
     {
-    $dispatches = Dispatch::all();
+    $dispatches = Dispatch::all(); 
     $offices = Office::all();
-    $locators = Locator::all();
-    $certificateofappearances = Certificateofappearance::all();
+    $locators = Locator::all(); 
+    $certificateofappearances = Certificateofappearance::all(); 
     $applicationforleaves = Applicationforleave::all();
     $travelorders = Travelorder::all();
-    $files = File::all();
 
-    return view('admin.files.index', compact('travelorders','dispatches','locators', 'certificateofappearances', 'applicationforleaves', 'offices' , 'files'));
-    }
-
-    public function storefile(Request $request)
-    {
-        $filesave = new File();
-        $filesave->SeriesNumber = $request->SeriesNumber;
-
-        if ($filesave->save()) {
-            return redirect()->back()->withErrors('Successfully Saved!');
-        }
+    return view('admin.files.index', compact('travelorders','dispatches','locators', 'certificateofappearances', 'applicationforleaves', 'offices'));
     }
 
     public function viewfile($id) {
@@ -77,7 +66,14 @@ class FileController extends Controller
         $Dispatchsave->DescriptionofDispatch = $request->DescriptionofDispatch;
         $Dispatchsave->PlateNumber = $request->PlateNumber;
         $Dispatchsave->Driver = $request->Driver;
+<<<<<<< HEAD
         $Dispatchsave->Passenger = implode(", ", $request->Passenger);
+=======
+        $Dispatchsave->Passenger = $request->Passenger;
+        $Dispatchsave->Crew = $request->Crew;
+        $Dispatchsave->PassengerName =implode(", ",$request->PassengerName);
+
+>>>>>>> origin/main
 
        
         if ($Dispatchsave->save()) {
@@ -85,6 +81,7 @@ class FileController extends Controller
         }
     }
 
+<<<<<<< HEAD
     //  public function deletedispatch (Request $request){
     //         $Deletesave= Dispatch::where('id',$request->id)->first();
     //         $Deletesave->DispatchNumber = $request->DispatchNumber;
@@ -100,6 +97,22 @@ class FileController extends Controller
     //         $Deletesave->Passenger = $request->Passenger;
     //         $Deletesave->Crew = $request->Crew;
     //         $Deletesave->PassengerName = $request->PassengerName;
+=======
+     public function deletedispatch (Request $request){
+            $Deletesave= Dispatch::where('id',$request->id)->first();
+            $Deletesave->TripTicketNumber = $request->TripTicketNumber;
+            $Deletesave->Date = $request->Date;
+            $Deletesave->Name = $request->Name;
+            $Deletesave->Address = $request->Address;
+            $Deletesave->ContactNumber = $request->ContactNumber;
+            $Deletesave->Office = $request->Office;
+            $Deletesave->DescriptionofDispatch = $request->DescriptionofDispatch;
+            $Deletesave->PlateNumber = $request->PlateNumber;
+            $Deletesave->Driver = $request->Driver;
+            $Deletesave->Passenger = $request->Passenger;
+            $Deletesave->Crew = $request->Crew;
+            $Deletesave->PassengerName = $request->PassengerName;
+>>>>>>> origin/main
 
     //     if($Deletesave->delete()) {
     //          return redirect()->back()->withErrors('Deleted!');
@@ -108,10 +121,10 @@ class FileController extends Controller
         public function applicationforleave(){
             $applicationforleaves = Applicationforleave::get();
             return view('admin.files.applicationforleave.leaveform', [
-                'applicationforleaves'=>$applicationforleaves
+                'applicationforleaves'=>$applicationforleaves 
             ]);
         }
-       
+        
         public function viewapplicationforleave(Request $request){
             $applicationforleaves=Applicationforleave::where('id',$request->id)->first();
 
@@ -144,12 +157,12 @@ class FileController extends Controller
             $applicationforleavesave->DaysWithoutPay = $request->DaysWithoutPay;
             $applicationforleavesave->OthersSpecify = $request->OthersSpecify;
             $applicationforleavesave->DisapprovedDueTo = $request->DisapprovedDueTo;
-           
+            
             $fields = ['TypeOfLeave', 'DetailsOfLeave', 'Commutation', 'Recommendation'];
 
             foreach ($fields as $field) {
                 if ($request->has($field)) {
-           
+            
                     $values = implode(',', $request->input($field));
                     $applicationforleavesave->$field = $values;
                 }
@@ -161,6 +174,7 @@ class FileController extends Controller
             }
             }
 
+<<<<<<< HEAD
        public function travelorder()
 {
     // Retrieve the travel orders from the database
@@ -170,12 +184,19 @@ class FileController extends Controller
     return view('admin.files.travelorder.travelorder', compact('travelorders'));
 }
 
+=======
+            public function travelorder()
+            {
+                return view('admin.files.travelorder.travelorder');
+            }
+    
+>>>>>>> origin/main
             public function viewtravelorder(Request $request){
                 $travelorder=Travelorder::where('id',$request->id)->first();
                 $travelorders = Travelorder::all();
                 $files = File::all();
                 $offices = Office::all();
-            return view('admin.files.travelorder.print', compact('travelorders', 'offices','travelorder','files'));  
+            return view('admin.files.travelorder.print', compact('travelorders', 'offices','travelorder','files'));   
             }
        
              public function storetravelorder(Request $request)
@@ -276,7 +297,15 @@ class FileController extends Controller
             return view('admin.files.locator.index');
         }
 
-        public function storelocator(Request $request)
+         public function viewlocator(Request $request){
+            $locator=locator::where('id',$request->id)->first();
+
+            return view('admin.files.locator.view',[
+                'locator'=>$locator
+            ]);
+        }
+
+          public function storelocator(Request $request)
         {
             $locatorsave = new Locator();
             $locatorsave->Year = $request->Year;
@@ -301,3 +330,4 @@ class FileController extends Controller
             }
         }
     }
+    

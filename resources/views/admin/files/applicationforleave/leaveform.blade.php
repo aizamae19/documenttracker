@@ -238,8 +238,7 @@
                                             <div class="form-group">
                                                 <p>6.C NUMBER OF WORKING DAYS APPLIED FOR</p>
                                                 <div class="line">
-                                                    <input type="text" name="NumberOfWorkingDaysAppliedFor
-" style="width: 100%; padding: 5px 5px; box-sizing: border-box; border: none; border-bottom: 1px solid #000;">
+                                                    <input type="text" name="NumberOfWorkingDaysAppliedFor" style="width: 100%; padding: 5px 5px; box-sizing: border-box; border: none; border-bottom: 1px solid #000;">
                                                 </div>
                                                 <div class="line">
                                                     INCLUSIVE DATES

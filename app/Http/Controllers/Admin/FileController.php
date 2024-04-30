@@ -13,7 +13,6 @@ use App\Models\Locator;
 use App\Models\File;
 use App\Models\Office;
 use App\Models\Typeofleave;
-use Carbon\Carbon;
 
 class FileController extends Controller
 {
@@ -143,6 +142,34 @@ class FileController extends Controller
             }
             }
 
+        public function deleteapplicationforleave(Request $request){
+            $Deletesave=Applicationforleave::where('id' ,$request->id)->first();
+            $Deletesave->Office = $request->Office;
+            $Deletesave->Name = $request->Name;
+            $Deletesave->DateOfFiling = $request->DateOfFiling;
+            $Deletesave->Position = $request->Position;
+            $Deletesave->Salary = $request->Salary;
+            $Deletesave->TypeOfLeave = $request->TypeOfLeave;
+            $Deletesave->Others = $request->Others;
+            $Deletesave->DetailsOfLeave = $request->DetailsOfLeave;
+            $Deletesave->WithinThePhilippines = $request->WithinThePhilippines;
+            $Deletesave->Abroad = $request->Abroad;
+            $Deletesave->InHospital = $request->InHospital;
+            $Deletesave->OutPatient = $request->OutPatient;
+            $Deletesave->SpecialLeaveBenefitsForWomen = $request->SpecialLeaveBenefitsForWomen;
+            $Deletesave->NumberOfWorkingDaysAppliedFor = $request->NumberOfWorkingDaysAppliedFor;
+            $Deletesave->InclusiveDates = $request->InclusiveDates;
+            $Deletesave->Commutation = $request->Commutation;
+            $Deletesave->Recommendation = $request->Recommendation;
+            $Deletesave->ForDisapprovalDueTo = $request->ForDisapprovalDueTo;
+            $Deletesave->DaysWithPay = $request->DaysWithPay;
+            $Deletesave->DaysWithoutPay = $request->DaysWithoutPay;
+            $Deletesave->OthersSpecify = $request->OthersSpecify;
+            $Deletesave->DisapprovedDueTo = $request->DisapprovedDueTo;
+            if($Deletesave->delete()) {
+                return redirect()->back()->withErrors('Deleted!');
+            }
+        }
             public function travelorder()
             {
                 return view('admin.files.travelorder.travelorder');

@@ -3,6 +3,7 @@
 xmlns:o="urn:schemas-microsoft-com:office:office"
 xmlns:x="urn:schemas-microsoft-com:office:excel"
 xmlns="http://www.w3.org/TR/REC-html40">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <head>
     <title>Document Tracking System</title>

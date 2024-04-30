@@ -87,8 +87,10 @@
                                     <td class="text-center">
                                        <a class="btn btn-sm btn-success" href="{{ url('/admin/files/applicationforleave/view/').'/'.$applicationforleave->id}}" data-target="#view"><i class="fa fa-eye"></i> 
                                        View</a>
-                                       <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> 
+                                       <a onclick="confirm('Are you sure, you want to delete Application for Leave?')" class="btn btn-sm btn-danger" href="{{ url('/admin/files/applicationforleave/delete').'/'.$applicationforleave->id}}"  data-target="#delete"><i class="fa fa-trash-alt"></i> 
                                        Delete</a>
+                                       {{method_field('DELETE')}}
+                                       @csrf
                                     </td>
                                  </tr>
                               @endforeach
@@ -270,6 +272,8 @@
                                     <td class="text-center">
                                        <a class="btn btn-sm btn-success" href="{{ url('/admin/files/locator/view/').'/'.$locator->id}}" data-target="#view"><i class="fa fa-eye"></i> View</a>
                                        <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
+                                       {{method_field('DELETE')}}
+                                       @csrf
                                     </td>
                                  </tr>
                               @endforeach

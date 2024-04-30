@@ -86,6 +86,7 @@ class FileController extends Controller
              return redirect()->back()->withErrors('Deleted!');
         }
     }
+
         public function applicationforleave(){
             $applicationforleaves = Applicationforleave::get();
             return view('admin.files.applicationforleave.leaveform', [
@@ -313,6 +314,30 @@ class FileController extends Controller
 
             if ($locatorsave->save()) {
                 return redirect("/admin/files")->withErrors('Successfully Saved!');
+            }
+        }
+
+        public function deletelocator(Request $request)
+        {
+            $Deletesave=Locator::where('id' ,$request->id)->first();
+            $Deletesave->Year = $request->Year;
+            $Deletesave->MonthOf = $request->MonthOf;
+            $Deletesave->NameOfEmployee = $request->NameOfEmployee;
+            $Deletesave->Designation = $request->Designation;
+            $Deletesave->Office = $request->Office;
+            $Deletesave->Date = $request->Date;
+            $Deletesave->ExpectedTimeOfDeparture = $request->ExpectedTimeOfDeparture;
+            $Deletesave->ExpectedTimeOfReturn = $request->ExpectedTimeOfReturn;
+            $Deletesave->TimeDeviation = $request->TimeDeviation;
+            $Deletesave->OfficialOrPersonal = $request->OfficialOrPersonal;
+            $Deletesave->Purpose = $request->Purpose;
+            $Deletesave->Approval = $request->Approval;
+            $Deletesave->RequestForTranspo = $request->RequestForTranspo;
+            $Deletesave->OfficeEstablishmentVisited = $request->OfficeEstablishmentVisited;
+            $Deletesave->ConfirmationOfAppearance = $request->ConfirmationOfAppearance;
+
+            if($Deletesave->delete()) {
+            return redirect()->back()->withErrors('Deleted!');
             }
         }
     }

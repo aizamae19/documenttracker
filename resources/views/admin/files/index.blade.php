@@ -87,7 +87,7 @@
                                     <td class="text-center">
                                        <a class="btn btn-sm btn-success" href="{{ url('/admin/files/applicationforleave/view/').'/'.$applicationforleave->id}}" data-target="#view"><i class="fa fa-eye"></i> 
                                        View</a>
-                                       <a onclick="confirm('Are you sure, you want to delete Application for Leave?')" class="btn btn-sm btn-danger" href="{{ url('/admin/files/applicationforleave/delete').'/'.$applicationforleave->id}}"  data-target="#delete"><i class="fa fa-trash-alt"></i> 
+                                       <a onclick="confirm('Are you sure you want to delete Application for Leave?')" class="btn btn-sm btn-danger" href="{{ url('/admin/files/applicationforleave/delete').'/'.$applicationforleave->id}}"  data-target="#delete"><i class="fa fa-trash-alt"></i> 
                                        Delete</a>
                                        {{method_field('DELETE')}}
                                        @csrf
@@ -157,8 +157,10 @@
                                     <td class="text-center">
                                        <a class="btn btn-sm btn-success" href="{{ url('/admin/files/dispatch/view/').'/'.$dispatches->id}}" data-target="#view"><i class="fa fa-eye"></i> 
                                        View</a>
-                                       <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> 
+                                       <a onclick="confirm('Are you sure you want to delete Dispatch?')" class="btn btn-sm btn-danger" href="{{ url('/admin/files/dispatch/delete').'/'.$dispatches->id}}" data-target="#delete"><i class="fa fa-trash-alt"></i> 
                                        Delete</a>
+                                       {{method_field('DELETE')}}
+                                       @csrf
                                     </td>
                                  </tr>
                               @endforeach
@@ -215,7 +217,9 @@
                                     <td>{{ substr($certificateofappearance->created_at, 0, 10) }}</td>
                                     <td class="text-center">
                                        <a class="btn btn-sm btn-success" href="{{ url('/admin/files/certificateofappearance/view/').'/'.$certificateofappearance->id}}" data-target="#view"><i class="fa fa-eye"></i> View</a>
-                                       <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
+                                       <a onclick="confirm('Are you sure you want to delete Certificate of Appearance?')" class="btn btn-sm btn-danger" class="btn btn-sm btn-danger" href="{{ url('/admin/files/certificateofappearance/delete').'/'.$certificateofappearance->id}}" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
+                                       {{method_field('DELETE')}}
+                                       @csrf
                                     </td>
                                  </tr>
                               @endforeach
@@ -271,7 +275,7 @@
                                     <td>{{ explode(', ', $locator->Date)[0] }}</td>
                                     <td class="text-center">
                                        <a class="btn btn-sm btn-success" href="{{ url('/admin/files/locator/view/').'/'.$locator->id}}" data-target="#view"><i class="fa fa-eye"></i> View</a>
-                                       <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
+                                       <a onclick="confirm('Are you sure you want to delete Locator?')" class="btn btn-sm btn-danger" href="{{ url('/admin/files/locator/delete').'/'.$locator->id}}"  data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
                                        {{method_field('DELETE')}}
                                        @csrf
                                     </td>
@@ -332,7 +336,9 @@
                                     <td>{{ $travelorder->Date }}</td>
                                     <td class="text-center">
                                        <a class="btn btn-sm btn-success" href="{{ url('/admin/files/travelorder/view/').'/'.$travelorder->id}}" data-toggle="" data-target="#"><i class="fa fa-eye"></i>View</a>
-                                       <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i>Delete</a>
+                                       <a onclick="confirm('Are you sure you want to delete Travel Order?')" class="btn btn-sm btn-danger" href="{{ url('/admin/files/travelorder/delete').'/'.$travelorder->id}}" data-target="#delete"><i class="fa fa-trash-alt"></i>Delete</a>
+                                       {{method_field('DELETE')}}
+                                       @csrf
                                     </td>
                                  </tr>
                               @endforeach
@@ -341,7 +347,7 @@
                      </table>
                   </div>
                </div>
-               <div id="delete" class="modal animated rubberBand delete-modal" role="dialog">
+               <!-- <div id="delete" class="modal animated rubberBand delete-modal" role="dialog">
                   <div class="modal-dialog modal-dialog-centered">
                      <div class="modal-content">
                         <div class="modal-body text-center">
@@ -353,7 +359,7 @@
                         </div>
                      </div>
                   </div>
-               </div>
+               </div> -->
                <div id="add" class="modal animated rubberBand delete-modal" role="dialog">
                   <div class="modal-dialog modal-dialog-centered modal-lg">
                      <div class="modal-content">

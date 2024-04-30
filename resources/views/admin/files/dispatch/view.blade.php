@@ -1541,11 +1541,11 @@
                                                 </tr>
                                                 <tr class="row14">
                                                       <td class="column2 style13 null style15" colspan="2"></td>
-                                                      <td class="column4 style13 null style15" colspan="6">{{ $dispatches->PassengerName}}</td>
+                                                      <td class="column4 style13 null style15" colspan="6"></td>
                                                 </tr>
                                                 <tr class="row15">
                                                       <td class="column2 style13 null style15" colspan="2"></td>
-                                                      <td class="column4 style13 null style15" colspan="6">{{ $dispatches->Crew}}</td>
+                                                      <td class="column4 style13 null style15" colspan="6"></td>
                                                 </tr>
                                                 <tr class="row16">
                                                       <td class="column0 style1 null"></td>

@@ -13,6 +13,7 @@ use App\Models\Locator;
 use App\Models\File;
 use App\Models\Office;
 use App\Models\Typeofleave;
+use Carbon\Carbon;
 
 class FileController extends Controller
 {
@@ -59,7 +60,8 @@ class FileController extends Controller
         $Dispatchsave->Driver = $request->Driver;
         $Dispatchsave->Passenger = $request->Passenger;
         $Dispatchsave->Crew = $request->Crew;
-        $Dispatchsave->PassengerName = $request->PassengerName;
+        $Dispatchsave->PassengerName =implode(", ",$request->PassengerName);
+
 
         if ($Dispatchsave->save()) {
             return redirect("/admin/files")->withErrors('Successfully Saved!');
@@ -262,7 +264,7 @@ class FileController extends Controller
             ]);
         }
 
-        public function storelocator(Request $request)
+          public function storelocator(Request $request)
         {
             $locatorsave = new Locator();
             $locatorsave->Year = $request->Year;
@@ -270,16 +272,17 @@ class FileController extends Controller
             $locatorsave->NameOfEmployee = $request->NameOfEmployee;
             $locatorsave->Designation = $request->Designation;
             $locatorsave->Office = $request->Office;
-            $locatorsave->Date = $request->Date;
-            $locatorsave->ExpectedTimeOfDeparture = $request->ExpectedTimeOfDeparture;
-            $locatorsave->ExpectedTimeOfReturn = $request->ExpectedTimeOfReturn;
-            $locatorsave->TimeDeviation = $request->TimeDeviation;
-            $locatorsave->OfficialOrPersonal = $request->OfficialOrPersonal;
-            $locatorsave->Purpose = $request->Purpose;
-            $locatorsave->Approval = $request->Approval;
-            $locatorsave->RequestForTranspo = $request->RequestForTranspo;
-            $locatorsave->OfficeEstablishmentVisited = $request->OfficeEstablishmentVisited;
-            $locatorsave->ConfirmationOfAppearance = $request->ConfirmationOfAppearance;
+            $locatorsave->Date = implode(", ", $request->Date);
+            $locatorsave->ExpectedTimeOfDeparture = implode(", ",$request->ExpectedTimeOfDeparture);
+            $locatorsave->ExpectedTimeOfReturn = implode(", ",$request->ExpectedTimeOfReturn);
+            $locatorsave->TimeDeviation = implode(", ",$request->TimeDeviation);
+            $locatorsave->OfficialOrPersonal = implode(", ",$request->OfficialOrPersonal);
+            $locatorsave->Purpose = implode(", ",$request->Purpose);
+            $locatorsave->Approval = implode(", ",$request->Approval);
+            $locatorsave->RequestForTranspo = implode(", ",$request->RequestForTranspo);
+            $locatorsave->OfficeEstablishmentVisited =implode(", ",$request->OfficeEstablishmentVisited);
+            $locatorsave->ConfirmationOfAppearance = implode(", ",$request->ConfirmationOfAppearance);
+
 
             if ($locatorsave->save()) {
                 return redirect("/admin/files")->withErrors('Successfully Saved!');

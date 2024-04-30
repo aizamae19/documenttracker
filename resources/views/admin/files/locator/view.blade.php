@@ -112,19 +112,37 @@
             <tr>
                 <td style="width: 3.75pt;padding: 0.75pt;height: 26.2pt;vertical-align: bottom;"><br></td>
             </tr>
-         <tr>
-                <td style="width: 83.95pt;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-left: 1pt solid windowtext;border-image: initial;border-top: none;padding: 0.75pt;height: 14.45pt;vertical-align: middle;font-size: 12px;text-align: center;">{{$locator->Date}}</td>
-                <td style="width: 51.45pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0.75pt;height: 14.45pt;vertical-align: middle;text-align: center;font-size: 12px;">{{$locator->ExpectedTimeOfDeparture}}</td>
-                <td style="width: 45.95pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0.75pt;height: 14.45pt;vertical-align: middle;text-align: center;font-size: 12px;">{{$locator->ExpectedTimeOfReturn}}</td>
-                <td style="width: 74.3pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0.75pt;height: 14.45pt;vertical-align: middle;text-align: center;font-size: 12px;">{{$locator->TimeDeviation}}</td>
-                <td style="width: 49.85pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0.75pt;height: 14.45pt;vertical-align: middle;text-align: center;font-size: 12px;">{{$locator->OfficialOrPersonal}}</td>
-                <td style="width: 106.65pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0.75pt;height: 14.45pt;vertical-align: middle;text-align: center;font-size: 12px;">{{$locator->Purpose}}</td>
-                <td style="width: 143.8pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0.75pt;height: 14.45pt;vertical-align: middle;text-align: center;font-size: 12px;">{{$locator->Approval}}</td>
-                <td style="width: 77.25pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0.75pt;height: 14.45pt;vertical-align: middle;text-align: center;font-size: 12px;font-size: 12px;"></td>
-                <td style="width: 114.9pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0.75pt;height: 14.45pt;vertical-align: middle;text-align: center;font-size: 12px;">{{$locator->OfficeEstablishmentVisited}}</td>
-                <td style="width: 92.15pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0.75pt;height: 14.45pt;vertical-align: middle;"><br></td>
+         <tr><?php
+                                        $Date = explode(',', $locator->Date);
+                                        $ExpectedTimeOfDeparture = explode(',', $locator->ExpectedTimeOfDeparture);
+                                        $ExpectedTimeOfReturn = explode(',', $locator->ExpectedTimeOfReturn);
+                                        $TimeDeviation = explode(',', $locator->TimeDeviation);
+                                        $OfficialOrPersonal = explode(',', $locator->OfficialOrPersonal);
+                                        $Purpose = explode(',', $locator->Purpose);
+                                        $Approval = explode(',', $locator->Approval);
+                                        $RequestForTranspo = explode(',', $locator->RequestForTranspo);
+                                        $OfficeEstablishmentVisited = explode(',', $locator->OfficeEstablishmentVisited);
+                                        $ConfirmationOfAppearance = explode(',', $locator->ConfirmationOfAppearance);
+
+                                        if ($Date !== null && $ExpectedTimeOfDeparture !== null && $ExpectedTimeOfReturn !== null && $TimeDeviation !== null && $OfficialOrPersonal !== null && $Purpose !== null && $Approval  !== null && $RequestForTranspo !== null && $OfficeEstablishmentVisited !== null && $ConfirmationOfAppearance !== null ) {
+                                        for($x = 0; $x < count($Date); $x++) {
+                                    ?>
+                <td style="width: 83.95pt;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-left: 1pt solid windowtext;border-image: initial;border-top: none;padding: 0.75pt;height: 14.45pt;vertical-align: middle;font-size: 12px;text-align: center;">{{ $Date[$x]}}</td>
+                <td style="width: 51.45pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0.75pt;height: 14.45pt;vertical-align: middle;text-align: center;font-size: 12px;">{{ $ExpectedTimeOfDeparture[$x]}}</td>
+                <td style="width: 45.95pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0.75pt;height: 14.45pt;vertical-align: middle;text-align: center;font-size: 12px;">{{ $ExpectedTimeOfReturn[$x]}}</td>
+                <td style="width: 74.3pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0.75pt;height: 14.45pt;vertical-align: middle;text-align: center;font-size: 12px;">{{ $TimeDeviation[$x]}}</td>
+                <td style="width: 49.85pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0.75pt;height: 14.45pt;vertical-align: middle;text-align: center;font-size: 12px;">{{ $OfficialOrPersonal[$x]}}</td>
+                <td style="width: 106.65pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0.75pt;height: 14.45pt;vertical-align: middle;text-align: center;font-size: 12px;">{{$Purpose[$x]}}</td>
+                <td style="width: 143.8pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0.75pt;height: 14.45pt;vertical-align: middle;text-align: center;font-size: 12px;">{{$Approval[$x]}}</td>
+                <td style="width: 77.25pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0.75pt;height: 14.45pt;vertical-align: middle;text-align: center;font-size: 12px;font-size: 12px;">{{$RequestForTranspo[$x]}}</td>
+                <td style="width: 114.9pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0.75pt;height: 14.45pt;vertical-align: middle;text-align: center;font-size: 12px;">{{$OfficeEstablishmentVisited[$x]}}</td>
+                <td style="width: 92.15pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0.75pt;height: 14.45pt;vertical-align: middle; text-align: center;">{{$ConfirmationOfAppearance[$x]}}</td>
                 <td style="width: 3.75pt;padding: 0.75pt;height: 14.45pt;vertical-align: bottom;font-size: 12px;"></td>
             </tr>
+             <?php
+                                        }
+                                    }
+                                    ?>
             <tr>
                 <td style="width: 58.95pt;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-left: 1pt solid windowtext;border-image: initial;border-top: none;padding: 0.75pt;height: 14.45pt;vertical-align: bottom;font-size: 12px;"><br></td>
                 <td style="width: 51.45pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0.75pt;height: 14.45pt;vertical-align: bottom;"><br></td>
@@ -320,6 +338,7 @@
                 <td style="width: 92.15pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0.75pt;height: 14.45pt;vertical-align: bottom;"><br></td>
                 <td style="width: 3.75pt;padding: 0.75pt;height: 14.45pt;vertical-align: bottom;"><br></td>
             <tr>
+               
                 <td colspan="6" style="width: 387.15pt;border-top: none;border-left: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-right: none;padding: 0.75pt;height: 14.45pt;vertical-align: bottom;">
                     <p style='margin:0in;margin-bottom:.0001pt;font-size:13px;font-family:"Calibri","sans-serif";'><span style="font-size:11px;color:black;">SIGNATURE OF EMPLOYEE</span></p>
                 </td>

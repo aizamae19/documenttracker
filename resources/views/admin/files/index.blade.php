@@ -94,6 +94,15 @@
                               @endforeach
                            @endif
                         </tbody>
+                        <tfoot>
+                           <tr>
+                              <th>Series Number</th>
+                              <th>Office</th>
+                              <th>Name</th>
+                              <th>Date Of Filing</th>
+                              <th class="text-center"></th>
+                           </tr>
+                        </tfoot>
                      </table>
                   </div>
                </div>
@@ -257,7 +266,7 @@
                                     <td>{{ date('Y') . '-' . sprintf('%03d', $officeCode) . '-' . $seriesNumberPadded }}</td>
                                     <td>{{ $locator->Office }}</td>
                                     <td>{{ $locator->NameOfEmployee }}</td>
-                                    <td>{{ $locator->Date }}</td>
+                                    <td>{{ explode(', ', $locator->Date)[0] }}</td>
                                     <td class="text-center">
                                        <a class="btn btn-sm btn-success" href="{{ url('/admin/files/locator/view/').'/'.$locator->id}}" data-target="#view"><i class="fa fa-eye"></i> View</a>
                                        <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>

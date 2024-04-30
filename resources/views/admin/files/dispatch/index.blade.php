@@ -138,7 +138,7 @@
                                                               $('#passenger_form').show();
                                                               $('#passengers_form').empty();
                                                               for(let x = 0; x < Passenger; x++){
-                                                                  $('#passengers_form').append('<div class="col-md-4"><div class="form-group"><p>FirstName</p><input class="form-control" name="Passenger" placeholder=""></div></div><div class="col-md-4"><div class="form-group"><p>Middle Name</p><input class="form-control" name="PassengerName" placeholder=""></div></div><div class="col-md-4"><div class="form-group"><p>LastName</p><input class="form-control" name="Crew" placeholder=""></div></div>');
+                                                                  $('#passengers_form').append('<div class="col-md-12"><div class="form-group"><p>Name</p><input class="form-control" name="Passenger" placeholder=""></div></div>');
                                                               }
                                                           } else {
                                                               $('#passenger_form').hide();

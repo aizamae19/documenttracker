@@ -1,9 +1,13 @@
-                <button id="print-button" onclick="window.print()" class="btn btn-sm btn-primary waves-effect waves-light printdtr"><i class="fa fa-print"></i> Print</button>
+<title>Document Tracking System</title>
+<link rel="icon" type="image/ico" href="{{asset('assets/img/MaasinCity.png')}}">
+  <section class="content">
+        <div class="container-fluid">
+            <div class="card card-info" style="">
                 <div class="wcdiv wcpage">
                     <style type="text/css">
                         .wcdiv.wcpage {
-                        width: 210mm;
-                        height: 350mm;
+                            width: 220mm;
+                            height: 300mm;
                     }
                         .sample-box {
                         width: 266px;
@@ -26,16 +30,6 @@
                         counter-increment: section;
                         content: counter(section);
 
-                    }
-                    #print-button {
-                        display: block;
-                        width: 100px;
-                        margin: 20px;
-                    }
-                    @media print {
-                        #print-button {
-                            display: none;
-                        }
                     }
                     </style>
                         <div class="wcdiv" style="left:0pt; top:2.5pt; background-color: white;">
@@ -114,7 +108,7 @@
                     </div>
                     <div class="wcdiv"><img class="wcimg" style="margin: 0 auto 0 0; display: block; left: 36pt; top: 268.42pt; width: 460.45pt; height: 22.6pt;" src="https://test.myfiles.space/user_files/temporary/6618ecb97980b7.70717253/1712909496_2024-travel/1712909496_2024-travel-4.png"></div>
                     <div class="wcdiv"><img class="wcimg" style="margin: 0 auto 0 0; display: block; left: 26.75pt; top: 178.14pt; width: 163.25pt; height: 25.1pt;" src="https://test.myfiles.space/user_files/temporary/6618ecb97980b7.70717253/1712909496_2024-travel/1712909496_2024-travel-6.png"></div>
-                    <div class="wcdiv" style="margin-left:40pt; top:65.6pt;">
+                    <div class="wcdiv" style="margin-left:40pt; top:65.6pt; margin-right: 60pt;">
                         <div class="wcdiv" style="left:-0.75pt; top:68.9pt;"><a name="_GoBack" style="left:0pt; top:0pt;">&nbsp;</a></div>
                         <div class="wcdiv" style="left:-0.75pt; top:117pt;"><span class="wcspan wctext002" style="left:0pt; top:0.39pt; line-height:13.41pt;">Date:&nbsp;{{$travelorder->Date}}</span></div>
                         <div class="wcdiv" style="left:-0.75pt; top:147.09pt;"><span class="wcspan wctext003" style="left:-8pt; top:0.39pt; line-height:13.41pt;">&nbsp;NACIONAL V MERCADO</span></div>
@@ -123,9 +117,9 @@
                         <div class="wcdiv" style="top:206.21pt;"><span class="wcspan wctext003" style="left:0pt; top:0.39pt; line-height:13.41pt;">Subject:</span> <span class="wcspan wctext004" style="left:63.67pt; top:0.39pt; line-height:13.41pt;">Recommendation for Issuance of Travel Order</span></div>
                         <div class="wcdiv" style="left:-0.75pt; top:235.83pt;"><span class="wcspan wctext002" style="left:0pt; top:0.39pt; line-height:13.41pt;">Sir;</span></div>
                         <div style="left:-0.75pt; top:284.66pt;">
-                        <p style="margin-top: 45%; margin-left: -10px; ">This is to certify that name(s) appearing below is/are authorized to undertake an official trip to<br><span style="color: red;top:0.39pt;">{{$travelorder->Location}}</span> from <span style="color: red;top:0.39pt;">{{$travelorder->Dated}}.</span></p>
+                        <p style="margin-top: 47%; ">This is to certify that name(s) appearing below is/are authorized to undertake an official trip to <span style="color: red;top:0.39pt;">{{$travelorder->Location}}</span> from <span style="color: red;top:0.39pt;">{{$travelorder->InclusiveDates}}.</span></p>
                         </div>
-                          <div class="sample-box" style="color: white; font-size: 7px;text-align: left;">Travel Request Issuance Number: </div>
+                           <div class="sample-box" style="color: white; font-size: 7px;text-align: left;">Travel Request Issuance Number:</div>
                          <table style="border: none;border-collapse: collapse;width:540pt; margin-top: 10px;">
                             <style >
                                 .sample-box {
@@ -170,7 +164,7 @@
                                </tbody>
                             </table>
                             <div style="left:-0.75pt; top:264.66pt;">
-                            <p style="margin-top: 1%; margin-left: -10px; text-align: justify; ">We hereby endorse this travel order request with a memorandum order from the  <span style="color: red;top:0.39pt;">Provincial Governor of Southern Leyte</span> dated <span style="color: red;top:0.39pt;">{{$travelorder->InclusiveDates}}.&nbsp;</span></p>
+                            <p style="margin-top: 1%; text-align: justify; ">We hereby endorse this travel order request with a memorandum order from the  <span style="color: red;top:0.39pt;">{{$travelorder->Endorser}}</span> dated <span style="color: red;top:0.39pt;">{{$travelorder->Dated}}.&nbsp;</span></p>
                             </div>
                             <table style="border: none;border-collapse: collapse;width:490pt;">
                                 <tbody>
@@ -212,6 +206,3 @@
             <p><br></p>
          </div>
       </section>
-    </div>
-  </div>
-</div>

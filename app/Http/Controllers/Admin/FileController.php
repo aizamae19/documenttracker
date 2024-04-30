@@ -254,6 +254,14 @@ class FileController extends Controller
             return view('admin.files.locator.index');
         }
 
+         public function viewlocator(Request $request){
+            $locator=locator::where('id',$request->id)->first();
+
+            return view('admin.files.locator.view',[
+                'locator'=>$locator
+            ]);
+        }
+
         public function storelocator(Request $request)
         {
             $locatorsave = new Locator();

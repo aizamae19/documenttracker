@@ -28,26 +28,26 @@
                                     </div>
                                     <br>
                                     <div class="row">
-                                        <div class="col-md-4">
+                                        <div class="col-md-6">
                                             <div class="form-group">
                                                 <p>YEAR</p>
-                                                <input type="text" class="form-control" name="Year">           
+                                                <input type="text" class="form-control" name="Year">          
                                             </div>
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="col-md-6">
                                             <div class="form-group">
                                                 <p>MONTH OF</p>
                                                 <input type="text" class="form-control" name="MonthOf">
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="row">
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <p>NAME OF EMPLOYEE</p>
                                                 <input type="text" class="form-control" name="NameOfEmployee">        
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row">
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <p>DESIGNATION</p>
@@ -69,16 +69,16 @@
                                                           <option>PLANNING</option>
                                                           <option>BUDGET</option>
                                                           <option>ACCOUNTING</option>
-                                                          <option>OGS</option>   
+                                                          <option>OGS</option>  
                                                           <option>CENRO</option>
                                                           <option>LEGAL</option>
                                                           <option>TREASURER</option>
                                                           <option>ASSESSOR</option>
                                                           <option>ENGINEERING</option>
-                                                          <option>CHU</option> 
+                                                          <option>CHU</option>
                                                           <option>CSWD</option>
                                                           <option>VET</option>
-                                                          <option>REGISTRAR</option> 
+                                                          <option>REGISTRAR</option>
                                                           <option>DILG</option>
                                                           <option>MARKET</option>
                                                           <option>TERMINAL</option>
@@ -87,219 +87,70 @@
                                                     </select>
                                             </div>
                                         </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
                                         <div class="col-md-4">
                                             <div class="form-group">
-                                                <p>Number of Rows</p>
-                                                <input type="number" class="form-control" id="Rows">
+                                                <p>Date</p>
+                                                <input type="text" class="form-control" name="Date">        
                                             </div>
                                         </div>
-                                    </div>
-
-                                                  <div class="col-md-12" id="row_form" style="display: none;">
-                                                      <div class="form-group">
-                                                      </div>
-                                                      <div class="row" id="rows_form">
-                                                      </div>
-                                                  </div>
-                                                  <script src="{{ asset('assets/jquery-3.7.1.min.js') }}"></script>
-                                                  <script>
-                                                      $('#Rows').on('input', function(){
-                                                          var Rows = Number($('#Rows').val());
-
-                                                          if(Rows >= 1){
-                                                              $('#Row_form').show();
-                                                              $('#Rows_form').empty();
-                                                              for(let x = 0; x < Rows; x++){
-                                                                  $('#Rowss_form').append('<div class="col-md-4"><div class="form-group"><p>FirstName</p><input class="form-control" name="Passenger" placeholder=""></div></div><div class="col-md-4"><div class="form-group"><p>Middle Name</p><input class="form-control" name="PassengerName" placeholder=""></div></div><div class="col-md-4"><div class="form-group"><p>LastName</p><input class="form-control" name="Crew" placeholder=""></div></div>');
-                                                              }
-                                                          } else {
-                                                              $('#Row_form').hide();
-                                                          }
-                                                          console.log(Rows);
-                                                      });
-                                                  </script>
-
-                                    <table class="html-table">
-                                        <tr>
-                                            <th class="tableh" style="text-align:center; font-size: 12px;">DATE</th>
-                                            <th class="tableh" style="text-align:center; font-size: 12px;">ETD<br>Expected Time of Departure</th>
-                                            <th class="tableh" style="text-align:center; font-size: 12px;">ETR<br>Expected Time of Return</th>
-                                            <th class="tableh" style="text-align:center; font-size: 12px;">TIME DEVIATION for ETR</th>
-                                            <th class="tableh" style="text-align:center; font-size: 12px;">OFFICIAL or PERSONAL?</th>
-                                            <th class="tableh" style="text-align:center; font-size: 12px;">PURPOSE/REASON</th>
-                                            <th class="tableh" style="text-align:center; font-size: 12px;">APPROVAL/<br>DISAPPROVAL By HoO</th>
-                                            <th class="tableh" style="text-align:center; font-size: 12px;">Request for Transpo<br>If Yes, to be signed by Motorpool & Driver</th>
-                                            <th class="tableh" style="text-align:center; font-size: 12px;">Office/Establishment<br>Visited<br>Date & Time Visited</th>
-                                            <th class="tableh" style="text-align:center; font-size: 12px;">Confirmation of Appearance<br>Name & Signature of Attending Employee</th>
-                                        </tr>
-                                        <tr>
-                                            <td class="tr-td"><input type="text" class="input" name="Date"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ExpectedTimeOfDeparture"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ExpectedTimeOfReturn"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="TimeDeviation"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="OfficialOrPersonal"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="Purpose"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="Approval"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="RequestForTranspo"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="OfficeEstablishmentVisited"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ConfirmationOfAppearance"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="tr-td"><input type="text" class="input" name="Date"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ExpectedTimeOfDeparture"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ExpectedTimeOfReturn"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="TimeDeviation"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="OfficialOrPersonal"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="Purpose"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="Approval"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="RequestForTranspo"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="OfficeEstablishmentVisited"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ConfirmationOfAppearance"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="tr-td"><input type="text" class="input" name="Date"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ExpectedTimeOfDeparture"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ExpectedTimeOfReturn"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="TimeDeviation"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="OfficialOrPersonal"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="Purpose"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="Approval"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="RequestForTranspo"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="OfficeEstablishmentVisited"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ConfirmationOfAppearance"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="tr-td"><input type="text" class="input" name="Date"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ExpectedTimeOfDeparture"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ExpectedTimeOfReturn"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="TimeDeviation"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="OfficialOrPersonal"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="Purpose"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="Approval"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="RequestForTranspo"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="OfficeEstablishmentVisited"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ConfirmationOfAppearance"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="tr-td"><input type="text" class="input" name="Date"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ExpectedTimeOfDeparture"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ExpectedTimeOfReturn"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="TimeDeviation"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="OfficialOrPersonal"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="Purpose"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="Approval"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="RequestForTranspo"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="OfficeEstablishmentVisited"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ConfirmationOfAppearance"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="tr-td"><input type="text" class="input" name="Date"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ExpectedTimeOfDeparture"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ExpectedTimeOfReturn"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="TimeDeviation"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="OfficialOrPersonal"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="Purpose"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="Approval"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="RequestForTranspo"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="OfficeEstablishmentVisited"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ConfirmationOfAppearance"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="tr-td"><input type="text" class="input" name="Date"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ExpectedTimeOfDeparture"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ExpectedTimeOfReturn"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="TimeDeviation"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="OfficialOrPersonal"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="Purpose"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="Approval"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="RequestForTranspo"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="OfficeEstablishmentVisited"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ConfirmationOfAppearance"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="tr-td"><input type="text" class="input" name="Date"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ExpectedTimeOfDeparture"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ExpectedTimeOfReturn"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="TimeDeviation"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="OfficialOrPersonal"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="Purpose"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="Approval"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="RequestForTranspo"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="OfficeEstablishmentVisited"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ConfirmationOfAppearance"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="tr-td"><input type="text" class="input" name="Date"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ExpectedTimeOfDeparture"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ExpectedTimeOfReturn"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="TimeDeviation"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="OfficialOrPersonal"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="Purpose"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="Approval"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="RequestForTranspo"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="OfficeEstablishmentVisited"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ConfirmationOfAppearance"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="tr-td"><input type="text" class="input" name="Date"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ExpectedTimeOfDeparture"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ExpectedTimeOfReturn"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="TimeDeviation"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="OfficialOrPersonal"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="Purpose"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="Approval"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="RequestForTranspo"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="OfficeEstablishmentVisited"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ConfirmationOfAppearance"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="tr-td"><input type="text" class="input" name="Date"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ExpectedTimeOfDeparture"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ExpectedTimeOfReturn"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="TimeDeviation"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="OfficialOrPersonal"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="Purpose"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="Approval"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="RequestForTranspo"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="OfficeEstablishmentVisited"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ConfirmationOfAppearance"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="tr-td"><input type="text" class="input" name="Date"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ExpectedTimeOfDeparture"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ExpectedTimeOfReturn"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="TimeDeviation"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="OfficialOrPersonal"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="Purpose"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="Approval"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="RequestForTranspo"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="OfficeEstablishmentVisited"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ConfirmationOfAppearance"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="tr-td"><input type="text" class="input" name="Date"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ExpectedTimeOfDeparture"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ExpectedTimeOfReturn"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="TimeDeviation"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="OfficialOrPersonal"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="Purpose"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="Approval"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="RequestForTranspo"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="OfficeEstablishmentVisited"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ConfirmationOfAppearance"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="tr-td"><input type="text" class="input" name="Date"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ExpectedTimeOfDeparture"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ExpectedTimeOfReturn"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="TimeDeviation"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="OfficialOrPersonal"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="Purpose"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="Approval"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="RequestForTranspo"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="OfficeEstablishmentVisited"></td>
-                                            <td class="tr-td"><input type="text" class="input" name="ConfirmationOfAppearance"></td>
-                                        </tr>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <p>Expected Time of Departure</p>
+                                                <input type="text" class="form-control" name="ExpectedTimeOfDeparture">        
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <p>Expected Time of Return(ETR)</p>
+                                                <input type="text" class="form-control" name="ExpectedTimeOfReturn">        
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <p>TIME DEVIATION for ETR</p>
+                                                <input type="text" class="form-control" name="TimeDeviation">        
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <p>OFFICIAL or PERSONAL?</p>
+                                                <input type="text" class="form-control" name="OfficialOrPersonal">        
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <p>PURPOSE/REASON</p>
+                                                <input type="text" class="form-control" name="Purpose">        
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <p>APPROVAL/DISAPPROVAL By HoO</p>
+                                                <input type="text" class="form-control" name="Approval">        
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <p>Request for Transpo<br>If Yes, to be signed by Motorpool & Driver</p>
+                                                <input type="text" class="form-control" name="RequestForTranspo">        
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <p>Office/Establishment<br>Visited<br>Date & Time Visited</p>
+                                                <input type="text" class="form-control" name="OfficeEstablishmentVisited">        
+                                            </div>
+                                        </div>
+                                         <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <p>Confirmation of Appearance<br>Name & Signature of Attending Employee</p>
+                                                <input type="text" class="form-control" name="ConfirmationOfAppearance">        
+                                            </div>
+                                        </div>
                                     </table>
                                     <div class="row">
                                         <div class="col-md-12">

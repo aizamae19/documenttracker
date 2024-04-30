@@ -57,10 +57,17 @@ class FileController extends Controller
         ]);
     }
 
+ public function viewlocator(Request $request){
+        $locator=locator::where('id',$request->id)->first();
+
+        return view('admin.files.locator.view',[
+                'locator'=>$locator
+        ]);
+    }
+
     public function saveDispatch(Request $request)
     {
         $Dispatchsave = new Dispatch();
-        $Dispatchsave->DispatchNumber = $request->DispatchNumber;
         $Dispatchsave->TripTicketNumber = $request->TripTicketNumber;
         $Dispatchsave->Date = $request->Date;
         $Dispatchsave->Name = $request->Name;
@@ -71,34 +78,33 @@ class FileController extends Controller
         $Dispatchsave->PlateNumber = $request->PlateNumber;
         $Dispatchsave->Driver = $request->Driver;
         $Dispatchsave->Passenger = implode(", ", $request->Passenger);
-        $Dispatchsave->Crew = implode(", ", $$request->Crew);
-        $Dispatchsave->PassengerName = implode(",", $request->PassengerName);
+
        
         if ($Dispatchsave->save()) {
             return redirect("/admin/files")->withErrors('Successfully Saved!');
         }
     }
 
-     public function deletedispatch (Request $request){
-            $Deletesave= Dispatch::where('id',$request->id)->first();
-            $Deletesave->DispatchNumber = $request->DispatchNumber;
-            $Deletesave->TripTicketNumber = $request->TripTicketNumber;
-            $Deletesave->Date = $request->Date;
-            $Deletesave->Name = $request->Name;
-            $Deletesave->Address = $request->Address;
-            $Deletesave->ContactNumber = $request->ContactNumber;
-            $Deletesave->Office = $request->Office;
-            $Deletesave->DescriptionofDispatch = $request->DescriptionofDispatch;
-            $Deletesave->PlateNumber = $request->PlateNumber;
-            $Deletesave->Driver = $request->Driver;
-            $Deletesave->Passenger = $request->Passenger;
-            $Deletesave->Crew = $request->Crew;
-            $Deletesave->PassengerName = $request->PassengerName;
+    //  public function deletedispatch (Request $request){
+    //         $Deletesave= Dispatch::where('id',$request->id)->first();
+    //         $Deletesave->DispatchNumber = $request->DispatchNumber;
+    //         $Deletesave->TripTicketNumber = $request->TripTicketNumber;
+    //         $Deletesave->Date = $request->Date;
+    //         $Deletesave->Name = $request->Name;
+    //         $Deletesave->Address = $request->Address;
+    //         $Deletesave->ContactNumber = $request->ContactNumber;
+    //         $Deletesave->Office = $request->Office;
+    //         $Deletesave->DescriptionofDispatch = $request->DescriptionofDispatch;
+    //         $Deletesave->PlateNumber = $request->PlateNumber;
+    //         $Deletesave->Driver = $request->Driver;
+    //         $Deletesave->Passenger = $request->Passenger;
+    //         $Deletesave->Crew = $request->Crew;
+    //         $Deletesave->PassengerName = $request->PassengerName;
 
-        if($Deletesave->delete()) {
-             return redirect()->back()->withErrors('Deleted!');
-        }
-    }
+    //     if($Deletesave->delete()) {
+    //          return redirect()->back()->withErrors('Deleted!');
+    //     }
+    // }
         public function applicationforleave(){
             $applicationforleaves = Applicationforleave::get();
             return view('admin.files.applicationforleave.leaveform', [
@@ -155,10 +161,14 @@ class FileController extends Controller
             }
             }
 
-            public function travelorder()
-            {
-                return view('admin.files.travelorder.travelorder');
-            }
+       public function travelorder()
+{
+    // Retrieve the travel orders from the database
+    $travelorders = \App\Models\TravelOrder::all();
+
+    // Return the blade view with the travel orders
+    return view('admin.files.travelorder.travelorder', compact('travelorders'));
+}
 
             public function viewtravelorder(Request $request){
                 $travelorder=Travelorder::where('id',$request->id)->first();
@@ -221,7 +231,6 @@ class FileController extends Controller
                     'certificateofappearances'=>$certificateofappearances
             ]);
         }
-
         public function storecertificateofappearance(Request $request)
         {
             $certificateofappearancesave = new Certificateofappearance();
@@ -239,7 +248,6 @@ class FileController extends Controller
                 return redirect("/admin/files")->withErrors('Successfully Saved!');
             }
         }
-
         public function deletecertificateofappearance(Request $request)
         {
             $Deletesave=Certificateofappearance::where('id' ,$request->id)->first();
@@ -276,16 +284,17 @@ class FileController extends Controller
             $locatorsave->NameOfEmployee = $request->NameOfEmployee;
             $locatorsave->Designation = $request->Designation;
             $locatorsave->Office = $request->Office;
-            $locatorsave->Date = $request->Date;
-            $locatorsave->ExpectedTimeOfDeparture = $request->ExpectedTimeOfDeparture;
-            $locatorsave->ExpectedTimeOfReturn = $request->ExpectedTimeOfReturn;
-            $locatorsave->TimeDeviation = $request->TimeDeviation;
-            $locatorsave->OfficialOrPersonal = $request->OfficialOrPersonal;
-            $locatorsave->Purpose = $request->Purpose;
-            $locatorsave->Approval = $request->Approval;
-            $locatorsave->RequestForTranspo = $request->RequestForTranspo;
-            $locatorsave->OfficeEstablishmentVisited = $request->OfficeEstablishmentVisited;
-            $locatorsave->ConfirmationOfAppearance = $request->ConfirmationOfAppearance;
+            $locatorsave->Date = implode(", ", $request->Date);
+            $locatorsave->ExpectedTimeOfDeparture = implode(", ",$request->ExpectedTimeOfDeparture);
+            $locatorsave->ExpectedTimeOfReturn = implode(", ",$request->ExpectedTimeOfReturn);
+            $locatorsave->TimeDeviation = implode(", ",$request->TimeDeviation);
+            $locatorsave->OfficialOrPersonal = implode(", ",$request->OfficialOrPersonal);
+            $locatorsave->Purpose = implode(", ",$request->Purpose);
+            $locatorsave->Approval = implode(", ",$request->Approval);
+            $locatorsave->RequestForTranspo = implode(", ",$request->RequestForTranspo);
+            $locatorsave->OfficeEstablishmentVisited =implode(", ",$request->OfficeEstablishmentVisited);
+            $locatorsave->ConfirmationOfAppearance = implode(", ",$request->ConfirmationOfAppearance);
+
 
             if ($locatorsave->save()) {
                 return redirect("/admin/files")->withErrors('Successfully Saved!');

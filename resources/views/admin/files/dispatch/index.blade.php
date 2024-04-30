@@ -120,7 +120,7 @@
                                                  <div class="col-md-4">
                                                       <div class="form-group">
                                                           <p>Number of Passenger</p>
-                                                          <input type="number" class="form-control" name="" placeholder="" id="Passenger">
+                                                          <input type="number" class="form-control" name="" placeholder="" id="Passengers">
                                                       </div>
                                                   </div>
                                                   <div class="col-md-12" id="passenger_form" style="display: none;">
@@ -129,21 +129,21 @@
                                                       <div class="row" id="passengers_form">
                                                       </div>
                                                   </div>
-                                                  <script src="{{ asset('assets/jquery-3.7.1.min.js') }}"></script>
+                                           <script src="{{ asset('assets/jquery/jquery.min.js') }}"></script>
                                                   <script>
-                                                      $('#Passenger').on('input', function(){
-                                                          var Passenger = Number($('#Passenger').val());
+                                                      $('#Passengers').on('input', function(){
+                                                          var Passengers = Number($('#Passengers').val());
 
-                                                          if(Passenger >= 1){
+                                                          if(Passengers >= 1){
                                                               $('#passenger_form').show();
                                                               $('#passengers_form').empty();
-                                                              for(let x = 0; x < Passenger; x++){
-                                                                  $('#passengers_form').append('<div class="col-md-4"><div class="form-group"><p>FirstName</p><input class="form-control" name="Passenger[]" placeholder=""></div></div><div class="col-md-4"><div class="form-group"><p>Middle Name</p><input class="form-control" name="PassengerName[]" placeholder=""></div></div><div class="col-md-4"><div class="form-group"><p>LastName</p><input class="form-control" name="Crew[]" placeholder=""></div></div>');
+                                                              for(let x = 0; x < Passengers; x++){
+                                                                  $('#passengers_form').append('<div class="col-md-12"><div class="form-group"><p>Name</p><input class="form-control" name="Passenger[]" placeholder=""></div></div>');
                                                               }
                                                           } else {
                                                               $('#passenger_form').hide();
                                                           }
-                                                          console.log(Passenger);
+                                                          console.log(Passengers);
                                                       });
                                                   </script>
                                             <div class="col-md-12">

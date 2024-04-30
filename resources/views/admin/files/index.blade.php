@@ -85,24 +85,15 @@
                                     <td>{{ $applicationforleave->Name }}</td>
                                     <td>{{ $applicationforleave->DateOfFiling }}</td>
                                     <td class="text-center">
-                                       <a class="btn btn-sm btn-success" href="{{ url('/admin/files/applicationforleave/view/').'/'.$applicationforleave->id}}" data-target="#view"><i class="fa fa-eye"></i>
+                                       <a class="btn btn-sm btn-success" href="{{ url('/admin/files/applicationforleave/view/').'/'.$applicationforleave->id}}" data-target="#view"><i class="fa fa-eye"></i> 
                                        View</a>
-                                       <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i>
+                                       <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> 
                                        Delete</a>
                                     </td>
                                  </tr>
                               @endforeach
                            @endif
                         </tbody>
-                        <tfoot>
-                           <tr>
-                              <th>Series Number</th>
-                              <th>Office</th>
-                              <th>Name</th>
-                              <th></th>
-                              <th></th>
-                           </tr>
-                        </tfoot>
                      </table>
                   </div>
                </div>
@@ -153,9 +144,9 @@
                                     <td>{{ $dispatches->Name }}</td>
                                     <td>{{ $dispatches->Date }}</td>
                                     <td class="text-center">
-                                       <a class="btn btn-sm btn-success" href="{{ url('/admin/files/dispatch/view/').'/'.$dispatches->id}}" data-target="#view"><i class="fa fa-eye"></i>
+                                       <a class="btn btn-sm btn-success" href="{{ url('/admin/files/dispatch/view/').'/'.$dispatches->id}}" data-target="#view"><i class="fa fa-eye"></i> 
                                        View</a>
-                                       <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i>
+                                       <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> 
                                        Delete</a>
                                     </td>
                                  </tr>
@@ -266,9 +257,9 @@
                                     <td>{{ date('Y') . '-' . sprintf('%03d', $officeCode) . '-' . $seriesNumberPadded }}</td>
                                     <td>{{ $locator->Office }}</td>
                                     <td>{{ $locator->NameOfEmployee }}</td>
-                                    <td>{{ $locator->Date }}</td>
+                                    <td>{{ explode(', ', $locator->Date)[0] }}</td>
                                     <td class="text-center">
-                                       <a class="btn btn-sm btn-success" href="{{ url('/admin/files/locator/view/').'/'.$locator->id}}" data-target="#view"><i class="fa fa-eye"></i> View</a>
+                                       <a class="btn btn-sm btn-success" href="{{ url('/admin/files/locator/view/').'/'.$locator->id}}" data-target="#"><i class="fa fa-eye"></i> View</a>
                                        <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i> Delete</a>
                                     </td>
                                  </tr>
@@ -304,33 +295,28 @@
                            </tr>
                         </thead>
                         <tbody>
-                             @if(isset($travelorders))
-    <?php
-    $officeSeriesNumbers = [];
-    ?>
-    @foreach($travelorders as $key => $travelorder)
-        <?php
-        // Assuming $travelorder->id is the ID of each travel order
-        $id = $travelorder->id;
+                           @if(isset($travelorders))
+                            <?php
+                            $officeSeriesNumbers = [];
+                            ?>
+                            @foreach($travelorders as $key => $travelorder)
+                                <tr>
+                                    <?php
+                                    $officeName = explode(', ', $travelorder->Office)[0];
 
-        $officeName = explode(', ', $travelorder->Office)[0];
+                                    $office = App\Models\Office::where('ShortName', $officeName)->first();
+                                    $officeCode = $office ? $office->Code : '';
 
-        $office = App\Models\Office::where('ShortName', $officeName)->first();
-        $officeCode = $office ? $office->Code : '';
-
-        if (!isset($officeSeriesNumbers[$officeName])) {
-            $officeSeriesNumbers[$officeName] = 1;
-        }
-        $seriesNumber = $officeSeriesNumbers[$officeName]++;
-        $seriesNumberPadded = sprintf('%06d', $seriesNumber);
-        ?>
-        <tr>
-            <td>{{ date('Y') . '-' . sprintf('%03d', $officeCode) . '-' . $seriesNumberPadded }}</td>
-            <td>{{ $officeName }}</td>
-            <td>{{ explode(', ', $travelorder->Name)[0] }}</td>
-            <td>{{ $travelorder->Date }}</td>
-      
-
+                                    if (!isset($officeSeriesNumbers[$officeName])) {
+                                        $officeSeriesNumbers[$officeName] = 1;
+                                    }
+                                    $seriesNumber = $officeSeriesNumbers[$officeName]++;
+                                    $seriesNumberPadded = sprintf('%06d', $seriesNumber);
+                                    ?>
+                                    <td>{{ date('Y') . '-' . sprintf('%03d', $officeCode) . '-' . $seriesNumberPadded }}</td>
+                                    <td>{{ $officeName }}</td>
+                                    <td>{{ explode(', ', $travelorder->Name)[0] }}</td>
+                                    <td>{{ $travelorder->Date }}</td>
                                     <td class="text-center">
                                        <a class="btn btn-sm btn-success" href="{{ url('/admin/files/travelorder/view/').'/'.$travelorder->id}}" data-toggle="" data-target="#"><i class="fa fa-eye"></i>View</a>
                                        <a class="btn btn-sm btn-danger" href="" data-toggle="modal" data-target="#delete"><i class="fa fa-trash-alt"></i>Delete</a>

@@ -29,10 +29,9 @@
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <p> DATE OF FILING</p>
-                                                    <input type="date" class="form-control" name="Date">
+                                                    <input type="date"  class="form-control" name="Date">
                                                 </div>
                                             </div>
-                                          
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <p>LOCATION</p>
@@ -75,7 +74,7 @@
                                                     <div class="row" id="travelorders_form">
                                                   </div>
                                               </div>
-                                           <script src="{{ asset('assets/jquery-3.7.1.min.js') }}"></script>
+                                           <script src="{{ asset('assets/jquery/jquery.min.js') }}"></script>
                                                 <script>
                                                       $('#Subject').on('input', function(){
                                                           var Subject = Number($('#Subject').val());
@@ -84,7 +83,7 @@
                                                               $('#travelorder_form').show();
                                                               $('#travelorders_form').empty();
                                                               for(let x = 0; x < Subject; x++){
-                                                                  $('#travelorders_form').append('<div class="col-md-4"><div class="form-group"><p>NAME</p><input class="form-control" name="Name[]" placeholder="Name"></div></div><div class="col-md-4"><div class="form-group"><p>DESIGNATION</p><input class="form-control" name="Designation[] "placeholder="Designation"></div></div><div class="col-md-4"> <div><p>OFFICE</p><select name="Office[]" class="form-control" required=""  ><option>MAYORS</option><option>BUDGET</option><option>ACCOUNTANTING</option><option>OGS</option> <option>AGRICULTURE</option><option>DILG</option><option>ADMIN</option><option>LEGAL</option><option>TREASURER</option> <option>ASSESSOR</option><option> ENGINEERING<option>CHU</option><option>VET</option> <option> REGISTRAR</option><option>MARKET</option><option>TERMINAL</option><option> SLAUGHTER</option> <option>CDRRMO</option><option>TOURISM</option><option>VICE SP</option><option>SECRETARY SP</option><option>HRMO</option><option>PLANNING</option> <option>CENRO</option><option>CSWD</option></select></div></div>');
+                                                                  $('#travelorders_form').append('<div class="col-md-4"><div class="form-group"><p>NAME</p><input class="form-control" name="Name[]" placeholder="Name"></div></div><div class="col-md-4"><div class="form-group"><p>DESIGNATION</p><input class="form-control" name="Designation[] "placeholder="Designation"></div></div><div class="col-md-4"><div><p>OFFICE</p><select name="Office[]" class="form-control" required=""  ><option>MAYORS</option><option>BUDGET</option><option>ACCOUNTANTING</option><option>OGS</option> <option>AGRICULTURE</option><option>DILG</option><option>ADMIN</option><option>LEGAL</option><option>TREASURER</option><option>ASSESSOR</option><option>ENGINEERING<option>CHU</option><option>VET</option><option> REGISTRAR</option><option>MARKET</option><option>TERMINAL</option><option> SLAUGHTER</option> <option>CDRRMO</option><option>TOURISM</option><option>VICE SP</option><option>SECRETARY SP</option><option>HRMO</option><option>PLANNING</option><option>CENRO</option><option>CSWD</option></select></div></div>');
                                                                     }
                                                                 } else {
                                                                     $('#travelorder_form').hide();

@@ -17,28 +17,16 @@
             </div>
          </div>
        <section class="content">
-      <section class="content">
   <section class="content">
-       <section class="content">
         <div class="container-fluid">
             <div class="card card-info" style="">
-                <br>
                 <button id="print-button" onclick="window.print()" class="btn btn-sm btn-primary waves-effect waves-light printdtr"><i class="fa fa-print"></i> Print</button>
-                <div class="wcdiv wcpage"> 
+                <div class="wcdiv wcpage">
                     <style type="text/css">
                         .wcdiv.wcpage {
-                        width: 210mm; 
-                        height: 350mm; 
+                        width: 210mm;
+                        height: 350mm;
                     }
-                    #print-button {
-                        display: block;
-                        width: 100px;
-                        margin-left: 50px;
-                    }
-                    @media print {
-                        #print-button {
-                            display: none;
-                        }  
                         .sample-box {
                         width: 266px;
                         background-color: white;
@@ -59,10 +47,20 @@
                         .count:before {
                         counter-increment: section;
                         content: counter(section);
+
+                    }
+                    #print-button {
+                        display: block;
+                        width: 100px;
+                        margin: 20px;
+                    }
+                    @media print {
+                        #print-button {
+                            display: none;
+                        }
                     }
                     </style>
-
-                        <div class="wcdiv" style="left:0pt; top:2.5pt; background-color: white;"> 
+                        <div class="wcdiv" style="left:0pt; top:2.5pt; background-color: white;">
                             <div class="wcdiv" style="top:-0.02pt;">
                             <div class="wcdiv">&nbsp;<img class="wcimg" style="margin: 0 auto 0 0; display: block; left: 0pt; top: 0.02pt; width: 612pt; height: 80.6pt;" src="https://test.myfiles.space/user_files/temporary/6618ecb97980b7.70717253/1712909496_2024-travel/1712909496_2024-travel-1.png"></div>
                         </div>
@@ -149,9 +147,8 @@
                         <div style="left:-0.75pt; top:284.66pt;">
                         <p style="margin-top: 45%; margin-left: -10px; ">This is to certify that name(s) appearing below is/are authorized to undertake an official trip to<br><span style="color: red;top:0.39pt;">{{$travelorder->Location}}</span> from <span style="color: red;top:0.39pt;">{{$travelorder->Dated}}.</span></p>
                         </div>
-                          <div class="sample-box" style="color: white; font-size: 7px;text-align: left;">Travel Request Issuance Number: </div>
+                           <div class="sample-box" style="color: white; font-size: 7px;text-align: left;">Travel Request Issuance Number:</div>
                          <table style="border: none;border-collapse: collapse;width:540pt; margin-top: 10px;">
-                     
                             <style >
                                 .sample-box {
                                width: 266px;
@@ -168,14 +165,14 @@
                                 background-color: #FF65FF;          
                                 }
                             </style>
-                        <table style="border: none;border-collapse: collapse;width:540pt; margin-top: 10px;">
-                          <div class="sample-box" style="color: white; font-size: 7px;text-align: left;">Travel Request Issuance Number: 
-                        </div>
-                        
-                        <div style="left:-0.75pt; top:264.66pt;">
-                        <p style="margin-top: 1%; margin-left: -10px; text-align: justify; ">We hereby endorse this travel order request with a memorandum order from the  <span style="color: red;top:0.39pt;">Provincial Governor of Southern Leyte</span> dated <span style="color: red;top:0.39pt;">{{$travelorder->InclusiveDates}}.&nbsp;</span></p>
+                            <table style="border: none;border-collapse: collapse;width:540pt; margin-top: 10px;">
+                            <tbody>
+                                <tr>
+                                <td   colspan="2" style="color:black;font-size:15px;font-weight:700;font-style:normal;text-decoration:none;font-family:Calibri, sans-serif;text-align:center;vertical-align:bottom;border:.5pt solid windowtext;height:11.5pt;width:106pt; border: 1pt dotted windowtext;">Name</td>
+                                <td style="color:black;font-size:15px;font-weight:700;font-style:normal;text-decoration:none;font-family:Calibri;text-align:center;vertical-align:middle;border:.5pt solid windowtext;border-left:none;width:118pt; border: 1pt dotted windowtext;">Designation</td>
+                                <td style="color:black;font-size:15px;font-weight:700;font-style:normal;text-decoration:none;font-family:Calibri;text-align:center;vertical-align:bottom;border:.5pt solid windowtext;border-left:none;width:116pt; border: 1pt dotted windowtext;">Office</td>
                                 </tr>
-                                   <?php 
+                                   <?php
                                         $Name = explode(',', $travelorder->Name);
                                         $Designation = explode(',', $travelorder->Designation);
                                         $Office = explode(',', $travelorder->Office);
@@ -199,15 +196,6 @@
                             </div>
                             <table style="border: none;border-collapse: collapse;width:490pt;">
                                 <tbody>
-                                }
-                                ?>
-                           </tbody>
-                        </table>
-                        <div style="left:-0.75pt; top:264.66pt;">
-                        <p style="margin-top: 1%; margin-left: -10px; text-align: justify; ">We hereby endorse this travel order request with a memorandum order from the  <span style="color: red;top:0.39pt;">Provincial Governor of Southern Leyte</span> dated <span style="color: red;top:0.39pt;">{{$travelorder->InclusiveDates}}.&nbsp;</span></p>
-                        </div>
-                        <table style="border: none;border-collapse: collapse;width:490pt;">
-                            <tbody>
                                 <tr>
                                 <td colspan="2" rowspan="3" style="color: black; font-size: 15px; font-weight: 400; font-style: normal; text-decoration: none; font-family: Calibri, sans-serif; text-align: center; vertical-align: top; border: 1pt dotted windowtext; height: 43.5pt; width: 34.6939%;">
                                     <div style="text-align: left;">The purpose of this travel:</div>

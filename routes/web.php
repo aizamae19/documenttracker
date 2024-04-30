@@ -54,6 +54,11 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::get('/admin/files/locator', [App\Http\Controllers\Admin\FileController::class, 'locator'])->name('locator');
             Route::post('/admin/files/locator/store', [App\Http\Controllers\Admin\FileController::class, 'storelocator'])->name('locator.store');
 
+              //View Locator
+            Route::get('/admin/files/locator/view/{id}', [App\Http\Controllers\Admin\FileController::class, 'viewlocator'])->name('locator.view');
+            Route::post('/admin/files/locator/view', [App\Http\Controllers\Admin\FileController::class, 'viewlocator'])->name('locatorview');
+
+            //#Dispatch
             Route::get('/admin/files/add',  [App\Http\Controllers\Admin\FileController::class, 'dispatchfile'])->name('getDispatch');
             Route::post('/admin/files/save',  [App\Http\Controllers\Admin\FileController::class, 'saveDispatch'])->name('DispatchSave'); 
 

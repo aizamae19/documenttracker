@@ -80,7 +80,7 @@ xmlns="http://www.w3.org/TR/REC-html40">
 <td colspan='2' height='34' style='mso-ignore:colspan;height:25.5pt;'></td><td colspan='4' class='x73' style='mso-ignore:colspan;overflow:hidden;'>3.<span style='mso-spacerun:yes;'>&nbsp;&nbsp; </span>DATE OF FILING<span style='mso-spacerun:yes;'>&nbsp; @if(isset($applicationforleaves->DateOfFiling) && !empty($applicationforleaves->DateOfFiling))
         <u style="">{{ $applicationforleaves->DateOfFiling }}</u>
     @else
-        ______________
+        ___________________
     @endif</span>
     <span style='mso-spacerun:yes;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 </td>
